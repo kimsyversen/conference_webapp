@@ -1,3 +1,8 @@
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+
 /* Navigation Menu - Background */
 .navigation {
     /* critical sizing and position styles */
@@ -50,10 +55,9 @@
     bottom: 100%;
     left: 0;
     z-index: 1;
-
     /* non-critical apperance styles */
     padding: 4em;
-    background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+
     background-size: 200%;
 }
 
@@ -109,6 +113,3 @@ code {
     background: #ddd;
 }
 
-/* Micro reset */
-*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
-html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }

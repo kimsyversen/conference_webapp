@@ -4,7 +4,6 @@ use Guzzle\Http\Client;
 
 class SessionsController extends \BaseController {
 
-
 	public function create() {
 
 		return View::make('sessions.create');
