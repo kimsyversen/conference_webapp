@@ -2,11 +2,18 @@
 
 class BaseController extends Controller {
 
-
 	/** Base url for the API this applications communicates with
 	 * @var string
 	 */
-	protected $api_base_url = "http://localhost:8000";
+	protected $api_endpoint;
+	protected $base_url;
+
+	function __construct()
+	{
+		$this->base_url = Config::get('uninett.api_base_uri');
+		$this->api_endpoint = Config::get('uninett.api_endpoint_uri');
+	}
+
 
 	/**
 	 * Setup the layout used by the controller.
@@ -18,15 +25,17 @@ class BaseController extends Controller {
 		if ( ! is_null($this->layout)) {
 			$this->layout = View::make($this->layout);
 		}
-		//TODO: Stick to access_token?
-		if(Session::has('access_token'))
-			View::share('access_token', Session::get('access_token'));
-		else
+
+
+		if(!Session::has('access_token')) {
+			View::share('authenticated', false);
 			View::share('access_token', false);
+
+			return;
+		}
+
+		View::share('authenticated', true);
+		View::share('access_token', Session::get('access_token'));
 	}
 
-	protected function getAccesstoken()
-	{
-		return Session::get('access_token');
-	}
 }

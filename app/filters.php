@@ -13,7 +13,24 @@
 
 App::before(function($request)
 {
-	//
+	//Manage session
+	if(Session::has('access_token'))
+	{
+		$access_token = Session::get('access_token');
+
+		if(isset($access_token['expires_at'])) {
+
+			$expire_time = $access_token['expires_at'];
+
+			$now = Carbon\Carbon::now();
+
+			if($now->diffInSeconds($expire_time) < 0)
+			{
+				Session::remove('access_token');
+				return Redirect::to('/home')->with('messages', ['You have been logged out because your session has timed out']);
+			}
+		}
+	}
 });
 
 
@@ -68,6 +85,18 @@ Route::filter('auth.basic', function()
 Route::filter('guest', function()
 {
 	if (Auth::check()) return Redirect::to('/');
+});
+
+Route::filter('not_authenticated', function()
+{
+	if (!Session::has('access_token'))
+		return Redirect::to('/home');
+});
+
+Route::filter('authenticated', function()
+{
+	if (Session::has('access_token'))
+		return Redirect::to('/home');
 });
 
 /*

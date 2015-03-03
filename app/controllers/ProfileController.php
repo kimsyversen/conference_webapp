@@ -8,18 +8,17 @@ class ProfileController extends BaseController {
 	{
 		$request = new ApiRequest;
 
-		$request->createRequest(
+		$request->createTokenRequest(
 			'GET',
-			"http://localhost:8000/api/v1/users/me",
-			['access_token' => 'fx7SigN4CPOgoSoErKy4ixfwR3P6tXo3in7abIGz'],
-			['access_token' => 'fx7SigN4CPOgoSoErKy4ixfwR3P6tXo3in7abIGz'],
-			['access_token' => 'fx7SigN4CPOgoSoErKy4ixfwR3P6tXo3in7abIGz']
+			"{$this->api_endpoint}/users/me",
+			[],
+			[],
+			[]
 		);
 
 
-		$response = $request->send();
+		$response = $request->send()['data'];
 
-		dd($response);
 
 		return View::make('users.profile')->with(compact('response'));
 	}

@@ -1,21 +1,20 @@
 <?php
+use Carbon\Carbon;
 use Guzzle\Http\Client;
 use Guzzle\Http\Exception\ClientErrorResponseException;
+use Uninett\Api\OauthRequest;
 
 class SessionsController extends \BaseController {
 
 	function __construct()
 	{
-		//$this->beforeFilter('api-guest');
+
 	}
 
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
+
 	public function create() {
+
 		return View::make('sessions.create');
 	}
 
@@ -24,38 +23,30 @@ class SessionsController extends \BaseController {
 	{
 		$client = new Client();
 
-		$secrets = [
-			'client_id' => 1,
-			'client_secret' => 'asdf',
-			'grant_type' => 'password'
-		];
-
-
-		$parameters = array_merge($secrets, Request::all());
-
 		$request = $client->createRequest(
 			'POST',
-			"http://localhost:8000/oauth/access_token",
+			"{$this->base_url}/oauth/access_token",
 			null,
-			$parameters,
+			array_merge(Config::get('uninett.oauth_info'), Request::all()),
 			[]
 		);
 
-			try {
-
+		try {
 				$response = $request->send();
 
-				Session::put('access_token', $response->json());
+				//Setup acccess_token in session, add expire time to be able to easy see when it expires
+				$expire_time = ['expires_at' => Carbon::now()->addSeconds($response->json()['expires_in'])];
+
+				$access_token = array_merge($response->json(), $expire_time);
+
+				Session::put('access_token', $access_token);
 
 				return Redirect::back();
-
 			}
 			catch(Exception $ex)
 			{
 				dd($ex->getMessage());
-				//Flash::error('Could not login user. Wrong credentials?');
-
-				return Redirect::back();
+				return Redirect::back()->with('messages', ['Could not login user. Wrong credentials?']);
 			}
 
 	}
@@ -63,11 +54,8 @@ class SessionsController extends \BaseController {
 	public function destroy()
 	{
 
-		Session::remove('email');
-		Session::remove('password');
+		Session::remove('access_token');
 
-		Flash::message('You have now been logged out');
-
-		return Redirect::route('home');
+		return Redirect::route('main_path')->with('messages', ['You have now been logged out']);
 	}
 }

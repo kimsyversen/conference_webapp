@@ -1,6 +1,6 @@
 @if(Session::has('messages'))
 <?php $messages = Session::get('messages'); ?>
-    <div class="alert alert-success">
+    <div class="alert alert-info">
         <ul>
             @foreach($messages as $message)
                 {{ $message }}

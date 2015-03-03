@@ -3,6 +3,11 @@
 class RegistrationController extends BaseController {
 
 
+	function __construct()
+	{
+		$this->beforeFilter('authenticated');
+	}
+
 	public function create()
 	{
 		return View::Make('registration.create');
@@ -13,15 +18,9 @@ class RegistrationController extends BaseController {
 	{
 		$request = new \Uninett\Api\Request();
 
-/*		$secret = [
-			'client_id' => 1,
-			'client_secret' => 'asdf',
-			'grant_type' => 'password'"{$this->api_base_url}/register",
-		];*/
-
 		$request->createRequest(
 			'POST',
-			"{$this->api_base_url}/register",
+			"{$this->base_url}/register",
 			[],
 			Request::all(),
 			[]

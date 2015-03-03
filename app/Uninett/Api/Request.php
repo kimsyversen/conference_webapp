@@ -7,6 +7,7 @@ use Guzzle\Http\Exception\ClientErrorResponseException;
 use Guzzle\Http\Exception\CurlException;
 use Guzzle\Http\Exception\ServerErrorResponseException;
 use GuzzleHttp\Exception\ParseException;
+use Session;
 
 class Request  {
 	protected $url;
@@ -30,13 +31,20 @@ class Request  {
 
 	public function createRequest($method, $url, $headers = [], $body = null, $options = [])
 	{
-		$this->url = $url;
 		$this->method = $method;
-		//$this->headers = is_null($this->auth) ? $headers : array_merge($headers, $this->auth->getAccessToken());
+		$this->url = $url;
 		$this->headers = $headers;
 		$this->body = $body;
 		$this->options = $options;
 	}
+
+	public function createTokenRequest($method, $url, $headers = [], $body = null, $options = [])
+	{
+		$url = $url . "?access_token=" . Session::get('access_token')['access_token'];
+
+		$this->createRequest($method, $url, $headers, $body, $options);
+	}
+
 
 	public function send()
 	{
