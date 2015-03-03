@@ -1,16 +1,8 @@
 <?php
 use Carbon\Carbon;
 use Guzzle\Http\Client;
-use Guzzle\Http\Exception\ClientErrorResponseException;
-use Uninett\Api\OauthRequest;
 
 class SessionsController extends \BaseController {
-
-	function __construct()
-	{
-
-	}
-
 
 
 	public function create() {

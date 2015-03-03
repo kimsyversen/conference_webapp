@@ -2,7 +2,7 @@
 
 class BaseController extends Controller {
 
-	/** Base url for the API this applications communicates with
+	/** Base url for the API this application communicates with
 	 * @var string
 	 */
 	protected $api_endpoint;
@@ -25,7 +25,6 @@ class BaseController extends Controller {
 		if ( ! is_null($this->layout)) {
 			$this->layout = View::make($this->layout);
 		}
-
 
 		if(!Session::has('access_token')) {
 			View::share('authenticated', false);

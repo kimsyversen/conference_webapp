@@ -15,7 +15,3 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 
 
 Route::get('users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile'])->before('not_authenticated');
-
-
-
-
