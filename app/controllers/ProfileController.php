@@ -16,7 +16,6 @@ class ProfileController extends BaseController {
 			[]
 		);
 
-
 		$response = $request->send()['data'];
 
 

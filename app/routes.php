@@ -15,3 +15,17 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 
 
 Route::get('users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile'])->before('not_authenticated');
+
+
+
+
+Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
+
+
+
+
+Route::group(['prefix' => 'conferences/{id}',  ], function() {
+	Route::get('/', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@getConferenceById' ]);
+
+	Route::get('schedueles', [ 'as' => 'schedueles_path', 'uses' => 'ConferenceSchedueleController@index' ]);
+});
