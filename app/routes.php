@@ -25,7 +25,7 @@ Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceCon
 
 
 Route::group(['prefix' => 'conferences/{id}',  ], function() {
-	Route::get('/', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@getConferenceById' ]);
+	Route::get('/', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 
 	Route::get('schedueles', [ 'as' => 'schedueles_path', 'uses' => 'ConferenceSchedueleController@index' ]);
 });
