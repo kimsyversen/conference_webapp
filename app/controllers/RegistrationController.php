@@ -5,7 +5,10 @@ class RegistrationController extends BaseController {
 
 	function __construct()
 	{
-		$this->beforeFilter('authenticated');
+		$this->base_url = "http://localhost:8000";
+
+		parent::__construct();
+
 	}
 
 	public function create()
@@ -17,16 +20,16 @@ class RegistrationController extends BaseController {
 	public function store()
 	{
 		$request = new \Uninett\Api\Request();
-
 		$request->createRequest(
 			'POST',
-			"{$this->base_url}/register",
+			"http://localhost:8000/register",
 			[],
 			Request::all(),
 			[]
 		);
 
 		$response = $request->send();
+
 
 		if(isset($response['error']))
 			return Redirect::back()->with(compact('response'));

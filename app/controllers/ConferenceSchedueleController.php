@@ -21,8 +21,6 @@ class ConferenceSchedueleController extends \BaseController {
 
 		$response = $request->send()['data'];
 
-
-
 		return View::make('schedueles.index')->with(compact('response'));
 	}
 

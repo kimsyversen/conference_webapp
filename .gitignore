@@ -8,3 +8,4 @@ composer.lock
 .idea/*
 Thumbs.db
 _ide_helper.php
+node_modules/*

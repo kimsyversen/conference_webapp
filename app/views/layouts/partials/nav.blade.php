@@ -15,28 +15,22 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-
-
                 <li class="nav-item"> {{ link_to_route('conferences_path', 'All Conferences') }} </li>
-
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        @if(!$authenticated)
-                            <li class="nav-item"> {{ link_to_route('register_path', 'Register') }} </li>
-                            <li class="nav-item"> {{ link_to_route('login_path', 'Login') }} </li>
-                        @endif
-
-                        @if($authenticated)
+                @if($authenticated)
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
                             <li class="nav-item"> {{ link_to_route('profile_path', 'Profile') }} </li>
                             <li class="nav-item"> {{ link_to_route('logout_path', 'Log out') }} </li>
-                        @endif
-                    </ul>
-                </li>
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item"> {{ link_to_route('register_path', 'Register') }} </li>
+                    <li class="nav-item"> {{ link_to_route('login_path', 'Login') }} </li>
+                @endif
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

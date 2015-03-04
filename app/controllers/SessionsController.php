@@ -32,7 +32,7 @@ class SessionsController extends \BaseController {
 
 				Session::put('access_token', $access_token);
 
-				return Redirect::back();
+				return Redirect::route('profile_path')->with('messages', ['You are now logged in.']);
 			}
 			catch(Exception $ex)
 			{

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
-    {{HTML::style('css/slidein-menu.css');}}
+    {{HTML::style('css/Main.css') }}
 </head>
 <body>
 	@include('layouts.partials.nav')
