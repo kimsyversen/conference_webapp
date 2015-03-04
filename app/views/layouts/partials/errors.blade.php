@@ -1,9 +1,6 @@
 @if(Session::has('response'))
     <?php $response = Session::get('response'); ?>
-    {{ dd($response) }}
-    @if(isset($response['error']))
-        {{ $response['error'] }}
-    @endif
+
     @if(isset($response['errors']))
         <div class="alert alert-danger">
             <ul>

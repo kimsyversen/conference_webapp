@@ -36,8 +36,15 @@ class SessionsController extends \BaseController {
 			}
 			catch(Exception $ex)
 			{
-				dd($ex->getMessage());
-				return Redirect::back()->with('messages', ['Could not login user. Wrong credentials?']);
+
+				$response = [
+					'errors' => [
+						'message' =>
+							['Could not login user. Wrong credentials?']
+						]
+				];
+
+				return Redirect::back()->with(compact('response'));
 			}
 
 	}
