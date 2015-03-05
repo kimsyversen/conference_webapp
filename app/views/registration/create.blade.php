@@ -8,11 +8,6 @@
             {{ Form::open(['route' => 'register_path', 'method' => 'post']) }}
 
             <div class="form-group">
-                {{ Form::label('username', 'Username:', ['class' => 'control-label']) }}
-                {{ Form::text('username', null, ['class' => 'form-control']) }}
-            </div>
-
-            <div class="form-group">
                 {{ Form::label('email', 'Email:', ['class' => 'control-label']) }}
                 {{ Form::text('email', null, ['class' => 'form-control']) }}
             </div>

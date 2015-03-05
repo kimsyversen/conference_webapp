@@ -1,20 +1,42 @@
 <?php
 use Carbon\Carbon;
-use Guzzle\Http\Client;
+use Uninett\Api\Request as ApiRequest;
 
+/**
+ * Class SessionsController
+ */
 class SessionsController extends \BaseController {
 
-	public function create() {
+	/**
+	 * @var ApiRequest
+	 */
+	private $request;
 
+	/**
+	 * @param ApiRequest $request
+	 */
+	function __construct(\Uninett\Api\Request $request)
+	{
+		parent::__construct();
+
+		$this->request = $request;
+	}
+
+	/**
+	 * @return \Illuminate\View\View
+	 */
+	public function create()
+	{
 		return View::make('sessions.create');
 	}
 
-
+	/**
+	 * Login user
+	 * @return \Illuminate\Http\RedirectResponse
+	 */
 	public function login()
 	{
-		$client = new Client();
-
-		$request = $client->createRequest(
+		$this->request->createRequest(
 			'POST',
 			"{$this->base_url}/oauth/access_token",
 			null,
@@ -22,37 +44,36 @@ class SessionsController extends \BaseController {
 			[]
 		);
 
-		try {
-				$response = $request->send();
+		$response = $this->request->send();
 
-				//Setup acccess_token in session, add expire time to be able to easy see when it expires
-				$expire_time = ['expires_at' => Carbon::now()->addSeconds($response->json()['expires_in'])];
+		if(isset($response['errors']))
+			return Redirect::back()->with($response);
 
-				$access_token = array_merge($response->json(), $expire_time);
+		$this->putAccessTokenInSession($response);
 
-				Session::put('access_token', $access_token);
-
-				return Redirect::route('profile_path')->with('messages', ['You are now logged in.']);
-			}
-			catch(Exception $ex)
-			{
-
-				$response = [
-					'errors' => [
-						'message' =>
-							['Could not login user. Wrong credentials?']
-						]
-				];
-
-				return Redirect::back()->with(compact('response'));
-			}
-
+		return Redirect::route('conferences_path')->with('messages', ['You are now logged in.']);
 	}
 
+	/**
+	 * Setup acccess_token in session, add expire time to be able to easy see when it expires
+	 * @param $response
+	 */
+	private function putAccessTokenInSession($response)
+	{
+		$expire_time = ['expires_at' => Carbon::now()->addSeconds($response['expires_in'])];
+
+		$access_token = array_merge($response, $expire_time);
+
+		Session::put('access_token', $access_token);
+	}
+
+	/**
+	 * Destroy everything in session
+	 * @return \Illuminate\Http\RedirectResponse
+	 */
 	public function destroy()
 	{
-
-		Session::remove('access_token');
+		Session::flush();
 
 		return Redirect::route('main_path')->with('messages', ['You have now been logged out']);
 	}

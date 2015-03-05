@@ -6,11 +6,11 @@
 
             @include('layouts.partials.errors')
 
-            @foreach($response as $key => $value)
-                <p>
-                    {{ $key }} : {{ $value }}
-                </p>
-            @endforeach
+            <?php $data = $response['data']; ?>
+
+            <p>Email {{ $data['email'] }}</p>
+
+
 
             <h2>Token information</h2>
             <div>
@@ -23,9 +23,6 @@
                 @endif
             </div>
 
-            <div>
-                 <?php echo "Session Lifetime:"  . Config::get('session.lifetime') . PHP_EOL; ?>
-            </div>
         </div>
     </div>
 @stop

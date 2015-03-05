@@ -2,13 +2,12 @@
 
 class RegistrationController extends BaseController {
 
+	private $request;
 
-	function __construct()
+	function __construct(\Uninett\Api\Request $request)
 	{
-		$this->base_url = "http://localhost:8000";
-
+		$this->request = $request;
 		parent::__construct();
-
 	}
 
 	public function create()
@@ -16,11 +15,9 @@ class RegistrationController extends BaseController {
 		return View::Make('registration.create');
 	}
 
-
 	public function store()
 	{
-		$request = new \Uninett\Api\Request();
-		$request->createRequest(
+		$this->request->createRequest(
 			'POST',
 			"http://localhost:8000/register",
 			[],
@@ -28,21 +25,14 @@ class RegistrationController extends BaseController {
 			[]
 		);
 
-		$response = $request->send();
+		$response = $this->request->send();
 
+		if(isset($response['errors']))
+			return Redirect::back()->with($response);
 
-		if(isset($response['error']))
-			return Redirect::back()->with(compact('response'));
-
-		$messages = [
-			'Account was successfully created. Check your email to verify your account '
-		];
-
-		return Redirect::route('login_path')->with(compact('response', 'messages'));
-
-
+		return Redirect::route('login_path')->with([
+			'messages' => ['Account was successfully created. Check your email to verify your account'],
+			'data' => $response
+		]);
 	}
-
-
-
 }

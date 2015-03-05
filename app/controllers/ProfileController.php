@@ -4,11 +4,19 @@ use Uninett\Api\Request as ApiRequest;
 
 class ProfileController extends BaseController {
 
+	private $request;
+
+	function __construct(\Uninett\Api\Request $request)
+	{
+		$this->request = $request;
+		parent::__construct();
+	}
+
 	public function profile()
 	{
-		$request = new ApiRequest;
 
-		$request->createTokenRequest(
+
+		$this->request->createTokenRequest(
 			'GET',
 			"{$this->api_endpoint}/users/me",
 			[],
@@ -16,7 +24,7 @@ class ProfileController extends BaseController {
 			[]
 		);
 
-		$response = $request->send()['data'];
+		$response = $this->request->send();
 
 
 		return View::make('users.profile')->with(compact('response'));

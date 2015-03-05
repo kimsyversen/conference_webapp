@@ -1,8 +1,7 @@
 @if(Session::has('messages'))
-<?php $messages = Session::get('messages'); ?>
     <div class="alert alert-info">
         <ul>
-            @foreach($messages as $message)
+            @foreach(Session::get('messages') as $message)
                 {{ $message }}
             @endforeach
         </ul>

@@ -8,7 +8,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+
+            @if(Session::has('conference_id'))
+                <a class="navbar-brand" href="{{ route('conference_path', ['id' => Session::get('conference_id')])  }}">To conference</a>
+            @else
+                <a class="navbar-brand" href="{{ route('main_path')}}">Home</a>
+            @endif
+
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +30,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="nav-item"> {{ link_to_route('profile_path', 'Profile') }} </li>
+                            <li class="nav-item"> {{ link_to_route('profile_path', 'Profile', ['id' => Session::get('conference_id')]) }} </li>
                             <li class="nav-item"> {{ link_to_route('logout_path', 'Log out') }} </li>
                         </ul>
                     </li>
