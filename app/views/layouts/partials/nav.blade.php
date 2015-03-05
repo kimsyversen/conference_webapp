@@ -14,15 +14,11 @@
             @else
                 <a class="navbar-brand" href="{{ route('main_path')}}">Home</a>
             @endif
-
-
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"> {{ link_to_route('conferences_path', 'All Conferences') }} </li>
+                <li class="nav-item {{HTML::isUrlActive('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences') }} </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -30,13 +26,13 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="nav-item"> {{ link_to_route('profile_path', 'Profile', ['id' => Session::get('conference_id')]) }} </li>
+                            <li class="nav-item "> {{ link_to_route('profile_path', 'Profile', ['id' => Session::get('conference_id')]) }} </li>
                             <li class="nav-item"> {{ link_to_route('logout_path', 'Log out') }} </li>
                         </ul>
                     </li>
                 @else
-                    <li class="nav-item"> {{ link_to_route('register_path', 'Register') }} </li>
-                    <li class="nav-item"> {{ link_to_route('login_path', 'Login') }} </li>
+                    <li class="nav-item {{HTML::isUrlActive('register_path')}}"> {{ link_to_route('register_path', 'Register') }} </li>
+                    <li class="nav-item {{HTML::isUrlActive('login_path')}}"> {{ link_to_route('login_path', 'Login') }} </li>
                 @endif
             </ul>
         </div><!-- /.navbar-collapse -->
