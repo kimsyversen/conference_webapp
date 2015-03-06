@@ -15,19 +15,10 @@
     .conference-item .conference-item-main .conference-item-description {
       font-size: 1em; }
 
-.footer {
-  background-color: #2a2a2a;
-  color: white; }
-  .footer .footer-item {
-    margin-top: 10px;
-    text-align: center; }
-    .footer .footer-item h4 {
-      font-size: 1.1em;
-      padding-top: 0.1em;
-      text-align: center; }
-    .footer .footer-item ul li {
-      margin-left: -50px;
-      list-style-type: none; }
+.footer-nav {
+  background-color: #95a5a6;
+  border-radius: 0px;
+  text-align: center; }
 
 body {
   margin-bottom: 200px; }
