@@ -12,7 +12,7 @@ class RegistrationController extends BaseController {
 
 	public function create()
 	{
-		return View::Make('registration.create');
+		return View::make('registration.create');
 	}
 
 	public function store()

@@ -1,11 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-6">
-            <h1>Register</h1>
+    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
+    @include('layouts.partials.errors-and-messages')
 
-            {{ Form::open(['route' => 'register_path', 'method' => 'post']) }}
+    @include('layouts.partials.page-header', ['text' => 'Create account'])
+        <div class="col-xs-12 conference-form">
+
+            {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
 
             <div class="form-group">
                 {{ Form::label('email', 'Email:', ['class' => 'control-label']) }}
@@ -27,5 +29,5 @@
             </div>
             {{ Form::close() }}
         </div>
-    </div>
+
 @stop

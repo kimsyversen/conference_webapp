@@ -1,7 +1,8 @@
 @import 'modules/navbar';
-@import 'modules/items/main_components';
-@import 'modules/items/conference_item';
 @import 'modules/footer';
+@import 'modules/components/forms';
+@import 'modules/components/conference_item';
+
 
 * {
   margin: 0;
@@ -13,7 +14,20 @@ body {
 
 html, body {
   height: 100%;
-  background-color: #E9EAEA;
+  background-color: darken(#E9EAEA, 7%);
+}
+
+.container {
+  /* To push footer to bottom of page*/
+  min-height: 100%;
 }
 
 
+.page-header-hr {
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0 0 10px;
+}
+
+.conference-well {
+  background-color: darken(rgb(255, 255, 255), 0%);
+}

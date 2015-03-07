@@ -1,11 +1,10 @@
 @extends('layouts.default')
 @section('content')
 <div class="container">
-    <div class='row'>
-        <div class='col-xs-12'>
-            <h2>Browse conferences</h2>
-        </div>
-    </div>
+    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
+    @include('layouts.partials.errors-and-messages')
+    @include('layouts.partials.page-header', ['text' => 'Browse conferences'])
+
     <div class='row'>
         @include('conferences.partials.conference-item')
     </div>

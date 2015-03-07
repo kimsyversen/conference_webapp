@@ -14,8 +14,6 @@ class ProfileController extends BaseController {
 
 	public function profile()
 	{
-
-
 		$this->request->createTokenRequest(
 			'GET',
 			"{$this->api_endpoint}/users/me",
@@ -26,8 +24,7 @@ class ProfileController extends BaseController {
 
 		$response = $this->request->send();
 
-
-		return View::make('users.profile')->with(compact('response'));
+		return View::make('users.profile.index')->with(compact('response'));
 	}
 
 }

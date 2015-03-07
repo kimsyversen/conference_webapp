@@ -5,12 +5,26 @@
   left: -6px;
   font-size: 1.5em; }
 
-.footer-navigation .item {
-  color: white; }
+* .conference-navbar a:active {
+  background-color: #ffffcc; }
+* .conference-navbar a:hover {
+  background-color: #ffffcc; }
+
+.footer-navigation {
+  border-radius: 0; }
+  .footer-navigation .item {
+    color: white; }
+
+.conference-form {
+  background-color: white;
+  padding: 3em;
+  border-radius: 5px; }
 
 .conference-item {
   background-color: white;
   margin: 1em; }
+  .conference-item a {
+    text-decoration: underline; }
   .conference-item .banner img {
     width: 100%;
     height: 100%; }
@@ -38,9 +52,6 @@
         .conference-item .main .description .button:hover {
           background-color: #c3c3c3; }
 
-.footer-navigation {
-  border-radius: 0px; }
-
 * {
   margin: 0; }
 
@@ -49,4 +60,15 @@ body {
 
 html, body {
   height: 100%;
-  background-color: #E9EAEA; }
+  background-color: #d7d9d9; }
+
+.container {
+  /* To push footer to bottom of page*/
+  min-height: 100%; }
+
+.page-header-hr {
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0 0 10px; }
+
+.conference-well {
+  background-color: white; }
