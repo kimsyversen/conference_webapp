@@ -1,13 +1,14 @@
-<div class="navbar navbar-default navbar-static-bottom footer-nav">
-    <div class="col-sm-12 col-md-12 footer-item">
-    <h4>Some placeholder text</h4>
-    <ul class="list-unstyled">
-        <li class="footer-list-item">Placeholder text</li>
-        <li class="footer-list-item">Placeholder text</li>
-        <li class="footer-list-item">Placeholder text</li>
-        <li class="footer-list-item">Placeholder text</li>
-        <li class="footer-list-item">Placeholder text</li>
-    </ul>
+<nav class="navbar navbar-default navbar-static-bottom navbar-inverse footer-navigation ">
+    <div class="item col-md-3">
+        <h5>Some placeholder text</h5>
+        <ul class="list-unstyled">
+            <li class="footer-list-item">Placeholder text</li>
+            <li class="footer-list-item">Placeholder text</li>
+            <li class="footer-list-item">Placeholder text</li>
+            <li class="footer-list-item">Placeholder text</li>
+            <li class="footer-list-item">Placeholder text</li>
+        </ul>
     </div>
-</div>
+</nav>
+
 

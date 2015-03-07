@@ -1,34 +1,19 @@
-@import 'modules/conference_item';
+@import 'modules/navbar';
+@import 'modules/items/main_components';
+@import 'modules/items/conference_item';
 @import 'modules/footer';
+
+* {
+  margin: 0;
+}
 
 body {
   margin-bottom: 200px;
 }
 
-
-/* Start sticky footer http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
-* {
-  margin: 0;
-}
 html, body {
   height: 100%;
+  background-color: #E9EAEA;
 }
-.wrapper {
-  min-height: 100%;
-  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
-  height: 100%;
-  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
-}
-
-.footer, .push {
-  height: 155px; /* .push must be the same height as .footer */
-}
-
-/*
-
-Sticky Footer by Ryan Fait
-http://ryanfait.com/
-
-*/
 
 

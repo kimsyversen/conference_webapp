@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-inverse navbar-static-top header-navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -24,7 +24,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @if($authenticated)
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class='glyphicon glyphicon-user navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li class="nav-item "> {{ link_to_route('profile_path', 'Profile', ['id' => Session::get('conference_id')]) }} </li>
                             <li class="nav-item"> {{ link_to_route('logout_path', 'Log out') }} </li>
