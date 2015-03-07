@@ -24,8 +24,31 @@ class ConferenceController extends \BaseController {
 
 		$response = $this->request->send();
 
+/*
+		$collection = new \Illuminate\Support\Collection($response);
+
+		dd($collection);*/
+
+
 		return View::make('conferences.index')->with($response);
 	}
+
+/*	function toModel($modelName, $models)
+	{
+		Eloquent::unguard();
+
+		$collection = new Illuminate\Support\Collection;
+
+		foreach($models as $model) {
+			$newModel = new $modelName($model);
+			$newModel->exists = true;
+			$collection->push($newModel);
+		}
+
+		Eloquent::reguard();
+
+		return $collection;
+	}*/
 
 	public function getConferenceById($id)
 	{
@@ -44,6 +67,7 @@ class ConferenceController extends \BaseController {
 		Session::put('conference_id', $id);
 
 		$response = $this->request->send();
+
 
 		return View::make('conferences.conference')->with($response);
 	}
