@@ -14,4 +14,4 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences/{id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 Route::get('conferences/{id}/users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
-Route::get('conferences/{id}/schedueles', [ 'as' => 'schedueles_path', 'uses' => 'ConferenceSchedueleController@index' ]);
+Route::get('conferences/{id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);

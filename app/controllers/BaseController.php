@@ -37,4 +37,8 @@ class BaseController extends Controller {
 		View::share('access_token', Session::get('access_token'));
 	}
 
+	public function toCollection($response){
+		return new \Illuminate\Support\Collection($response);
+	}
+
 }

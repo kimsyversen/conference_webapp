@@ -52,6 +52,35 @@
         .conference-item .main .description .button:hover {
           background-color: #c3c3c3; }
 
+.session-item {
+  background-color: white;
+  margin: 1em;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding-top: 1em; }
+  .session-item a {
+    text-decoration: underline; }
+  .session-item .header {
+    padding: 0.5em 0.5em 0 0; }
+    .session-item .header .time {
+      font-size: 0.8em;
+      float: right;
+      display: block; }
+    .session-item .header .location {
+      font-size: 0.5em; }
+    .session-item .header .avatar {
+      float: left;
+      font-size: 1.5em;
+      padding: 0.5em 0.5em 0 0; }
+    .session-item .header .title {
+      padding: 0.5em 0 0 0;
+      font-size: 1em; }
+    .session-item .header .description {
+      padding: 1em; }
+
+.session-information .location {
+  font-size: 1em; }
+
 * {
   margin: 0; }
 

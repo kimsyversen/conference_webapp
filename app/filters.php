@@ -16,6 +16,7 @@ App::before(function($request)
 	//Manage session
 	if(Session::has('access_token'))
 	{
+
 		$access_token = Session::get('access_token');
 
 		if(isset($access_token['expires_at'])) {
@@ -24,7 +25,7 @@ App::before(function($request)
 
 			$now = Carbon\Carbon::now();
 
-			if($now->diffInSeconds($expire_time) < 0)
+			if($now->gt($expire_time))
 			{
 				Session::remove('access_token');
 				return Redirect::to('/home')->with('messages', ['You have been logged out because your session has timed out']);

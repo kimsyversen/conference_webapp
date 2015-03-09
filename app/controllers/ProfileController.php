@@ -23,7 +23,6 @@ class ProfileController extends BaseController {
 		);
 
 		$response = $this->request->send();
-
 		return View::make('users.profile.index')->with(compact('response'));
 	}
 

@@ -19,10 +19,10 @@
                         </div>
                         <div class="description">
 
-                            <button class='btn form-control button' id="button" data-toggle="collapse" data-target="#text">Conference description</button>
+                            <button class='btn form-control button' id="button"> Conference description</button>
 
-                            <div id="text" class="text collapse">
-                                <p> <i class="about">About</i> {{ $conference['description'] }}</p>
+                            <div id="text" class="text hidden">
+                                <p> <i class="about"> About</i> {{ $conference['description'] }}</p>
                             </div>
                         </div>
                     </div>

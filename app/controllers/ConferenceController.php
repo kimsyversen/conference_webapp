@@ -68,7 +68,6 @@ class ConferenceController extends \BaseController {
 
 		$response = $this->request->send();
 
-
 		return View::make('conferences.conference')->with($response);
 	}
 
