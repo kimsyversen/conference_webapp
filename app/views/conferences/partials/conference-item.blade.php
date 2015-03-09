@@ -18,7 +18,6 @@
                             {{ ConferenceHelper::timeStampToHuman($conference['begins']['date'])}}</span>
                         </div>
                         <div class="description">
-
                             <button class='btn form-control button' id="button"> Conference description</button>
 
                             <div id="text" class="text hidden">

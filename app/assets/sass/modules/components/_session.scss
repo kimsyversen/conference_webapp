@@ -1,16 +1,24 @@
 .session-item {
   background-color: rgb(255, 255, 255);
   margin: 1em;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 25px;
-  padding-top: 1em;
+
 
   a {
     text-decoration: underline;
   }
 
+  .button {
+    background-color: lighten(#c3c3c3, 20%);
+    border-radius: 0;
+    width: 100%;
+    transition: 1s;
+    margin-top: 0.4em;
+    &:hover {
+      background-color: darken(#E9EAEA, 7%);
+    }
+  }
+
   .header {
-    padding: 0.5em 0.5em 0 0;
 
     .time {
       font-size: 0.8em;
