@@ -1,0 +1,61 @@
+.session-item {
+  background-color: rgb(255, 255, 255);
+  margin: 1em;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .header {
+
+    .time {
+      font-size: 0.8em;
+      float: right;
+      display: block;
+    }
+    .location {
+      font-size: 0.5em
+    }
+
+    .avatar {
+      padding: 0.5em;
+      float: left;
+      font-size: 1.5em;
+
+    }
+    .title {
+      padding: 0.5em 0 0.5em 0;
+      font-size: 1em;
+    }
+
+  }
+
+  .description {
+    padding: 0.5em;
+  }
+
+  .buttons {
+
+
+    .with-border {
+      border-right: 1px dashed #000;
+    }
+
+    button {
+      background-color: darken(#E9EAEA, 30%);
+      border-radius: 0;
+      width: 100%;
+      transition: 1s;
+
+      &:hover {
+        background-color: darken(#E9EAEA, 7%);
+      }
+    }
+  }
+
+  .session-information {
+    .location {
+      font-size: 1em;
+    }
+  }
+}

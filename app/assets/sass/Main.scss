@@ -2,7 +2,7 @@
 @import 'modules/footer';
 @import 'modules/components/forms';
 @import 'modules/components/conference_item';
-@import 'modules/components/session';
+@import 'modules/components/schedule';
 
 * {
   margin: 0;
@@ -30,4 +30,9 @@ html, body {
 
 .conference-well {
   background-color: darken(rgb(255, 255, 255), 0%);
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
 }

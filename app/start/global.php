@@ -81,6 +81,6 @@ App::down(function()
 require app_path().'/filters.php';
 
 
-
+require(app_path().'/errors.php');
 
 require app_path().'/macros.php';

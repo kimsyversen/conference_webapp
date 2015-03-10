@@ -12,7 +12,7 @@ class ConferenceScheduleController extends \BaseController {
 
 	public function index($conference_id)
 	{
-		$this->request->createTokenRequest(
+		$this->request->createRequest(
 			'GET',
 			"{$this->api_endpoint}/conferences/{$conference_id}/schedule",
 			[],
@@ -21,20 +21,6 @@ class ConferenceScheduleController extends \BaseController {
 		);
 
 		$response = $this->request->send();
-
-/*		$sessions = $this->toCollection($response['data'])->sortBy('begins')->toArray();
-
-		$paralell_sessions[] = array_shift($sessions);
-		$begins_at = $paralell_sessions[0]['begins'];
-		$ends_at = $paralell_sessions[0]['ends'];
-
-		dd($paralell_sessions);
-		foreach($sessions as $session)
-		{
-			if ($session['begins'] == $)
-
-		}
-*/
 
 
 		return View::make('schedule.index')->with(['data' => $response]);

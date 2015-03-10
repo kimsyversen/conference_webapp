@@ -1,4 +1,5 @@
 <?php namespace Uninett\Api;
+use Session;
 
 /**
  * Class ResponseFormatter
@@ -10,8 +11,11 @@ class ResponseFormatter {
 	 * @param $errors
 	 * @return array
 	 */
-	public function error( $errors)
+	public function error($errors)
 	{
+		//Make the errors available both in session and the response?
+		Session::flash('errors', $errors);
+
 		$response = [
 			'errors' => $errors
 		];

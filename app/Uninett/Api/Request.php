@@ -1,5 +1,7 @@
 <?php namespace Uninett\Api;
 
+use Guzzle\Common\Exception\GuzzleException;
+use Log;
 use Session;
 use Guzzle\Http\Client;
 use GuzzleHttp\Exception\ParseException;
@@ -7,6 +9,8 @@ use Guzzle\Http\Exception\CurlException;
 use Guzzle\Common\Exception\RuntimeException;
 use Guzzle\Http\Exception\ClientErrorResponseException;
 use Guzzle\Http\Exception\ServerErrorResponseException;
+use Symfony\Component\HttpKernel\Exception\FatalErrorException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Class Request
@@ -90,7 +94,6 @@ class Request  {
 		$this->createRequest($method, $url, $headers, $body, $options);
 	}
 
-
 	/**
 	 * @return array
 	 */
@@ -115,16 +118,17 @@ class Request  {
 		}
 		catch(ClientErrorResponseException $ex)
 		{
+			$errorCode = $ex->getResponse()->getStatusCode();
 			/**
 			 * Check for 4xx status codes that is returned from the API
 			 */
-			if($ex->getResponse()->getStatusCode() == 401)
+			if($errorCode == 401)
 				return $this->responseFormatter->error(['Wrong credentials!']);
 
 			/**
 			 * If validation exception, parse the response to a format the error view understands.
 			 */
-			if($ex->getResponse()->getStatusCode() == 422)
+			if($errorCode == 422)
 			{
 				$response = "";
 				foreach($ex->getResponse()->json()['errors'] as $messages)
@@ -134,7 +138,12 @@ class Request  {
 				return $this->responseFormatter->error($response);
 			}
 
+			//If we try to access something like conferences/asdasdads/schedule instead of  conferences/1/schedule
+			if($errorCode === 404)
+				throw new NotFoundHttpException;
+
 			$errorCode = $ex->getResponse()->getStatusCode();
+
 			return $this->responseFormatter
 				->error(["A not implemented translation for error code {$errorCode} occured"]);
 
@@ -145,14 +154,13 @@ class Request  {
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			return $this->responseFormatter
-				->error(["A not implemented translation for error code {$errorCode} occured with message {$message}"]);
-
+				->error(["A not implemented translation for error code {$errorCode} occured while sending the request to server"]);
 		}
 		catch(CurlException $ex)
 		{
-			$response = $ex->getMessage();
-
-			return $this->parseResponse($response);
+			//IF curl cannot connect to API
+			//string '[curl] 7: Failed to connect to localhost port 8000: Connection refused [url] http://localhost:8000/api/v1/conferences/3/schedule' (length=128)
+			return $this->responseFormatter->error(["It seems like the application cannot reach the server"]);
 		}
 	}
 
@@ -167,9 +175,18 @@ class Request  {
 		{
 			return $this->responseFormatter->response($response->json());
 		}
-		/**
-		 * This exception occurs if json cannot be parsed?
-		 */
+		catch(ServerErrorResponseException $ex)
+		{
+			$message = $ex->getResponse();
+			$errorCode = $ex->getResponse()->getStatusCode();
+
+			return $this->responseFormatter
+				->error(["A not implemented translation for error code {$errorCode} occured with message {$message}"]);
+		}
+		catch(GuzzleException $ex)
+		{
+			return $this->responseFormatter->error($ex->getMessage());
+		}
 		catch(ParseException $ex)
 		{
 			return $this->responseFormatter->error($ex->getMessage());

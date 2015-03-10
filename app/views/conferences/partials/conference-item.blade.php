@@ -15,7 +15,7 @@
                         </div>
                         <div>
                             <span class="time">
-                            {{ ConferenceHelper::timeStampToHuman($conference['begins']['date'])}}</span>
+                                {{ ConferenceHelper::timestampToBeingEnds( $conference['start_date']['date'], $conference['end_date']['date'], 'Y/d/m') }}</span>
                         </div>
                         <div class="description">
                             <button class='btn form-control button' id="button"> Conference description</button>

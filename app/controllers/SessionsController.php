@@ -46,12 +46,12 @@ class SessionsController extends \BaseController {
 
 		$response = $this->request->send();
 
-		if(isset($response['errors']))
+		if(isset($response['errors']) || is_null($response))
 			return Redirect::back()->with($response);
 
 		$this->putAccessTokenInSession($response);
 
-		return Redirect::route('conferences_path')->with('messages', ['You are now logged in.']);
+		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 	}
 
 	/**

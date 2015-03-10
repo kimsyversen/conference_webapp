@@ -14,51 +14,16 @@ class ConferenceController extends \BaseController {
 
 	public function index()
 	{
-		$this->request->createRequest(
-			'GET',
-			"{$this->api_endpoint}/conferences",
-			[],
-			[],
-			[]
-		);
+		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences");
 
 		$response = $this->request->send();
-
-/*
-		$collection = new \Illuminate\Support\Collection($response);
-
-		dd($collection);*/
-
 
 		return View::make('conferences.index')->with($response);
 	}
 
-/*	function toModel($modelName, $models)
-	{
-		Eloquent::unguard();
-
-		$collection = new Illuminate\Support\Collection;
-
-		foreach($models as $model) {
-			$newModel = new $modelName($model);
-			$newModel->exists = true;
-			$collection->push($newModel);
-		}
-
-		Eloquent::reguard();
-
-		return $collection;
-	}*/
-
 	public function getConferenceById($id)
 	{
-		$this->request->createRequest(
-			'GET',
-			"{$this->api_endpoint}/conferences/{$id}",
-			[],
-			[],
-			[]
-		);
+		$this->request->createRequest('GET',  "{$this->api_endpoint}/conferences/{$id}");
 
 		/**
 		 * Insert conference_id to session so users

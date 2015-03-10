@@ -28,11 +28,13 @@ class RegistrationController extends BaseController {
 		$response = $this->request->send();
 
 		if(isset($response['errors']))
-			return Redirect::back()->with($response);
+			return Redirect::back()->with('errors',$response['errors']);
 
-		return Redirect::route('login_path')->with([
-			'messages' => ['Account was successfully created. Check your email to verify your account'],
-			'data' => $response
-		]);
+		return Redirect::route('login_path')->with(
+			[
+				'data' => $response,
+				'messages' => ['Account was successfully created. Check your email to verify your account']
+			]);
+
 	}
 }
