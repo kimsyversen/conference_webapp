@@ -18,7 +18,7 @@
     }
 
     .avatar {
-      padding: 0.5em;
+      padding: 0.5em 0 0 1em;
       float: left;
       font-size: 1.5em;
 
@@ -30,8 +30,11 @@
 
   }
 
-  .description {
-    padding: 0.5em;
+  .description-long {
+    padding: 1em;
+  }
+  .description-short  {
+    padding: 1em;
   }
 
   .buttons {

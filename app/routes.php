@@ -15,3 +15,4 @@ Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceCon
 Route::get('conferences/{id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 Route::get('conferences/{id}/users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 Route::get('conferences/{id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);
+Route::get('conferences/{id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@index' ]);

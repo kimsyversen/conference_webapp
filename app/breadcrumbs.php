@@ -40,3 +40,10 @@ Breadcrumbs::register('schedule', function($breadcrumbs) {
 	$breadcrumbs->push("Schedule", route('schedule_path'));
 
 });
+
+
+Breadcrumbs::register('session', function($breadcrumbs) {
+	$breadcrumbs->parent('schedule');
+	$breadcrumbs->push("Session", route('session_path'));
+
+});

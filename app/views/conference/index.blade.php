@@ -7,7 +7,7 @@
         @unless(Session::has('errors'))
             @include('layouts.partials.page-header', ['text' => 'Browse conferences'])
             <div class='row'>
-                @include('conferences.partials.conference-item')
+                @include('conference.partials.conference-item')
             </div>
         @endunless
     </div>

@@ -18,7 +18,7 @@ class ConferenceController extends \BaseController {
 
 		$response = $this->request->send();
 
-		return View::make('conferences.index')->with($response);
+		return View::make('conference.index')->with($response);
 	}
 
 	public function getConferenceById($id)
@@ -33,7 +33,7 @@ class ConferenceController extends \BaseController {
 
 		$response = $this->request->send();
 
-		return View::make('conferences.conference')->with($response);
+		return View::make('conference.show')->with($response);
 	}
 
 }
