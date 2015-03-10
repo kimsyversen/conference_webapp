@@ -22,7 +22,7 @@ Breadcrumbs::register('conference', function($breadcrumbs) {
 	if(Session::has('conference_id'))
 	{
 		$conference_id = Session::get('conference_id');
-		$breadcrumbs->push("Conference {$conference_id}", route('conference_path', ['id' => $conference_id]));
+		$breadcrumbs->push("Conference {$conference_id}", route('conference_path', ['conference_id' => $conference_id]));
 	}
 	else
 		$breadcrumbs->push("Conference", route('conference_path'));
@@ -37,13 +37,27 @@ Breadcrumbs::register('profile', function($breadcrumbs) {
 
 Breadcrumbs::register('schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
-	$breadcrumbs->push("Schedule", route('schedule_path'));
+	if(Session::has('conference_id'))
+	{
+		$conference_id = Session::get('conference_id');
+
+		$breadcrumbs->push("Schedule", route('schedule_path', ['conference_id' => $conference_id]));
+	}
+	else
+		$breadcrumbs->push("Schedule", route('schedule_path'));
 
 });
 
 
 Breadcrumbs::register('session', function($breadcrumbs) {
 	$breadcrumbs->parent('schedule');
-	$breadcrumbs->push("Session", route('session_path'));
+
+	if(Session::has('session_id'))
+	{
+		$session_id = Session::get('session_id');
+		$breadcrumbs->push("Session {$session_id}", route('session_path', ['conference_id' => $session_id]));
+	}
+	else
+		$breadcrumbs->push("Session", route('conference_path'));
 
 });

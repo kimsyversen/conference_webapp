@@ -23,6 +23,7 @@ class ConferenceScheduleController extends \BaseController {
 		$response = $this->request->send();
 
 
+
 		return View::make('conference.schedule.index')->with(['data' => $response]);
 	}
 }

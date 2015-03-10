@@ -21,15 +21,15 @@ class ConferenceController extends \BaseController {
 		return View::make('conference.index')->with($response);
 	}
 
-	public function getConferenceById($id)
+	public function getConferenceById($conference_id)
 	{
-		$this->request->createRequest('GET',  "{$this->api_endpoint}/conferences/{$id}");
+		$this->request->createRequest('GET',  "{$this->api_endpoint}/conferences/{$conference_id}");
 
 		/**
 		 * Insert conference_id to session so users
 		 * may go to their profile relative to a conference (see nav.blade.php)
 		 */
-		Session::put('conference_id', $id);
+		Session::put('conference_id', $conference_id);
 
 		$response = $this->request->send();
 

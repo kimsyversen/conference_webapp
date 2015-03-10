@@ -10,7 +10,7 @@
             </button>
 
             @if(Session::has('conference_id'))
-                <a class="navbar-brand" href="{{ route('conference_path', ['id' => Session::get('conference_id')])  }}">Conference {{ Session::get('conference_id') }}</a>
+                <a class="navbar-brand" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">Conference {{ Session::get('conference_id') }}</a>
             @else
                 <a class="navbar-brand" href="{{ route('home_path')}}">Home</a>
             @endif

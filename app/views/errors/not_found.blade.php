@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
+
     @include('layouts.partials.errors-and-messages')
 
     <div class="container">
