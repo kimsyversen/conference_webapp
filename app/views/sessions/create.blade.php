@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
+    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('login') ])
     @include('layouts.partials.errors-and-messages')
     @include('layouts.partials.page-header', ['text' => 'Sign In'])
 

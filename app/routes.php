@@ -29,3 +29,10 @@ Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' =>
 Route::get('conferences/{conference_id}/users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 Route::get('conferences/{conference_id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@index' ]);
+Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@store' ]);
+
+
+Route::get('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@index' ]);
+Route::post('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@store' ]);
+
+

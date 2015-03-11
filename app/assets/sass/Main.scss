@@ -1,8 +1,9 @@
 @import 'modules/navbar';
 @import 'modules/footer';
+@import 'modules/components/buttons';
 @import 'modules/components/forms';
 @import 'modules/components/conference_item';
-@import 'modules/components/schedule';
+@import 'modules/components/session';
 
 * {
   margin: 0;
@@ -22,7 +23,6 @@ html, body {
   min-height: 100%;
 }
 
-
 .page-header-hr {
   border-bottom: 1px solid #ccc;
   margin: 10px 0 0 10px;
@@ -35,4 +35,8 @@ html, body {
 .nopadding {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+textarea {
+  resize: none;
 }

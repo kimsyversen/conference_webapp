@@ -18,7 +18,7 @@
                                 {{ ConferenceHelper::timestampToBeingEnds( $conference['start_date']['date'], $conference['end_date']['date'], 'Y/d/m') }}</span>
                         </div>
                         <div class="description">
-                            <button class='btn form-control button' id="button"> Conference description</button>
+                            <button class='btn form-control button-light' id="button"> Conference description</button>
 
                             <div id="text" class="text hidden">
                                 <p> <i class="about"> About</i> {{ $conference['description'] }}</p>

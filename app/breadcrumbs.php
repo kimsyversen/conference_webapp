@@ -15,6 +15,11 @@ Breadcrumbs::register('registration', function($breadcrumbs) {
 	$breadcrumbs->push('Register account', route('registration_path'));
 });
 
+Breadcrumbs::register('login', function($breadcrumbs) {
+	$breadcrumbs->parent('home');
+	$breadcrumbs->push('Sign in', route('login_path'));
+});
+
 
 Breadcrumbs::register('conference', function($breadcrumbs) {
 	$breadcrumbs->parent('conferences');
@@ -45,7 +50,6 @@ Breadcrumbs::register('schedule', function($breadcrumbs) {
 	}
 	else
 		$breadcrumbs->push("Schedule", route('schedule_path'));
-
 });
 
 
@@ -54,10 +58,19 @@ Breadcrumbs::register('session', function($breadcrumbs) {
 
 	if(Session::has('session_id'))
 	{
+		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
-		$breadcrumbs->push("Session {$session_id}", route('session_path', ['conference_id' => $session_id]));
+
+		$breadcrumbs->push("Session {$session_id}", route('session_path', ['session_id' => $session_id, 'conference_id' => $conference_id]));
 	}
 	else
 		$breadcrumbs->push("Session", route('conference_path'));
+
+});
+
+
+Breadcrumbs::register('rating', function($breadcrumbs) {
+	$breadcrumbs->parent('session');
+	$breadcrumbs->push("Rating", route('rating_path'));
 
 });

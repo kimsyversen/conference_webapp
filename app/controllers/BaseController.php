@@ -27,13 +27,10 @@ class BaseController extends Controller {
 		}
 
 		if(!Session::has('access_token')) {
-			View::share('authenticated', false);
 			View::share('access_token', false);
-
 			return;
 		}
 
-		View::share('authenticated', true);
 		View::share('access_token', Session::get('access_token'));
 	}
 }

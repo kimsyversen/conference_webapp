@@ -30,16 +30,15 @@
 
         <div class="row buttons ">
             <div class="col-xs-6 nopadding">
-                <button class='btn button with-border button-schedule' id="button">
+                <button class='btn button-dark with-border button-schedule' id="button">
                     <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
                     <span class="button-text">Add to schedule</span></button>
             </div>
             <div class="col-xs-6 nopadding">
-                <button class='btn button button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
                     <span class="button-text">Read more </span>
                 </button>
             </div>
         </div>
     </div>
-
 </div>

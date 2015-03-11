@@ -27,7 +27,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                @if($authenticated)
+                @if(Session::has('access_token')))
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-user navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

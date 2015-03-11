@@ -32,5 +32,9 @@ class ConferenceSessionsController extends \BaseController {
 		return View::make('conference.sessions.index')->with(['data' => $response]);
 	}
 
+	public function store()
+	{
+		return Request::all();
+	}
 
 }

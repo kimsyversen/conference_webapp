@@ -16,7 +16,6 @@ App::before(function($request)
 	//Manage session
 	if(Session::has('access_token'))
 	{
-
 		$access_token = Session::get('access_token');
 
 		if(isset($access_token['expires_at'])) {
@@ -87,16 +86,10 @@ Route::filter('guest', function()
 	if (Auth::check()) return Redirect::to('/');
 });
 
-Route::filter('not_authenticated', function()
-{
-	if (!Session::has('access_token'))
-		return Redirect::to('/home');
-});
-
 Route::filter('authenticated', function()
 {
-	if (Session::has('access_token'))
-		return Redirect::to('/home');
+	if (!Session::has('access_token'))
+		return Redirect::route('login_path')->with('messages', ['You must be authenticated to do access that page']);
 });
 
 /*
