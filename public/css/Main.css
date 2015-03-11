@@ -22,7 +22,8 @@
   -webkit-transition: 1s;
           transition: 1s; }
   .button-dark:hover {
-    background-color: #d7d9d9; }
+    background-color: #d7d9d9;
+    border: 1px solid #c3c3c3; }
 
 .button-light {
   background-color: #f6f6f6;
@@ -32,7 +33,8 @@
           transition: 1s;
   margin-top: 0.4em; }
   .button-light:hover {
-    background-color: #c3c3c3; }
+    background-color: #c3c3c3;
+    border: 1px solid #9b9f9f; }
 
 a.button-link {
   text-decoration: none !important;
