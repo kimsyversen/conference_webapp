@@ -7,6 +7,7 @@
         <!-- Heading -->
         @include('layouts.partials.page-header', ['text' => 'Schedule'])
 
+
         @unless(Session::has('errors'))
             <div class='row'>
                 <!-- Parse each group-->
@@ -17,8 +18,14 @@
                     @foreach($sessionGroup['sessions'] as $session)
                         @include('conference.sessions.partials.session', ['session' => $session])
                     @endforeach
+
                 @endforeach
             </div>
         @endunless
     </div>
 @stop
+
+
+
+
+

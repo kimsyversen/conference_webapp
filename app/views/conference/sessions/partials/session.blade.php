@@ -8,7 +8,6 @@
                 <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
             </div>
             <div class="col-xs-10 title">
-
                 <h4> <a href="/{{ $session['links']['session']['uri'] }}" rel="self">{{ $session['title'] }}</a></h4>
             </div>
         </div>
@@ -28,13 +27,14 @@
             </div>
         </div>
 
-        <div class="row buttons ">
+        <div class="row buttons">
             <div class="col-xs-6 nopadding">
                 <button class='btn button-dark with-border button-schedule' id="button">
                     <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
                     <span class="button-text">Add to schedule</span></button>
             </div>
-            <div class="col-xs-6 nopadding">
+
+            <div class="col-xs-6 nopadding button-more-parent">
                 <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
                     <span class="button-text">Read more </span>
                 </button>

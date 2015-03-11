@@ -34,6 +34,14 @@ Breadcrumbs::register('conference', function($breadcrumbs) {
 });
 
 
+Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
+	$breadcrumbs->parent('conference');
+	$breadcrumbs->push("Your schedule", route('personal_schedule_path'));
+
+});
+
+
+
 Breadcrumbs::register('profile', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
 	$breadcrumbs->push("Your profile", route('profile_path'));
@@ -43,11 +51,7 @@ Breadcrumbs::register('profile', function($breadcrumbs) {
 Breadcrumbs::register('schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
 	if(Session::has('conference_id'))
-	{
-		$conference_id = Session::get('conference_id');
-
-		$breadcrumbs->push("Schedule", route('schedule_path', ['conference_id' => $conference_id]));
-	}
+		$breadcrumbs->push("Schedule", route('schedule_path', ['conference_id' => Session::get('conference_id')]));
 	else
 		$breadcrumbs->push("Schedule", route('schedule_path'));
 });
@@ -71,6 +75,6 @@ Breadcrumbs::register('session', function($breadcrumbs) {
 
 Breadcrumbs::register('rating', function($breadcrumbs) {
 	$breadcrumbs->parent('session');
-	$breadcrumbs->push("Rating", route('rating_path'));
+	$breadcrumbs->push("Rate session", route('rating_path'));
 
 });

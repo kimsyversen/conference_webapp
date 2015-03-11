@@ -12,18 +12,10 @@ class ConferenceScheduleController extends \BaseController {
 
 	public function index($conference_id)
 	{
-		$this->request->createRequest(
-			'GET',
-			"{$this->api_endpoint}/conferences/{$conference_id}/schedule",
-			[],
-			[],
-			[]
-		);
+		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 
 		$response = $this->request->send();
 
-
-
-		return View::make('conference.schedule.index')->with(['data' => $response]);
+		return View::make('conference.schedule.conference.index')->with(['data' => $response]);
 	}
 }

@@ -1,0 +1,53 @@
+.session-item {
+  background-color: rgb(255, 255, 255);
+  margin: 1em;
+
+  a {
+    text-decoration: underline;
+  }
+
+  .header {
+
+    .time {
+      font-size: 0.8em;
+      float: right;
+      display: block;
+    }
+    .location {
+      font-size: 0.5em
+    }
+
+    .avatar {
+      padding: 0.5em 0 0 1em;
+      float: left;
+      font-size: 1.5em;
+
+    }
+    .title {
+      padding: 0.5em 0 0.5em 0;
+      font-size: 1em;
+    }
+
+  }
+
+  .description-long {
+    padding: 1em;
+  }
+  .description-short  {
+    padding: 1em;
+  }
+
+  .buttons {
+    .with-border {
+      border-right: 1px dashed #000;
+    }
+
+
+  }
+
+  .session-information {
+    .location {
+      font-size: 1em;
+    }
+  }
+}

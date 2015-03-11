@@ -34,6 +34,10 @@
   .button-light:hover {
     background-color: #c3c3c3; }
 
+a.button-link {
+  text-decoration: none !important;
+  color: inherit; }
+
 .conference-form {
   background-color: white;
   padding: 3em; }
