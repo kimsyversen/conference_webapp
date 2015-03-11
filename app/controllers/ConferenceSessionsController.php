@@ -22,18 +22,7 @@ class ConferenceSessionsController extends \BaseController {
 		$response = $this->request->send();
 
 
-
-
-		if(Session::has('access_token'))
-		{
-			$this->request->createTokenRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
-			$rateResponse = $this->request->send();
-
-			if(isset($rateResponse['data']['rateable']))
-				return View::make('conference.sessions.index')->with('data', array_merge($response, ['rateable' => true]));
-		}
-
-		return View::make('conference.sessions.index')->with('data', array_merge($response, ['rateable' => false]));
+		return View::make('conference.sessions.index')->with('data', $response);
 	}
 
 	public function store()
