@@ -30,13 +30,14 @@
 
                         {{ Form::selectRange(
                             'value',
-                            0, 5,
+                            1, 5,
                             null,
                             ['class' => 'form-control']);
                         }}
                     </div>
 
                     <div class="form-group">
+                        {{ Form::label('comment', 'Comment:', ['class' => 'control-label']) }}
                         {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => 3]) }}
                     </div>
 
@@ -45,9 +46,7 @@
                     </div>
                     {{ Form::close() }}
                 </div>
-
-            </div>
-
+        </div>
 
         @else
             <div class="row">

@@ -9,27 +9,20 @@
   margin: 0;
 }
 
-body {
-  margin-bottom: 200px;
-}
-
 html, body {
   height: 100%;
+  min-height: 100%;
   background-color: darken(#E9EAEA, 7%);
 }
 
 .container {
-  /* To push footer to bottom of page*/
+  /* Push footer to bottom of page */
   min-height: 100%;
 }
 
 .page-header-hr {
   border-bottom: 1px solid #ccc;
   margin: 10px 0 0 10px;
-}
-
-.conference-well {
-  background-color: darken(rgb(255, 255, 255), 0%);
 }
 
 .nopadding {

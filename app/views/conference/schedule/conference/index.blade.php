@@ -22,6 +22,8 @@
                 @endforeach
             </div>
         @endunless
+
+        @include('conference.partials.goto-top')
     </div>
 @stop
 

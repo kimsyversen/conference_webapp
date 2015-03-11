@@ -35,5 +35,4 @@ class ConferenceController extends \BaseController {
 
 		return View::make('conference.show')->with($response);
 	}
-
 }

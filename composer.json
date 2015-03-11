@@ -10,7 +10,8 @@
         "laracasts/presenter": "0.1.*",
         "guzzle/guzzle": "3.9.*@dev",
         "laracasts/flash": "~1.2",
-		"davejamesmiller/laravel-breadcrumbs": "2.*"
+		"davejamesmiller/laravel-breadcrumbs": "2.*",
+        "laracasts/utilities": "~1.0"
 
 	},
     "require-dev": {

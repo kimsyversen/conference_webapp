@@ -12,6 +12,11 @@ class RegistrationController extends BaseController {
 
 	public function create()
 	{
+	/*	JavaScript::put([
+			'conference_id' => Session::get('conference_id'),
+			'session_id' => Session::get('session_id'),
+		]);*/
+
 		return View::make('conference.registration.create');
 	}
 

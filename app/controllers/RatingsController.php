@@ -40,7 +40,12 @@ class RatingsController extends BaseController {
 	public function store()
 	{
 
-		$conference_id = Session::get('conference_id');
+		if(Request::ajax())
+		{
+			return "Yes!";
+		}
+
+/*		$conference_id = Session::get('conference_id');
 		$session_id =  Session::get('session_id');
 
 		$data = [
@@ -59,7 +64,7 @@ class RatingsController extends BaseController {
 
 		dd($response);
 
-		 return "store";
+		 return "store";*/
 	}
 
 

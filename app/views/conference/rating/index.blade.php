@@ -8,5 +8,10 @@
 
     @include('conference.rating.partials.rating')
 
+
+
+
+
+
 @stop
 
