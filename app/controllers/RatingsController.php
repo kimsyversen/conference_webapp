@@ -25,17 +25,17 @@ class RatingsController extends BaseController {
 
 					if (isset($response['data'][0]['code']))
 					{
-						/*$view = View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
-						return $view;*/
+						$view = View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
+						return $view;
 
-						return $response['data'][0]['code'];
+					/*	return $response['data'][0]['code'];*/
 					}
 				}
 				else
 					//If user is not authenticated
-					/*$view = View::Make('conference.sessions.partials.rating', ['status' => -1]);
-					return $view;*/
-					return -1;
+					$view = View::Make('conference.sessions.partials.rating', ['status' => -1]);
+					return $view;
+					//return -1;
 		}
 	}
 

@@ -4,8 +4,8 @@
     <div class="col-md-10 session-item ">
         @if($status == -1)
             @include('conference.sessions.partials.rating_status.status_-1')
-       {{-- @elseif($status == 0)
-            @include('conference.sessions.partials.rating_status.status_0')--}}
+        @elseif($status == 0)
+            @include('conference.sessions.partials.rating_status.status_0')
         @elseif($status == 1)
             @include('conference.sessions.partials.rating_status.status_1')
         @elseif($status == 2)

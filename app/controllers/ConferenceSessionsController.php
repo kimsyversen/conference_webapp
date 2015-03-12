@@ -20,9 +20,25 @@ class ConferenceSessionsController extends \BaseController {
 	{
 		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
 
+		$status = -1;
 		$response = $this->request->send();
 
-		return View::make('conference.sessions.index')->with('data', $response);
+		//If user is authenticated
+		if (Session::has('access_token'))
+		{
+			$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+
+			$response2 = $this->request->send();
+
+
+			if(isset($response2['data'][0]['code']))
+				$status = $response2['data'][0]['code'];
+			else
+				$status = -1;
+
+		}
+
+		return View::make('conference.sessions.index')->with(['data' =>  $response, 'status' => $status]);
 	}
 
 	public function store()

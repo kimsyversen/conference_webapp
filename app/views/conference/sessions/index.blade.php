@@ -14,32 +14,8 @@
 
         @include('conference.partials.delimiter', ['text' => 'Rate session', 'value' => ''])
 
-        <a href="#" id="initialize-rating"></a>
+        @include('conference.sessions.partials.rating', ['status' => $status])
 
-
-        {{-- When AJAX html binding works as expected, this can be removed and ratings.js can bind data to a div here --}}
-        <div class="row">
-            <!-- Push one column to left -->
-            <div class="col-md-1"></div>
-            <div class="col-md-10 session-item ">
-
-            <div class="status--1 hidden">
-                @include('conference.sessions.partials.rating_status.status_-1')
-            </div>
-            <div class="status-0 hidden">
-                @include('conference.sessions.partials.rating_status.status_0')
-            </div>
-            <div class="status-1 hidden">
-                @include('conference.sessions.partials.rating_status.status_1')
-            </div>
-            <div class="status-2 hidden">
-                @include('conference.sessions.partials.rating_status.status_2')
-            </div>
-            <div class="status-3 hidden">
-                @include('conference.sessions.partials.rating_status.status_3')
-            </div>
-        </div>
-        </div>
     @endunless
 
     @include('conference.partials.goto-top')
