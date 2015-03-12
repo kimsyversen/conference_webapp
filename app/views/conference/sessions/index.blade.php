@@ -17,11 +17,21 @@
 
         <a href="#" id="initialize-rating"></a>
 
-        <div class="user-can-rate hidden">
-            @include('conference.sessions.partials.rating', ['rateable' => true])
+
+        <div class="user-must-be-authenticated hidden">
+            @include('conference.sessions.partials.rating', ['status' => -1])
         </div>
-        <div class="user-not-rate hidden">
-            @include('conference.sessions.partials.rating', ['rateable' => false])
+        <div class="user-can-rate hidden">
+            @include('conference.sessions.partials.rating', ['status' => 0])
+        </div>
+        <div class="session-does-not-belong-to-conference hidden">
+            @include('conference.sessions.partials.rating', ['status' => 1])
+        </div>
+        <div class="user-session-must-end hidden">
+            @include('conference.sessions.partials.rating', ['status' => 2])
+        </div>
+        <div class="user-already-rated hidden">
+            @include('conference.sessions.partials.rating', ['status' => 3])
         </div>
     @endunless
 
@@ -32,6 +42,5 @@
     @parent
     {{ HTML::script('js/ratings/ratings.js') }}
 @stop
-
 
 

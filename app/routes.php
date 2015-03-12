@@ -3,12 +3,19 @@
 Route::bind('conference_id', function($value, $route)
 {
 	Session::put('conference_id', $value);
+/*	JavaScript::put([
+		'conferenceId' => Session::get('conference_id'),
 
+	]);*/
 	return $value;
 });
 
 Route::bind('session_id', function($value, $route)
 {
+/*	JavaScript::put([
+
+		'sessionId' => Session::get('session_id'),
+	]);*/
 	Session::put('session_id', $value);
 
 	return $value;
@@ -34,17 +41,13 @@ Route::get('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'sessi
 Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@store' ]);
 
 
-//Route::get('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@index' ]);
-Route::get('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@index2' ]);
 Route::post('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@store' ]);
 
 
+/**
+ * AJAX Routes
+ */
 
-Route::get('/test', function(){
-
-	if(Request::ajax())
-		return "Wuhu!!! AJAX! :D";
-
-});
+Route::get('ajax/see_if_user_has_rated', [ 'as' => 'rating_path', 'uses' => 'RatingsController@show' ]);
 
 

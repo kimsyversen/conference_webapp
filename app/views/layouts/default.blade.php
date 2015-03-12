@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     {{ HTML::style('css/Main.css') }}
-    {{ HTML::style('css/star-rating.min.css') }}
 </head>
 <body>
     <header>
@@ -14,9 +13,8 @@
     </header>
     <div class="container">
         @yield('content')
-
-
     </div>
+
     @include('layouts.partials.footer')
 
     @section('javascript')

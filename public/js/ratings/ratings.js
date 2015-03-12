@@ -29,25 +29,35 @@
         e.preventDefault();
     });
 
+     $('#initialize-rating').click(function(e){
+          e.preventDefault();
 
-    $('#initialize-rating').click(function(e){
-        e.preventDefault();
+          $.get('/ajax/see_if_user_has_rated', function(data)
+          {
+              var status = data;
 
-        $.get('/conferences/" + conference_id  +  "/sessions/" +  session_id +  "/rate', function(data)
-        {
-            determineRateElement(data['data']['rateable']);
-        });
-    });
+              alert(status);
 
-    function determineRateElement(rateable) {
-        if(rateable === true)
-            $(".user-can-rate").removeClass('hidden');
-        else
-            $(".user-not-rate").removeClass('hidden');
-    }
+              //If user must be authenticated
+              if(status == -1)
+                  $(".user-must-be-authenticated").removeClass('hidden');
+              //If user can rate the session
+              if(status == 0)
+                  $(".user-can-rate").removeClass('hidden');
+              //Session does not belongs to conference. This should not happen. Ever.
+              if(status == 1)
+                  $(".session-does-not-belong-to-conference").removeClass('hidden');
+              //Session has not ended
+              if(status == 2)
+                  $(".user-session-must-end").removeClass('hidden');
+              if(status == 3)
+                  $(".user-already-rated").removeClass('hidden');
 
 
+          });
+      });
 
     $('#initialize-rating').click();
+
 })();
 

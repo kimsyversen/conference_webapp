@@ -119,6 +119,9 @@ class Request  {
 		catch(ClientErrorResponseException $ex)
 		{
 			$errorCode = $ex->getResponse()->getStatusCode();
+
+			if($errorCode == 400)
+				return $this->responseFormatter->error($ex->getMessage());
 			/**
 			 * Check for 4xx status codes that is returned from the API
 			 */
