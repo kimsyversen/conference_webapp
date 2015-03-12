@@ -4,5 +4,3 @@
         <a href="#top">To top of the page</a>
     </div>
 </div>
-
-g
