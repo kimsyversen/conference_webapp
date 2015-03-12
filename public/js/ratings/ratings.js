@@ -28,7 +28,7 @@
 
           $.get('/ajax/user_get_rating', function(data)
           {
-              if(data == -1)
+             if(data == -1)
                 $('.status--1').removeClass('hidden');
               if(data == 0)
                   $('.status-0').removeClass('hidden');

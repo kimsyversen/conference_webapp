@@ -16,6 +16,7 @@
 
         <a href="#" id="initialize-rating"></a>
 
+
         {{-- When AJAX html binding works as expected, this can be removed and ratings.js can bind data to a div here --}}
         <div class="row">
             <!-- Push one column to left -->

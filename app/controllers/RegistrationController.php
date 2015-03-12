@@ -27,9 +27,6 @@ class RegistrationController extends BaseController {
 
 		$response = $this->request->send();
 
-
-
-
 		if(isset($response['errors']))
 			return Redirect::back()->with('errors',$response['errors']);
 

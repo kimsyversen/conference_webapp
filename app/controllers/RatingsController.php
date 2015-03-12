@@ -6,10 +6,7 @@ class RatingsController extends BaseController {
 
 	function __construct(\Uninett\Api\Request $request)
 	{
-		//$this->beforeFilter('authenticated');
-
 		$this->request = $request;
-
 		parent::__construct();
 	}
 
@@ -17,11 +14,6 @@ class RatingsController extends BaseController {
 	{
 		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
-
-		JavaScript::put([
-			'foo' => 'bar',
-			'age' => 29
-		]);
 
 		if (Request::ajax())
 		{
@@ -59,8 +51,6 @@ class RatingsController extends BaseController {
 		{
 			//If user is authenticated
 			if (Session::has('access_token')) {
-
-
 				$data = [
 					'conference_id' => Session::get('conference_id'),
 					'session_id' => Session::get('session_id')
