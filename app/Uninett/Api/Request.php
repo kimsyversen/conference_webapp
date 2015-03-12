@@ -87,9 +87,20 @@ class Request  {
 	 * @param null $body
 	 * @param array $options
 	 */
-	public function createTokenRequest($method, $url, $headers = [], $body = null, $options = [])
+	public function createTokenGetRequest($method, $url, $headers = [], $body = null, $options = [])
 	{
 		$url = $url . "?access_token=" . Session::get('access_token')['access_token'];
+
+		$this->createRequest($method, $url, $headers, $body, $options);
+	}
+
+	public function createTokenPostRequest($method, $url, $headers = [], $body = null, $options = [])
+	{
+		$access_token =  ["access_token" => Session::get('access_token')['access_token'] ];
+
+		$body = array_merge($access_token, $body);
+
+		$headers = array_merge($access_token, $headers);
 
 		$this->createRequest($method, $url, $headers, $body, $options);
 	}
@@ -121,7 +132,7 @@ class Request  {
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			if($errorCode == 400)
-				return $this->responseFormatter->error($ex->getMessage());
+				return $this->responseFormatter->error(['Bad request']);
 			/**
 			 * Check for 4xx status codes that is returned from the API
 			 */

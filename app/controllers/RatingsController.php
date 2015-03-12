@@ -27,7 +27,7 @@ class RatingsController extends BaseController {
 		{
 				//If user is authenticated
 				if (Session::has('access_token')) {
-					$this->request->createTokenRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+					$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
 					$response = $this->request->send();
 
@@ -49,32 +49,44 @@ class RatingsController extends BaseController {
 
 	public function store()
 	{
-	/*	$conference_id = Session::get('conference_id');
-		$session_id =  Session::get('session_id');*/
+		$conference_id = Session::get('conference_id');
+		$session_id =  Session::get('session_id');
 
 
 		//This method does not account for posting rating for the same session twice.
 		//This should be handled by the get method.
 		if (Request::ajax())
 		{
-			return 1;
-
-/*			//If user is authenticated
+			//If user is authenticated
 			if (Session::has('access_token')) {
+
 
 				$data = [
 					'conference_id' => Session::get('conference_id'),
-					'session_id' => Session::get('session_id'),
+					'session_id' => Session::get('session_id')
 				];
 
-				$data = array_merge($data, Request::all());
+				Request::merge($data);
 
-				$this->request->createTokenRequest('POST', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings",
+				$requestData = Request::except('_token');
+
+				$url = "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings";
+
+				Log::info($url);
+
+				foreach($requestData as $key => $value)
+					Log::info($key . " => " . $value);
+
+				$this->request->createTokenPostRequest(
+					'POST',
+					"{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings",
 					[],
-					[$data],
+					$requestData,
 					[]);
 
 				$response = $this->request->send();
+
+
 
 				return $response;
 
@@ -82,7 +94,7 @@ class RatingsController extends BaseController {
 
 			//TODO: What if not authenticated?
 
-			return false;*/
+			return false;
 		}
 		else
 			return "Not AJAX";

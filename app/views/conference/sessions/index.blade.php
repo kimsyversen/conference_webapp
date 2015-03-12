@@ -16,6 +16,7 @@
 
         <a href="#" id="initialize-rating"></a>
 
+        {{-- When AJAX html binding works as expected, this can be removed and ratings.js can bind data to a div here --}}
         <div class="row">
             <!-- Push one column to left -->
             <div class="col-md-1"></div>
@@ -37,7 +38,7 @@
                 @include('conference.sessions.partials.rating_status.status_3')
             </div>
         </div>
-
+        </div>
     @endunless
 
     @include('conference.partials.goto-top')

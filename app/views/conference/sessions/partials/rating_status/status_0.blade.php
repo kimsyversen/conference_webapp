@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <div class="description-long">
+        <div class="rating-description description-long">
             <p>Here you can give this session a rating and also give comments on it.</p>
         </div>
     </div>
@@ -18,12 +18,12 @@
 <div class="row">
     <div class="col-xs-12">
 
-        {{ Form::open(['data-remote', 'route' => 'post']) }}
+        {{ Form::open(['data-remote', 'route' => 'ajax.user.post.rating']) }}
         <div class="form-group">
-            {{ Form::label('value', 'Rate:', ['class' => 'control-label']) }}
+            {{ Form::label('score', 'Rate:', ['class' => 'control-label']) }}
 
             {{ Form::selectRange(
-                'value',
+                'score',
                 1, 5,
                 null,
                 ['class' => 'form-control']);

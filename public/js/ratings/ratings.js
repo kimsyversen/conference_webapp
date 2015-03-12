@@ -12,14 +12,12 @@
             data: form.serialize(),
             success: function(data) {
                 e.preventDefault();
-                alert('Success');
 
-               form.remove();
-                var descriptionLong = form.closest('.description-long');
-                descriptionLong.children().empty();
+                form.remove();
 
-                descriptionLong.append("<div>" + "This session has been rated with the score  " + data.value +  "</div>");
-
+                var descriptionLong = $('.rating-description');
+                descriptionLong.empty();
+                descriptionLong.append("<div>" + "This session has been rated" + "</div>");
             }
         })();
         e.preventDefault();
