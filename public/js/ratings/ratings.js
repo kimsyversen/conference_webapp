@@ -2,9 +2,9 @@
 
     $('form[data-remote]').on('submit', function(e) {
         e.preventDefault();
-
         var form = $(this);
         var method = form.find('input[name="_method"]').val() || 'POST';
+        var url = form.prop('action');
 
         $.ajax({
             type: method,
@@ -12,17 +12,13 @@
             data: form.serialize(),
             success: function(data) {
                 e.preventDefault();
+                alert('Success');
 
-                form.remove();
-
+               form.remove();
                 var descriptionLong = form.closest('.description-long');
-
                 descriptionLong.children().empty();
 
-                descriptionLong.append("<div>" +
-                "This session has been rated with the score  " + data.value +
-
-                "</div>");
+                descriptionLong.append("<div>" + "This session has been rated with the score  " + data.value +  "</div>");
 
             }
         })();
@@ -32,28 +28,21 @@
      $('#initialize-rating').click(function(e){
           e.preventDefault();
 
-          $.get('/ajax/see_if_user_has_rated', function(data)
+          $.get('/ajax/user_get_rating', function(data)
           {
-              var status = data;
+              if(data == -1)
+                $('.status--1').removeClass('hidden');
+              if(data == 0)
+                  $('.status-0').removeClass('hidden');
+              if(data == 1)
+                  $('.status-1').removeClass('hidden');
+              if(data == 2)
+                  $('.status-2').removeClass('hidden');
+              if(data == 3)
+                  $('.status-3').removeClass('hidden');
 
-              alert(status);
-
-              //If user must be authenticated
-              if(status == -1)
-                  $(".user-must-be-authenticated").removeClass('hidden');
-              //If user can rate the session
-              if(status == 0)
-                  $(".user-can-rate").removeClass('hidden');
-              //Session does not belongs to conference. This should not happen. Ever.
-              if(status == 1)
-                  $(".session-does-not-belong-to-conference").removeClass('hidden');
-              //Session has not ended
-              if(status == 2)
-                  $(".user-session-must-end").removeClass('hidden');
-              if(status == 3)
-                  $(".user-already-rated").removeClass('hidden');
-
-
+              //If we can use view::make in the controller, this can be used and rest can be removed
+              //$('.rating-div').append(data);
           });
       });
 

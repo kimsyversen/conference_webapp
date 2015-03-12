@@ -29,5 +29,4 @@ class ConferenceSessionsController extends \BaseController {
 	{
 		return Request::all();
 	}
-
 }

@@ -41,13 +41,13 @@ Route::get('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'sessi
 Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@store' ]);
 
 
-Route::post('conferences/{conference_id}/sessions/{session_id}/rate', [ 'as' => 'rating_path', 'uses' => 'RatingsController@store' ]);
+
 
 
 /**
  * AJAX Routes
  */
 
-Route::get('ajax/see_if_user_has_rated', [ 'as' => 'rating_path', 'uses' => 'RatingsController@show' ]);
-
+Route::get('ajax/user_get_rating', [ 'as' => 'get', 'uses' => 'RatingsController@show' ]);
+Route::post('ajax/user_get_rating', [ 'as' => 'post', 'uses' => 'RatingsController@store' ]);
 

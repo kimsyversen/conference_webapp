@@ -17,7 +17,8 @@
 
 <div class="row">
     <div class="col-xs-12">
-        {{ Form::open(['data-remote']) }}
+
+        {{ Form::open(['data-remote', 'route' => 'post']) }}
         <div class="form-group">
             {{ Form::label('value', 'Rate:', ['class' => 'control-label']) }}
 
@@ -40,3 +41,4 @@
         {{ Form::close() }}
     </div>
 </div>
+
