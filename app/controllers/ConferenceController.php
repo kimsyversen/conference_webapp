@@ -26,10 +26,11 @@ class ConferenceController extends \BaseController {
 		$this->request->createRequest('GET',  "{$this->api_endpoint}/conferences/{$conference_id}");
 
 		/**
+		 * TODO: REMOVE?
 		 * Insert conference_id to session so users
 		 * may go to their profile relative to a conference (see nav.blade.php)
 		 */
-		Session::put('conference_id', $conference_id);
+		/*Session::put('conference_id', $conference_id);*/
 
 		$response = $this->request->send();
 

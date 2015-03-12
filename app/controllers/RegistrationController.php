@@ -30,11 +30,10 @@ class RegistrationController extends BaseController {
 		if(isset($response['errors']))
 			return Redirect::back()->with('errors',$response['errors']);
 
-		return Redirect::route('login_path')->with(
-			[
+		return Redirect::route('login_path')->with([
 				'data' => $response,
 				'messages' => ['Account was successfully created. Check your email to verify your account']
-			]);
+		]);
 
 	}
 }

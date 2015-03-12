@@ -15,28 +15,22 @@ class RatingsController extends BaseController {
 		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
 
-		if (Request::ajax())
-		{
-				//If user is authenticated
-				if (Session::has('access_token')) {
-					$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+		if(Request::ajax())
+			if ($this->userIsAuthenticated()) {
+				$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
-					$response = $this->request->send();
+				$response = $this->request->send();
 
-					if (isset($response['data'][0]['code']))
-					{
-						$view = View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
-						return $view;
+				if (isset($response['data'][0]['code']))
+					return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
+			}
+			else
+				return View::Make('conference.sessions.partials.rating', ['status' => -1]);
 
-					/*	return $response['data'][0]['code'];*/
-					}
-				}
-				else
-					//If user is not authenticated
-					$view = View::Make('conference.sessions.partials.rating', ['status' => -1]);
-					return $view;
-					//return -1;
-		}
+
+		return Redirect::route('home_path')->with([
+			'errors' =>  ['Something went wrong when trying to display the rating form.']
+		]);
 	}
 
 	public function store()
@@ -44,13 +38,12 @@ class RatingsController extends BaseController {
 		$conference_id = Session::get('conference_id');
 		$session_id =  Session::get('session_id');
 
+		//This method does not account for posting rating for the same session twice. That should be handled by the get method.
 
-		//This method does not account for posting rating for the same session twice.
-		//This should be handled by the get method.
 		if (Request::ajax())
 		{
-			//If user is authenticated
-			if (Session::has('access_token')) {
+			if ($this->userIsAuthenticated()) {
+
 				$data = [
 					'conference_id' => Session::get('conference_id'),
 					'session_id' => Session::get('session_id')
@@ -59,13 +52,6 @@ class RatingsController extends BaseController {
 				Request::merge($data);
 
 				$requestData = Request::except('_token');
-
-				$url = "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings";
-
-				Log::info($url);
-
-				foreach($requestData as $key => $value)
-					Log::info($key . " => " . $value);
 
 				$this->request->createTokenPostRequest(
 					'POST',
@@ -76,19 +62,10 @@ class RatingsController extends BaseController {
 
 				$response = $this->request->send();
 
-
-
 				return $response;
-
 			}
-
-			//TODO: What if not authenticated?
-
-			return false;
 		}
 		else
 			return "Not AJAX";
-
 	}
-
 }

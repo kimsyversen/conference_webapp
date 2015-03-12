@@ -49,7 +49,7 @@ class SessionsController extends \BaseController {
 		if(isset($response['errors']) || is_null($response))
 			return Redirect::back()->with($response);
 
-		$this->putAccessTokenInSession($response);
+		$this->storeAccessTokenInSession($response);
 
 		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 	}
@@ -58,7 +58,7 @@ class SessionsController extends \BaseController {
 	 * Setup acccess_token in session, add expire time to be able to easy see when it expires
 	 * @param $response
 	 */
-	private function putAccessTokenInSession($response)
+	private function storeAccessTokenInSession($response)
 	{
 		$expire_time = ['expires_at' => Carbon::now()->addSeconds($response['expires_in'])];
 

@@ -11,25 +11,21 @@ class ConferenceSessionsController extends \BaseController {
 	}
 
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index($conference_id, $session_id)
 	{
 		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
 
+		//Assume user is not authenticated
 		$status = -1;
+
 		$response = $this->request->send();
 
 		//If user is authenticated
-		if (Session::has('access_token'))
+		if ($this->userIsAuthenticated())
 		{
 			$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
 			$response2 = $this->request->send();
-
 
 			if(isset($response2['data'][0]['code']))
 				$status = $response2['data'][0]['code'];
