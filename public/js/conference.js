@@ -33,6 +33,15 @@ $(document).ready(function(){
     });
 
 
+ /*   $(".alert button.close").click(function (e) {
+        $(this).parent().fadeOut('slow');
+    });
+    */
+    window.setTimeout(function() {
+        $(".alert-info").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+        });
+    }, 5000);
 
 
 });
