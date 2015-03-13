@@ -9,6 +9,7 @@ modules:
     enabled:
         - PhpBrowser
         - AcceptanceHelper
+        - Laravel4
     config:
         PhpBrowser:
-            url: 'http://localhost:8000'
+            url: 'http://localhost:8001'

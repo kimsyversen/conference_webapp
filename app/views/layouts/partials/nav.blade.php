@@ -18,11 +18,14 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences') }} </li>
+                <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
 
                 @if(Session::has('conference_id'))
-                    <li class="nav-item {{HTML::activeState('schedule_path')}}"> {{ link_to_route('schedule_path', 'Schedule', ['conference_id' => Session::get('conference_id')] ) }} </li>
-                    <li class="nav-item {{HTML::activeState('personal_schedule_path')}}"> {{ link_to_route('personal_schedule_path', 'Personal schedule', ['conference_id' => Session::get('conference_id')] ) }} </li>
+                    <li class="nav-item {{HTML::activeState('schedule_path')}}"> {{ link_to_route('schedule_path', 'Schedule', ['conference_id' => Session::get('conference_id')], ['name' => 'conference-schedule-link']  ) }} </li>
+
+                    @if(Session::has('access_token'))
+                        <li class="nav-item {{HTML::activeState('personal_schedule_path')}}"> {{ link_to_route('personal_schedule_path', 'Personal Schedule', ['conference_id' => Session::get('conference_id')], ['name' => 'personal-schedule-link']  ) }} </li>
+                    @endif
                 @endif
             </ul>
 
@@ -31,13 +34,13 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-user navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="nav-item">  {{ link_to_route('profile_path', "Profile", ['id' => Session::get('conference_id')] ) }} </li>
-                            <li class="nav-item"> {{ link_to_route('logout_path', 'Log out') }} </li>
+                            <li class="nav-item {{HTML::activeState('profile_path')}} ">  {{ link_to_route('profile_path', "Profile", ['id' => Session::get('conference_id')], ['name' => 'profile-link'] ) }} </li>
+                            <li class="nav-item {{HTML::activeState('logout_path')}} "> {{ link_to_route('logout_path', 'Log out', null, ['name' => 'logout-link']) }} </li>
                         </ul>
                     </li>
                 @else
-                    <li class="nav-item {{HTML::activeState('registration_path')}}"> {{ link_to_route('registration_path', 'Register') }} </li>
-                    <li class="nav-item {{HTML::activeState('login_path')}}"> {{ link_to_route('login_path', 'Login') }} </li>
+                    <li class="nav-item {{HTML::activeState('registration_path')}}"> {{ link_to_route('registration_path', 'Register', null, ['name' => 'register-link'] ) }} </li>
+                    <li class="nav-item {{HTML::activeState('login_path')}}"> {{ link_to_route('login_path', 'Login', null, ['name' => 'login-link'] ) }} </li>
                 @endif
             </ul>
         </div><!-- /.navbar-collapse -->

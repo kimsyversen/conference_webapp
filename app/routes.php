@@ -2,6 +2,7 @@
 //TODO Refactor
 
 
+
 Route::get('/', [ 'as' => 'home_path', 'uses' => 'HomeController@index' ]);
 Route::get('/home', [ 'as' => 'home_path', 'uses' => 'HomeController@index' ]);
 
