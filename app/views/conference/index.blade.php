@@ -1,11 +1,11 @@
-@extends('layouts.default')
+@extends('conference.layouts.default')
 @section('content')
     <div class="container">
-        @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
-        @include('layouts.partials.errors-and-messages')
+        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
+        @include('conference.layouts.partials.errors-and-messages')
 
         @unless(Session::has('errors'))
-            @include('layouts.partials.page-header', ['text' => 'Browse conferences'])
+            @include('conference.layouts.partials.page-header', ['text' => 'Browse conferences'])
             <div class='row'>
                 @include('conference.partials.conference-item')
             </div>

@@ -1,8 +1,8 @@
-@extends('layouts.default')
+@extends('conference.layouts.default')
 @section('content')
-    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('login') ])
-    @include('layouts.partials.errors-and-messages')
-    @include('layouts.partials.page-header', ['text' => 'Sign In'])
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('login') ])
+    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.layouts.partials.page-header', ['text' => 'Sign In'])
 
 
     <div class="col-xs-12 conference-form">

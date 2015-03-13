@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('conference.layouts.default')
 
 @section('content')
 
@@ -8,7 +8,7 @@
                 {{ Breadcrumbs::render('home') }}
             </div>
         </div>
-        @include('layouts.partials.errors-and-messages')
+        @include('conference.layouts.partials.errors-and-messages')
 
         <div class="row">
             <div class="col-xs-12">

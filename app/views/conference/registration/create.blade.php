@@ -1,10 +1,10 @@
-@extends('layouts.default')
+@extends('conference.layouts.default')
 
 @section('content')
-    @include('layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
-    @include('layouts.partials.errors-and-messages')
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
+    @include('conference.layouts.partials.errors-and-messages')
 
-    @include('layouts.partials.page-header', ['text' => 'Create account'])
+    @include('conference.layouts.partials.page-header', ['text' => 'Create account'])
         <div class="col-xs-12 conference-form">
 
             {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}

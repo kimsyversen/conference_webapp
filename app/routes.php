@@ -3,8 +3,8 @@
 
 
 
-Route::get('/', [ 'as' => 'home_path', 'uses' => 'HomeController@index' ]);
-Route::get('/home', [ 'as' => 'home_path', 'uses' => 'HomeController@index' ]);
+Route::get('/', [ 'as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
+
 
 Route::get('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@create' ]);
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);

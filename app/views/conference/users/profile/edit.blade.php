@@ -1,8 +1,8 @@
-@extends('layouts.default')
+@extends('conference.layouts.default')
 @section('content')
     <div class="row">
         <div class="col-md-6">
-            @include('layouts.partials.errors')
+            @include('conference.layouts.partials.errors')
 
             @unless(!isset($user['data']))
                 <?php $user = $user['data']; ?>
