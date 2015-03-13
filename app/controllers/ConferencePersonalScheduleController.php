@@ -2,26 +2,35 @@
 
 class ConferencePersonalScheduleController extends \BaseController {
 
+	private $request;
+
+	function __construct(\Uninett\Api\Request $request)
+	{
+		$this->request = $request;
+		parent::__construct();
+	}
+
+
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function index()
+
+	public function index($conference_id)
 	{
-		return View::make('conference.schedule.personal.index');
+		if($this->userIsAuthenticated())
+		{
+			$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal");
+
+			$response = $this->request->send();
+
+			return View::make('conference.schedule.personal.index')->with(['data' => $response]);
+		}
+
+		//TODO: Ta hensyn tiul at bruker ikke kan være det?
 	}
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
 
 
 	/**
