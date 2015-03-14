@@ -73,36 +73,14 @@ class Request  {
 	 */
 	public function createRequest($method, $url, $headers = [], $body = null, $options = [])
 	{
+		if(Session::get('access_token')['access_token'])
+			$headers = array_merge($headers, ['Authorization' =>  Session::get('access_token')['access_token']]);
+
 		$this->method = $method;
 		$this->url = $url;
 		$this->headers = $headers;
 		$this->body = $body;
 		$this->options = $options;
-	}
-
-	/**
-	 * @param $method
-	 * @param $url
-	 * @param array $headers
-	 * @param null $body
-	 * @param array $options
-	 */
-	public function createTokenGetRequest($method, $url, $headers = [], $body = null, $options = [])
-	{
-		$url = $url . "?access_token=" . Session::get('access_token')['access_token'];
-
-		$this->createRequest($method, $url, $headers, $body, $options);
-	}
-
-	public function createTokenPostRequest($method, $url, $headers = [], $body = null, $options = [])
-	{
-		$access_token =  ["access_token" => Session::get('access_token')['access_token'] ];
-
-		$body = array_merge($access_token, $body);
-
-		$headers = array_merge($access_token, $headers);
-
-		$this->createRequest($method, $url, $headers, $body, $options);
 	}
 
 	/**

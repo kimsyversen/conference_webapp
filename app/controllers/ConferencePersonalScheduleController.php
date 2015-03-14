@@ -21,7 +21,7 @@ class ConferencePersonalScheduleController extends \BaseController {
 	{
 		if($this->userIsAuthenticated())
 		{
-			$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal");
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal");
 
 			$response = $this->request->send();
 

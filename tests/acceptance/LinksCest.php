@@ -60,7 +60,7 @@ class LinksCest
 		$I->seeLink('Schedule', '/conferences/1/schedule');
 
 		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
-		$I->seeLink('Profile', '/conferences/1/users/profile');
+		$I->seeLink('Profile', '/profile');
 		$I->seeLink('Log out', '/logout');
 	}
 
@@ -80,7 +80,7 @@ class LinksCest
 		$I->seeLink('Register', '/register');
 
 		$I->dontSeeLink('Personal Schedule', '/conferences/1/schedule');
-		$I->dontSeeLink('Profile', '/conferences/1/users/profile');
+		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');
 
 	}

@@ -23,7 +23,7 @@ class ConferenceSessionsController extends \BaseController {
 		//If user is authenticated
 		if ($this->userIsAuthenticated())
 		{
-			$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
 			$response2 = $this->request->send();
 

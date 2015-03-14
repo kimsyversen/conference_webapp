@@ -14,7 +14,7 @@ class ProfileController extends BaseController {
 
 	public function profile()
 	{
-		$this->request->createTokenGetRequest('GET',"{$this->api_endpoint}/users/me");
+		$this->request->createRequest('GET',"{$this->api_endpoint}/users/me");
 
 		$response = $this->request->send();
 		return View::make('conference.users.profile.index')->with(compact('response'));

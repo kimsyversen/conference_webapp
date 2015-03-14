@@ -17,7 +17,7 @@ class RatingsController extends BaseController {
 
 		if(Request::ajax())
 			if ($this->userIsAuthenticated()) {
-				$this->request->createTokenGetRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+				$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
 				$response = $this->request->send();
 
@@ -53,7 +53,7 @@ class RatingsController extends BaseController {
 
 				$requestData = Request::except('_token');
 
-				$this->request->createTokenPostRequest(
+				$this->request->createRequest(
 					'POST',
 					"{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings",
 					[],
