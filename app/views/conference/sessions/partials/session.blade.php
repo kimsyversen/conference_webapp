@@ -27,18 +27,26 @@
         </div>
 
         <div class="row buttons">
-            <div class="col-xs-6 nopadding">
-                <button class='btn button-dark with-border button-schedule' id="button">
-                    <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                    <span class="button-text">Add to schedule</span></button>
-            </div>
 
-            <div class="col-xs-6 nopadding button-more-parent">
+        @if($authenticated)
+                <div class="col-xs-6 nopadding">
+                    <button class='btn button-dark with-border button-schedule' id="add-to-schedule" value="{{ $session['id']  }}">
+                        <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        <span class="button-text">Add to schedule</span></button>
+                </div>
+
+                <div class="col-xs-6 nopadding button-more-parent">
+                    <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        <span class="button-text">Read more</span>
+                    </button>
+                </div>
+        @else
+            <div class="col-xs-12 nopadding button-more-parent">
                 <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                    <span class="button-text">Read more </span>
+                    <span class="button-text">Read more</span>
                 </button>
             </div>
+        @endif
         </div>
     </div>
-
 </div>

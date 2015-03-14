@@ -39,6 +39,20 @@ class ConferenceSessionsController extends \BaseController {
 
 	public function store()
 	{
-		return Request::all();
+		Log::info('Trying to store session in personal schedule');
+			$conference_id = Session::get('conference_id');
+
+		if(Request::ajax())
+		{
+
+			$this->request->createRequest('POST', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal",
+			[],
+			['session_id' => Request::get('session_id')],
+			[]);
+
+			$this->request->send();
+
+			return "We just did a ajax post request!";
+		}
 	}
 }

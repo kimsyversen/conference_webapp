@@ -1,6 +1,5 @@
 @extends('conference.layouts.default')
 
-{{--
 @section('content')
     @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
 
@@ -26,4 +25,4 @@
 @section('javascript')
     @parent
     {{ HTML::script('js/ratings/ratings.js') }}
-@stop--}}
+@stop

@@ -84,6 +84,31 @@ class Request  {
 	}
 
 	/**
+	 * @param $method
+	 * @param $url
+	 * @param array $headers
+	 * @param null $body
+	 * @param array $options
+	 */
+	public function createTokenGetRequest($method, $url, $headers = [], $body = null, $options = [])
+	{
+
+
+		$this->createRequest($method, $url, $headers, $body, $options);
+	}
+
+/*	public function createTokenPostRequest($method, $url, $headers = [], $body = null, $options = [])
+	{
+		$access_token =  ["access_token" => Session::get('access_token')['access_token'] ];
+
+		$body = array_merge($access_token, $body);
+
+		$headers = array_merge($access_token, $headers);
+
+		$this->createRequest($method, $url, $headers, $body, $options);
+	}*/
+
+	/**
 	 * @return array
 	 */
 	public function send()
@@ -125,7 +150,7 @@ class Request  {
 				$response = "";
 				foreach($ex->getResponse()->json()['errors'] as $messages)
 					foreach($messages as  $message)
-					$response[] = $message;
+						$response[] = $message;
 
 				return $this->responseFormatter->error($response);
 			}

@@ -1,4 +1,37 @@
 $(document).ready(function(){
+
+
+
+   $('.session-item').on('click', '#add-to-schedule', function(e){
+      e.preventDefault();
+
+        var button = $(this);
+
+        //Find URL to resource
+        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href'); //.find('h4 a').attr('href');
+
+
+        var sessionId = button.attr('value');
+        console.log(url);
+
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: {session_id: sessionId},
+            success: function(data) {
+                alert(data);
+
+                //TODO: Change button
+
+                //TODO: Insert notification?
+            },
+            error: function(data)
+            {
+                console.log('Error!!!');
+            }
+        })
+    });
+
     $(".description").on("click", "button", function(){
         var isHidden = $(this).parent().find('.text').hasClass('hidden');
         var parent = $(this).parent().find('.text');
@@ -47,6 +80,7 @@ $(document).ready(function(){
             $(this).remove();
         });
     }, 5000);
+
 
 
 
