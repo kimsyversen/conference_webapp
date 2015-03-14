@@ -19,7 +19,7 @@ Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceCon
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceScheduleController@index' ]);
 
-Route::get('conferences/{conference_id}/users/profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
+Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 Route::get('conferences/{conference_id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/schedule/personal', [ 'as' => 'personal_schedule_path', 'uses' => 'ConferencePersonalScheduleController@index' ]);
 

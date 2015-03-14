@@ -34,7 +34,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-user navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="nav-item {{HTML::activeState('profile_path')}} ">  {{ link_to_route('profile_path', "Profile", ['id' => Session::get('conference_id')], ['name' => 'profile-link'] ) }} </li>
+                            <li class="nav-item {{HTML::activeState('profile_path')}} ">  {{ link_to_route('profile_path', "Profile", null, ['name' => 'profile-link'] ) }} </li>
                             <li class="nav-item {{HTML::activeState('logout_path')}} "> {{ link_to_route('logout_path', 'Log out', null, ['name' => 'logout-link']) }} </li>
                         </ul>
                     </li>

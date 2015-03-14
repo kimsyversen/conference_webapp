@@ -43,7 +43,7 @@ Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 
 
 Breadcrumbs::register('profile', function($breadcrumbs) {
-	$breadcrumbs->parent('conference');
+	$breadcrumbs->parent('home');
 	$breadcrumbs->push("Your profile", route('profile_path'));
 
 });
