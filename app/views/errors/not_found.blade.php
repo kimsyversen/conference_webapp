@@ -9,7 +9,7 @@
 
             <p>Sorry, this page did not exist.</p>
 
-            <h3><a href="{{ route('home_path') }}">Go home</h3>
+            <h3><a href="{{ route('home_path') }}">Go home</a></h3>
         </div>
     </div>
 @stop

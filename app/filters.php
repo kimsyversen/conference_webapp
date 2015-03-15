@@ -27,7 +27,7 @@ App::before(function($request)
 			if($now->gt($expire_time))
 			{
 				Session::remove('access_token');
-				return Redirect::to('/home')->with('messages', ['You have been logged out because your session has timed out']);
+				return Redirect::to('/')->with('messages', ['You have been logged out because your session has timed out']);
 			}
 		}
 	}

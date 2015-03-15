@@ -7,7 +7,7 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
-Route::get('/', ['uses' => 'ConferenceController@index' ]);
+Route::get('/', ['as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page

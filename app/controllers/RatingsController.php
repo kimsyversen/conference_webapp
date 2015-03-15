@@ -27,8 +27,8 @@ class RatingsController extends BaseController {
 			else
 				return View::Make('conference.sessions.partials.rating', ['status' => -1]);
 
-
-		return Redirect::route('home_path')->with([
+//TODO: se på
+		return Redirect::route('conferences_path')->with([
 			'errors' =>  ['Something went wrong when trying to display the rating form.']
 		]);
 	}

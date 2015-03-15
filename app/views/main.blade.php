@@ -5,7 +5,7 @@
 
         <div class="row">
             <div class='col-xs-12'>
-                {{ Breadcrumbs::render('home') }}
+                {{ Breadcrumbs::render('conferences') }}
             </div>
         </div>
         @include('conference.layouts.partials.errors-and-messages')
