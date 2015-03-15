@@ -25,11 +25,12 @@ class BaseController extends Controller {
 	 */
 	protected function setupLayout()
 	{
+		View::share('authenticated', Session::has('access_token'));
+
+
 		if ( ! is_null($this->layout)) {
 			$this->layout = View::make($this->layout);
 		}
-
-		View::share('authenticated', Session::has('access_token'));
 	}
 
 	public function userIsAuthenticated()

@@ -18,6 +18,13 @@ $(document).ready(function(){
             type: 'post',
             url: url,
             data: {session_id: sessionId},
+            timeout: 15000,
+            beforeSend: function() {
+                //Vis loadingscreen?
+            },
+            complete: function() {
+              //remove loadingscreen?
+            },
             success: function(data) {
                 alert(data);
 
@@ -25,9 +32,10 @@ $(document).ready(function(){
 
                 //TODO: Insert notification?
             },
-            error: function(data)
+            error: function(request, errorType, errorMessage)
             {
-                console.log('Error!!!');
+                alert(errorMessage);
+                console.log(errorMessage);
             }
         })
     });

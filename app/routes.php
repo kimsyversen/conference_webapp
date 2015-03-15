@@ -3,7 +3,7 @@
 
 
 
-Route::get('/', [ 'as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
+
 
 
 Route::get('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@create' ]);
@@ -13,6 +13,7 @@ Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login'
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 
 
+Route::get('/', ['uses' => 'ConferenceController@index' ]);
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page

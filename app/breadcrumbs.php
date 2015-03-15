@@ -1,11 +1,7 @@
 <?php
 
-Breadcrumbs::register('home', function($breadcrumbs) {
-	$breadcrumbs->push('Home', route('home_path'));
-});
 
 Breadcrumbs::register('conferences', function($breadcrumbs) {
-	$breadcrumbs->parent('home');
 	$breadcrumbs->push('Conferences', route('conferences_path'));
 });
 
