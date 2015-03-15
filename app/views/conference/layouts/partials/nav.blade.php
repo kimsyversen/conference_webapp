@@ -22,10 +22,10 @@
                     <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
                 @endif
 
-                @if($authenticated)
+                    @if(Session::has('conference_id') && isset($authenticated))gs
                     <li class="nav-item {{HTML::activeState('schedule_path')}}"> {{ link_to_route('schedule_path', 'Schedule', ['conference_id' => Session::get('conference_id')], ['name' => 'conference-schedule-link']  ) }} </li>
 
-                    @if($authenticated)
+                    @if(Session::has('conference_id') && isset($authenticated))
                         <li class="nav-item {{HTML::activeState('personal_schedule_path')}}"> {{ link_to_route('personal_schedule_path', 'Personal Schedule', ['conference_id' => Session::get('conference_id')], ['name' => 'personal-schedule-link']  ) }} </li>
                     @endif
                 @endif
