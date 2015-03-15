@@ -11,9 +11,13 @@
     <header>
         @include('conference.layouts.partials.nav')
     </header>
-    <div class="container">
-        @yield('content')
+    <div class="wrapper">
+       <div class="container">
+            @yield('content')
+        </div>
+        <div class="push"></div>
     </div>
+
 
     @include('conference.layouts.partials.footer')
 

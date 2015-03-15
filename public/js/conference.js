@@ -40,40 +40,35 @@ $(document).ready(function(){
         })
     });
 
-    $(".description").on("click", "button", function(){
-        var isHidden = $(this).parent().find('.text').hasClass('hidden');
-        var parent = $(this).parent().find('.text');
+    $(".conference-item").on("click", "button", function(){
 
-       if(isHidden)
-            parent.removeClass('hidden');
-        else
-            parent.addClass('hidden');
+        //Find conference-item DOM element
+        var conferenceItem = $(this).parent().parent().parent();
+
+        //Find button
+        var button = conferenceItem.find('.button-more-conference');
+
+        //Toggle hidden on the description text
+        conferenceItem.find('.description .text').toggleClass('hidden');
+
+        //Change text on the button
+        button.text( button.text() === "Read about the conference" ? 'Close' : "Read about the conference");
     });
 
     $(".button-more").on("click", function(){
+        //Walk up in the DOM tree
         var parent = $(this).parent().parent().parent();
-        var description_long = parent.find('.description-long');
-        var button = parent.find('.button-more');
 
-        description_long.toggleClass('hidden');
+        //Find the different descriptions and toggle them
+        parent.find('.description-long').toggleClass('hidden');
+        parent.find('.description-short').toggleClass('hidden');
 
-        if(description_long.hasClass('hidden')) {
-/*            parent.find('.description-short').addClass('hidden');
-            description_long.removeClass('hidden');*/
+        //Find the last span inside the button
+        var buttonText = parent.find('.button-more span').last();
 
-            button.empty();
-            button.append("<span class='glyphicon glyphicon glyphicon glyphicon-calendar' aria-hidden='true'></span> Read more");
-        }
-        else
-        {
-       /*     parent.find('.description-short').removeClass('hidden').slideDown('slow');
+        //Change its text
+        buttonText.text( buttonText.text() === "Read more" ? 'Read less' : "Read more");
 
-            description_long.addClass('hidden').slideUp('slow');*/
-
-            button.empty();
-            button.append("<span class='glyphicon glyphicon glyphicon glyphicon-calendar' aria-hidden='true'></span> Read less");
-
-        }
     });
 
 

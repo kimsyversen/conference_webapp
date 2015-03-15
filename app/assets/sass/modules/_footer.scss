@@ -1,10 +1,10 @@
-.footer-navigation {
-  height: 200px;
-  border: none;
-  background-color: #00c658;
-  border-radius: 0;
-  .item {
-    color: white;
-  }
+.footer {
+  background-color: #2c2c2c;
 
+  .item {
+    h4 {
+      color: #d6e9c6;
+      font-weight:normal;
+    }
+  }
 }

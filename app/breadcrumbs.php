@@ -7,12 +7,12 @@ Breadcrumbs::register('conferences', function($breadcrumbs) {
 
 
 Breadcrumbs::register('registration', function($breadcrumbs) {
-	$breadcrumbs->parent('home');
+	$breadcrumbs->parent('conferences');
 	$breadcrumbs->push('Register account', route('registration_path'));
 });
 
 Breadcrumbs::register('login', function($breadcrumbs) {
-	$breadcrumbs->parent('home');
+	$breadcrumbs->parent('conferences');
 	$breadcrumbs->push('Sign in', route('login_path'));
 });
 
@@ -39,7 +39,7 @@ Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 
 
 Breadcrumbs::register('profile', function($breadcrumbs) {
-	$breadcrumbs->parent('home');
+	$breadcrumbs->parent('conferences');
 	$breadcrumbs->push("Your profile", route('profile_path'));
 
 });

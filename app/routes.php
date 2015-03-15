@@ -1,17 +1,11 @@
 <?php
-//TODO Refactor
-
-
-
-
-
-
 Route::get('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@create' ]);
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
 Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create']);
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 
+Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
 Route::get('/', ['uses' => 'ConferenceController@index' ]);
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
@@ -21,15 +15,10 @@ Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceCon
 
 
 Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceScheduleController@index' ]);
-
-Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 Route::get('conferences/{conference_id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/schedule/personal', [ 'as' => 'personal_schedule_path', 'uses' => 'ConferencePersonalScheduleController@index' ]);
-
 Route::get('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@index' ]);
-
-//Ajax store in personal agenda
-Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@store' ]);
+Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_path', 'uses' => 'ConferenceSessionsController@store' ]); //Ajax store in personal agenda
 
 
 
@@ -38,7 +27,7 @@ Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'sess
 /**
  * AJAX Routes
  */
-
+//Fjerne get?
 Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);
 Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' => 'RatingsController@store' ]);
 

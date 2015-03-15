@@ -6,9 +6,9 @@
 
         @unless(Session::has('errors'))
             @include('conference.layouts.partials.page-header', ['text' => 'Browse conferences'])
-            <div class='row'>
-                @include('conference.partials.conference-item')
-            </div>
+
+            @include('conference.partials.conference', ['data' =>  $data])
         @endunless
     </div>
+    @include('conference.partials.goto-top')
 @stop

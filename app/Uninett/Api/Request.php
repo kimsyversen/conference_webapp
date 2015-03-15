@@ -171,7 +171,7 @@ class Request  {
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			return $this->responseFormatter
-				->error(["A not implemented translation for error code {$errorCode} occured while sending the request to server"]);
+				->error(["Cannot connect to server. Errorcode {$errorCode}"]);
 		}
 		catch(CurlException $ex)
 		{

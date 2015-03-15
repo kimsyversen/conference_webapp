@@ -10,27 +10,27 @@
 * .conference-navbar a:hover {
   background-color: #ffffcc; }
 
-.footer-navigation {
-  height: 200px;
-  border: none;
-  background-color: #00c658;
-  border-radius: 0; }
-  .footer-navigation .item {
-    color: white; }
+.footer {
+  background-color: #2c2c2c; }
+  .footer .item h4 {
+    color: #d6e9c6;
+    font-weight: normal; }
 
 .button-dark {
   background-color: #9b9f9f;
   border-radius: 0;
   width: 100%;
-  -webkit-transition: 1s;
-          transition: 1s; }
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  color: inherit; }
   .button-dark:hover {
     background-color: #d7d9d9;
     border: 1px solid #c3c3c3; }
 
 .button-light {
-  background-color: #f6f6f6;
-  border: 1px solid #c3c3c3;
+  background-color: #d0d0d0;
+  border-radius: 0;
+  border-top: 1px solid #c3c3c3;
   width: 100%;
   -webkit-transition: 1s;
           transition: 1s;
@@ -50,25 +50,23 @@ a.button-link {
 .conference-item {
   background-color: white;
   margin: 1em; }
-  .conference-item a {
-    text-decoration: underline; }
-  .conference-item .banner img {
+  .conference-item .header img {
     width: 100%;
     height: 100%; }
-  .conference-item .main {
+  .conference-item .body {
     padding: 0.5em; }
-    .conference-item .main .name {
+    .conference-item .body .name {
+      padding: 0.5em;
       text-align: center;
       font-size: 1.3em; }
-    .conference-item .main .time {
+    .conference-item .body .time {
+      padding: .9em;
       text-align: right;
       font-size: 0.8em; }
-    .conference-item .main .about {
-      color: #B3BAC0;
-      font-size: 1em; }
-    .conference-item .main .description {
-      border-top: 1px solid #ccc;
-      margin: .5em 0; }
+    .conference-item .body .description {
+      padding: .2em; }
+      .conference-item .body .description .text {
+        padding: 0.5em; }
 
 .session-item {
   background-color: white;
@@ -105,9 +103,11 @@ html, body {
   min-height: 100%;
   background-color: #d7d9d9; }
 
-.container {
-  /* Push footer to bottom of page */
-  min-height: 100%; }
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -150px; }
 
 .page-header-hr {
   border-bottom: 1px solid #ccc;
@@ -119,3 +119,10 @@ html, body {
 
 textarea {
   resize: none; }
+
+.footer, .push {
+  height: 150px; }
+
+.goto-top {
+  margin-top: 2em;
+  margin-bottom: 2em; }

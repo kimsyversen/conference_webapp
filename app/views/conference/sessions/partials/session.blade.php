@@ -22,13 +22,12 @@
                 <p class="lead">About the session</p>
                 <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
                 <p><span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</p>
-                <p>{{   $session['description'] }}</p>
+                <p>{{ $session['description'] }}</p>
             </div>
         </div>
 
         <div class="row buttons">
-
-        @if($authenticated)
+            @if($authenticated)
                 <div class="col-xs-6 nopadding">
                     <button class='btn button-dark with-border button-schedule' id="add-to-schedule" value="{{ $session['id']  }}">
                         <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
@@ -36,17 +35,17 @@
                 </div>
 
                 <div class="col-xs-6 nopadding button-more-parent">
+                    <button class='btn button-dark button-more' id="button"><span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        <span class="button-text">Read more</span>
+                    </button>
+                </div>
+            @else
+                <div class="col-xs-12 nopadding button-more-parent">
                     <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
                         <span class="button-text">Read more</span>
                     </button>
                 </div>
-        @else
-            <div class="col-xs-12 nopadding button-more-parent">
-                <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                    <span class="button-text">Read more</span>
-                </button>
-            </div>
-        @endif
+            @endif
         </div>
     </div>
 </div>

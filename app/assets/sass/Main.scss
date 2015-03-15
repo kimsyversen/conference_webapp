@@ -2,7 +2,7 @@
 @import 'modules/footer';
 @import 'modules/components/buttons';
 @import 'modules/components/forms';
-@import 'modules/components/conference_item';
+@import 'modules/components/conference';
 @import 'modules/components/session';
 
 * {
@@ -15,10 +15,13 @@ html, body {
   background-color: darken(#E9EAEA, 7%);
 }
 
-.container {
-  /* Push footer to bottom of page */
+.wrapper {
   min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -150px;
 }
+
 
 .page-header-hr {
   border-bottom: 1px solid #ccc;
@@ -34,7 +37,10 @@ textarea {
   resize: none;
 }
 
-
-
-
-
+.footer, .push {
+  height: 150px;
+}
+.goto-top {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
