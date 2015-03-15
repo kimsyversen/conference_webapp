@@ -12,13 +12,15 @@
             @if(Session::has('conference_id'))
                 <a class="navbar-brand" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">Conference {{ Session::get('conference_id') }}</a>
             @else
-                <a class="navbar-brand" href="{{ route('conferences_path')}}">Home</a>
+                <a class="navbar-brand" href="{{ route('conferences_path')}}">All conferences</a>
             @endif
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
+                @if(Session::has('conference_id'))
+                    <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
+                @endif
 
                 @if($authenticated)
                     <li class="nav-item {{HTML::activeState('schedule_path')}}"> {{ link_to_route('schedule_path', 'Schedule', ['conference_id' => Session::get('conference_id')], ['name' => 'conference-schedule-link']  ) }} </li>
