@@ -29,16 +29,6 @@ $(document).ready(function(){
         })
     });
 
-
-
-
-
-
-
-
-
-
-
    $('.session-item').on('click', '#add-to-schedule', function(e){
       e.preventDefault();
 
@@ -54,22 +44,22 @@ $(document).ready(function(){
         $.ajax({
             type: 'post',
             url: url,
-            data: {session_id: sessionId},
+            data: {session_id : sessionId},
             timeout: 15000,
             beforeSend: function() {
-                //Vis loadingscreen?
-            },
-            complete: function() {
-              //remove loadingscreen?
+                alert('Starting to add to schedule');
             },
             success: function(data) {
                 var parent = button.closest('.buttons');
                 parent.find('.container-button-schedule').html(data);
             },
+            complete: function() {
+                alert('Finished adding to schedule');
+            },
             error: function(request, errorType, errorMessage)
             {
-                alert(errorMessage);
-                console.log(errorMessage);
+                //TODO: Flash error message?
+                alert("Seems like the session is already in your schedule");
             }
         })
     });
