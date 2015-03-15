@@ -7,7 +7,6 @@
         <div class="col-md-6">
             <h1>Profile</h1>
             @include('conference.layouts.partials.errors')
-
         </div>
     </div>
 @stop

@@ -28,22 +28,29 @@
 
         <div class="row buttons">
             @if($authenticated)
-                <div class="col-xs-6 nopadding">
-                    <button class='btn button-dark with-border button-schedule' id="add-to-schedule" value="{{ $session['id']  }}">
-                        <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                        <span class="button-text">Add to schedule</span></button>
+                <div class="col-xs-6 nopadding container-button-schedule">
+                    @include('conference.button', [
+                    'id' => 'add-to-schedule',
+                    'buttonClass' => 'btn button-dark with-border button-schedule',
+                    'text' => 'Add to schedule',
+                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+                    'value' =>  $session['id']])
                 </div>
 
                 <div class="col-xs-6 nopadding button-more-parent">
-                    <button class='btn button-dark button-more' id="button"><span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                        <span class="button-text">Read more</span>
-                    </button>
+                    @include('conference.button', [
+                    'buttonClass' => 'btn button-dark button-more',
+                    'id' => 'button',
+                    'text' => 'Read more',
+                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar'])
                 </div>
             @else
                 <div class="col-xs-12 nopadding button-more-parent">
-                    <button class='btn button-dark button-more' id="button"> <span class="glyphicon glyphicon glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                        <span class="button-text">Read more</span>
-                    </button>
+                    @include('conference.button', [
+                    'buttonClass' => 'btn button-dark button-more',
+                    'id' => 'button',
+                    'text' => 'Read more',
+                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar'])
                 </div>
             @endif
         </div>

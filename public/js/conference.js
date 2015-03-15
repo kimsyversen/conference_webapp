@@ -1,4 +1,41 @@
 $(document).ready(function(){
+    $('.session-item').on('click', '#remove-from-schedule', function(e){
+        e.preventDefault();
+        console.log(e);
+
+        var button = $(this);
+
+        //Find URL to resource
+        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
+
+        var sessionId = button.attr('value');
+
+        $.ajax({
+            type: 'DELETE',
+            url: url,
+            data: {session_id: sessionId},
+            timeout: 15000,
+
+            success: function(data) {
+                console.log("Try to destroy ");
+                var parent = button.closest('.buttons');
+                parent.find('.container-button-schedule').html(data);
+            },
+            error: function(request, errorType, errorMessage)
+            {
+                alert(errorMessage);
+                console.log(errorMessage);
+            }
+        })
+    });
+
+
+
+
+
+
+
+
 
 
 
@@ -8,10 +45,10 @@ $(document).ready(function(){
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href'); //.find('h4 a').attr('href');
-
+        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
 
         var sessionId = button.attr('value');
+
         console.log(url);
 
         $.ajax({
@@ -26,11 +63,8 @@ $(document).ready(function(){
               //remove loadingscreen?
             },
             success: function(data) {
-                alert(data);
-
-                //TODO: Change button
-
-                //TODO: Insert notification?
+                var parent = button.closest('.buttons');
+                parent.find('.container-button-schedule').html(data);
             },
             error: function(request, errorType, errorMessage)
             {

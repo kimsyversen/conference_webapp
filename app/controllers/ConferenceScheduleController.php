@@ -18,4 +18,7 @@ class ConferenceScheduleController extends \BaseController {
 
 		return View::make('conference.schedule.conference.index')->with(['data' => $response]);
 	}
+
+
+
 }

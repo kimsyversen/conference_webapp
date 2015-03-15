@@ -75,6 +75,6 @@ class SessionsController extends \BaseController {
 	{
 		Session::flush();
 
-		return Redirect::route('home_path')->with('messages', ['You have now been logged out']);
+		return Redirect::route('conference_path')->with('messages', ['You have now been logged out']);
 	}
 }
