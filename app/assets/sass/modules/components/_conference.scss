@@ -1,0 +1,38 @@
+.conference-item {
+  background-color: rgb(255, 255, 255);
+  margin: 1em;
+
+  .header {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  .body {
+    padding: 0.5em;
+
+    .name {
+      padding: 0.5em;
+      text-align: center;
+      font-size: 1.3em;
+    }
+
+    .time {
+      padding: .9em;
+      text-align: right;
+      font-size: 0.8em;
+    }
+
+    .description {
+
+      padding: .2em;
+
+      .text {
+        padding: 0.5em;
+      }
+    }
+  }
+
+}
