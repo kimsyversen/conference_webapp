@@ -32,9 +32,13 @@ $(document).ready(function(){
                     //When its only the header for the session group and one session left in that group, remove both
                     //As the view is of this writing, it will be one row for the header and one row for the session item
                     if(sessionGroup.children('.row').length === 2)
-                        sessionGroup.detach();
+                        sessionGroup.fadeOut('slow', function() {
+                            $(this).detach();
+                        });
                     else
-                        buttonContainer.closest('.item').closest('.row').detach();
+                        buttonContainer.closest('.item').closest('.row').fadeOut('slow', function() {
+                            $(this).detach();
+                        });
                 }
             },
             error: function(request, errorType, errorMessage)

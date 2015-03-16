@@ -33,8 +33,6 @@
             "app/Uninett/Api/",
             "app/Uninett/Helpers/"
 		]
-
-
 	},
     "psr-4": {
       "Uninett\\": "app/Uninett"
