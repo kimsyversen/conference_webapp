@@ -1,25 +1,26 @@
 @extends('conference.layouts.default')
 
 @section('content')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
+    <div class="container">
+        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
 
-    @include('conference.layouts.partials.errors-and-messages')
+        @include('conference.layouts.partials.errors-and-messages')
 
-    @include('conference.layouts.partials.page-header', ['text' => 'Details about session'])
+        @include('conference.layouts.partials.page-header', ['text' => 'Details about session'])
 
-    @unless(Session::has('errors'))
-        @include('conference.partials.delimiter', ['text' => 'Session information', 'value' => ''])
+        @if(isset($data['data']) && !empty($data['data']))
+            @include('conference.partials.delimiter', ['text' => 'Session information', 'value' => ''])
 
-        @include('conference.sessions.partials.session', ['session' => $data['data']])
+            @include('conference.sessions.partials.session', ['session' => $data['data']])
 
-        @include('conference.partials.delimiter', ['text' => 'Rate session', 'value' => ''])
+            @include('conference.partials.delimiter', ['text' => 'Rate session', 'value' => ''])
 
-        @include('conference.sessions.partials.rating', ['status' => $status])
+            @include('conference.sessions.partials.rating', ['status' => $status])
 
-    @endunless
+        @endif
 
-    @include('conference.partials.goto-top')
-
+        @include('conference.partials.goto-top')
+</div>
 @stop
 
 @section('javascript')

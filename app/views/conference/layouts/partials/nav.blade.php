@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @if(Session::has('conference_id'))
-                    <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All Conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
+                    <li class="nav-item {{HTML::activeState('conferences_path')}}"> {{ link_to_route('conferences_path', 'All conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
                 @endif
 
                 @if(Session::has('conference_id'))
@@ -45,6 +45,6 @@
                     <li class="nav-item {{HTML::activeState('login_path')}}"> {{ link_to_route('login_path', 'Login', null, ['name' => 'login-link'] ) }} </li>
                 @endif
             </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>

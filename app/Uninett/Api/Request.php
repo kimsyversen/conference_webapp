@@ -156,6 +156,7 @@ class Request  {
 			}
 
 			//If we try to access something like conferences/asdasdads/schedule instead of  conferences/1/schedule
+			//TODO: This also kicks in when we try to request to the wrong API URL
 			if($errorCode === 404)
 				throw new NotFoundHttpException;
 

@@ -4,10 +4,11 @@
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('schedule') ])
         @include('conference.layouts.partials.errors-and-messages')
 
-        @unless(Session::has('errors'))
-            @include('conference.layouts.partials.page-header', ['text' => 'Schedule'])
+        @include('conference.layouts.partials.page-header', ['text' => 'Schedule'])
+
+        @if(isset($data['data']) && !empty($data['data']))
             @include('conference.sessions.partials.session_group', ['sessionGroup' => $data['data']])
-        @endunless
+        @endif
     </div>
     @include('conference.partials.goto-top')
 @stop

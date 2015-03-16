@@ -29,7 +29,7 @@
         <div class="row buttons">
             @if($authenticated)
                 <div class="col-xs-6 nopadding container-button-schedule">
-                    @include('conference.button', [
+                    @include('conference.components.button', [
                     'id' => 'add-to-schedule',
                     'buttonClass' => 'btn button-dark with-border button-schedule',
                     'text' => 'Add to schedule',
@@ -38,19 +38,19 @@
                 </div>
 
                 <div class="col-xs-6 nopadding button-more-parent">
-                    @include('conference.button', [
+                    @include('conference.components.button', [
                     'buttonClass' => 'btn button-dark button-more',
                     'id' => 'button',
                     'text' => 'Read more',
-                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar'])
+                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                 </div>
             @else
                 <div class="col-xs-12 nopadding button-more-parent">
-                    @include('conference.button', [
+                    @include('conference.components.button', [
                     'buttonClass' => 'btn button-dark button-more',
                     'id' => 'button',
                     'text' => 'Read more',
-                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar'])
+                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                 </div>
             @endif
         </div>

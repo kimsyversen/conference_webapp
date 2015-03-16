@@ -30,11 +30,10 @@ class AcceptanceHelper extends \Codeception\Module
 		$I->amOnPage('/conferences');
 
 		//Check that the link actually exists
-		$I->seeLink('All Conferences', '/conferences');
+		$I->seeLink('All conferences', '/conferences');
 
 		//Navigate from /conferences to /conferences/1
 		$I->amOnPage('/conferences/1');
-
 
 	}
 

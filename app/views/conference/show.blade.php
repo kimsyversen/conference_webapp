@@ -5,3 +5,7 @@
     @include('conference.layouts.partials.page-header', ['text' => 'Conference start page'])
 
 @stop
+
+
+{{--
+This is not currently used. Could be used as a start page for a conference.--}}

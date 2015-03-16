@@ -79,7 +79,7 @@ class ConferenceSessionsController extends \BaseController {
 			$response = $this->request->send();
 
 			Log::info($response);
-			return View::Make('conference.button', [
+			return View::Make('conference.components.button', [
 				'id' => 'add-to-schedule',
 				'buttonClass' => 'btn button-dark with-border button-schedule',
 				'text' => 'Add to schedule',

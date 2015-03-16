@@ -7,8 +7,8 @@
         <!-- Heading -->
         @include('conference.layouts.partials.page-header', ['text' => 'Personal schedule'])
 
-        @unless(Session::has('errors'))
+        @if(isset($data['data']) && !empty($data['data']))
             @include('conference.sessions.partials.session_group', ['sessionGroup' => $data['data']])
-        @endunless
+        @endif
     </div>
 @stop

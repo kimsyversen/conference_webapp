@@ -87,8 +87,14 @@ $(document).ready(function(){
         parent.find('.description-long').toggleClass('hidden');
         parent.find('.description-short').toggleClass('hidden');
 
+
+        var button = parent.find('.button-more span');
+
+        //Swap glyph on button
+        button.first().toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
+
         //Find the last span inside the button
-        var buttonText = parent.find('.button-more span').last();
+        var buttonText = button.last();
 
         //Change its text
         buttonText.text( buttonText.text() === "Read more" ? 'Read less' : "Read more");
@@ -103,7 +109,7 @@ $(document).ready(function(){
     }, 5000);
 
     window.setTimeout(function() {
-        $(".alert-info").fadeTo(500, 0).slideUp(500, function(){
+        $(".alert-danger").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove();
         });
     }, 5000);
