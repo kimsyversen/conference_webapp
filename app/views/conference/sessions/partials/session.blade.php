@@ -60,7 +60,7 @@
             @endif
 
             @if($schedule_type == 'personal')
-                    <div class="col-xs-6 nopadding container-button-schedule">
+                    <div class="col-xs-6 nopadding container-button-schedule personal">
                         @include('conference.components.button', [
                         'id' => 'remove-from-schedule',
                         'buttonClass' => 'btn button-dark with-border button-schedule',

@@ -11,6 +11,7 @@ $(document).ready(function(){
         var sessionId = button.attr('value');
 
         $.ajax({
+            context: button,
             type: 'DELETE',
             url: url,
             data: {session_id: sessionId},
@@ -19,12 +20,29 @@ $(document).ready(function(){
             success: function(data) {
                 console.log("Try to destroy ");
                 var parent = button.closest('.buttons');
+
                 parent.find('.container-button-schedule').html(data);
+
+                //If we are on the personal schedule, the session should be removed
+                var buttonContainer = parent.find('.container-button-schedule');
+
+                if(buttonContainer.hasClass('personal'))
+                {
+                    //Find the nearest session group
+                    var sessionGroup =  buttonContainer.closest('.session-group');
+
+                    //When its only the header for the session group and one session left in that group, remove both
+                    //As the view is of this writing, it will be one row for the header and one row for the session item
+                    if(sessionGroup.children('.row').length === 2)
+                        sessionGroup.detach();
+                    else
+                        buttonContainer.closest('.item').closest('.row').detach();
+                }
             },
             error: function(request, errorType, errorMessage)
             {
                 alert(errorMessage);
-                console.log(errorMessage);
+
             }
         })
     });

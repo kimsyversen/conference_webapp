@@ -8,7 +8,7 @@
         @include('conference.layouts.partials.page-header', ['text' => 'Personal schedule'])
 
         @if(isset($data['data']) && !empty($data['data']))
-            @include('conference.sessions.partials.session_group', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
+            @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
         @endif
     </div>
 @stop
