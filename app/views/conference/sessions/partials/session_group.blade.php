@@ -4,6 +4,6 @@
 
     <!-- A session element -->
     @foreach($sessionGroup['sessions'] as $session)
-        @include('conference.sessions.partials.session', ['session' => $session])
+        @include('conference.sessions.partials.session', ['session' => $session, 'schedule_type' => $schedule_type])
     @endforeach
 @endforeach

@@ -27,31 +27,54 @@
         </div>
 
         <div class="row buttons">
-            @if($authenticated)
-                <div class="col-xs-6 nopadding container-button-schedule">
-                    @include('conference.components.button', [
-                    'id' => 'add-to-schedule',
-                    'buttonClass' => 'btn button-dark with-border button-schedule',
-                    'text' => 'Add to schedule',
-                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
-                    'value' =>  $session['id']])
-                </div>
+            @if($schedule_type == 'conference')
+                @if($authenticated)
+                    @if($session['in_personal_schedule'] == true)
+                        <div class="col-xs-6 nopadding container-button-schedule">
+                            @include('conference.components.button', [
+                            'id' => 'remove-from-schedule',
+                            'buttonClass' => 'btn button-dark with-border button-schedule',
+                            'text' => 'Remove from schedule',
+                            'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+                            'value' =>  $session['id']])
+                        </div>
+                    @else
+                        <div class="col-xs-6 nopadding container-button-schedule">
+                            @include('conference.components.button', [
+                            'id' => 'add-to-schedule',
+                            'buttonClass' => 'btn button-dark with-border button-schedule',
+                            'text' => 'Add to schedule',
+                            'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+                            'value' =>  $session['id']])
+                        </div>
+                    @endif
 
-                <div class="col-xs-6 nopadding button-more-parent">
-                    @include('conference.components.button', [
-                    'buttonClass' => 'btn button-dark button-more',
-                    'id' => 'button',
-                    'text' => 'Read more',
-                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
-                </div>
-            @else
-                <div class="col-xs-12 nopadding button-more-parent">
-                    @include('conference.components.button', [
-                    'buttonClass' => 'btn button-dark button-more',
-                    'id' => 'button',
-                    'text' => 'Read more',
-                    'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
-                </div>
+                    <div class="col-xs-6 nopadding button-more-parent">
+                        @include('conference.components.button', [
+                        'buttonClass' => 'btn button-dark button-more',
+                        'id' => 'button',
+                        'text' => 'Read more',
+                        'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
+                    </div>
+                @endif
+            @endif
+
+            @if($schedule_type == 'personal')
+                    <div class="col-xs-6 nopadding container-button-schedule">
+                        @include('conference.components.button', [
+                        'id' => 'remove-from-schedule',
+                        'buttonClass' => 'btn button-dark with-border button-schedule',
+                        'text' => 'Remove from schedule',
+                        'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+                        'value' =>  $session['id']])
+                    </div>
+                    <div class="col-xs-6 nopadding button-more-parent">
+                        @include('conference.components.button', [
+                        'buttonClass' => 'btn button-dark button-more',
+                        'id' => 'button',
+                        'text' => 'Read more',
+                        'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
+                    </div>
             @endif
         </div>
     </div>

@@ -37,10 +37,11 @@ class ConferenceSessionsController extends \BaseController {
 
 	public function store()
 	{
-		Log::info('Trying to store session in personal schedule');
-			$conference_id = Session::get('conference_id');
+		Log::debug('Trying to store session in personal schedule');
 
+		$conference_id = Session::get('conference_id');
 		$requestedSessionId = Request::get('session_id');
+
 		if(Request::ajax())
 		{
 
@@ -51,7 +52,7 @@ class ConferenceSessionsController extends \BaseController {
 
 			$this->request->send();
 
-			return View::Make('conference.button', [
+			return View::Make('conference.components.button', [
 			'id' => 'remove-from-schedule',
 			'buttonClass' => 'btn button-dark with-border button-schedule',
 			'text' => 'Remove from schedule',
@@ -65,9 +66,9 @@ class ConferenceSessionsController extends \BaseController {
 
 	public function destroy()
 	{
-		Log::info('Trying to destroy session in personal schedule');
-		$conference_id = Session::get('conference_id');
+		Log::debug('Trying to destroy session in personal schedule');
 
+		$conference_id = Session::get('conference_id');
 		$requestedSessionId = Request::get('session_id');
 		if(Request::ajax())
 		{

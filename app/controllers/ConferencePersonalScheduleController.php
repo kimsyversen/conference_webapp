@@ -23,6 +23,7 @@ class ConferencePersonalScheduleController extends \BaseController {
 		{
 			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal");
 
+
 			$response = $this->request->send();
 
 			return View::make('conference.schedule.personal.index')->with(['data' => $response]);

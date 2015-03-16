@@ -12,7 +12,10 @@ class ConferenceScheduleController extends \BaseController {
 
 	public function index($conference_id)
 	{
-		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule");
+		if($this->userIsAuthenticated())
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated");
+		else
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 
 		$response = $this->request->send();
 

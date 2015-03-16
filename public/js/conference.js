@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    $('.session-item').on('click', '#remove-from-schedule', function(e){
+    $('.item').on('click', '#remove-from-schedule', function(e){
         e.preventDefault();
         console.log(e);
 
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
+        var url = button.closest('.item').find('.header').find('.title h4 a').attr('href');
 
         var sessionId = button.attr('value');
 
@@ -29,14 +29,13 @@ $(document).ready(function(){
         })
     });
 
-   $('.session-item').on('click', '#add-to-schedule', function(e){
+   $('.item').on('click', '#add-to-schedule', function(e){
       e.preventDefault();
 
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
-
+        var url = button.closest('.item').find('.header').find('.title h4 a').attr('href');
         var sessionId = button.attr('value');
 
         console.log(url);
@@ -47,19 +46,20 @@ $(document).ready(function(){
             data: {session_id : sessionId},
             timeout: 15000,
             beforeSend: function() {
-                alert('Starting to add to schedule');
+                //alert('Starting to add to schedule');
             },
             success: function(data) {
                 var parent = button.closest('.buttons');
                 parent.find('.container-button-schedule').html(data);
             },
             complete: function() {
-                alert('Finished adding to schedule');
+               // alert('Finished adding to schedule');
             },
             error: function(request, errorType, errorMessage)
             {
                 //TODO: Flash error message?
-                alert("Seems like the session is already in your schedule");
+                alert(errorMessage);
+               // alert("Seems like the session is already in your schedule");
             }
         })
     });

@@ -6,7 +6,6 @@
         @include('conference.layouts.partials.page-header', ['text' => 'Newsfeed'])
         @if(isset($data) && !empty($data))
             <div class="row">
-
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     @foreach($data['data'] as $post)
