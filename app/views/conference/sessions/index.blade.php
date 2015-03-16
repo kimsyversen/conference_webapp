@@ -26,4 +26,9 @@
 @section('javascript')
     @parent
     {{ HTML::script('js/ratings/ratings.js') }}
+    <script>
+        $(document).ready(function() {
+            $(".button-more").trigger("click");
+        });
+    </script>
 @stop
