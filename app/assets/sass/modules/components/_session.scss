@@ -1,4 +1,4 @@
-.session-item {
+.item {
   background-color: rgb(255, 255, 255);
   margin: 1em;
 
@@ -41,11 +41,9 @@
     .with-border {
       border-right: 1px dashed #000;
     }
-
-
   }
 
-  .session-information {
+  .information {
     .location {
       font-size: 1em;
     }

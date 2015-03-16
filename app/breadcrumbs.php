@@ -29,6 +29,17 @@ Breadcrumbs::register('conference', function($breadcrumbs) {
 		$breadcrumbs->push("Conference", route('conference_path'));
 });
 
+Breadcrumbs::register('maps', function($breadcrumbs) {
+	$breadcrumbs->parent('conference');
+	$breadcrumbs->push("Maps", route('maps_path'));
+
+});
+
+Breadcrumbs::register('newsfeed', function($breadcrumbs) {
+	$breadcrumbs->parent('conference');
+	$breadcrumbs->push("Newsfeed", route('newsfeed_path'));
+
+});
 
 Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');

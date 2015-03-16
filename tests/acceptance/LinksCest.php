@@ -45,99 +45,91 @@ class LinksCest
 		$I->dontSee('Logout');
 	}
 
-	public function canSeeCorrectLinksWhenVisitingForTheFirstTime(AcceptanceTester $I){
+	public function can_see_correct_links_when_visiting_first_time(AcceptanceTester $I){
 		$I->am('guest');
 
 		$I->wantTo('See if all correct links are available if i am at main page');
 
 		$I->amOnPage('/conferences');
 
-		$this->canNotSeeAuthenticatedLinks($I);
-
-		$this->canSeeLinksWhenGuestAndNotAuthenticated($I);
-
-
+		$this->is_not_authenticated_and_on_main_page($I);
 
 	}
 
-	public function canSeeCorrectLinksIfAuthenticatingFromMainPage(AcceptanceTester $I){
+	public function can_see_correct_links_when_visiting_conference_first_time(AcceptanceTester $I){
+		$I->am('guest');
+
+		$I->wantTo('See if all correct links are available if i am at main page');
+
+		$I->amOnPage('/conferences/1');
+
+		$this->is_not_authenticated_and_on_conference($I);
+
+	}
+
+	public function can_see_correct_links_when_authenticating_from_main_page(AcceptanceTester $I){
 		$I->am('guest');
 
 		$I->wantTo('See if all correct links are available if authenticated from main page');
 
 		$I->loginUser();
 
-		$this->canSeeAuthenticatedLinks($I);
+		$this->is_authenticated_and_on_main_page($I);
 	}
 
-	public function canSeeCorrectLinksIfAuthenticated(AcceptanceTester $I){
+	public function can_see_correct_links_when_authenticating_after_visiting_a_conference(AcceptanceTester $I){
 		$I->am('guest');
 
 		$I->wantTo('See if all correct links are available if authenticated');
 
+		$I->navigateToScheduleForTheFirstConference();
+
 		$I->loginUser();
 
-		$I->navigateToScheduleForTheFirstConference();
-
-		$this->canSeeAuthenticatedAndConferenceLinks($I);
+		$this->is_authenticated_and_on_conference($I);
 	}
 
-	public function canSeeCorrectLinksIfGuest(AcceptanceTester $I){
-		$I->am('guest');
 
-		$I->wantTo('See if all correct links are available if guest');
+	private function is_authenticated_and_on_main_page(AcceptanceTester $I)
+	{
+		$I->seeLink('All conferences', '/conferences');
+		$I->seeLink('Profile', '/profile');
+		$I->seeLink('Log out', '/logout');
 
-
-		$I->navigateToScheduleForTheFirstConference();
-
-		$this->canSeeConferenceLinksWhenNotAuthenticated($I);
-		$this->canSeeLinksWhenGuestAndNotAuthenticated($I);
-
+		$I->dontSeeLink('Log in', '/login');
 	}
 
-	private function canSeeLinksWhenGuestAndNotAuthenticated(AcceptanceTester $I)
+	private function is_authenticated_and_on_conference(AcceptanceTester $I)
+	{
+		$this->is_authenticated_and_on_main_page($I);
+
+		$I->seeLink('Conference 1', '/conferences/1');
+		$I->seeLink('Schedule', '/conferences/1/schedule');
+		$I->seeLink('Maps', '/conferences/1/maps');
+		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
+	}
+
+
+	private function is_not_authenticated_and_on_main_page(AcceptanceTester $I)
 	{
 		$I->seeLink('All conferences', '/conferences');
 		$I->seeLink('Login', '/login');
 		$I->seeLink('Register', '/register');
-	}
-
-
-	private function canNotSeeAuthenticatedLinks(AcceptanceTester $I)
-	{
-		//Once a user is authenticated, the user can not see
-
-		$I->dontSeeLink('Conference 1', '/conferences/1');
-		$I->dontSeeLink('Schedule', '/conferences/1/schedule');
-		$I->dontSeeLink('Personal Schedule', '/conferences/1/schedule');
 
 		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');
 	}
 
-
-	private function canSeeAuthenticatedLinks(AcceptanceTester $I)
+	private function is_not_authenticated_and_on_conference(AcceptanceTester $I)
 	{
-		//Right after authenticating, the user can see
 		$I->seeLink('All conferences', '/conferences');
-		$I->seeLink('Profile', '/profile');
-		$I->seeLink('Log out', '/logout');
-	}
-
-	private function canSeeConferenceLinksWhenNotAuthenticated(AcceptanceTester $I)
-	{
-		//If not authenticated, but on a specific conference, the user can see
 		$I->seeLink('Conference 1', '/conferences/1');
 		$I->seeLink('Schedule', '/conferences/1/schedule');
-	}
+		$I->seeLink('Maps', '/conferences/1/maps');
 
+		$I->dontSeeLink('Profile', '/profile');
+		$I->dontSeeLink('Log out', '/logout');
+		$I->dontSeeLink('Personal Schedule', '/conferences/1/schedule');
 
-	private function canSeeAuthenticatedAndConferenceLinks(AcceptanceTester $I)
-	{
-		//If authenticated and on a conference, the user can see
-		$this->canSeeAuthenticatedLinks($I);
-		$I->seeLink('Conference 1', '/conferences/1');
-		$I->seeLink('Schedule', '/conferences/1/schedule');
-		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
 	}
 }
