@@ -16,9 +16,7 @@ $(document).ready(function(){
             url: url,
             data: {session_id: sessionId},
             timeout: 15000,
-
             success: function(data) {
-                console.log("Try to destroy ");
                 var parent = button.closest('.buttons');
 
                 parent.find('.container-button-schedule').html(data);

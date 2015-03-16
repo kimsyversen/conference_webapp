@@ -17,6 +17,7 @@ class ConferenceScheduleController extends \BaseController {
 		else
 			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 
+
 		$response = $this->request->send();
 
 		return View::make('conference.schedule.conference.index')->with(['data' => $response]);

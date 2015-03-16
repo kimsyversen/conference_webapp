@@ -162,6 +162,7 @@ class Request  {
 
 			$errorCode = $ex->getResponse()->getStatusCode();
 
+			Log::debug($ex->getMessage());
 			return $this->responseFormatter
 				->error(["A not implemented translation for error code {$errorCode} occured"]);
 

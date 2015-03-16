@@ -11,7 +11,7 @@
         @if(isset($data['data']) && !empty($data['data']))
             @include('conference.partials.delimiter', ['text' => 'Session information', 'value' => ''])
 
-            @include('conference.sessions.partials.session', ['session' => $data['data'], 'schedule_type' => 1])
+            @include('conference.sessions.partials.session', ['session' => $data['data'], 'schedule_type' => 'session'])
 
             @include('conference.partials.delimiter', ['text' => 'Rate session', 'value' => ''])
 

@@ -13,7 +13,11 @@ class ConferenceSessionsController extends \BaseController {
 
 	public function index($conference_id, $session_id)
 	{
-		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
+
+		if($this->userIsAuthenticated())
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/authenticated");
+		else
+			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
 
 		//Assume user is not authenticated
 		$status = -1;
@@ -32,7 +36,11 @@ class ConferenceSessionsController extends \BaseController {
 				$status = -1;
 		}
 
-		return View::make('conference.sessions.index')->with(['data' =>  $response, 'status' => $status]);
+
+		return View::make('conference.sessions.index')->with([
+			'data' =>  $response,
+			'status' => $status
+		]);
 	}
 
 	public function store()

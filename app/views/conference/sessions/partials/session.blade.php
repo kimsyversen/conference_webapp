@@ -48,8 +48,15 @@
                             'value' =>  $session['id']])
                         </div>
                     @endif
-
                     <div class="col-xs-6 nopadding button-more-parent">
+                        @include('conference.components.button', [
+                        'buttonClass' => 'btn button-dark button-more',
+                        'id' => 'button',
+                        'text' => 'Read more',
+                        'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
+                    </div>
+                @else
+                    <div class="col-xs-12 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
@@ -69,6 +76,16 @@
                         'value' =>  $session['id']])
                     </div>
                     <div class="col-xs-6 nopadding button-more-parent">
+                        @include('conference.components.button', [
+                        'buttonClass' => 'btn button-dark button-more',
+                        'id' => 'button',
+                        'text' => 'Read more',
+                        'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
+                    </div>
+            @endif
+
+            @if($schedule_type == 'session')
+                    <div class="col-xs-12 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
