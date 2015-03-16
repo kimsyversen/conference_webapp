@@ -1,0 +1,37 @@
+.message {
+  margin: 1em;
+
+  .panel {
+    border: 0;
+    border-radius: 0;
+
+    .panel-heading {
+      background-color: darken(#E9EAEA, 30%);
+
+      .glyph {
+        float: left;
+        span {
+          font-size: 1.5em;
+        }
+      }
+      .title {
+        margin-left: 25px;
+
+        h3 {
+          padding: 0.1em 0 0 0.5em;
+        }
+      }
+    }
+
+    .panel-body {
+      .time {
+        font-size: 1em;
+        float: right;
+      }
+      .body {
+        margin-top: 0.5em;
+      }
+    }
+
+  }
+}

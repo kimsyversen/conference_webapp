@@ -107,6 +107,7 @@ class LinksCest
 		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
+		$I->seeLink('Newsfeed', '/conferences/1/newsfeed');
 	}
 
 

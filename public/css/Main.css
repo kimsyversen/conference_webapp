@@ -43,9 +43,10 @@ a.button-link {
   text-decoration: none !important;
   color: inherit; }
 
-.conference-form {
+.forms {
+  margin-top: 1em;
   background-color: white;
-  padding: 3em; }
+  padding: 4em 3em 3em 3em; }
 
 .conference-item {
   background-color: white;
@@ -94,6 +95,27 @@ a.button-link {
     border-right: 1px dashed #000; }
   .item .information .location {
     font-size: 1em; }
+
+.message {
+  margin: 1em; }
+  .message .panel {
+    border: 0;
+    border-radius: 0; }
+    .message .panel .panel-heading {
+      background-color: #9b9f9f; }
+      .message .panel .panel-heading .glyph {
+        float: left; }
+        .message .panel .panel-heading .glyph span {
+          font-size: 1.5em; }
+      .message .panel .panel-heading .title {
+        margin-left: 25px; }
+        .message .panel .panel-heading .title h3 {
+          padding: 0.1em 0 0 0.5em; }
+    .message .panel .panel-body .time {
+      font-size: 1em;
+      float: right; }
+    .message .panel .panel-body .body {
+      margin-top: 0.5em; }
 
 * {
   margin: 0; }
@@ -150,3 +172,6 @@ textarea {
     font-size: 16em; }
   .featurette p {
     font-size: 2em; } }
+
+.item-margin {
+  margin-top: 1em; }

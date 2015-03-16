@@ -5,7 +5,7 @@
     @include('conference.layouts.partials.errors-and-messages')
 
     @include('conference.layouts.partials.page-header', ['text' => 'Create account'])
-        <div class="col-xs-12 conference-form">
+        <div class="col-xs-12 forms">
 
             {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
 

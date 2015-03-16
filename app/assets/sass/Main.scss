@@ -3,7 +3,8 @@
 @import 'modules/components/buttons';
 @import 'modules/components/forms';
 @import 'modules/components/conference';
-@import 'modules/components/session';
+@import 'modules/components/item';
+@import 'modules/components/message/item';
 
 * {
   margin: 0;
@@ -96,4 +97,9 @@ textarea {
     }
 
 
+}
+
+
+.item-margin {
+  margin-top: 1em;
 }

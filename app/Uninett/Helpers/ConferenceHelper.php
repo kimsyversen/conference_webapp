@@ -9,10 +9,11 @@ class ConferenceHelper {
 
 		$timestamp = Carbon::createFromTimestamp(strtotime($timestamp));
 
-		if($now->gt($timestamp))
+		return $timestamp->diffForHumans();
+		/*if($now->gt($timestamp))
 		return "Started " . $timestamp->diffForHumans();
 
-		return  "Starts " . $timestamp->diffForHumans();
+		return  "Starts " . $timestamp->diffForHumans();*/
 	}
 
 	public static function timestampToBeingEnds($begins, $ends, $format = 'H:i:s')

@@ -5,7 +5,7 @@
     @include('conference.layouts.partials.page-header', ['text' => 'Sign In'])
 
 
-    <div class="col-xs-12 conference-form">
+    <div class="col-xs-12 forms " >
         {{ Form::open(['route' => 'login_path', 'method' => 'post']) }}
 
         <div class="form-group">
