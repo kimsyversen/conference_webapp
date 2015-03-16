@@ -19,7 +19,11 @@ $(document).ready(function(){
             success: function(data) {
                 var parent = button.closest('.buttons');
 
-                parent.find('.container-button-schedule').html(data);
+           //     parent.find('.container-button-schedule').html(data);
+
+                parent.find('.container-button-schedule').fadeIn('slow', function(){
+                    $(this).html(data);
+                });
 
                 //If we are on the personal schedule, the session should be removed
                 var buttonContainer = parent.find('.container-button-schedule');
@@ -70,7 +74,11 @@ $(document).ready(function(){
             },
             success: function(data) {
                 var parent = button.closest('.buttons');
-                parent.find('.container-button-schedule').html(data);
+               // parent.find('.container-button-schedule').html(data);
+
+                parent.find('.container-button-schedule').fadeIn('slow', function() {
+                    $(this).html(data);
+                })
             },
             complete: function() {
                // alert('Finished adding to schedule');
