@@ -25,7 +25,7 @@ $app = new Illuminate\Foundation\Application;
 */
 
 $env = $app->detectEnvironment(array(
-	'production' => array('shadowcat'),
+	'production' => array('turbo'),
 	'local' =>  array('Kimba', 'kImac.local' , 'administrator-VirtualBox')
 ));
 
