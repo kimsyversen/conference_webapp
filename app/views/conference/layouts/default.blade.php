@@ -14,14 +14,14 @@
     </header>
     <div class="wrapper">
        <div class="container">
-            @yield('content')
+           @yield('content')
         </div>
         <div class="push"></div>
     </div>
 
+    @include('conference.partials.goto-top')
 
     @include('conference.layouts.partials.footer')
-
     @section('javascript')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
