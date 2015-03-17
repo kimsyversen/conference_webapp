@@ -10,7 +10,14 @@ Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@prof
 
 
 
+Route::get('/test', function() {
 
+
+	$a = \Carbon\Carbon::createFromTimestamp(strtotime("Thu Apr 02 10:56:57 +0000 2009"));
+
+	return $a->format('Y-m-d H:i:s');
+
+});
 
 
 Route::get('/featurette', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@index' ]);

@@ -1,22 +1,25 @@
 <?php
 
-use Uninett\Api\Request as ApiRequest;
+use Uninett\Api\Client as ApiRequest;
 
 class ProfileController extends BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
 	public function profile()
 	{
-		$this->request->createRequest('GET',"{$this->api_endpoint}/users/me");
+		$request = (new Uninett\Api\Request)
+			->setMethod('GET')
+			->setUrl("{$this->api_endpoint}/users/me")
+			->setAccessTokenInHeaders();
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 		return View::make('conference.users.profile.index')->with(compact('response'));
 	}
 

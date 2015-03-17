@@ -11,6 +11,8 @@ class ExampleTest extends TestCase {
 	{
 		$crawler = $this->client->request('GET', '/');
 
+
+		$this->call();
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}
 

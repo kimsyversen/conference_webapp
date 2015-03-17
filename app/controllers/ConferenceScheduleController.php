@@ -2,27 +2,27 @@
 
 class ConferenceScheduleController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
 	public function index($conference_id)
 	{
+
+		$request = (new Uninett\Api\Request)->setMethod('GET');
+
 		if($this->userIsAuthenticated())
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated");
+			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated")
+				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 		else
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule");
+			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 
-
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		return View::make('conference.schedule.conference.index')->with(['data' => $response]);
 	}
-
-
-
 }

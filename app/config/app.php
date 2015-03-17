@@ -123,7 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
-		'Laracasts\Utilities\UtilitiesServiceProvider'
+		'Laracasts\Utilities\UtilitiesServiceProvider',
+	   'Thujohn\Twitter\TwitterServiceProvider',
 
 	),
 
@@ -192,7 +193,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
-		'Flash' => 'Laracasts\Flash\Flash'
+		'Flash' => 'Laracasts\Flash\Flash',
+		'Twitter' => 'Thujohn\Twitter\TwitterFacade'
 	),
 
 );

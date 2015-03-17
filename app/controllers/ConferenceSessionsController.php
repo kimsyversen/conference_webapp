@@ -2,33 +2,36 @@
 
 class ConferenceSessionsController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
 
 	public function index($conference_id, $session_id)
 	{
-
+		$request = (new Uninett\Api\Request)->setMethod('GET');
 		if($this->userIsAuthenticated())
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/authenticated");
+			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/authenticated")->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 		else
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
+			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
 
 		//Assume user is not authenticated
 		$status = -1;
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		if ($this->userIsAuthenticated())
 		{
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+			$request2 = (new Uninett\Api\Request)
+				->setMethod('GET')
+				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create")
+				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 
-			$response2 = $this->request->send();
+			$response2 = $this->client->send($request2);
 
 			if(isset($response2['data'][0]['code']))
 				$status = $response2['data'][0]['code'];
@@ -52,13 +55,14 @@ class ConferenceSessionsController extends \BaseController {
 
 		if(Request::ajax())
 		{
+			$request = (new Uninett\Api\Request)
+				->setMethod('POST')
+				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal")
+				->setBody(['session_id' => $requestedSessionId])
+				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 
-			$this->request->createRequest('POST', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal",
-			[],
-			['session_id' => $requestedSessionId],
-			[]);
 
-			$this->request->send();
+			$this->client->send($request);
 
 			return View::Make('conference.components.button', [
 			'id' => 'remove-from-schedule',
@@ -67,7 +71,6 @@ class ConferenceSessionsController extends \BaseController {
 			'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
 			'value' =>  $requestedSessionId]);
 
-			//return "We just did a ajax post request!";
 		}
 	}
 
@@ -78,14 +81,18 @@ class ConferenceSessionsController extends \BaseController {
 
 		$conference_id = Session::get('conference_id');
 		$requestedSessionId = Request::get('session_id');
+
 		if(Request::ajax())
 		{
-			$this->request->createRequest('DELETE',
-				"{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal/{$requestedSessionId}");
+			$request = (new Uninett\Api\Request)
+				->setMethod('DELETE')
+				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal/{$requestedSessionId}")
+				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 
-			$response = $this->request->send();
 
-			Log::info($response);
+			//TODO: Gjøre noe med respons?
+			$response = $this->client->send($request);
+
 			return View::Make('conference.components.button', [
 				'id' => 'add-to-schedule',
 				'buttonClass' => 'btn button-dark with-border button-schedule',

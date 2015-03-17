@@ -21,16 +21,22 @@ class RequestTest extends TestCase {
 	 */
 	public function test_a_working_request()
 	{
-		$realRequest = new Uninett\Api\Request(new \Uninett\Api\ResponseFormatter());
 
+		$mockClient = Mock::mock('Uninett\Api\Client', [
+			new \Uninett\Api\ResponseFormatter,
+			Mock::mock('Guzzle\Http\Client')
+		]);
 
-		$mock = Mock::mock('Uninett\Api\Request', [new \Uninett\Api\ResponseFormatter]);
+		$request = new Uninett\Api\Request();
 
-		//$request = $mock->shouldReceive('createRequest')->with('GET', "{$this->api_endpoint}/conferences");
+		$request->setMethod('GET');
+		$request->setUrl('http://localhost:8000/api/v1/conferences');
 
-		 $mock->shouldReceive('createRequest')->with('GET', "{$this->api_endpoint}/conferences");
+		//This returns exception
+		$mockResponse = $mockClient
+			->shouldReceive('send')
+			->with($request);
 
-		//$realRequest->createRequest($request);
 	}
 
 }

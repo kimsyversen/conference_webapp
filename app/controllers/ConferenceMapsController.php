@@ -2,19 +2,19 @@
 
 class ConferenceMapsController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
 	public function index($conference_id)
 	{
-		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/maps");
+		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/maps");
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		return View::make('conference.maps.index')->with(['data' => $response]);
 	}

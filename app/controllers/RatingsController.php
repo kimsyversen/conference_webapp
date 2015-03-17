@@ -2,11 +2,11 @@
 
 class RatingsController extends BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
@@ -17,9 +17,11 @@ class RatingsController extends BaseController {
 
 		if(Request::ajax())
 			if ($this->userIsAuthenticated()) {
-				$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
+				$request = (new Uninett\Api\Request)
+					->setMethod('GET')
+					->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create");
 
-				$response = $this->request->send();
+				$response = $this->client->send($request);
 
 				if (isset($response['data'][0]['code']))
 					return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
@@ -53,20 +55,19 @@ class RatingsController extends BaseController {
 
 				$requestData = Request::except('_token');
 
-				$this->request->createRequest(
-					'POST',
-					"{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings",
-					[],
-					$requestData,
-					[]);
+				$request = (new Uninett\Api\Request)
+					->setMethod('POST')
+					->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings")
+					->setBody($requestData)
+					->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 
-				$response = $this->request->send();
+				$response = $this->client->send($request);
 
 				//return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
 				return $response;
 			}
 		}
 		else
-			return "Not AJAX";
+			Log::error('Someome tried to make a wrong coll in RatingsController@store');
 	}
 }

@@ -2,37 +2,30 @@
 
 class ConferenceController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
 		parent::__construct();
 
-		$this->request = $request;
+		$this->client = $client;
 	}
 
 
 	public function index()
 	{
-		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences");
+		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences");
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		return View::make('conference.index')->with($response);
 	}
 
 	public function getConferenceById($conference_id)
 	{
-		$this->request->createRequest('GET',  "{$this->api_endpoint}/conferences/{$conference_id}");
+		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences/{$conference_id}");
 
-		/**
-		 * TODO: REMOVE?
-		 * Insert conference_id to session so users
-		 * may go to their profile relative to a conference (see nav.blade.php)
-		 */
-		/*Session::put('conference_id', $conference_id);*/
-
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		return View::make('conference.show')->with($response);
 	}

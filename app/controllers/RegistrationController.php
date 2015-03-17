@@ -2,11 +2,11 @@
 
 class RegistrationController extends BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
@@ -17,15 +17,12 @@ class RegistrationController extends BaseController {
 
 	public function store()
 	{
-		$this->request->createRequest(
-			'POST',
-			"http://localhost:8000/register",
-			[],
-			Request::all(),
-			[]
-		);
+		$request = (new Uninett\Api\Request)
+			->setMethod('POST')
+			->setUrl("{$this->base_url}/register")
+			->setBody(Request::all());
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
 		if(isset($response['errors']))
 			return Redirect::back()->with('errors',$response['errors']);

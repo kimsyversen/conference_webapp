@@ -1,6 +1,6 @@
 <?php
 use Carbon\Carbon;
-use Uninett\Api\Request as ApiRequest;
+use Uninett\Api\Client as ApiRequest;
 
 /**
  * Class SessionsController
@@ -8,18 +8,18 @@ use Uninett\Api\Request as ApiRequest;
 class SessionsController extends \BaseController {
 
 	/**
-	 * @var ApiRequest
+	 * @var ApiClient
 	 */
-	private $request;
+	private $client;
 
 	/**
-	 * @param ApiRequest $request
+	 * @param ApiRequest $client
 	 */
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
 		parent::__construct();
 
-		$this->request = $request;
+		$this->client = $client;
 	}
 
 	/**
@@ -36,15 +36,13 @@ class SessionsController extends \BaseController {
 	 */
 	public function login()
 	{
-		$this->request->createRequest(
-			'POST',
-			"{$this->base_url}/oauth/access_token",
-			null,
-			array_merge(Config::get('uninett.oauth_info'), Request::all()),
-			[]
-		);
+		$request = (new Uninett\Api\Request)
+			->setMethod('POST')
+			->setUrl("{$this->base_url}/oauth/access_token")
+			->setBody(array_merge(Config::get('uninett.oauth_info'), Request::all()));
 
-		$response = $this->request->send();
+
+		$response = $this->client->send($request);
 
 		if(isset($response['errors']) || is_null($response))
 			return Redirect::back()->with($response);

@@ -2,21 +2,24 @@
 
 class ConferenceNewsFeedController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
 	public function index($conference_id)
 	{
-		$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/newsfeeds");
+		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/newsfeeds");
 
-		$response = $this->request->send();
+		$response = $this->client->send($request);
 
-		return View::make('conference.newsfeed.index')->with(['data' => $response]);
+		$twitterData = json_decode( Twitter::getUserTimeline(array('screen_name' => 'nokios2015', 'count' => 2, 'format' => 'json')), true);
+
+
+		return View::make('conference.newsfeed.index')->with(['data' => $response, 'twitter' => $twitterData]);
 	}
 
 }

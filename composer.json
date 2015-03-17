@@ -11,7 +11,8 @@
         "guzzle/guzzle": "3.9.*@dev",
         "laracasts/flash": "~1.2",
 		"davejamesmiller/laravel-breadcrumbs": "2.*",
-        "laracasts/utilities": "~1.0"
+        "laracasts/utilities": "~1.0",
+        "thujohn/twitter": "dev-master"
 
 	},
     "require-dev": {

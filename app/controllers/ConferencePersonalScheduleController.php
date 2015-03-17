@@ -2,11 +2,11 @@
 
 class ConferencePersonalScheduleController extends \BaseController {
 
-	private $request;
+	private $client;
 
-	function __construct(\Uninett\Api\Request $request)
+	function __construct(\Uninett\Api\Client $client)
 	{
-		$this->request = $request;
+		$this->client = $client;
 		parent::__construct();
 	}
 
@@ -21,39 +21,14 @@ class ConferencePersonalScheduleController extends \BaseController {
 	{
 		if($this->userIsAuthenticated())
 		{
-			$this->request->createRequest('GET', "{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal");
+			$request = (new Uninett\Api\Request)
+				->setMethod('GET')
+				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal")
+				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
 
-
-			$response = $this->request->send();
+			$response = $this->client->send($request);
 
 			return View::make('conference.schedule.personal.index')->with(['data' => $response]);
 		}
-
-		//TODO: Ta hensyn tiul at bruker ikke kan være det?
 	}
-
-
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
-
 }
