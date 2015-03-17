@@ -1,5 +1,5 @@
 @if(Session::has('messages'))
-    <div class="alert alert-info alert-dismissible fade in">
+    <div class="alert alert-info alert-dismissible animated fadeIn">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <ul>
             @foreach(Session::get('messages') as $message)

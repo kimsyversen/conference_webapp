@@ -131,15 +131,17 @@ $(document).ready(function(){
 
 
    window.setTimeout(function() {
-        $(".alert-info").fadeTo(500, 0).slideUp(500, function(){
+       $(".alert-info").toggleClass('fadeIn fadeOut').detach();
+     /*   $(".alert-info").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove();
-        });
+        });*/
     }, 5000);
 
     window.setTimeout(function() {
-        $(".alert-danger").fadeTo(500, 0).slideUp(500, function(){
+        $(".alert-danger").toggleClass('fadeIn fadeOut').detach();
+/*        $(".alert-danger").fadeTo(500, 0).slideUp(500, function(){
             $(this).remove();
-        });
+        });*/
     }, 5000);
 
 
