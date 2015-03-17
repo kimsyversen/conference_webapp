@@ -46,5 +46,4 @@
             </div>
         @endif
     </div>
-    @include('conference.partials.goto-top')
 @stop

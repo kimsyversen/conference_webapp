@@ -103,6 +103,7 @@ $(document).ready(function(){
         //Toggle hidden on the description text
         conferenceItem.find('.description .text').toggleClass('hidden');
 
+
         //Change text on the button
         button.text( button.text() === "Read about the conference" ? 'Close' : "Read about the conference");
     });

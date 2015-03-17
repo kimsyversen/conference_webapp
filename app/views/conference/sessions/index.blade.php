@@ -18,8 +18,6 @@
             @include('conference.sessions.partials.rating', ['status' => $status])
 
         @endif
-
-        @include('conference.partials.goto-top')
 </div>
 @stop
 

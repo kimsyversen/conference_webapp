@@ -14,3 +14,5 @@ return [
 	'api_endpoint_uri' => 'https://shadowcat.uninett.no/api/v1',
 	'api_accesstoken_endpoint_url' => 'https://shadowcat.uninett.no/oauth/access_token',
 ];
+
+

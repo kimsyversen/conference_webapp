@@ -20,7 +20,8 @@
       "way/generators": "~2.0",
       "barryvdh/laravel-debugbar": "~1.8",
       "panique/laravel-sass": "1.0",
-      "laracasts/testdummy": "~2"
+      "laracasts/testdummy": "~2",
+      "mockery/mockery" : "0.9.*@dev"
     },
 	"autoload": {
 		"classmap": [

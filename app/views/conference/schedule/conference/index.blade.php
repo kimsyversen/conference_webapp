@@ -8,10 +8,8 @@
 
         @if(isset($data['data']) && !empty($data['data']))
             @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'conference'])
-
         @endif
     </div>
-    @include('conference.partials.goto-top')
 @stop
 
 
