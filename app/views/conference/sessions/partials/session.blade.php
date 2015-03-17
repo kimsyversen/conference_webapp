@@ -30,7 +30,7 @@
             @if($schedule_type == 'conference')
                 @if($authenticated)
                     @if($session['in_personal_schedule'] == true)
-                        <div class="col-xs-6 nopadding container-button-schedule">
+                        <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
                             @include('conference.components.button', [
                             'id' => 'remove-from-schedule',
                             'buttonClass' => 'btn button-dark with-border button-schedule',
@@ -39,7 +39,7 @@
                             'value' =>  $session['id']])
                         </div>
                     @else
-                        <div class="col-xs-6 nopadding container-button-schedule">
+                        <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
                             @include('conference.components.button', [
                             'id' => 'add-to-schedule',
                             'buttonClass' => 'btn button-dark with-border button-schedule',
@@ -48,7 +48,7 @@
                             'value' =>  $session['id']])
                         </div>
                     @endif
-                    <div class="col-xs-6 nopadding button-more-parent">
+                    <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
@@ -56,7 +56,7 @@
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
                 @else
-                    <div class="col-xs-12 nopadding button-more-parent">
+                    <div class="col-xs-12 col-sm-6 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
@@ -67,7 +67,7 @@
             @endif
 
             @if($schedule_type == 'personal')
-                    <div class="col-xs-6 nopadding container-button-schedule personal">
+                    <div class="col-xs-7 col-sm-6 nopadding container-button-schedule personal">
                         @include('conference.components.button', [
                         'id' => 'remove-from-schedule',
                         'buttonClass' => 'btn button-dark with-border button-schedule',
@@ -75,7 +75,7 @@
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
                         'value' =>  $session['id']])
                     </div>
-                    <div class="col-xs-6 nopadding button-more-parent">
+                    <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
