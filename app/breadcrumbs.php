@@ -72,7 +72,7 @@ Breadcrumbs::register('session', function($breadcrumbs) {
 		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
 
-		$breadcrumbs->push("Session {$session_id}", route('session_path', ['session_id' => $session_id, 'conference_id' => $conference_id]));
+		$breadcrumbs->push("Session", route('session_path', ['session_id' => $session_id, 'conference_id' => $conference_id]));
 	}
 	else
 		$breadcrumbs->push("Session", route('conference_path'));

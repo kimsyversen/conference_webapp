@@ -16,10 +16,11 @@ $(document).ready(function(){
             url: url,
             data: {session_id: sessionId},
             timeout: 15000,
+            beforeSend : function()  {
+                button.addClass('disabled');
+            },
             success: function(data) {
                 var parent = button.closest('.buttons');
-
-           //     parent.find('.container-button-schedule').html(data);
 
                 parent.find('.container-button-schedule').fadeIn('slow', function(){
                     $(this).html(data);
@@ -44,6 +45,9 @@ $(document).ready(function(){
                             $(this).detach();
                         });
                 }
+            },
+            complete : function() {
+                button.removeClass('disabled');
             },
             error: function(request, errorType, errorMessage)
             {
@@ -70,7 +74,7 @@ $(document).ready(function(){
             data: {session_id : sessionId},
             timeout: 15000,
             beforeSend: function() {
-                //alert('Starting to add to schedule');
+                button.addClass('disabled');
             },
             success: function(data) {
                 var parent = button.closest('.buttons');
@@ -81,7 +85,7 @@ $(document).ready(function(){
                 })
             },
             complete: function() {
-               // alert('Finished adding to schedule');
+                button.removeClass('disabled');
             },
             error: function(request, errorType, errorMessage)
             {

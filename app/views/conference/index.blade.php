@@ -1,6 +1,6 @@
 @extends('conference.layouts.default')
 @section('content')
-    <div class="container">
+
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
         @include('conference.layouts.partials.errors-and-messages')
 
@@ -10,6 +10,6 @@
 
             @include('conference.partials.conference', ['data' =>  $data])
         @endif
-    </div>
+
 
 @stop

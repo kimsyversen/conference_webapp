@@ -1,6 +1,6 @@
 @extends('conference.layouts.default')
 @section('content')
-    <div class="container ">
+
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('personal_schedule') ])
         @include('conference.layouts.partials.errors-and-messages')
 
@@ -10,5 +10,5 @@
         @if(isset($data['data']) && !empty($data['data']))
             @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
         @endif
-    </div>
+
 @stop
