@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 
         //Change text on the button
-        button.text( button.text() === "Read about the conference" ? 'Close' : "Read about the conference");
+        button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
     $(".button-more").on("click", function(){
