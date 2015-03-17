@@ -56,7 +56,7 @@
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
                 @else
-                    <div class="col-xs-12 col-sm-6 nopadding button-more-parent">
+                    <div class="col-xs-12 col-sm-12 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
                         'id' => 'button',
@@ -92,6 +92,8 @@
                         'text' => 'Read more',
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
+
+
             @endif
         </div>
     </div>
