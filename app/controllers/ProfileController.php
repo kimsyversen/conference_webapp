@@ -17,7 +17,7 @@ class ProfileController extends BaseController {
 		$request = (new Uninett\Api\Request)
 			->setMethod('GET')
 			->setUrl("{$this->api_endpoint}/users/me")
-			->setAccessTokenInHeaders();
+			->setAccessTokenInHeader();
 
 		$response = $this->client->send($request);
 		return View::make('conference.users.profile.index')->with(compact('response'));

@@ -12,12 +12,11 @@ class ConferenceScheduleController extends \BaseController {
 
 	public function index($conference_id)
 	{
-
 		$request = (new Uninett\Api\Request)->setMethod('GET');
 
 		if($this->userIsAuthenticated())
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated")
-				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
 		else
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 

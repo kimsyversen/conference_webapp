@@ -59,7 +59,7 @@ class RatingsController extends BaseController {
 					->setMethod('POST')
 					->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings")
 					->setBody($requestData)
-					->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
+					->setAccessTokenInHeader(Session::get('access_token')['access_token']);
 
 				$response = $this->client->send($request);
 

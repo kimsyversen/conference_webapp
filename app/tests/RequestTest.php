@@ -36,7 +36,6 @@ class RequestTest extends TestCase {
 		$mockResponse = $mockClient
 			->shouldReceive('send')
 			->with($request);
-
 	}
 
 }

@@ -33,30 +33,6 @@ class Client  {
 		$this->responseFormatter = $responseFormatter;
 		$this->client = $client;
 	}
-
-	/**
-	 * @param $method
-	 * @param $url
-	 * @param array $headers
-	 * @param null $body
-	 * @param array $options
-	 */
-/*	public function createRequest($method, $url, $headers = [], $body = null, $options = [])
-	{
-		if(Session::get('access_token')['access_token'])
-			$headers = array_merge($headers, ['Authorization' =>  Session::get('access_token')['access_token']]);
-
-		$request = new Request();
-
-		$request->setMethod($method);
-		$request->setUrl($url);
-		$request->setHeaders($headers);
-		$request->setBody($body);
-		$request->setOptions($options);
-
-		return $request;
-	}*/
-
 	/**
 	 * @return array
 	 */

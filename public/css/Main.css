@@ -117,6 +117,10 @@ a.button-link {
     .message .panel .panel-body .body {
       margin-top: 0.5em; }
 
+.newspost-twitter .panel > .panel-heading {
+  background-image: none;
+  background-color: #af8b0f; }
+
 * {
   margin: 0; }
 

@@ -24,7 +24,7 @@ class ConferencePersonalScheduleController extends \BaseController {
 			$request = (new Uninett\Api\Request)
 				->setMethod('GET')
 				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal")
-				->setAccessTokenInHeaders(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
 
 			$response = $this->client->send($request);
 

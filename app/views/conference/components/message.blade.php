@@ -1,4 +1,4 @@
-<div class="message">
+<div class="message  {{ $classes }}">
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="row">

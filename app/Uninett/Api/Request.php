@@ -80,7 +80,7 @@ class Request {
 	/**
 	 * @param mixed $headers
 	 */
-	public function setAccessTokenInHeaders($token)
+	public function setAccessTokenInHeader($token)
 	{
 		if(Session::get('access_token')['access_token'])
 			$this->headers = array_merge($this->headers, ['Authorization' =>  $token]);
@@ -128,7 +128,7 @@ class Request {
 	{
 		$this->setMethod($method);
 		$this->setUrl($url);
-		$this->setAccessTokenInHeaders($headers);
+		$this->setAccessTokenInHeader($headers);
 		$this->setBody($body);
 		$this->setOptions($options);
 
