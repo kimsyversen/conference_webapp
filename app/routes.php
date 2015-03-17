@@ -7,8 +7,7 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
-Route::get('/', ['as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
-Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
+
 
 
 
@@ -19,7 +18,8 @@ Route::get('/featurette', ['as' => 'featurette_path', 'uses' => 'FeaturetteContr
 //TODO: Since we have no conference start page, set the conference schedule as the start page
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 
-
+Route::get('/', ['as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
+Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/maps', [ 'as' => 'maps_path', 'uses' => 'ConferenceMapsController@index' ]);
 Route::get('conferences/{conference_id}/newsfeed', [ 'as' => 'newsfeed_path', 'uses' => 'ConferenceNewsFeedController@index' ]);
