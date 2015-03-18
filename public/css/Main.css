@@ -2,6 +2,9 @@
 .default-heading-color, * h1, h2, h3, h4, h5, h6, * a {
   color: #2F2F2F; }
 
+.default-link-hover-color, .footer-conference a:hover {
+  color: #3f90ff; }
+
 * a {
   text-decoration: underline; }
 
@@ -42,18 +45,13 @@
 .footer-conference {
   background-color: #2c2c2c; }
   .footer-conference a {
-    color: #a19c9c gp; }
+    color: #fffaf5; }
   .footer-conference h4 {
     color: #777777;
     font-weight: normal; }
 
 .forms {
-  margin-top: 1em;
-  background-color: white;
   padding: 4em 3em 3em 3em; }
-
-.sign-in {
-  margin-top: 2em; }
 
 .conference-item {
   background-color: white;

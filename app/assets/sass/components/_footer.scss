@@ -1,14 +1,18 @@
+
 .footer-conference {
 
   a {
-    color: #a19c9cgp;
-  }
+    color: #fffaf5;
 
+    &:hover {
+      @extend .default-link-hover-color;
+
+    }
+  }
 
   background-color: #2c2c2c;
 
-
-    h4 {
+  h4 {
       color: darken(#9D9D9D, 15%);
       font-weight:normal;
   }
