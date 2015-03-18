@@ -13,8 +13,6 @@
                 form.remove();
 
                 var descriptionLong = $('.rating-description');
-/*                descriptionLong.empty();
-                descriptionLong.append("<div>This session has been rated</div>");*/
 
                 descriptionLong.empty();
                 descriptionLong.fadeOut("slow", function(){

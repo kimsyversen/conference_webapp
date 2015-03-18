@@ -8,8 +8,9 @@ use Uninett\Helpers\AccessToken;
  */
 class SessionsController extends \BaseController {
 
+
 	/**
-	 * @var ApiClient
+	 * @var ApiRequest
 	 */
 	private $client;
 
@@ -50,23 +51,8 @@ class SessionsController extends \BaseController {
 
 		AccessToken::set($response);
 
-		//$this->storeAccessTokenInSession($response);
-
 		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 	}
-
-	/**
-	 * Setup acccess_token in session, add expire time to be able to easy see when it expires
-	 * @param $response
-	 */
-/*	private function storeAccessTokenInSession($response)
-	{
-		$expire_time = ['expires_at' => Carbon::now()->addSeconds($response['expires_in'])];
-
-		$access_token = array_merge($response, $expire_time);
-
-		Session::put('access_token', $access_token);
-	}*/
 
 	/**
 	 * Destroy everything in session
@@ -75,6 +61,8 @@ class SessionsController extends \BaseController {
 	public function destroy()
 	{
 		Session::flush();
+
+		//TODO: Redirect to conference_path?
 
 		return Redirect::route('conferences_path')->with('messages', ['You have now been logged out']);
 	}

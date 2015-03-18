@@ -73,6 +73,6 @@ class RatingsController extends BaseController {
 			}
 		}
 		else
-			Log::error('Someome tried to make a wrong coll in RatingsController@store');
+			Log::error('Someome tried to make a wrong call in RatingsController@store');
 	}
 }

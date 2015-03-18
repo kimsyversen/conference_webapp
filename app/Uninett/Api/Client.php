@@ -13,12 +13,16 @@ use Guzzle\Http\Exception\ServerErrorResponseException;
 use Symfony\Component\HttpKernel\Exception\FatalErrorException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+
 /**
- * Class Request
+ * Class Client
  * @package Uninett\Api
  */
 class Client  {
 
+	/**
+	 * @var GuzzleClient
+	 */
 	private $client;
 	/**
 	 * @var ResponseFormatter
@@ -45,7 +49,7 @@ class Client  {
 			$requestParams->getBody(),
 			$requestParams->getOptions());
 
-		/* A list of exceptions and their explaination
+		/* A list of exceptions and their explanation
 		 * may be found here: http://api.guzzlephp.org/namespace-Guzzle.Http.Exception.html
 		 */
 		try {

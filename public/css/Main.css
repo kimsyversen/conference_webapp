@@ -52,6 +52,9 @@
   background-color: white;
   padding: 4em 3em 3em 3em; }
 
+.sign-in {
+  margin-top: 2em; }
+
 .conference-item {
   background-color: white;
   margin: 1em; }
@@ -128,6 +131,10 @@
 .newspost-twitter .panel > .panel-heading {
   background-image: none;
   background-color: #af8b0f; }
+
+.rating-item {
+  margin: 1em;
+  background-color: #ffffff; }
 
 /** Main layout **/
 * {

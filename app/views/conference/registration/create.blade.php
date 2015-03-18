@@ -5,23 +5,24 @@
     @include('conference.layouts.partials.errors-and-messages')
 
     @include('conference.layouts.partials.page-header', ['text' => 'Create account'])
-        <div class="col-xs-12 forms">
+    <div class="col-md-3"></div>
+    <div class="col-xs-12 col-md-6 sign-in" >
 
             {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
 
             <div class="form-group">
                 {{ Form::label('email', 'Email:', ['class' => 'control-label']) }}
-                {{ Form::text('email', null, ['required', 'class' => 'form-control']) }}
+                {{ Form::text('email', null, ['required', 'class' => 'form-control', 'placeholder' => 'Email']) }}
             </div>
 
             <div class="form-group">
                 {{ Form::label('password', 'Password:', ['class' => 'control-label']) }}
-                {{ Form::password('password', ['required', 'class' => 'form-control']) }}
+                {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => 'Password']) }}
             </div>
 
             <div class="form-group">
                 {{ Form::label('password_confirmation', 'Password confirmation:', ['class' => 'control-label']) }}
-                {{ Form::password('password_confirmation', ['required', 'class' => 'form-control']) }}
+                {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => 'Confirm the password']) }}
             </div>
 
             <div class="form-group">

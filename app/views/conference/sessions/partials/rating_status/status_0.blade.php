@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="rating-description description-long">
-            <p>Here you can give this session a rating and also give comments on it.</p>
+            <p>Here you can give this session a rating and leave an optinal comment.</p>
         </div>
     </div>
 </div>
@@ -32,11 +32,11 @@
 
         <div class="form-group">
             {{ Form::label('comment', 'Comment:', ['class' => 'control-label']) }}
-            {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => 3]) }}
+            {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => 3, 'placeholder' => "Say what's on your mind"]) }}
         </div>
 
         <div class="form-group">
-            {{ Form::submit('submit', ['class' => 'btn btn-primary form-control']) }}
+            {{ Form::submit('Submit', ['class' => 'btn btn-primary form-control']) }}
         </div>
         {{ Form::close() }}
     </div>
