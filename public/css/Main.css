@@ -36,7 +36,7 @@
   @media (max-width: 767px) {
     .featurette span.glyphicon {
       font-size: 10em;
-      padding: 0.1em 0.4em 0 0.1em; }
+      padding: 0.1em 0.2em 0.1em 0.1em; }
     .featurette figcaption {
       padding-left: 75px; }
     .featurette p {
@@ -45,7 +45,7 @@
   @media (min-width: 768px) {
     .featurette span.glyphicon {
       font-size: 13em;
-      padding: 0.1em 0.4em 0 0.1em; }
+      padding: 0.1em 0.4em 0.3em 0.1em; }
     .featurette p {
       font-size: 1.5em; } }
   @media (min-width: 992px) {
