@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-inverse navbar-static-top conference-navbar">
+<nav class="navbar navbar-default navbar-inverse navbar-static-top navbar-conference">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,16 +10,20 @@
             </button>
 
             @if(Session::has('conference_id'))
-                <a class="navbar-brand" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">Conference {{ Session::get('conference_id') }}</a>
+                <a class="navbar-brand home-link" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">
+                    <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
+                </a>
             @else
-                <a class="navbar-brand" href="{{ route('conferences_path')}}">All conferences</a>
+
+                <a class="navbar-brand" href="{{ route('conferences_path')}}">
+                    <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Browse conferences</span>
+                    </a>
             @endif
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @if(Session::has('conference_id'))
-                    <li class="nav-item"> {{ link_to_route('conferences_path', 'All conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
                     <li class="nav-item"> {{ link_to_route('schedule_path', 'Schedule', ['conference_id' => Session::get('conference_id')]) }} </li>
                     <li class="nav-item"> {{ link_to_route('maps_path', 'Maps', ['conference_id' => Session::get('conference_id')] ) }} </li>
                     <li class="nav-item"> {{ link_to_route('newsfeed_path', 'Newsfeed', ['conference_id' => Session::get('conference_id')] ) }} </li>
@@ -33,7 +37,7 @@
             <ul class="nav navbar-nav navbar-right">
                 @if($authenticated)
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-user navbar-user-image'> </i>Settings <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-cog  navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li class="nav-item">  {{ link_to_route('profile_path', "Profile") }} </li>
                             <li class="nav-item "> {{ link_to_route('logout_path', 'Log out') }} </li>

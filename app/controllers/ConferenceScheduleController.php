@@ -1,5 +1,7 @@
 <?php
 
+use Uninett\Helpers\AccessToken;
+
 class ConferenceScheduleController extends \BaseController {
 
 	private $client;
@@ -16,7 +18,7 @@ class ConferenceScheduleController extends \BaseController {
 
 		if($this->userIsAuthenticated())
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated")
-				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(AccessToken::get());
 		else
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 

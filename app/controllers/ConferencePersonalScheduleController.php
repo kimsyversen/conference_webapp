@@ -1,5 +1,7 @@
 <?php
 
+use Uninett\Helpers\AccessToken;
+
 class ConferencePersonalScheduleController extends \BaseController {
 
 	private $client;
@@ -10,13 +12,6 @@ class ConferencePersonalScheduleController extends \BaseController {
 		parent::__construct();
 	}
 
-
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-
 	public function index($conference_id)
 	{
 		if($this->userIsAuthenticated())
@@ -24,7 +19,7 @@ class ConferencePersonalScheduleController extends \BaseController {
 			$request = (new Uninett\Api\Request)
 				->setMethod('GET')
 				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal")
-				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(AccessToken::get());
 
 			$response = $this->client->send($request);
 

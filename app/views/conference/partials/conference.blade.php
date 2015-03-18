@@ -36,7 +36,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 ">
-                            <button class='btn form-control button-dark button-more-conference ' id="button">Read more</button>
+                            <button class='btn form-control button-conference button-dark button-more ' id="button">Read more</button>
                         </div>
                     </div>
                 </div>

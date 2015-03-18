@@ -57,7 +57,7 @@ $(document).ready(function(){
         })
     });
 
-   $('.item').on('click', '#add-to-schedule', function(e){
+    $('.item').on('click', '#add-to-schedule', function(e){
       e.preventDefault();
 
         var button = $(this);
@@ -96,23 +96,22 @@ $(document).ready(function(){
         })
     });
 
-    $(".conference-item").on("click", "button", function(){
+    $(".conference-item").on("click", ".button-more", function(){
 
         //Find conference-item DOM element
         var conferenceItem = $(this).parent().parent().parent();
 
         //Find button
-        var button = conferenceItem.find('.button-more-conference');
+        var button = conferenceItem.find('button');
 
         //Toggle hidden on the description text
         conferenceItem.find('.description .text').toggleClass('hidden');
-
 
         //Change text on the button
         button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
-    $(".button-more").on("click", function(){
+    $(".session-item").on("click", ".button-more", function(){
         //Walk up in the DOM tree
         var parent = $(this).parent().parent().parent();
 

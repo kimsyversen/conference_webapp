@@ -1,10 +1,13 @@
-@import 'modules/navbar';
-@import 'modules/footer';
-@import 'modules/components/buttons';
-@import 'modules/components/forms';
-@import 'modules/components/conference';
-@import 'modules/components/item';
-@import 'modules/components/message/item';
+@import 'defaults';
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/conference/item';
+@import 'components/session/item';
+@import 'components/message/item';
+
+
+/** Main layout **/
 
 * {
   margin: 0;
@@ -47,7 +50,7 @@ textarea {
 }
 
 
-.featurette {
+/*.featurette {
 
 
     @media(max-width:767px){
@@ -97,11 +100,5 @@ textarea {
     }
 
 
-}
-
-/*
-.item-margin {
-  margin-top: 1em;
-}
-*/
+}*/
 

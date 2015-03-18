@@ -1,5 +1,7 @@
 <?php
 
+use Uninett\Helpers\AccessToken;
+
 class RatingsController extends BaseController {
 
 	private $client;
@@ -35,6 +37,9 @@ class RatingsController extends BaseController {
 		]);
 	}
 
+	/**
+	 * @return array
+	 */
 	public function store()
 	{
 		$conference_id = Session::get('conference_id');
@@ -59,7 +64,7 @@ class RatingsController extends BaseController {
 					->setMethod('POST')
 					->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings")
 					->setBody($requestData)
-					->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+					->setAccessTokenInHeader(AccessToken::get());
 
 				$response = $this->client->send($request);
 

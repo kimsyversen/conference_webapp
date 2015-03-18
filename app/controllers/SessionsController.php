@@ -1,6 +1,7 @@
 <?php
 use Carbon\Carbon;
 use Uninett\Api\Client as ApiRequest;
+use Uninett\Helpers\AccessToken;
 
 /**
  * Class SessionsController
@@ -47,7 +48,9 @@ class SessionsController extends \BaseController {
 		if(isset($response['errors']) || is_null($response))
 			return Redirect::back()->with($response);
 
-		$this->storeAccessTokenInSession($response);
+		AccessToken::set($response);
+
+		//$this->storeAccessTokenInSession($response);
 
 		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 	}
@@ -56,14 +59,14 @@ class SessionsController extends \BaseController {
 	 * Setup acccess_token in session, add expire time to be able to easy see when it expires
 	 * @param $response
 	 */
-	private function storeAccessTokenInSession($response)
+/*	private function storeAccessTokenInSession($response)
 	{
 		$expire_time = ['expires_at' => Carbon::now()->addSeconds($response['expires_in'])];
 
 		$access_token = array_merge($response, $expire_time);
 
 		Session::put('access_token', $access_token);
-	}
+	}*/
 
 	/**
 	 * Destroy everything in session

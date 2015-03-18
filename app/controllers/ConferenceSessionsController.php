@@ -1,5 +1,7 @@
 <?php
 
+use Uninett\Helpers\AccessToken;
+
 class ConferenceSessionsController extends \BaseController {
 
 	private $client;
@@ -15,7 +17,8 @@ class ConferenceSessionsController extends \BaseController {
 	{
 		$request = (new Uninett\Api\Request)->setMethod('GET');
 		if($this->userIsAuthenticated())
-			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/authenticated")->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/authenticated")
+				->setAccessTokenInHeader(AccessToken::get());
 		else
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}");
 
@@ -29,7 +32,7 @@ class ConferenceSessionsController extends \BaseController {
 			$request2 = (new Uninett\Api\Request)
 				->setMethod('GET')
 				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/sessions/{$session_id}/ratings/create")
-				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(AccessToken::get());
 
 			$response2 = $this->client->send($request2);
 
@@ -59,8 +62,7 @@ class ConferenceSessionsController extends \BaseController {
 				->setMethod('POST')
 				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal")
 				->setBody(['session_id' => $requestedSessionId])
-				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
-
+				->setAccessTokenInHeader(AccessToken::get());
 
 			$this->client->send($request);
 
@@ -87,7 +89,7 @@ class ConferenceSessionsController extends \BaseController {
 			$request = (new Uninett\Api\Request)
 				->setMethod('DELETE')
 				->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/personal/{$requestedSessionId}")
-				->setAccessTokenInHeader(Session::get('access_token')['access_token']);
+				->setAccessTokenInHeader(AccessToken::get());
 
 
 			//TODO: Gjøre noe med respons?

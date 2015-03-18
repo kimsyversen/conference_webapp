@@ -13,24 +13,7 @@
 
 App::before(function($request)
 {
-	//Manage session
-	if(Session::has('access_token'))
-	{
-		$access_token = Session::get('access_token');
-
-		if(isset($access_token['expires_at'])) {
-
-			$expire_time = $access_token['expires_at'];
-
-			$now = Carbon\Carbon::now();
-
-			if($now->gt($expire_time))
-			{
-				Session::remove('access_token');
-				return Redirect::to('/')->with('messages', ['You have been logged out because your session has timed out']);
-			}
-		}
-	}
+	\Uninett\Helpers\AccessToken::validate();
 });
 
 

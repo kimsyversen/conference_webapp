@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row session-item">
     <!-- Push one column to left -->
     <div class="col-md-1"></div>
     <div class="col-md-10 item">
