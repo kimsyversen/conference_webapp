@@ -73,32 +73,32 @@
       .conference-item .body .description .text {
         padding: 0.5em; }
 
-.item {
+.session-item {
   background-color: white;
   margin: 1em; }
-  .item a {
+  .session-item a {
     text-decoration: underline; }
-  .item .header .time {
+  .session-item .header .time {
     font-size: 0.8em;
     float: right;
     display: block; }
-  .item .header .location {
+  .session-item .header .location {
     font-size: 0.5em; }
-  .item .header .avatar {
+  .session-item .header .avatar {
     padding: 0.5em 0 0 1em;
     float: left;
     font-size: 1.5em;
     color: #1b800a; }
-  .item .header .title {
+  .session-item .header .title {
     padding: 0.5em 0 0.5em 0;
     font-size: 1em; }
-  .item .description-long {
+  .session-item .description-long {
     padding: 1em; }
-  .item .description-short {
+  .session-item .description-short {
     padding: 1em; }
-  .item .buttons .with-border {
+  .session-item .buttons .with-border {
     border-right: 1px dashed #000; }
-  .item .information .location {
+  .session-item .information .location {
     font-size: 1em; }
 
 .message {

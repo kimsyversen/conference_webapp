@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    $('.item').on('click', '#remove-from-schedule', function(e){
+    $('.session-item').on('click', '#remove-from-schedule', function(e){
         e.preventDefault();
         console.log(e);
 
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.item').find('.header').find('.title h4 a').attr('href');
+        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
 
         var sessionId = button.attr('value');
 
@@ -57,13 +57,13 @@ $(document).ready(function(){
         })
     });
 
-    $('.item').on('click', '#add-to-schedule', function(e){
+    $('.session-item').on('click', '#add-to-schedule', function(e){
       e.preventDefault();
 
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.item').find('.header').find('.title h4 a').attr('href');
+        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
         var sessionId = button.attr('value');
 
         console.log(url);
@@ -111,7 +111,7 @@ $(document).ready(function(){
         button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
-    $(".item").on("click", "#button-session-more", function(){
+    $(".session-item").on("click", "#button-session-more", function(){
         //Walk up in the DOM tree
         var parent = $(this).parent().parent().parent();
 
