@@ -70,7 +70,7 @@ class ConferenceSessionsController extends \BaseController {
 			'id' => 'remove-from-schedule',
 			'buttonClass' => 'btn button-dark with-border button-schedule',
 			'text' => 'Remove from schedule',
-			'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+			'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-remove',
 			'value' =>  $requestedSessionId]);
 
 		}
@@ -99,7 +99,7 @@ class ConferenceSessionsController extends \BaseController {
 				'id' => 'add-to-schedule',
 				'buttonClass' => 'btn button-dark with-border button-schedule',
 				'text' => 'Add to schedule',
-				'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-calendar',
+				'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-save',
 				'value' =>  $requestedSessionId]);
 
 		}

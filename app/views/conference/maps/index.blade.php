@@ -9,16 +9,14 @@
 
         @if(isset($data) && !empty($data))
             <div class="row">
-
-                <div class="col-md-1"></div>
-                <div class="col-md-10 item">
-
                     @foreach($data['data'] as $map)
-                        <img class="img-responsive" src="{{ $map['uri'] }}">
-                        <p> {{ $map['description'] }}</p>
-                    @endforeach
-                </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-10">
+                        <img class="img-responsive text-center" src="{{ $map['uri'] }}">
+                    </div>
 
+
+                    @endforeach
             </div>
         @endif
     </div>
