@@ -38,6 +38,10 @@
 
 
 .newspost-twitter {
+  .panel {
+    border : 0;
+    border-radius: 0 !important;
+  }
   .panel > .panel-heading {
     background-image: none;
     background-color: #af8b0f;
