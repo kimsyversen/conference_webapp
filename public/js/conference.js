@@ -96,7 +96,7 @@ $(document).ready(function(){
         })
     });
 
-    $(".item").on("click", "#button-conference-more", function(){
+    $(".conference-item").on("click", "#button-conference-more", function(){
 
         //Find conference-item DOM element
         var conferenceItem = $(this).parent().parent().parent();

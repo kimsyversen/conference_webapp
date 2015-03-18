@@ -52,25 +52,25 @@
   background-color: white;
   padding: 4em 3em 3em 3em; }
 
-.item {
+.conference-item {
   background-color: white;
   margin: 1em; }
-  .item .header img {
+  .conference-item .header img {
     width: 100%;
     height: 100%; }
-  .item .body {
+  .conference-item .body {
     padding: 0.5em; }
-    .item .body .name {
+    .conference-item .body .name {
       padding: 0.5em;
       text-align: center;
       font-size: 1.3em; }
-    .item .body .time {
+    .conference-item .body .time {
       padding: .9em;
       text-align: right;
       font-size: 0.8em; }
-    .item .body .description {
+    .conference-item .body .description {
       padding: .2em; }
-      .item .body .description .text {
+      .conference-item .body .description .text {
         padding: 0.5em; }
 
 .item {
