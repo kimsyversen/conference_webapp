@@ -1,5 +1,6 @@
 <?php namespace Uninett\Helpers; 
 use Carbon\Carbon;
+use Redirect;
 use Session;
 
 /**
