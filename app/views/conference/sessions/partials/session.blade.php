@@ -51,7 +51,7 @@
                     <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
-                        'id' => 'button',
+                        'id' => 'button-session-more',
                         'text' => 'Read more',
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
@@ -59,7 +59,7 @@
                     <div class="col-xs-12 col-sm-12 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
-                        'id' => 'button',
+                        'id' => 'button-session-more',
                         'text' => 'Read more',
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
@@ -78,7 +78,7 @@
                     <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
-                        'id' => 'button',
+                        'id' => 'button-session-more',
                         'text' => 'Read more',
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>
@@ -88,7 +88,7 @@
                     <div class="col-xs-12 nopadding button-more-parent">
                         @include('conference.components.button', [
                         'buttonClass' => 'btn button-dark button-more',
-                        'id' => 'button',
+                        'id' => 'button-session-more',
                         'text' => 'Read more',
                         'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-zoom-in'])
                     </div>

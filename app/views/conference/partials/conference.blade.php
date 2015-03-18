@@ -3,7 +3,7 @@
     <div class="row">
         @foreach($row as $conference)
             <div class="col-md-6">
-                <div class="conference-item">
+                <div class="item">
                     <div class="row header">
                         <div class="col-xs-12">
                             <a href="/{{$conference['link']['uri'] }} " rel="{{ $conference['link']['rel']  }}">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 ">
-                            <button class='btn form-control button-conference button-dark button-more ' id="button">Read more</button>
+                            <button class='btn form-control button-conference button-dark button-more ' id="button-conference-more">Read more</button>
                         </div>
                     </div>
                 </div>

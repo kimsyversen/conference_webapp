@@ -96,7 +96,7 @@ $(document).ready(function(){
         })
     });
 
-    $(".conference-item").on("click", ".button-more", function(){
+    $(".item").on("click", "#button-conference-more", function(){
 
         //Find conference-item DOM element
         var conferenceItem = $(this).parent().parent().parent();
@@ -111,7 +111,7 @@ $(document).ready(function(){
         button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
-    $(".session-item").on("click", ".button-more", function(){
+    $(".item").on("click", "#button-session-more", function(){
         //Walk up in the DOM tree
         var parent = $(this).parent().parent().parent();
 

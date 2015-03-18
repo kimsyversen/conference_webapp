@@ -7,5 +7,4 @@
 @stop
 
 
-{{--
-This is not currently used. Could be used as a start page for a conference.--}}
+{{-- This is not currently used. Could be used as a start page for a conference. --}}
