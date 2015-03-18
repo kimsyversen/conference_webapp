@@ -30,6 +30,34 @@
 .conference-breacrumb {
   background-color: #ffffff; }
 
+.featurette {
+  margin-top: 3em;
+  margin-bottom: 2em; }
+  @media (max-width: 767px) {
+    .featurette span.glyphicon {
+      font-size: 5em; }
+    .featurette figcaption {
+      padding-left: 75px; }
+    .featurette p {
+      font-size: 1.4em;
+      padding-top: 0.1em; } }
+  @media (min-width: 768px) {
+    .featurette span.glyphicon {
+      font-size: 5em; }
+    .featurette p {
+      font-size: 1em; } }
+  @media (min-width: 992px) {
+    .featurette span.glyphicon {
+      font-size: 5em; }
+    .featurette p {
+      font-size: 1.5em; } }
+  @media (min-width: 1200px) {
+    .featurette span.glyphicon {
+      font-size: 16em;
+      margin: 0.2em; }
+    .featurette p {
+      font-size: 2em; } }
+
 .navbar-conference a {
   text-decoration: none;
   color: #ff0000; }
@@ -166,55 +194,3 @@ textarea {
 .goto-top {
   margin-top: 2em;
   margin-bottom: 2em; }
-
-/*.featurette {
-
-
-    @media(max-width:767px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      figcaption {
-        padding-left: 75px;
-      }
-
-
-      p {
-        font-size: 1.4em;
-        padding-top: 0.1em;
-      }
-
-
-
-    }
-    @media(min-width:768px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
-    @media(min-width:992px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      p {
-        font-size: 1.5em;
-      }
-    }
-    @media(min-width:1200px) {
-      span.glyphicon{
-        font-size: 16em;
-      }
-
-      p {
-        font-size: 2em;
-      }
-    }
-
-
-}*/

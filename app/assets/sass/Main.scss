@@ -1,4 +1,5 @@
 @import 'defaults';
+@import 'components/featurette';
 @import 'components/nav';
 @import 'components/footer';
 @import 'components/forms';
@@ -6,6 +7,7 @@
 @import 'components/session/item';
 @import 'components/message/item';
 @import 'components/rating/item';
+
 
 
 /** Main layout **/
@@ -50,56 +52,4 @@ textarea {
   margin-bottom: 2em;
 }
 
-
-/*.featurette {
-
-
-    @media(max-width:767px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      figcaption {
-        padding-left: 75px;
-      }
-
-
-      p {
-        font-size: 1.4em;
-        padding-top: 0.1em;
-      }
-
-
-
-    }
-    @media(min-width:768px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
-    @media(min-width:992px){
-      span.glyphicon {
-        font-size: 5em;
-      }
-
-      p {
-        font-size: 1.5em;
-      }
-    }
-    @media(min-width:1200px) {
-      span.glyphicon{
-        font-size: 16em;
-      }
-
-      p {
-        font-size: 2em;
-      }
-    }
-
-
-}*/
 

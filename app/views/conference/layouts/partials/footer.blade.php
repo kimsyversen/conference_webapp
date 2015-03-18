@@ -5,7 +5,7 @@
                 <h4>Other information</h4>
                 <ul class="list-unstyled">
                     <li class="footer-list-item"><a href="#">About the creators</a></li>
-                    <li class="footer-list-item"><a href="#">Get a quick tour of the application</a></li>
+                    <li class="footer-list-item"><a href="{{ route('featurette_path') }}">Get a quick tour of the application</a></li>
                     <li class="footer-list-item"><a href="#">Disclaimer?</a></li>
                     <li class="nav-item"> {{ link_to_route('conferences_path', 'All conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
                 </ul>
