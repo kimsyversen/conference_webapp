@@ -84,7 +84,8 @@
   .item .header .avatar {
     padding: 0.5em 0 0 1em;
     float: left;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    color: #1b800a; }
   .item .header .title {
     padding: 0.5em 0 0.5em 0;
     font-size: 1em; }

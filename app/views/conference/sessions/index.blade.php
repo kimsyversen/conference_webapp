@@ -24,9 +24,11 @@
 @section('javascript')
     @parent
     {{ HTML::script('js/ratings/ratings.js') }}
+    <!-- Expand the details about session when entered and remove the button-->
     <script>
         $(document).ready(function() {
-            $(".button-more").trigger("click");
+            $("#button-session-more").trigger("click");
+            $("#button-session-more").detach();
         });
     </script>
 @stop
