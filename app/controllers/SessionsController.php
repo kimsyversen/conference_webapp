@@ -60,10 +60,15 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy()
 	{
-		Session::flush();
+		$messages = ['You have now been logged out'];
 
-		//TODO: Redirect to conference_path?
+		if(Session::has('conference_id')){
+			$conference_id = Session::get('conference_id');
 
-		return Redirect::route('conferences_path')->with('messages', ['You have now been logged out']);
+			Session::flush();
+
+			return Redirect::route('conference_path', ['conference_id' => $conference_id])->with($messages);
+		}
+		return Redirect::route('conferences_path')->with($messages);
 	}
 }

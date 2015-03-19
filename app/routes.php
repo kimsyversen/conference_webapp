@@ -4,19 +4,10 @@ Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationCo
 Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create']);
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
-
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
-
-Route::get('/test', function() {
-	 phpinfo();
-});
-
-Route::get('/featurette', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@index' ]);
+Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@index' ]);
 Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]);
-
-
-
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
