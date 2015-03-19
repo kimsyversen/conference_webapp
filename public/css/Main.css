@@ -14,6 +14,9 @@
   -webkit-transition: 0.3s;
           transition: 0.3s; }
 
+.button-green {
+  background-color: #098018; }
+
 .button-dark {
   background-color: #9b9f9f; }
   .button-dark:hover {
@@ -35,12 +38,12 @@
   margin-bottom: 2em; }
   @media (max-width: 767px) {
     .featurette span.glyphicon {
-      font-size: 10em;
+      font-size: 8em;
       padding: 0.1em 0.2em 0.1em 0.1em; }
     .featurette figcaption {
-      padding-left: 75px; }
+      padding-left: 60px; }
     .featurette p {
-      font-size: 1.4em;
+      font-size: 1.5em;
       padding-top: 0.1em; } }
   @media (min-width: 768px) {
     .featurette span.glyphicon {
