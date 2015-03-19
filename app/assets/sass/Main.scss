@@ -9,6 +9,9 @@
 @import 'components/rating/item';
 
 
+.site-default-background-color {
+  background-color: darken(#E9EAEA, 7%);
+}
 
 /** Main layout **/
 
@@ -19,7 +22,7 @@
 html, body {
   height: 100%;
   min-height: 100%;
-  background-color: darken(#E9EAEA, 7%);
+  @extend .site-default-background-color;
 }
 
 .wrapper {
@@ -53,3 +56,6 @@ textarea {
 }
 
 
+.about-the-application {
+  font-size: 1.6em;
+}

@@ -1,5 +1,5 @@
 /** Side wide defaults  **/
-.default-heading-color, * h1, h2, h3, h4, h5, h6, * a {
+.default-heading-color, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3 {
   color: #2F2F2F; }
 
 .default-link-hover-color, .footer-conference a:hover {
@@ -143,14 +143,17 @@
     border: 0;
     border-radius: 0; }
     .message .panel .panel-heading {
-      background-color: #9b9f9f; }
+      border: 0;
+      background-color: #f2f2f2; }
       .message .panel .panel-heading .glyph {
+        color: #3e3e3e;
         float: left; }
         .message .panel .panel-heading .glyph span {
           font-size: 1.5em; }
       .message .panel .panel-heading .title {
         margin-left: 25px; }
         .message .panel .panel-heading .title h3 {
+          font-weight: 400;
           padding: 0.1em 0 0 0.5em; }
     .message .panel .panel-body .time {
       font-size: 1em;
@@ -162,12 +165,15 @@
   border: 0;
   border-radius: 0 !important; }
 .newspost-twitter .panel > .panel-heading {
-  background-image: none;
-  background-color: #af8b0f; }
+  /*    background-image: none;
+    background-color: #2ea7af;*/ }
 
 .rating-item {
   margin: 1em;
   background-color: #ffffff; }
+
+.site-default-background-color, html, body {
+  background-color: #d7d9d9; }
 
 /** Main layout **/
 * {
@@ -175,8 +181,7 @@
 
 html, body {
   height: 100%;
-  min-height: 100%;
-  background-color: #d7d9d9; }
+  min-height: 100%; }
 
 .wrapper {
   min-height: 100%;
@@ -201,3 +206,6 @@ textarea {
 .goto-top {
   margin-top: 2em;
   margin-bottom: 2em; }
+
+.about-the-application {
+  font-size: 1.6em; }

@@ -17,6 +17,12 @@ Breadcrumbs::register('login', function($breadcrumbs) {
 });
 
 
+Breadcrumbs::register('about_creators', function($breadcrumbs) {
+	$breadcrumbs->parent('conferences');
+	$breadcrumbs->push('About the application', route('about_creators_path'));
+});
+
+
 Breadcrumbs::register('conference', function($breadcrumbs) {
 	$breadcrumbs->parent('conferences');
 

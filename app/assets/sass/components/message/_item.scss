@@ -6,18 +6,23 @@
     border-radius: 0;
 
     .panel-heading {
-      background-color: darken(#E9EAEA, 30%);
+      border: 0;
+      background-color: darken(white, 5%);
 
       .glyph {
+        color: #3e3e3e;
         float: left;
         span {
           font-size: 1.5em;
+
         }
       }
       .title {
         margin-left: 25px;
 
         h3 {
+          font-weight: 400;
+          @extend .default-heading-color;
           padding: 0.1em 0 0 0.5em;
         }
       }
@@ -43,8 +48,8 @@
     border-radius: 0 !important;
   }
   .panel > .panel-heading {
-    background-image: none;
-    background-color: #af8b0f;
+/*    background-image: none;
+    background-color: #2ea7af;*/
 
   }
 }
