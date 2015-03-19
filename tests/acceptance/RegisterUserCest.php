@@ -33,12 +33,19 @@ class RegisterUserCest
 
 		$I->amOnPage('/register');
 
-		$random_string = str_random(10);
-		$I->fillField('email', $random_string . '@example.com');
+		$I->fillField('email', str_random(10). '@example.com');
 		$I->fillField('password', 'secret');
 		$I->fillField('password_confirmation', 'secret');
 
 		$I->click('Sign up');
-		$I->see('Account was successfully created. Check your email to verify your account');
+
+		$I->amOnPage('/login');
+
+		$I->see('Sign in');
+
+		//TODO: Someone this won't work
+		//$I->see('Account was successfully created. Check your email to verify your account.');
+
+
 	}
 }

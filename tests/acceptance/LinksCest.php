@@ -96,6 +96,9 @@ class LinksCest
 		$I->seeLink('Profile', '/profile');
 		$I->seeLink('Log out', '/logout');
 
+		$I->seeLink('About the application', '/about');
+		$I->seeLink('Features of this application', '/features');
+
 		$I->dontSeeLink('Log in', '/login');
 	}
 
@@ -103,7 +106,7 @@ class LinksCest
 	{
 		$this->is_authenticated_and_on_main_page($I);
 
-		$I->seeLink('Conference 1', '/conferences/1');
+		$I->seeLink('Home', '/conferences/1');
 		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
@@ -117,6 +120,10 @@ class LinksCest
 		$I->seeLink('Login', '/login');
 		$I->seeLink('Register', '/register');
 
+		$I->seeLink('About the application', '/about');
+		$I->seeLink('Features of this application', '/features');
+
+
 		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');
 	}
@@ -124,13 +131,15 @@ class LinksCest
 	private function is_not_authenticated_and_on_conference(AcceptanceTester $I)
 	{
 		$I->seeLink('All conferences', '/conferences');
-		$I->seeLink('Conference 1', '/conferences/1');
+		$I->seeLink('Home', '/conferences/1');
 		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
+
+		$I->seeLink('About the application', '/about');
+		$I->seeLink('Features of this application', '/features');
 
 		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');
 		$I->dontSeeLink('Personal Schedule', '/conferences/1/schedule');
-
 	}
 }

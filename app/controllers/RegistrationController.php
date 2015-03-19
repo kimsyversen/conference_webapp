@@ -29,7 +29,7 @@ class RegistrationController extends BaseController {
 
 		return Redirect::route('login_path')->with([
 				'data' => $response,
-				'messages' => ['Account was successfully created. Check your email to verify your account']
+				'messages' => ['Account was successfully created. Check your email to verify your account.']
 		]);
 
 	}

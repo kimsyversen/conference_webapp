@@ -3,7 +3,6 @@
     @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conference') ])
     @include('conference.layouts.partials.errors-and-messages')
     @include('conference.layouts.partials.page-header', ['text' => 'Conference start page'])
-
 @stop
 
 

@@ -143,6 +143,11 @@ $(document).ready(function(){
     }, 5000);
 
 
+    $("#button-login").on("click",  function(){
+
+
+    });
+
 
 
 /*Snippet borrowed from Lasse Brudeskar Vikås*/
