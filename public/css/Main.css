@@ -128,6 +128,8 @@
   .session-item .header .title {
     padding: 0.5em 0 0.5em 0;
     font-size: 1em; }
+    .session-item .header .title h4 {
+      font-weight: 400; }
   .session-item .description-long {
     padding: 1em; }
   .session-item .description-short {
