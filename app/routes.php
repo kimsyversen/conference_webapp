@@ -8,7 +8,9 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
 
-
+Route::get('/test', function() {
+	 phpinfo();
+});
 
 Route::get('/featurette', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@index' ]);
 
