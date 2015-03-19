@@ -14,6 +14,14 @@
 App::before(function($request)
 {
 	\Uninett\Helpers\AccessToken::validate();
+
+
+/*	if(!Cookie::has('first_visit'))
+	{
+		Cookie::forever('first_visit', false);
+		Redirect::route('featurette_path');
+	}*/
+
 });
 
 
