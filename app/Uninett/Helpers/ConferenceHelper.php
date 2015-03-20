@@ -42,4 +42,30 @@ class ConferenceHelper {
 		return $sentence;
 	}
 
+	/**
+	 * @param $recipients
+	 * @param int $length
+	 */
+	public static function formatChatRecipients($recipients, $length = 5) {
+		$string = "";
+		$currentLength = 0;
+
+		foreach($recipients['group_recipients'] as $recipient) {
+			$string = $string . $recipient['name'] . ", ";
+			$currentLength += 1;
+			if ($currentLength === $length){
+				break;
+			}
+		}
+
+		foreach($recipients['user_recipients'] as $recipient) {
+			$string = $string . $recipient['email'] . ", ";
+			$currentLength += 1;
+
+			if ($currentLength === $length){
+				break;
+			}
+		}
+		return substr($string, 0, strlen($string) -2);
+	}
 }

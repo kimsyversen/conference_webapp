@@ -28,8 +28,10 @@
                     <li class="nav-item"> {{ link_to_route('maps_path', 'Maps', ['conference_id' => Session::get('conference_id')] ) }} </li>
                     <li class="nav-item"> {{ link_to_route('newsfeed_path', 'Newsfeed', ['conference_id' => Session::get('conference_id')] ) }} </li>
 
+
                     @if(isset($authenticated) && $authenticated === true)
                         <li class="nav-item"> {{ link_to_route('personal_schedule_path', 'Personal Schedule', ['conference_id' => Session::get('conference_id')] ) }} </li>
+                        <li class="nav-item"> {{ link_to_route('chats_path', 'Chats', ['conference_id' => Session::get('conference_id')] ) }} </li>
                     @endif
                 @endif
             </ul>

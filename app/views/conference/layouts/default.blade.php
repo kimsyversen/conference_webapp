@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
+    {{ HTML::style('css/speechbubble.css') }}
 </head>
 <body>
     <header>

@@ -52,7 +52,7 @@ class AccessToken {
 
 				if($now->gt($expire_time)) {
 					Session::remove('access_token');
-					return Redirect::to('/')->with('messages', ['You have been logged out because your session has timed out']);
+					return Redirect::route('login_path')->with('messages', ['You have been logged out because your session has timed out']);
 				}
 			}
 		}

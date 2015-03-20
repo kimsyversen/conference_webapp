@@ -12,7 +12,9 @@ class ConferenceMapsController extends \BaseController {
 
 	public function index($conference_id)
 	{
-		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/maps");
+		$request = (new Uninett\Api\Request)
+			->setMethod('GET')
+			->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/maps");
 
 		$response = $this->client->send($request);
 

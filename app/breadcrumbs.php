@@ -1,6 +1,7 @@
 <?php
 
 
+
 Breadcrumbs::register('conferences', function($breadcrumbs) {
 	$breadcrumbs->push('Conferences', route('conferences_path'));
 });
@@ -46,6 +47,23 @@ Breadcrumbs::register('newsfeed', function($breadcrumbs) {
 	$breadcrumbs->push("Newsfeed", route('newsfeed_path'));
 
 });
+
+Breadcrumbs::register('chats', function($breadcrumbs) {
+	$conference_id = Session::get('conference_id');
+
+	$breadcrumbs->parent('conference');
+	$breadcrumbs->push("Chats", route('chats_path', ['conference_id' => $conference_id]));
+
+});
+
+Breadcrumbs::register('chat', function($breadcrumbs) {
+	$conference_id = Session::get('conference_id');
+
+	$breadcrumbs->parent('chats');
+	$breadcrumbs->push("Chat", route('chat_path', ['conference_id' => $conference_id]));
+
+});
+
 
 Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');

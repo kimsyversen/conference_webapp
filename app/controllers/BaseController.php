@@ -13,6 +13,10 @@ class BaseController extends Controller {
 	protected $api_endpoint;
 	protected $base_url;
 
+
+	//TODO: Set IDs
+	protected $conference_id;
+	protected $session_id;
 	function __construct()
 	{
 		$this->base_url = Config::get('uninett.api_base_uri');
