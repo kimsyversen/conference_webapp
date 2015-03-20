@@ -225,10 +225,8 @@
 .bubble {
   position: relative;
   min-height: 120px;
-  padding: 1.5em 2em 2em 2em;
+  padding: 1em;
   background: #FFFFFF;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
   border-radius: 10px; }
 
 .bubble:after {

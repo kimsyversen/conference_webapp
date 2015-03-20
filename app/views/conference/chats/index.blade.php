@@ -4,7 +4,7 @@
     @include('conference.layouts.partials.errors-and-messages')
 
     @if(isset($data) && !empty($data))
-        @include('conference.layouts.partials.page-header', ['text' => 'Message threads'])
+        @include('conference.layouts.partials.page-header', ['text' => 'Chats'])
 
         @foreach($data['data'] as $chat)
 

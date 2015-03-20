@@ -13,7 +13,7 @@
                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
             </div>
             <div class="col-xs-10 col-sm-10 chat-title">
-                <h4 class="panel-title"> <a href="/{{$uri}}">{{ $title }}</a> </h4>
+                <h4 class="panel-title"> From <a href="/{{$uri}}"> {{ $title }}</a> </h4>
             </div>
 
         </div>
