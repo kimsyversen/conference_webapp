@@ -4,19 +4,22 @@
 
 .chat-group {
   background-color: #ffffff;
-  padding: 0.5em;
+  padding: 0.8em;
   margin-bottom: 1em;
-
+  word-wrap: break-word;
   .chat-avatar {
     float: left;
     padding: 0 15px 0 1em;
     font-size: 1.5em;
+
   }
 
   .chat-title {
     float: left;
     font-weight: 400;
-    padding: 0.3em 0 0.5em 0;
+    padding: 0.3em 0 0.5em 0.5em;
+
+
   }
 
   .time {
@@ -27,29 +30,7 @@
 
 }
 
-/*.chat-message {
-  background-color: white;
-  margin-bottom: 1em;
 
-  .chat-avatar {
-    float: left;
-    padding: 0.5em 0  0 1em;
-    font-size: 1.5em;
-  }
-
-  .chat-title {
-    float: left;
-    font-weight: 400;
-    padding: 1em 0 0 0;
-  }
-
-  .header {
-    background-color: blue;
-  }
-  .body {
-    margin: 1.5em;
-  }
-}*/
 
 .chat-message {
   margin-top: 1em;
