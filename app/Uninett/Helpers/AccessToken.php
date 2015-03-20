@@ -1,7 +1,8 @@
 <?php namespace Uninett\Helpers; 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 use Redirect;
-use Session;
+
 
 /**
  * Class AccessToken
