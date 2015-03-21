@@ -49,8 +49,6 @@ class ConferenceChatsController extends \BaseController {
 
 		$response = $this->client->send($request);
 
-
-
 		return View::make('conference.chats.show')->with('chat', $response);
 	}
 

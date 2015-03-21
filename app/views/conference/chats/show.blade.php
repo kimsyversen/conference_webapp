@@ -8,7 +8,7 @@
                    @include('conference.components.chatMessage', [
                        'uri' => $chat['data']['link'],
                        'title' =>  $message['user']['email'],
-                       'time' => $chat['data']['created_at']['date'],
+                       'time' => $message['created_at']['date'],
                        'user' => $message['user']['email'],
                        'message' => $message['message']
                     ])
