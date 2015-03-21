@@ -15,6 +15,11 @@ class RegistrationController extends BaseController {
 		return View::make('conference.registration.create');
 	}
 
+	public function createModal()
+	{
+		return View::make('conference.registration.create-modal');
+	}
+
 	public function store()
 	{
 		$request = (new Uninett\Api\Request)
@@ -25,7 +30,7 @@ class RegistrationController extends BaseController {
 		$response = $this->client->send($request);
 
 		if(isset($response['errors']))
-			return Redirect::back()->with('errors',$response['errors']);
+			return Redirect::route('register_path')->with('errors',$response['errors']);
 
 		return Redirect::route('login_path')->with([
 				'data' => $response,

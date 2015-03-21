@@ -143,23 +143,40 @@ $(document).ready(function(){
     }, 5000);
 
 
-    $("#button-login").on("click",  function(){
-
-
-    });
-
     $("#login-button").on("click",  function() {
+
         BootstrapDialog.show({
+            title: 'Login',
+            description: 'Login to your account',
             message: function(dialog) {
                 var $message = $('<div></div>');
                 var pageToLoad = dialog.getData('pageToLoad');
                 $message.load(pageToLoad);
+
                 return $message;
             },
             data: {
                 'pageToLoad': '/loginmodal'
             }
         });
+    });
 
+
+    $("#register-button").on("click",  function() {
+
+        BootstrapDialog.show({
+            title: 'Register',
+            description: 'Register a new account',
+            message: function(dialog) {
+                var $message = $('<div></div>');
+                var pageToLoad = dialog.getData('pageToLoad');
+                $message.load(pageToLoad);
+
+                return $message;
+            },
+            data: {
+                'pageToLoad': '/registermodal'
+            }
+        });
     });
 });

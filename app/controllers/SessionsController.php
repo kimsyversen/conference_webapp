@@ -55,12 +55,14 @@ class SessionsController extends \BaseController {
 		$response = $this->client->send($request);
 
 		if(isset($response['errors']) || is_null($response))
-			return Redirect::route('login_path')->with($response);
+			return $response;
+		//	return Redirect::route('login_path')->with($response);
 
 		AccessToken::set($response);
 
 
 		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
+
 	}
 
 	/**
