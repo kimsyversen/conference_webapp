@@ -41,5 +41,5 @@ Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' =>
 /* loader.io */
 
 Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
-	return storage_path() . '/loaderio-aef6c70fb68412153005721ed69b906e.txt';
+	return File::get(storage_path() . "/loaderio-aef6c70fb68412153005721ed69b906e.txt");
 });
