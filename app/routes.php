@@ -1,5 +1,5 @@
 <?php
-Route::get('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@create' ]);
+Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ]);
 Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ]);
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
 Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create']);

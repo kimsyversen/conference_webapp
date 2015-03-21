@@ -27,6 +27,7 @@ class LoginUserCest
 	{
 		$I->am('guest');
 		$I->wantTo('Log in nonexisting user');
+
 		$I->amOnPage('/login');
 
 		$email =  str_random(10) . '@example.com';
@@ -35,6 +36,7 @@ class LoginUserCest
 		$I->loginUser($email, $password);
 
 		$I->click('Sign in');
+
 		$I->see('Wrong credentials!');
 	}
 }

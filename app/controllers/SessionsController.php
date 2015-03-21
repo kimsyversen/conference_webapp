@@ -60,8 +60,9 @@ class SessionsController extends \BaseController {
 
 		AccessToken::set($response);
 
+		return Redirect::back()->with('messages', ['You are now logged in']);
 
-		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
+		//return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 
 	}
 

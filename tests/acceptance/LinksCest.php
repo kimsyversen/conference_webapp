@@ -117,8 +117,8 @@ class LinksCest
 	private function is_not_authenticated_and_on_main_page(AcceptanceTester $I)
 	{
 		$I->seeLink('All conferences', '/conferences');
-		$I->seeLink('Login', '/login');
-		$I->seeLink('Register', '/register');
+	/*	$I->seeLink('Login', '/login');
+		$I->seeLink('Register', '/register');*/
 
 		$I->seeLink('About the application', '/about');
 		$I->seeLink('Features of this application', '/features');
