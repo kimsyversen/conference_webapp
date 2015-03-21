@@ -36,3 +36,10 @@ Route::delete('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'se
 Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);
 Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' => 'RatingsController@store' ]);
 
+
+
+/* loader.io */
+
+Route::get('loaderio-aef6c70fb68412153005721ed69b906e', function() {
+	return storage_path() . '/loaderio-aef6c70fb68412153005721ed69b906e.txt';
+});
