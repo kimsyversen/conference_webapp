@@ -33,6 +33,14 @@ class SessionsController extends \BaseController {
 	}
 
 	/**
+	 * @return \Illuminate\View\View
+	 */
+	public function createModal()
+	{
+		return View::make('sessions.create-modal');
+	}
+
+	/**
 	 * Login user
 	 * @return \Illuminate\Http\RedirectResponse
 	 */
@@ -47,9 +55,10 @@ class SessionsController extends \BaseController {
 		$response = $this->client->send($request);
 
 		if(isset($response['errors']) || is_null($response))
-			return Redirect::back()->with($response);
+			return Redirect::route('login_path')->with($response);
 
 		AccessToken::set($response);
+
 
 		return Redirect::route('conferences_path')->with('messages', ['You are now logged in']);
 	}

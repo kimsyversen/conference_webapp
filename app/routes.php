@@ -2,6 +2,7 @@
 Route::get('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@create' ]);
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
 Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create']);
+Route::get('loginmodal', ['as' => 'login_modal_path', 'uses' => 'SessionsController@createModal']);
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);

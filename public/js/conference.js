@@ -148,4 +148,18 @@ $(document).ready(function(){
 
     });
 
+    $("#login-button").on("click",  function() {
+        BootstrapDialog.show({
+            message: function(dialog) {
+                var $message = $('<div></div>');
+                var pageToLoad = dialog.getData('pageToLoad');
+                $message.load(pageToLoad);
+                return $message;
+            },
+            data: {
+                'pageToLoad': '/loginmodal'
+            }
+        });
+
+    });
 });
