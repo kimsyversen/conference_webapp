@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Conferences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+
+    {{ HTML::style('css/bootstrap.min.css') }}
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
-    {{ HTML::style('css/speechbubble.css') }}
+    {{ HTML::style('css/bootstrap-dialog.min.css') }}
+
 </head>
 <body>
     <header>
@@ -24,9 +26,10 @@
 
     @include('conference.layouts.partials.footer')
     @section('javascript')
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        {{ HTML::script('js/jquery-1.11.2.min.js') }}
+        {{ HTML::script('js/jquery-ui.min.js') }}
+        {{ HTML::script('js/bootstrap.min.js') }}
+        {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
     @show
 </body>
