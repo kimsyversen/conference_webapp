@@ -24,11 +24,15 @@
     <meta name="msapplication-wide310x150logo" content="img/widetile.png" />
     <meta name="msapplication-square310x310logo" content="img/largetile.png" />
 
+    {{ HTML::style('css/addtohomescreen.css') }}
+    {{ HTML::script('js/addtohomescreen.min.js') }}
+    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
+
     {{ HTML::style('css/bootstrap.min.css') }}
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
-    {{ HTML::style('css/addtohomescreen.css') }}
+
 
 </head>
 <body>
@@ -52,9 +56,6 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
-        {{ HTML::script('js/addtohomescreen.min.js') }}
-
-        <script> $(document).ready(function(){ addToHomescreen(); }); </script>
     @show
     @if(Session::has('has_visited_before'))
         <div id="#receiver"></div>
