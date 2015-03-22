@@ -1,6 +1,8 @@
 .session-item {
   background-color: rgb(255, 255, 255);
   margin: 1em;
+  @extend .default-box-shadow;
+
 
   a {
     text-decoration: underline;

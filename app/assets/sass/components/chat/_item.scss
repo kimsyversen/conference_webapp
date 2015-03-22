@@ -3,6 +3,7 @@
 }
 
 .chat-group {
+  @extend .default-box-shadow;
   background-color: #ffffff;
   padding: 0.8em;
   margin-bottom: 1em;
@@ -35,6 +36,7 @@
 .chat-message {
   margin-top: 1em;
 
+
   .chat-user {
     margin-top: 3em;
     margin-bottom: 1.5em;
@@ -59,6 +61,7 @@
 
 .bubble:after
 {
+
   content: '';
   position: absolute;
   border-style: solid;

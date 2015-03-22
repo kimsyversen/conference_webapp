@@ -1,9 +1,15 @@
 /** Side wide defaults  **/
+.site-default-background-color, html, body {
+  background-color: #d7d9d9; }
+
 .default-heading-color, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3 {
   color: #2F2F2F; }
 
 .default-link-hover-color, .footer-conference a:hover {
   color: #3f90ff; }
+
+.default-box-shadow, .conference-item, .session-item, .message, .chat-group {
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
   text-decoration: underline; }
@@ -219,9 +225,6 @@
   margin-top: -15px;
   left: -15px;
   top: 23%; }
-
-.site-default-background-color, html, body {
-  background-color: #d7d9d9; }
 
 /** Main layout **/
 * {

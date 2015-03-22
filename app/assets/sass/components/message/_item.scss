@@ -1,5 +1,6 @@
 .message {
   margin: 1em;
+  @extend .default-box-shadow;
 
   .panel {
     border: 0;
