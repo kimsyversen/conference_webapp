@@ -94,6 +94,10 @@
   .footer-conference h4 {
     color: #777777;
     font-weight: normal; }
+  .footer-conference ul li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.1em; }
 
 .forms {
   padding: 4em 3em 3em 3em; }
