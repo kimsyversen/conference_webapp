@@ -18,7 +18,7 @@ App::before(function($request)
 	if(!Cookie::has('has_visited_before'))
 	{
 		Session::put('has_visited_before', true);
-		Cookie::forever('has_visited_before', true);
+		Cookie::queue('has_visited_before', true);
 	}
 
 
@@ -28,6 +28,7 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
+
 });
 
 /*

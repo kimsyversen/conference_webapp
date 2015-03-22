@@ -32,7 +32,6 @@
 
 </head>
 <body>
-
     <header>
         @include('conference.layouts.partials.nav')
     </header>
@@ -57,16 +56,6 @@
         <script> $(document).ready(function(){ addToHomescreen(); }); </script>
 
     @show
-    @if(Session::has('has_visited_before'))
-        <div id="#receiver"></div>
-        <script>
-            $(document).ready(function(){
-                $('#receiver').click();
-            });
-        </script>
-        <?php Session::forget('has_visited_before') ?>
-
-    @endif
 </body>
-
+@include('conference.layouts.partials.firstTime')
 </html>
