@@ -182,9 +182,8 @@ $(document).ready(function(){
     });
 
     $("#receiver").click(function () {
-        alert('hoho');
         BootstrapDialog.show({
-            title: 'Hello, user!',
+            title: 'Hello, user',
             description: 'Short about the features of this application',
             message: function(dialog) {
                 var $message = $('<div></div>');
@@ -193,11 +192,18 @@ $(document).ready(function(){
 
                 return $message;
             },
+            buttons: [{
+                label: 'Close',
+                action: function(dialogItself){
+                    dialogItself.close();
+                }
+            }],
             data: {
-                'pageToLoad': '/features'
+                'pageToLoad': '/featuresmodal'
             }
         });
     });
+
 });
 
 

@@ -32,6 +32,7 @@
 
 </head>
 <body>
+
     <header>
         @include('conference.layouts.partials.nav')
     </header>
@@ -43,26 +44,28 @@
     </div>
 
     @include('conference.partials.goto-top')
-    <div id="receiver"> CLICK HERE</div>
+
     @include('conference.layouts.partials.footer')
 
     @section('javascript')
-
-
         {{ HTML::script('js/jquery-1.11.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
         {{ HTML::script('js/addtohomescreen.min.js') }}
 
+        <script> $(document).ready(function(){ addToHomescreen(); }); </script>
+    @show
+    @if(Session::has('has_visited_before'))
+        <div id="#receiver"></div>
         <script>
             $(document).ready(function(){
-
-                addToHomescreen();
+                $('#receiver').click();
             });
         </script>
-    @show
+        <?php Session::forget('has_visited_before') ?>
 
-
+    @endif
 </body>
+
 </html>

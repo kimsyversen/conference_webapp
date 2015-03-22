@@ -15,11 +15,10 @@ App::before(function($request)
 {
 	\Uninett\Helpers\AccessToken::validate();
 
-	if(Cookie::has('first_visit')) {
-
-		//TODO: Make script run after load
-	/*	echo "<script>   $(document).ready(function(){ $('#receiver').click();  }); </script>";*/
-		//echo "<script> $('#user-first-visited').trigger('click'); </script>";
+	if(!Cookie::has('has_visited_before'))
+	{
+		Session::put('has_visited_before', true);
+		Cookie::forever('has_visited_before', true);
 	}
 
 
@@ -29,9 +28,6 @@ App::before(function($request)
 
 App::after(function($request, $response)
 {
-	if(!Cookie::has('first_visit'))
-		Cookie::queue('first_visit', true, 31536000);
-
 });
 
 /*
