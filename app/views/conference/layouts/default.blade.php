@@ -51,8 +51,8 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
-        {{ HTML::style('css/addtohomescreen.css') }}
-        {{ HTML::script('js/addtohomescreen.min.js') }}
+ {{--       {{ HTML::style('css/addtohomescreen.css') }}
+        {{ HTML::script('js/addtohomescreen.min.js') }}--}}
 
 
     @show

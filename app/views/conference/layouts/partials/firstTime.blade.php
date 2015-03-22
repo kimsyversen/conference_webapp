@@ -7,5 +7,5 @@
     </script>
     <?php Session::forget('has_visited_before') ?>
 @else
-    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
+ {{--   <script> $(document).ready(function(){ addToHomescreen(); }); </script>--}}
 @endif
