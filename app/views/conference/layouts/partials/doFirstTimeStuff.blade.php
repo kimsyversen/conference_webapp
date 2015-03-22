@@ -12,6 +12,4 @@
         </div>
     </div>
     <?php Session::forget('has_visited_before') ?>
-@else
-    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
 @endif
