@@ -36,6 +36,8 @@
         @include('conference.layouts.partials.nav')
     </header>
     <div class="wrapper">
+        <div id="receiver"></div>
+
        <div class="container">
            @yield('content')
         </div>
@@ -51,11 +53,9 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
- {{--       {{ HTML::style('css/addtohomescreen.css') }}
-        {{ HTML::script('js/addtohomescreen.min.js') }}--}}
-
-
+        {{ HTML::style('css/addtohomescreen.css') }}
+        {{ HTML::script('js/addtohomescreen.min.js') }}
     @show
 </body>
-@include('conference.layouts.partials.firstTime')
+    @include('conference.layouts.partials.firstTime')
 </html>
