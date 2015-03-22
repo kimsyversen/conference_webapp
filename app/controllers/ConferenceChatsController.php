@@ -29,7 +29,6 @@ class ConferenceChatsController extends \BaseController {
 
 		$response = $this->client->send($request);
 
-
 		return View::make('conference.chats.index')->with('data', $response);
 	}
 
@@ -51,41 +50,4 @@ class ConferenceChatsController extends \BaseController {
 
 		return View::make('conference.chats.show')->with('chat', $response);
 	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /conferencechats/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /conferencechats/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /conferencechats/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
-
 }
