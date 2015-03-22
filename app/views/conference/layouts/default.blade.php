@@ -32,7 +32,9 @@
     {{ HTML::style('css/addtohomescreen.css') }}
     {{ HTML::style('js/addtohomescreen.min.js') }}
     <script>
-        addToHomescreen();
+        $(document).ready(function() {
+            addToHomescreen();
+        });
     </script>
 
 </head>
