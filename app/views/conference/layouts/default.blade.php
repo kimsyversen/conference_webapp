@@ -29,12 +29,11 @@
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
+
     {{ HTML::style('css/addtohomescreen.css') }}
-    {{ HTML::style('js/addtohomescreen.min.js') }}
+    {{ HTML::script('js/addtohomescreen.min.js') }}
     <script>
-        $(document).ready(function() {
             addToHomescreen();
-        });
     </script>
 
 </head>
