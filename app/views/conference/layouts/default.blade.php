@@ -53,7 +53,7 @@
         {{ HTML::script('js/conference.js') }}
         {{ HTML::style('css/addtohomescreen.css') }}
         {{ HTML::script('js/addtohomescreen.min.js') }}
-        <script> $(document).ready(function(){ addToHomescreen(); }); </script>
+        <script> $(document).ready(function(){ addToHomescreen({startDelay: 30} ); }); </script>
 
     @show
 </body>
