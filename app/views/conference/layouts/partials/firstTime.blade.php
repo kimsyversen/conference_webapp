@@ -1,4 +1,4 @@
-@if(Session::get('has_visited_before'))
+@if(Session::has('has_visited_before'))
     <div id="receiver"></div>
     <script>
         $(document).ready(function(){
@@ -6,4 +6,6 @@
         });
     </script>
     <?php Session::forget('has_visited_before') ?>
+@else
+    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
 @endif
