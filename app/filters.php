@@ -15,8 +15,7 @@ App::before(function($request)
 {
 	\Uninett\Helpers\AccessToken::validate();
 
-	if(!Cookie::has('has_visited_before'))
-	{
+	if(!Cookie::has('has_visited_before')) {
 		Session::put('has_visited_before', true);
 		Cookie::queue('has_visited_before', true);
 	}
