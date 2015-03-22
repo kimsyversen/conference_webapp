@@ -7,6 +7,8 @@
 
         @include('conference.layouts.partials.page-header', ['text' => 'Maps'])
 
+        @include('conference.layouts.partials.doFirstTimeStuff')
+
         @if(isset($data) && !empty($data))
             <div class="row">
                     @foreach($data['data'] as $map)

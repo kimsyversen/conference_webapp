@@ -57,7 +57,14 @@
   }
 }
 
-
 .conference-breacrumb {
   background-color: #ffffff;
+}
+
+.site-notice {
+  background-color: darken(#E9EAEA, 15%);
+  padding: 1em;
+
+  @extend .default-box-shadow;
+  margin: 1em 0 1em 0;
 }

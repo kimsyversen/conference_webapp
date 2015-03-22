@@ -2,6 +2,7 @@
 @section('content')
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
         @include('conference.layouts.partials.errors-and-messages')
+        @include('conference.layouts.partials.doFirstTimeStuff')
 
         @if(isset($data))
             @if(!empty($data))

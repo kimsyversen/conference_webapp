@@ -36,8 +36,6 @@
         @include('conference.layouts.partials.nav')
     </header>
     <div class="wrapper">
-        <div id="receiver"></div>
-
        <div class="container">
            @yield('content')
         </div>
@@ -57,5 +55,4 @@
         {{ HTML::script('js/addtohomescreen.min.js') }}
     @show
 </body>
-    @include('conference.layouts.partials.firstTime')
 </html>

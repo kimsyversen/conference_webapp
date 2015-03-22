@@ -179,6 +179,11 @@ $(document).ready(function(){
             }
         });
     });
+
+    $("#dismiss").on("click",  function() {
+       var container = $(this).closest('.container-fluid');
+        container.detach();
+    });
 });
 
 

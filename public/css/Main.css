@@ -8,7 +8,7 @@
 .default-link-hover-color, .footer-conference a:hover {
   color: #3f90ff; }
 
-.default-box-shadow, .conference-item, .session-item, .message, .chat-group {
+.default-box-shadow, .site-notice, .conference-item, .session-item, .message, .chat-group {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
@@ -38,6 +38,11 @@
 
 .conference-breacrumb {
   background-color: #ffffff; }
+
+.site-notice {
+  background-color: #c2c5c5;
+  padding: 1em;
+  margin: 1em 0 1em 0; }
 
 .featurette {
   margin-top: 3em;

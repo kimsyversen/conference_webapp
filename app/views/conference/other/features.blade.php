@@ -1,6 +1,7 @@
 @extends('conference.layouts.default')
 @section('content')
 
+
     <div class="featurette">
         <span class="glyphicon glyphicon-list-alt pull-left" aria-hidden="true"></span>
         <h2 class="featurette-heading">Browse conferences</h2>
@@ -47,8 +48,8 @@
     <div class="featurette">
         <span class="glyphicon glyphicon-earphone pull-left" aria-hidden="true"></span>
         <h2 class="featurette-heading">Receive the latest news</h2>
-        <p class="lead">The conference has a newsfeeds where you will see the latest messages from the conference administration team. The newsfeed also pulls the last tweets. Everything about the conference in one convenient place.</p>
-        <br><br>
+        <p class="lead">The conference has a newsfeeds where you will see the latest messages from the conference administration team.  Everything about the conference in one convenient place.</p>
+        <br><br><br>
     </div>
 
 
@@ -68,6 +69,11 @@
 
 
 @stop
+
+
+<script>
+
+</script>
 
 
 

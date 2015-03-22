@@ -9,7 +9,7 @@ Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destr
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
 Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]);
-Route::get('/featuresm', ['as' => 'featurette_modal_path', 'uses' => 'FeaturetteController@createModal' ]);
+
 Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]);
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page
