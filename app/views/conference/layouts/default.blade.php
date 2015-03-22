@@ -43,18 +43,23 @@
     </div>
 
     @include('conference.partials.goto-top')
-
+    <div id="receiver"> CLICK HERE</div>
     @include('conference.layouts.partials.footer')
+
     @section('javascript')
+
+
         {{ HTML::script('js/jquery-1.11.2.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
+        {{ HTML::script('js/conference.js') }}
         {{ HTML::script('js/addtohomescreen.min.js') }}
-        {{ HTML::script('js/conference.min.js') }}
+
         <script>
-            (function() {
+            $(document).ready(function(){
+
                 addToHomescreen();
-            })();
+            });
         </script>
     @show
 

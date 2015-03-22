@@ -15,18 +15,23 @@ App::before(function($request)
 {
 	\Uninett\Helpers\AccessToken::validate();
 
+	if(Cookie::has('first_visit')) {
 
-/*	if(!Cookie::has('first_visit'))
-	{
-		Cookie::forever('first_visit', false);
-		Redirect::route('featurette_path');
-	}*/
+		//TODO: Make script run after load
+	/*	echo "<script>   $(document).ready(function(){ $('#receiver').click();  }); </script>";*/
+		//echo "<script> $('#user-first-visited').trigger('click'); </script>";
+	}
+
+
 
 });
 
 
 App::after(function($request, $response)
 {
+	if(!Cookie::has('first_visit'))
+		Cookie::queue('first_visit', true, 31536000);
+
 });
 
 /*

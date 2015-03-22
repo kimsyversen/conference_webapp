@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.session-item').on('click', '#remove-from-schedule', function(e){
         e.preventDefault();
         console.log(e);
@@ -179,4 +180,24 @@ $(document).ready(function(){
             }
         });
     });
+
+    $("#receiver").click(function () {
+        alert('hoho');
+        BootstrapDialog.show({
+            title: 'Hello, user!',
+            description: 'Short about the features of this application',
+            message: function(dialog) {
+                var $message = $('<div></div>');
+                var pageToLoad = dialog.getData('pageToLoad');
+                $message.load(pageToLoad);
+
+                return $message;
+            },
+            data: {
+                'pageToLoad': '/features'
+            }
+        });
+    });
 });
+
+
