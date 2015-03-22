@@ -47,7 +47,7 @@
     @include('conference.layouts.partials.footer')
 
     @section('javascript')
-        {{ HTML::script('js/jquery-1.11.2.min.js') }}
+        {{ HTML::script('js/jquery-2.1.3.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
