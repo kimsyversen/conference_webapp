@@ -6,8 +6,8 @@
                 <p class="lead">Hi! We see that this is the first time you use this application. Do you want a short presentation of what you can do with this application?</p>
                 <div class="btn-group">
 
-                    <button type="button" class="btn button-dark"><a href="{{ route('featurette_path')}}">Give me a quick tour</a> </button>
-                    <button type="button" class="btn button-dark" id="dismiss"><a href="#">Dismiss</a></button>
+                    <a href="{{ route('featurette_path')}}" class="btn button-dark">Give me a quick tour</a>
+                    <a href="#" class="btn button-dark" id="dismiss">Dismiss</a>
                 </div>
             </div>
         </div>
