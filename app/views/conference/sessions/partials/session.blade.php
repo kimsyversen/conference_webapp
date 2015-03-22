@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Push one column to left -->
-    <div class="col-md-1"></div>
-    <div class="col-md-10 session-item">
+    <div class="col-sm-1 col-md-1"></div>
+    <div class="col-sm-10 col-md-10 session-item">
         <div class="row header">
             <div class="col-xs-2 col-sm-1 avatar">
                 <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
