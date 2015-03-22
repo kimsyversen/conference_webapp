@@ -29,6 +29,7 @@
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
+    {{ HTML::style('css/addtohomescreen.css') }}
 
 </head>
 <body>
@@ -51,6 +52,12 @@
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}
         {{ HTML::script('js/conference.js') }}
+        {{ HTML::style('js/addtohomescreen.min.js') }}
     @show
+
+    <script>
+        addToHomescreen();
+    </script>
+
 </body>
 </html>
