@@ -177,8 +177,7 @@
     background-color: #2ea7af;*/ }
 
 .rating-item {
-  margin: 1em;
-  background-color: #ffffff; }
+  padding: 1em; }
 
 .chat-intro-text {
   margin-top: 1em; }
