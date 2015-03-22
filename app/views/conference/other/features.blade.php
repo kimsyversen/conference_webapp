@@ -65,15 +65,22 @@
 
     <hr class="featurette-divider">
 
-
-
+    <div class="container-fluid">
+        <div class="row goto-top">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center ">
+                <a href="{{ URL::previous() }}">Go back</a>
+            </div>
+        </div>
+    </div>
 
 @stop
 
 
-<script>
 
-</script>
+
+
+
 
 
 
