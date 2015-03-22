@@ -9,6 +9,6 @@ class FeaturetteController extends \BaseController {
 
 	public function createModal()
 	{
-		return View::make('conference.other.featurettemodal');
+		return View::make('conference.other.featurettem');
 	}
 }

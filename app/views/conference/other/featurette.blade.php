@@ -1,5 +1,4 @@
 @extends('conference.layouts.default')
-
 @section('content')
 
     <div class="featurette">

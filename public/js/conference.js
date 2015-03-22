@@ -164,7 +164,6 @@ $(document).ready(function(){
 
 
     $("#register-button").on("click",  function() {
-
         BootstrapDialog.show({
             title: 'Register',
             description: 'Register a new account',
@@ -180,30 +179,6 @@ $(document).ready(function(){
             }
         });
     });
-
-    $("#receiver").click(function () {
-        BootstrapDialog.show({
-            title: 'Hello, user',
-            description: 'Short about the features of this application',
-            message: function(dialog) {
-                var $message = $('<div></div>');
-                var pageToLoad = dialog.getData('pageToLoad');
-                $message.load(pageToLoad);
-
-                return $message;
-            },
-            buttons: [{
-                label: 'Close',
-                action: function(dialogItself){
-                    dialogItself.close();
-                }
-            }],
-            data: {
-                'pageToLoad': '/featuresmodal'
-            }
-        });
-    });
-
 });
 
 

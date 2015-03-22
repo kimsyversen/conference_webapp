@@ -6,7 +6,7 @@
 </div>
 
 
-    <hr class="featurette-divider">
+<hr class="featurette-divider">
 
 <div class="featurette">
     <span class="glyphicon glyphicon-list-alt pull-left" aria-hidden="true"></span>
@@ -67,13 +67,6 @@
     <p class="lead">You have the possibility to receive private messages from the administrator. However, this requires an account and that you are logged in to the application.</p>
     <br><br>
 </div>
-
-
-<hr class="featurette-divider">
-
-
-
-
 @stop
 
 

@@ -7,8 +7,9 @@
 
     {{ HTML::style('css/bootstrap.min.css') }}
     {{ HTML::style('css/animate.min.css') }}
-    {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
+    {{ HTML::style('css/Main.css') }}
+
 
 </head>
 <body>
