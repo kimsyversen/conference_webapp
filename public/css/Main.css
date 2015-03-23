@@ -27,7 +27,8 @@
   background-color: #098018; }
 
 .button-dark {
-  background-color: #9b9f9f; }
+  background-color: #9b9f9f;
+  color: black; }
   .button-dark:hover {
     background-color: #d7d9d9;
     border: 1px solid #c3c3c3; }
@@ -222,6 +223,8 @@
 
 .chat-message {
   margin-top: 1em; }
+  .chat-message .chat-icon {
+    font-size: 1.5em; }
   .chat-message .chat-user {
     margin-top: 3em;
     margin-bottom: 1.5em;
@@ -284,3 +287,38 @@ textarea {
 
 .about-the-application {
   font-size: 1.6em; }
+
+.circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  background-color: darkgreen;
+  line-height: 1.428571429;
+  border-radius: 50%; }
+
+/** Snippets from http://bootsnipp.com/snippets/featured/circle-button */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px; }
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px; }
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px; }

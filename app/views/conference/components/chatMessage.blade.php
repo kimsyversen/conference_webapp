@@ -3,7 +3,7 @@
         <div class="col-md-2"></div>
         <div class="col-xs-3 col-sm-2 col-md-3">
             <div class="chat-user">
-                <span>{{ $user }} </span>
+                {{( $user )}}
             </div>
         </div>
         <div class="col-xs-9 col-sm-10 col-md-6">

@@ -15,10 +15,10 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
 
-                                <div class="col-xs-12 map-text text-center">
+                                <div class="col-xs-12 text-center">
                                     <p class="lead">{{ $map['description'] }}</p>
 
-                                <div class="col-xs-12 map-map">
+                                <div class="col-xs-12">
                                     <img class="img-responsive text-center" src="{{ $map['uri'] }}">
                                 </div>
                             </div>

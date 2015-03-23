@@ -25,7 +25,8 @@
     <meta name="msapplication-wide310x150logo" content="/img/widetile.png" />
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
-    {{ HTML::style('css/bootstrap.min.css') }}
+    {{ HTML::style('css/bootstrap-simplex.min.css') }}
+{{--    {{ HTML::style('css/bootstrap.min.css') }}--}}
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}

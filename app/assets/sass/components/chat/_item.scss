@@ -35,8 +35,9 @@
 
 .chat-message {
   margin-top: 1em;
-
-
+  .chat-icon {
+    font-size: 1.5em;
+  }
   .chat-user {
     margin-top: 3em;
     margin-bottom: 1.5em;

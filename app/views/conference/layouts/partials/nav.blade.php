@@ -41,7 +41,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-cog  navbar-user-image'> </i>Settings <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="nav-item">  {{ link_to_route('profile_path', "Profile") }} </li>
+                            {{--<li class="nav-item">  {{ link_to_route('profile_path', "Profile") }} </li>--}}
                             <li class="nav-item "> {{ link_to_route('logout_path', 'Log out') }} </li>
                         </ul>
                     </li>

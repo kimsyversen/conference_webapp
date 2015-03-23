@@ -4,7 +4,7 @@
     <div class="col-sm-10 col-md-10 session-item">
         <div class="row header">
             <div class="col-xs-2 col-sm-1 avatar">
-                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span class="btn-primary btn-circle glyphicon glyphicon-ok"></span>
             </div>
             <div class="col-xs-10 title">
                 <h4> <a href="/{{ $session['links']['session']['uri'] }}" rel="self">{{ $session['title'] }}</a></h4>
