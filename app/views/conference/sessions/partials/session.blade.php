@@ -14,7 +14,7 @@
             <div class="col-xs-12 col-sm-8 col-md-9 info">
                 <h3><a href="/{{ $session['links']['session']['uri'] }}" rel="self">{{ $session['title'] }}</a></h3>
 
-                <div class="row">
+                <div class="row descriptions">
                     <div class="description-short">
                         <div class="col-xs-12">
                             <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
@@ -34,9 +34,9 @@
 
             <div class="col-xs-12 col-sm-1 col-md-1 social">
                 <div class="row text-center">
-                    <div class="col-xs-4 col-sm-12 col-md-12 facebook"><a href="#facebook"> <span class="fa fa-facebook"></span> </a> </div>
-                    <div class="col-xs-4 col-sm-12 col-md-12 twitter"><a href="#twitter"> <span class="fa fa-twitter"></span></a></div>
-                    <div class="col-xs-4 col-sm-12 col-md-12 google-plus"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></div>
+                    <div class="col-xs-4 col-sm-12 col-md-12 facebook nopadding"><a href="#facebook"> <span class="fa fa-facebook"></span> </a> </div>
+                    <div class="col-xs-4 col-sm-12 col-md-12 twitter nopadding"><a href="#twitter"> <span class="fa fa-twitter"></span></a></div>
+                    <div class="col-xs-4 col-sm-12 col-md-12 google-plus nopadding"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></div>
                 </div>
             </div>
         </div>

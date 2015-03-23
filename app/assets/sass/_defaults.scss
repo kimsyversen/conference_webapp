@@ -43,14 +43,19 @@
   width: 100%;
   transition: 0.3s;
   bottom: 0;
-}
+  -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.75);;
 
+
+}
+/*
 .button-green {
   background-color: #098018;
-}
+}*/
 
 .button-dark {
-  background-color: darken(#E9EAEA, 30%);
+  background-color: darken(#E9EAEA, 20%);
   color: black;
 
   &:hover {
