@@ -38,11 +38,16 @@
   text-decoration: underline;
 }
 
+.buttons {
+  position: relative;
+  bottom: 0;
+}
+
 .button-conference {
   border-radius: 0;
   width: 100%;
   transition: 0.3s;
-
+  bottom: 0;
 }
 
 .button-green {

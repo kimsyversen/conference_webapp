@@ -1,267 +1,156 @@
-
-
-
+/* Borrowed from http://bootsnipp.com/snippets/featured/event-list */
 
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 
-
-.event-list {
-  list-style: none;
-  font-family: 'Lato', sans-serif;
-  margin: 0px;
-  padding: 0px;
-
-}
-.event-list > li {
+.event-default {
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 2px rgb(51, 51, 51);
   box-shadow: 0px 0px 2px rgba(51, 51, 51, 0.7);
   padding: 0px;
-  margin: 0px 0px 20px;
-
-}
-.event-list > li > time {
-  display: inline-block;
-  width: 100%;
-  color: rgb(255, 255, 255);
-  background-color: rgb(197, 64, 11);
-/*  background-color: rgb(79, 153, 197);*/
-  padding: 5px;
-  text-align: center;
-  text-transform: uppercase;
-
-}
-.event-list > li:nth-child(even) > time {
-  background-color: rgb(165, 82, 167);
-
-}
-.event-list > li > time > span {
-  display: none;
-}
-.event-list > li > time > .day {
-  display: block;
-  font-size: 56pt;
-  font-weight: 100;
-  line-height: 1;
-}
-.event-list > li time > .month {
-  display: block;
-  font-size: 24pt;
-  font-weight: 600;
-  line-height: 1;
-}
-.event-list > li > img {
-  width: 100%;
-
-}
-.event-list > li > .info {
-  padding-top: 5px;
-  text-align: center;
-  color: black;
-}
-.event-list > li > .info > .title {
-  font-size: 17pt;
-  font-weight: 700;
-  margin: 0px;
-}
-.event-list > li > .info > .desc {
-  font-size: 13pt;
-  font-weight: 300;
-  margin: 0px;
 }
 
-.event-list > li > .info > .description-long {
-  position: relative;
-  height: 120px;
-  text-align: left;
-  padding-right: 40px;
+@media(max-width:767px){
+  .event {
+
+    @extend .event-default;
+
+    .event-time {
+      display: inline-block;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      background-color: rgb(197, 64, 11);
+      /*  background-color: rgb(79, 153, 197);*/
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
+
+      .month {
+        display: block;
+        font-size: 24pt;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .day {
+        display: block;
+        font-size: 56pt;
+        font-weight: 100;
+        line-height: 1;
+      }
+
+      .hour {
+        display: none;
+      }
+    }
+
+    .social {
+      .facebook a, .twitter a,  .google-plus a {
+        display: block;
+        width: 100%;
+        color: rgb(75, 110, 168) !important;
+      }
+      .twitter a {
+        color: rgb(79, 213, 248) !important;
+      }
+      .google-plus a {
+        color: rgb(221, 75, 57) !important;
+      }
+      .facebook:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(75, 110, 168) !important;
+      }
+      .twitter:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(79, 213, 248) !important;
+      }
+      .google-plus:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(221, 75, 57) !important;
+      }
+    }
+  }
 }
 
-.event-list > li > .info > ul,
-.event-list > li > .social > ul {
-  display: table;
-  list-style: none;
-  margin: 10px 0px 0px;
-  padding: 0px;
-  width: 100%;
-  text-align: center;
-}
-.event-list > li > .social > ul {
-  margin: 0px;
-}
-.event-list > li > .info > ul > li,
-.event-list > li > .social > ul > li {
-  display: table-cell;
-  cursor: pointer;
-  color: rgb(30, 30, 30);
-  font-size: 11pt;
-  font-weight: 300;
-  padding: 3px 0px;
-}
+@media(min-width:768px){
 
-.event-list > li > .info > .description-long {
-
-  margin: 1em 0 0 0.5em;
-  font-family: Arial, Helvetica, sans-serif;
-  @extend .default-heading-color;
-}
-
-.event-list > li > .info > .description-short {
-
-  margin: 1em 0 0 0.5em;
-  font-family: Arial, Helvetica, sans-serif;
-  @extend .default-heading-color;
-}
-
-.event-list > li > .info > ul > li > a {
-  display: block;
-  width: 100%;
-  color: rgb(30, 30, 30);
-  text-decoration: none;
-}
-.event-list > li > .social > ul > li {
-  padding: 0px;
-}
-.event-list > li > .social > ul > li > a {
-  padding: 3px 0px;
-}
-.event-list > li > .info > ul > li:hover,
-.event-list > li > .social > ul > li:hover {
-  color: rgb(30, 30, 30);
-  background-color: rgb(200, 200, 200);
-}
-.facebook a,
-.twitter a,
-.google-plus a {
-  display: block;
-  width: 100%;
-  color: rgb(75, 110, 168) !important;
-}
-.twitter a {
-  color: rgb(79, 213, 248) !important;
-}
-.google-plus a {
-  color: rgb(221, 75, 57) !important;
-}
-.facebook:hover a {
-  color: rgb(255, 255, 255) !important;
-  background-color: rgb(75, 110, 168) !important;
-}
-.twitter:hover a {
-  color: rgb(255, 255, 255) !important;
-  background-color: rgb(79, 213, 248) !important;
-}
-.google-plus:hover a {
-  color: rgb(255, 255, 255) !important;
-  background-color: rgb(221, 75, 57) !important;
-}
+  .event {
+    @extend .event-default;
 
 
 
+    overflow: hidden;
 
 
-/**
+
+    .event-time {
+      margin-bottom: -99999px;
+      padding-bottom: 99999px;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: rgb(255, 255, 255);
+      background-color: rgb(197, 64, 11);
+      /*  background-color: rgb(79, 153, 197);*/
+
+
+      font-family: 'Lato', sans-serif;
+
+        .month {
+          display: block;
+          font-size: 24pt;
+          font-weight: 600;
+          line-height: 1;
+        }
+        .day {
+          display: block;
+          font-size: 56pt;
+          font-weight: 100;
+          line-height: 1;
+        }
+        .hour {
+          display: none;
+        }
+    }
+
+    .social {
+      margin: 1em 0 1em 0;
+      font-size: 20px;
+      font-weight: 300;
+
+      .facebook a, .twitter a,  .google-plus a {
+        display: block;
+        width: 100%;
+        color: rgb(75, 110, 168) !important;
+      }
+      .twitter a {
+        color: rgb(79, 213, 248) !important;
+      }
+      .google-plus a {
+        color: rgb(221, 75, 57) !important;
+      }
+      .facebook:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(75, 110, 168) !important;
+      }
+      .twitter:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(79, 213, 248) !important;
+      }
+      .google-plus:hover a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(221, 75, 57) !important;
+      }
+    }
+  }
+}
+
+
+/*
 @media(max-width:767px){}
 @media(min-width:768px){}
 @media(min-width:992px){}
 @media(min-width:1200px){}
 */
-
-
-
-
-@media (min-width:768px) {
-  .event-list > li {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    padding: 0px;
-    background-color: rgb(255, 255, 255);
-
-  }
-
-  .event-list > li > time,
-  .event-list > li > img  {
-    display: inline-block;
-  }
-  .event-list > li > time,
-  .event-list > li > img {
-    width: 120px;
-
-    float: left;
-  }
-  .event-list > li > .info {
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    color: black;
-  }
-  .event-list > li > time,
-  .event-list > li > img {
-    width: 120px;
-    height: 133px;
-    padding: 0px;
-    margin: 0px;
-  }
-
-
-
-  .event-list > li > .info {
-    position: relative;
-    min-height: 120px;
-    text-align: left;
-    padding-right: 40px;
-
-  }
-
-  .event-list > li > .info > .description-long {
-
-    margin: 1em 0 0 0.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    @extend .default-heading-color;
-  }
-
-  .event-list > li > .info > .description-short {
-
-    margin: 1em 0 0 0.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    @extend .default-heading-color;
-  }
-
-  .event-list > li > .info > .title,
-  .event-list > li > .info > .desc {
-    padding: 0px 10px;
-  }
-  .event-list > li > .info > ul {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-  }
-
-  .event-list > li > .social {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: block;
-    width: 40px;
-  }
-
-  .event-list > li > .social > ul {
-    border-left: 1px solid rgb(230, 230, 230);
-  }
-  .event-list > li > .social > ul > li {
-    display: block;
-    padding: 0px;
-  }
-  .event-list > li > .social > ul > li > a {
-    display: block;
-    width: 40px;
-    padding: 10px 0px 9px;
-  }
-}
-
-
-
-
