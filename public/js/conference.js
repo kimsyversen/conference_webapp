@@ -52,7 +52,7 @@ $(document).ready(function(){
             },
             error: function(request, errorType, errorMessage)
             {
-                alert(errorMessage);
+                alert('Oops. Please wait some seconds before trying again.');
 
             }
         })
@@ -90,8 +90,8 @@ $(document).ready(function(){
             },
             error: function(request, errorType, errorMessage)
             {
-                alert(errorMessage);
-               // alert("Seems like the session is already in your schedule");
+                alert('Oops. Please wait some seconds before trying again.');
+
             }
         })
     });
@@ -129,7 +129,7 @@ $(document).ready(function(){
         var buttonText = button.last();
 
         //Change its text
-        buttonText.text( buttonText.text() === "Read more" ? 'Read less' : "Read more");
+        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");
 
     });
 
@@ -186,3 +186,29 @@ $(document).ready(function(){
 });
 
 
+(function() {
+
+    $('form[data-remote]').on('submit', function(e) {
+        e.preventDefault();
+        var form = $(this);
+        var method = form.find('input[name="_method"]').val() || 'POST';
+
+        $.ajax({
+            type: method,
+            url: form.prop('action'),
+            data: form.serialize(),
+            success: function(data) {
+                form.remove();
+
+                var descriptionLong = $('.rating-description');
+
+                descriptionLong.empty();
+                descriptionLong.fadeOut("slow", function(){
+                    var p = $("<p>This session has been rated</p>").show();
+                    $(this).append(p);
+                    descriptionLong.fadeIn(2000);
+                });
+            }
+        })();
+    });
+})();

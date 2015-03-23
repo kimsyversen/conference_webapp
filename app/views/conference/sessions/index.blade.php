@@ -27,8 +27,7 @@
     <!-- Expand the details about session when entered and remove the button-->
     <script>
         $(document).ready(function() {
-            $("#button-session-more").trigger("click");
-            $("#button-session-more").detach();
+            $("#button-session-more").trigger("click").detach();
         });
     </script>
 @stop

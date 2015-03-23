@@ -3,6 +3,9 @@
   margin: 1em;
   @extend .default-box-shadow;
 
+  button {
+    color: black;
+  }
   .header {
     img {
       width: 100%;

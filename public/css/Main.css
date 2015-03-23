@@ -9,7 +9,7 @@
   color: #3f90ff; }
 
 .default-box-shadow, .site-notice, .form-small, .conference-item, .session-item, .message, .chat-group {
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
   text-decoration: underline; }
@@ -104,11 +104,15 @@
 
 .form-small {
   background-color: white;
-  margin-top: 5em; }
+  margin-top: 5em;
+  border: 1px solid #ffffff;
+  border-radius: 5px; }
 
 .conference-item {
   background-color: white;
   margin: 1em; }
+  .conference-item button {
+    color: black; }
   .conference-item .header img {
     width: 100%;
     /* height: 100%;*/
@@ -133,22 +137,24 @@
   margin: 1em; }
   .session-item a {
     text-decoration: underline; }
-  .session-item .header .time {
-    font-size: 0.8em;
-    float: right;
-    display: block; }
-  .session-item .header .location {
-    font-size: 0.5em; }
-  .session-item .header .avatar {
-    padding: 0.5em 0 0 1em;
-    float: left;
-    font-size: 1.5em;
-    color: #1b800a; }
-  .session-item .header .title {
-    padding: 0.5em 0 0.5em 0;
-    font-size: 1em; }
-    .session-item .header .title h4 {
-      font-weight: 400; }
+  .session-item .header {
+    padding: 0.3em; }
+    .session-item .header .time {
+      font-size: 0.8em;
+      float: right;
+      display: block; }
+    .session-item .header .location {
+      font-size: 0.5em; }
+    .session-item .header .avatar {
+      padding: 0.5em 0 0 1em;
+      float: left;
+      font-size: 1.5em;
+      color: #1b800a; }
+    .session-item .header .title {
+      padding: 0.5em 0 0.5em 0;
+      font-size: 1em; }
+      .session-item .header .title h4 {
+        font-weight: 400; }
   .session-item .description-long {
     padding: 1em; }
   .session-item .description-short {
