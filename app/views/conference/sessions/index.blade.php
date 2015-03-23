@@ -16,9 +16,7 @@
             @include('conference.layouts.partials.delimiter', ['text' => 'Say what you think about this session', 'value' => ''])
 
             @include('conference.sessions.partials.rating', ['status' => $status])
-
         @endif
-
 @stop
 
 @section('javascript')
