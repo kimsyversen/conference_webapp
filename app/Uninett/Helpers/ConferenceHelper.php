@@ -68,4 +68,9 @@ class ConferenceHelper {
 		}
 		return substr($string, 0, strlen($string) -2);
 	}
+
+	public static function timestampToCarbon($timestamp)
+	{
+		return Carbon::createFromTimestamp(strtotime($timestamp));
+	}
 }

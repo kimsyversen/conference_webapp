@@ -111,13 +111,36 @@ $(document).ready(function(){
         button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
-    $(".session-item").on("click", "#button-session-more", function(){
+    $(".event-list").on("click", "#button-session-more", function(){
         //Walk up in the DOM tree
-        var parent = $(this).parent().parent().parent();
+  /*      var parent = $(this).parent().parent().parent();
 
         //Find the different descriptions and toggle them
         parent.find('.description-long').toggleClass('hidden');
         parent.find('.description-short').toggleClass('hidden');
+
+
+        var button = parent.find('.button-more span');
+
+        //Swap glyph on button
+        button.first().toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
+
+        //Find the last span inside the button
+        var buttonText = button.last();
+
+        //Change its text
+        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");*/
+
+
+
+        var parent = $(this).closest('.event-list');
+
+        console.log(parent);
+
+        //Find the different descriptions and toggle them
+        parent.find('.description-long').toggleClass('hidden');
+        parent.find('.description-short').toggleClass('hidden');
+
 
 
         var button = parent.find('.button-more span');
