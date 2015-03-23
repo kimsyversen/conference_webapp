@@ -1,14 +1,11 @@
 $(document).ready(function(){
 
-    $('.session-item').on('click', '#remove-from-schedule', function(e){
+    $('.session').on('click', '#remove-from-schedule', function(e){
         e.preventDefault();
-        console.log(e);
-
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
-
+        var url = button.closest('.session').find('.event').find('.info h3 a').attr('href');
         var sessionId = button.attr('value');
 
         $.ajax({
@@ -58,16 +55,17 @@ $(document).ready(function(){
         })
     });
 
-    $('.session-item').on('click', '#add-to-schedule', function(e){
+    $('.session').on('click', '#add-to-schedule', function(e){
       e.preventDefault();
 
         var button = $(this);
 
+
         //Find URL to resource
-        var url = button.closest('.session-item').find('.header').find('.title h4 a').attr('href');
+        var url = button.closest('.session').find('.event').find('.info h3 a').attr('href');
         var sessionId = button.attr('value');
 
-        console.log(url);
+
 
         $.ajax({
             type: 'post',
@@ -111,37 +109,16 @@ $(document).ready(function(){
         button.text( button.text() === "Read more" ? 'Close' : "Read more");
     });
 
-    $(".event-list").on("click", "#button-session-more", function(){
+
+
+
+    $(".session").on("click", "#button-session-more", function(){
         //Walk up in the DOM tree
-  /*      var parent = $(this).parent().parent().parent();
+        var parent = $(this).closest('.session');
 
         //Find the different descriptions and toggle them
         parent.find('.description-long').toggleClass('hidden');
         parent.find('.description-short').toggleClass('hidden');
-
-
-        var button = parent.find('.button-more span');
-
-        //Swap glyph on button
-        button.first().toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
-
-        //Find the last span inside the button
-        var buttonText = button.last();
-
-        //Change its text
-        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");*/
-
-
-
-        var parent = $(this).closest('.event-list');
-
-        console.log(parent);
-
-        //Find the different descriptions and toggle them
-        parent.find('.description-long').toggleClass('hidden');
-        parent.find('.description-short').toggleClass('hidden');
-
-
 
         var button = parent.find('.button-more span');
 

@@ -1,20 +1,66 @@
-/* Borrowed from http://bootsnipp.com/snippets/featured/event-list */
+/* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 
+/*  background-color: rgb(79, 153, 197);*/
 .event-default {
   margin-top: 1em;
-  margin-bottom: 1em;
+
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 2px rgb(51, 51, 51);
   box-shadow: 0px 0px 2px rgba(51, 51, 51, 0.7);
   padding: 0px;
+  @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+  @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 }
 
+.social-links {
+  .facebook a, .twitter a,  .google-plus a {
+    display: block;
+    width: 100%;
+    color: rgb(75, 110, 168) !important;
+  }
+  .twitter a {
+    color: rgb(79, 213, 248) !important;
+  }
+  .google-plus a {
+    color: rgb(221, 75, 57) !important;
+  }
+  .facebook:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(75, 110, 168) !important;
+  }
+  .twitter:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(79, 213, 248) !important;
+  }
+  .google-plus:hover a {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(221, 75, 57) !important;
+  }
+}
+
+.event-time-data {
+  .month {
+    display: block;
+    font-size: 24pt;
+    font-weight: 600;
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+  }
+  .day {
+    display: block;
+    font-size: 56pt;
+    font-weight: 100;
+    line-height: 1;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .hour {
+    display: none;
+  }
+}
 @media(max-width:767px){
   .event {
-
     @extend .event-default;
 
     .event-time {
@@ -26,63 +72,21 @@
       text-align: center;
       text-transform: uppercase;
       font-family: 'Lato', sans-serif;
+      @extend .event-time-data;
 
-      .month {
-        display: block;
-        font-size: 24pt;
-        font-weight: 600;
-        line-height: 1;
-      }
-      .day {
-        display: block;
-        font-size: 56pt;
-        font-weight: 100;
-        line-height: 1;
-      }
-
-      .hour {
-        display: none;
-      }
     }
 
     .social {
-      .facebook a, .twitter a,  .google-plus a {
-        display: block;
-        width: 100%;
-        color: rgb(75, 110, 168) !important;
-      }
-      .twitter a {
-        color: rgb(79, 213, 248) !important;
-      }
-      .google-plus a {
-        color: rgb(221, 75, 57) !important;
-      }
-      .facebook:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(75, 110, 168) !important;
-      }
-      .twitter:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(79, 213, 248) !important;
-      }
-      .google-plus:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(221, 75, 57) !important;
-      }
+
+      @extend .social-links;
     }
   }
 }
 
 @media(min-width:768px){
-
   .event {
     @extend .event-default;
-
-
-
     overflow: hidden;
-
-
 
     .event-time {
       margin-bottom: -99999px;
@@ -93,56 +97,18 @@
 
       color: rgb(255, 255, 255);
       background-color: rgb(197, 64, 11);
-      /*  background-color: rgb(79, 153, 197);*/
 
-
-      font-family: 'Lato', sans-serif;
-
-        .month {
-          display: block;
-          font-size: 24pt;
-          font-weight: 600;
-          line-height: 1;
-        }
-        .day {
-          display: block;
-          font-size: 56pt;
-          font-weight: 100;
-          line-height: 1;
-        }
-        .hour {
-          display: none;
-        }
+      .row {
+        padding: 0.8em;
+      }
+      @extend .event-time-data;
     }
 
     .social {
       margin: 1em 0 1em 0;
       font-size: 20px;
       font-weight: 300;
-
-      .facebook a, .twitter a,  .google-plus a {
-        display: block;
-        width: 100%;
-        color: rgb(75, 110, 168) !important;
-      }
-      .twitter a {
-        color: rgb(79, 213, 248) !important;
-      }
-      .google-plus a {
-        color: rgb(221, 75, 57) !important;
-      }
-      .facebook:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(75, 110, 168) !important;
-      }
-      .twitter:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(79, 213, 248) !important;
-      }
-      .google-plus:hover a {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(221, 75, 57) !important;
-      }
+      @extend .social-links;
     }
   }
 }
