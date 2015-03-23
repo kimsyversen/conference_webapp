@@ -7,7 +7,7 @@
 .default-heading-lightweight, .default-heading {
   font-weight: 400; }
 
-.default-heading-color, .default-heading, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3, .event-list > li > .info > .description-long {
+.default-heading-color, .default-heading, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3, .event-list > li > .info > .description-long, .event-list > li > .info > .description-short {
   color: #2F2F2F; }
 
 .default-link-hover-color, .footer-conference a:hover {
@@ -139,8 +139,7 @@
         padding: 0.5em; }
 
 .session-item {
-  background-color: white;
-  margin: 1em; }
+  background-color: white; }
   .session-item a {
     text-decoration: underline; }
   .session-item .header {
@@ -161,12 +160,6 @@
       font-size: 1em; }
       .session-item .header .title h4 {
         font-weight: 400; }
-  .session-item .description-long {
-    padding: 1em; }
-    .session-item .description-long p {
-      margin: 5em; }
-  .session-item .description-short {
-    padding: 1em; }
   .session-item .buttons .with-border {
     border-right: 1px dashed #000; }
   .session-item .information .location {
@@ -344,7 +337,7 @@ textarea {
   display: inline-block;
   width: 100%;
   color: white;
-  background-color: #c54b0d;
+  background-color: #c5400b;
   padding: 5px;
   text-align: center;
   text-transform: uppercase; }
@@ -364,7 +357,7 @@ textarea {
 .event-list > li time > .month {
   display: block;
   font-size: 24pt;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1; }
 
 .event-list > li > img {
@@ -411,7 +404,12 @@ textarea {
   padding: 3px 0px; }
 
 .event-list > li > .info > .description-long {
-  overflow: visible; }
+  margin: 1em 0 0 0.5em;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.event-list > li > .info > .description-short {
+  margin: 1em 0 0 0.5em;
+  font-family: Arial, Helvetica, sans-serif; }
 
 .event-list > li > .info > ul > li > a {
   display: block;
@@ -452,7 +450,7 @@ textarea {
   color: white !important;
   background-color: #dd4b39 !important; }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .event-list > li {
     position: relative;
     display: block;
@@ -472,17 +470,19 @@ textarea {
     color: black; }
   .event-list > li > time, .event-list > li > img {
     width: 120px;
-    height: 120px;
+    height: 133px;
     padding: 0px;
     margin: 0px; }
-  .event-list > li > .info > .description-long {
-    margin-bottom: 100px; }
   .event-list > li > .info {
     position: relative;
     min-height: 120px;
     text-align: left;
     padding-right: 40px; }
   .event-list > li > .info > .description-long {
+    margin: 1em 0 0 0.5em;
+    font-family: Arial, Helvetica, sans-serif; }
+  .event-list > li > .info > .description-short {
+    margin: 1em 0 0 0.5em;
     font-family: Arial, Helvetica, sans-serif; }
   .event-list > li > .info > .title, .event-list > li > .info > .desc {
     padding: 0px 10px; }

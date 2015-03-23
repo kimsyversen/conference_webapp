@@ -1,6 +1,6 @@
 .session-item {
   background-color: rgb(255, 255, 255);
-  margin: 1em;
+
   @extend .default-box-shadow;
 
 
@@ -36,18 +36,7 @@
     }
   }
 
-  .description-long {
-    padding: 1em;
 
-
-    p {
-         margin: 5em;
-    }
-
-  }
-  .description-short  {
-    padding: 1em;
-  }
 
   .buttons {
     .with-border {

@@ -1,4 +1,4 @@
-<div class="container">
+
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10">
             <ul class="event-list">
@@ -10,9 +10,12 @@
                     </time>
                     <div class="info">
                         <h2 class="title"><a href="/{{ $session['links']['session']['uri'] }}" rel="self">{{ $session['title'] }}</a></h2>
+
                         <div class="description-short">
-                            <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
-                            <p><span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</p>
+                            <div class="col-xs-12">
+                                <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
+                                <p><span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</p>
+                            </div>
                         </div>
 
                         <div class="description-long hidden">
@@ -109,4 +112,3 @@
             </ul>
         </div>
     </div>
-</div>
