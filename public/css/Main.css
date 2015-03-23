@@ -14,7 +14,7 @@
 .default-link-hover-color, .footer-conference a:hover {
   color: #3f90ff; }
 
-.default-box-shadow, .site-notice, .form-small, .conference-item, .event-default, .event, .message, .chat-group {
+.default-box-shadow, .site-notice, .form-small, .conference-item, .event-default, .event, .message, .rating-item, .chat-group {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
@@ -306,7 +306,8 @@
     background-color: #2ea7af;*/ }
 
 .rating-item {
-  padding: 1em; }
+  padding: 1em;
+  background-color: white; }
 
 .chat-intro-text {
   margin-top: 1em; }
