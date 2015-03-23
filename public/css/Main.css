@@ -247,6 +247,9 @@
   left: -15px;
   top: 23%; }
 
+.maps-item {
+  margin-top: 2em; }
+
 /** Main layout **/
 * {
   margin: 0; }
