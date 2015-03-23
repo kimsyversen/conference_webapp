@@ -1,6 +1,6 @@
 
     <div class="row">
-        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10">
+        <div class="col-xs-12  col-md-offset-1 col-md-10">
             <ul class="event-list">
                 <li>
                     <time>
