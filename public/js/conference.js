@@ -143,7 +143,7 @@ $(document).ready(function(){
     }, 5000);
 
 
-    $("#login-button").on("click",  function() {
+    $(".login-button").on("click", function() {
 
         BootstrapDialog.show({
             title: 'Login',

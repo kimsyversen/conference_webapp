@@ -49,7 +49,7 @@
                     {{--<li class="nav-item"> {{ link_to_route('registration_path', 'Register') }} </li>--}}
                     <li class="nav-item"> <a href="#" id="register-button">Register</a></li>
                     {{--<li class="nav-item"> {{ link_to_route('login_path', 'Login', null, ['id' => 'login-button']) }} </li>--}}
-                    <li class="nav-item"> <a href="#" id="login-button">Login</a></li>
+                    <li class="nav-item"> <a href="#" class="login-button">Login</a></li>
                 @endif
             </ul>
         </div>

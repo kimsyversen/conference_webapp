@@ -1,5 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 /** Side wide defaults  **/
 .site-default-background-color, html, body {
   background-color: #d7d9d9; }
@@ -27,10 +28,6 @@
   bottom: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75); }
 
-/*
-.button-green {
-  background-color: #098018;
-}*/
 .button-dark {
   background-color: #b5b8b8;
   color: black; }
@@ -161,19 +158,16 @@
     .featurette p {
       font-size: 2em; } }
 
-.navbar-conference {
-  background-color: #c5400b; }
-  .navbar-conference a {
-    text-decoration: none;
-    color: #ff0000; }
-  .navbar-conference .home-link {
-    margin-top: -2px; }
-  .navbar-conference .navbar-user-image {
-    float: left;
-    position: relative;
-    top: -2px;
-    left: -6px;
-    font-size: 1.8em; }
+.navbar-conference a {
+  text-decoration: none; }
+.navbar-conference .home-link {
+  margin-top: -2px; }
+.navbar-conference .navbar-user-image {
+  float: left;
+  position: relative;
+  top: -2px;
+  left: -6px;
+  font-size: 1.8em; }
 
 .footer-conference {
   background-color: #2c2c2c; }
@@ -338,6 +332,14 @@
 /** Main layout **/
 * {
   margin: 0; }
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 html, body {
   height: 100%;

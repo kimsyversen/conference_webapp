@@ -12,16 +12,28 @@
 @import 'components/map/item';
 
 /** Main layout **/
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 
 * {
   margin: 0;
 }
 
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 html, body {
   height: 100%;
   min-height: 100%;
   @extend .site-default-background-color;
 }
+
+
 
 .wrapper {
   min-height: 100%;

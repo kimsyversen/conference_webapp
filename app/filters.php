@@ -19,9 +19,6 @@ App::before(function($request)
 		Session::put('has_visited_before', true);
 		Cookie::queue('has_visited_before', true);
 	}
-
-
-
 });
 
 
@@ -82,6 +79,18 @@ Route::filter('authenticated', function()
 {
 	if (!Session::has('access_token'))
 		return Redirect::route('login_path')->with('messages', ['You must be authenticated to do access that page']);
+});
+
+
+Route::filter('redirectIfAuthenticated', function()
+{
+	if (Session::has('access_token'))
+	{
+		if(Session::has('conference_id'))
+			return Redirect::route('conference_path', ['conference_id' => Session::get('conference_id')]);
+
+		return Redirect::route('conferences_path');
+	}
 });
 
 /*

@@ -11,7 +11,7 @@
         @if(isset($data['data']) && !empty($data['data']))
             @include('conference.layouts.partials.delimiter', ['text' => 'Session information', 'value' => ''])
 
-            @include('conference.sessions.partials.session', ['session' => $data['data'], 'schedule_type' => 'session'])
+            @include('conference.sessions.partials.session', ['session' => $data['data'], 'schedule_type' => 'conference'])
 
             @include('conference.layouts.partials.delimiter', ['text' => 'Say what you think about this session', 'value' => ''])
 
@@ -27,7 +27,7 @@
     <!-- Expand the details about session when entered and remove the button-->
     <script>
         $(document).ready(function() {
-            $("#button-session-more").trigger("click").detach();
+            $("#button-session-more").trigger("click");
         });
     </script>
 @stop
