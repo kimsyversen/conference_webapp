@@ -14,7 +14,6 @@
             <p class="lead text-center">Your personal schedule is empty.</p>
         @endif
     @endif
-
 @stop
 
 <script>

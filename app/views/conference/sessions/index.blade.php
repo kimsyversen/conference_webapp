@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 
 @section('content')
-    <div class="container">
+
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
 
         @include('conference.layouts.partials.errors-and-messages')
@@ -18,7 +18,7 @@
             @include('conference.sessions.partials.rating', ['status' => $status])
 
         @endif
-</div>
+
 @stop
 
 @section('javascript')
