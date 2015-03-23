@@ -2,3 +2,8 @@
   padding: 4em 3em 3em 3em;
 }
 
+.form-small {
+  background-color: rgb(255, 255, 255);
+  margin-top: 5em;
+  @extend .default-box-shadow;
+}

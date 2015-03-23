@@ -90,7 +90,6 @@ $(document).ready(function(){
             },
             error: function(request, errorType, errorMessage)
             {
-                //TODO: Flash error message?
                 alert(errorMessage);
                // alert("Seems like the session is already in your schedule");
             }

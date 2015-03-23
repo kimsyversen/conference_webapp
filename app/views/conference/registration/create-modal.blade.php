@@ -3,6 +3,7 @@
 @section('content')
     @include('conference.layouts.partials.errors-and-messages')
 
+
     {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
 
     <div class="form-group">
@@ -24,4 +25,5 @@
         {{ Form::submit('Sign up', ['class' => 'form-control btn btn-primary']) }}
     </div>
     {{ Form::close() }}
+
 @stop

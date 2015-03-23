@@ -8,7 +8,7 @@
 .default-link-hover-color, .footer-conference a:hover {
   color: #3f90ff; }
 
-.default-box-shadow, .site-notice, .conference-item, .session-item, .message, .chat-group {
+.default-box-shadow, .site-notice, .form-small, .conference-item, .session-item, .message, .chat-group {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
@@ -101,6 +101,10 @@
 
 .forms {
   padding: 4em 3em 3em 3em; }
+
+.form-small {
+  background-color: white;
+  margin-top: 5em; }
 
 .conference-item {
   background-color: white;
