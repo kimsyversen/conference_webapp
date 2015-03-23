@@ -1,5 +1,4 @@
 @import 'defaults';
-@import 'session-new';
 @import 'components/featurette';
 @import 'components/nav';
 @import 'components/footer';
@@ -33,15 +32,12 @@ html, body {
   @extend .site-default-background-color;
 }
 
-
-
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto -150px;
 }
-
 
 .page-header-hr {
   border-bottom: 1px solid #ccc;
@@ -64,7 +60,6 @@ textarea {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-
 
 .about-the-application {
   font-size: 1.6em;
