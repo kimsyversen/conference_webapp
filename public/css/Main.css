@@ -2,7 +2,10 @@
 .site-default-background-color, html, body {
   background-color: #d7d9d9; }
 
-.default-heading-color, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3 {
+.default-heading-lightweight, .default-heading {
+  font-weight: 400; }
+
+.default-heading-color, .default-heading, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3 {
   color: #2F2F2F; }
 
 .default-link-hover-color, .footer-conference a:hover {

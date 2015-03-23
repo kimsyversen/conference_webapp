@@ -42,7 +42,7 @@
         <div class="push"></div>
     </div>
 
-    @include('conference.partials.goto-top')
+    @include('conference.layouts.partials.goto-top')
 
     @include('conference.layouts.partials.footer')
 

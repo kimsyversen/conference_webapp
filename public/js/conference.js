@@ -198,15 +198,15 @@ $(document).ready(function(){
             url: form.prop('action'),
             data: form.serialize(),
             success: function(data) {
-                form.remove();
+                var parent = form.closest('.row');
 
-                var descriptionLong = $('.rating-description');
+                parent.children().detach();
 
-                descriptionLong.empty();
-                descriptionLong.fadeOut("slow", function(){
-                    var p = $("<p>This session has been rated</p>").show();
+
+                parent.fadeOut("slow", function(){
+                    var p = $("<div class='col-xs-12 text-center default-heading'> <h4>This session has been rated</h4></div>").show();
                     $(this).append(p);
-                    descriptionLong.fadeIn(2000);
+                    parent.fadeIn(2000);
                 });
             }
         })();

@@ -7,7 +7,7 @@
         @if(isset($data))
             @if(!empty($data))
                 @include('conference.layouts.partials.page-header', ['text' => 'Browse conferences'])
-                @include('conference.partials.conference', ['data' =>  $data])
+                @include('conference.layouts.partials.conference', ['data' =>  $data])
             @else
                 <p class="lead">There are currently no conferences here.</p>
             @endif

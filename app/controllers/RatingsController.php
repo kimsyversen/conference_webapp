@@ -17,7 +17,7 @@ class RatingsController extends BaseController {
 		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
 
-		if(Request::ajax())
+		if(Request::ajax()) {
 			if ($this->userIsAuthenticated()) {
 				$request = (new Uninett\Api\Request)
 					->setMethod('GET')
@@ -28,10 +28,14 @@ class RatingsController extends BaseController {
 				if (isset($response['data'][0]['code']))
 					return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
 			}
-			else
-				return View::Make('conference.sessions.partials.rating', ['status' => -1]);
+		}
+		else
+		{
+			return View::Make('conference.sessions.partials.rating', ['status' => -1]);
+		}
 
-//TODO: se på
+
+
 		return Redirect::route('conferences_path')->with([
 			'errors' =>  ['Something went wrong when trying to display the rating form.']
 		]);
