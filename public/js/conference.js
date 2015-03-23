@@ -5,7 +5,7 @@ $(document).ready(function(){
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session').find('.event').find('.info h3 a').attr('href');
+        var url = button.closest('.session').find('.event').find('.info h4 a').attr('href');
         var sessionId = button.attr('value');
 
         $.ajax({
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
 
         //Find URL to resource
-        var url = button.closest('.session').find('.event').find('.info h3 a').attr('href');
+        var url = button.closest('.session').find('.event').find('.info h4 a').attr('href');
         var sessionId = button.attr('value');
 
 
