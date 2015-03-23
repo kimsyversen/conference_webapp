@@ -1,5 +1,5 @@
 <div class="row session">
-    <div class="col-xs-offset-1 col-sm-offset-1 col-sm-10 col-xs-10 col-md-offset-1 col-md-10">
+    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
         <div class="row event">
             <div class="col-xs-2 col-sm-3 col-md-2 event-time">
                 <div class="row">

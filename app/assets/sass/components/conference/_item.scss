@@ -1,7 +1,6 @@
 .conference-item {
-  background-color: rgb(255, 255, 255);
+  @extend .item;
   margin: 1em;
-  @extend .default-box-shadow;
 
   button {
     color: black;

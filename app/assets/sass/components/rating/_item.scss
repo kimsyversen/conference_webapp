@@ -1,7 +1,5 @@
 .rating-item {
+  @extend .item;
   padding: 1em;
-  background-color: rgb(255, 255, 255);
-
-  @extend .default-box-shadow;
 
 }

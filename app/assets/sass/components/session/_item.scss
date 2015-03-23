@@ -66,15 +66,15 @@
 
 /*  background-color: rgb(79, 153, 197);*/
 
+.session {
+  margin-bottom: 2em;
+}
 
 .event-default {
+  @extend .item;
   margin-top: 1em;
-
-  background-color: rgb(255, 255, 255);
-
   padding: 0px;
-  @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-  @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
 
   .description-short, .description-long {
     color: black;

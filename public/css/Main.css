@@ -14,7 +14,7 @@
 .default-link-hover-color, .footer-conference a:hover {
   color: #3f90ff; }
 
-.default-box-shadow, .site-notice, .form-small, .conference-item, .event-default, .event, .message, .rating-item, .chat-group {
+.default-box-shadow, .site-notice, .form-small, .event-default, .event, .message, .chat-group, .item, .conference-item, .rating-item {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 * a {
@@ -114,7 +114,6 @@
   border-radius: 5px; }
 
 .conference-item {
-  background-color: white;
   margin: 1em; }
   .conference-item button {
     color: black; }
@@ -200,12 +199,12 @@
 }*/
 /* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 /*  background-color: rgb(79, 153, 197);*/
+.session {
+  margin-bottom: 2em; }
+
 .event-default, .event {
   margin-top: 1em;
-  background-color: white;
-  padding: 0px;
-  
-   }
+  padding: 0px; }
   .event-default .description-short, .event .description-short, .event-default .description-long, .event .description-long {
     color: black; }
 
@@ -306,8 +305,7 @@
     background-color: #2ea7af;*/ }
 
 .rating-item {
-  padding: 1em;
-  background-color: white; }
+  padding: 1em; }
 
 .chat-intro-text {
   margin-top: 1em; }
@@ -411,6 +409,9 @@ textarea {
   background-color: darkgreen;
   line-height: 1.428571429;
   border-radius: 50%; }
+
+.item, .conference-item, .event-default, .event, .rating-item {
+  background-color: white; }
 
 /** Snippets from http://bootsnipp.com/snippets/featured/circle-button */
 .btn-circle {
