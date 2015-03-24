@@ -102,8 +102,7 @@
                     @endif
                 @endif
             @endif
-
-{{--            @if($schedule_type == 'personal')
+            @if($schedule_type == 'personal')
                     @if(empty($session['description']))
                         <div class="col-xs-12 col-sm-12 nopadding container-button-schedule personal">
                             @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
@@ -117,14 +116,13 @@
                             @include('conference.components.buttons.button-read-more')
                         </div>
                     @endif
-
             @endif
 
             @if($schedule_type == 'session')
                 <div class="col-xs-12 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
-            @endif--}}
+            @endif
         </div>
     </div>
 </div>

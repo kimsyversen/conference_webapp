@@ -109,7 +109,7 @@ class LinksCest
 		$I->seeLink('Home', '/conferences/1');
 		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
-		$I->seeLink('Personal Schedule', '/conferences/1/schedule');
+		$I->seeLink('My schedule', '/conferences/1/schedule');
 		$I->seeLink('Newsfeed', '/conferences/1/newsfeed');
 	}
 
@@ -140,6 +140,6 @@ class LinksCest
 
 		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');
-		$I->dontSeeLink('Personal Schedule', '/conferences/1/schedule');
+		$I->dontSeeLink('My schedule', '/conferences/1/schedule');
 	}
 }

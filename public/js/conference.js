@@ -56,16 +56,12 @@ $(document).ready(function(){
     });
 
     $('.session').on('click', '.button-schedule-add', function(e){
-      e.preventDefault();
-
+        e.preventDefault();
         var button = $(this);
-
 
         //Find URL to resource
         var url = button.closest('.session').find('.event').find('.info h4 a').attr('href');
         var sessionId = button.attr('value');
-
-
 
         $.ajax({
             type: 'post',
@@ -77,7 +73,6 @@ $(document).ready(function(){
             },
             success: function(data) {
                 var parent = button.closest('.buttons');
-               // parent.find('.container-button-schedule').html(data);
 
                 parent.find('.container-button-schedule').fadeIn('slow', function() {
                     $(this).html(data);
