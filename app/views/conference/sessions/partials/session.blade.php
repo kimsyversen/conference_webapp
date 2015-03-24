@@ -24,9 +24,14 @@
                     <div class="col-xs-12 session-info">
                         <ul>
                             <li><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }} </li>
-                            <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</li>
+                            @if(isset($session['location']) && !empty($session['location']))
+                                <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</li>
+                            @endif
+
                             @if(isset($session['confirmed']) && $session['confirmed'] == false)
-                                <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>Session is cancelled</li>
+                                <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Session is cancelled</li>
+                            @else
+                                <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Session is confirmed</li>
                             @endif
                         </ul>
                     </div>
