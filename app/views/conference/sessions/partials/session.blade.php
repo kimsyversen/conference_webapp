@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 info">
-                <h4><a href="/{{ $session['links']['session']['uri'] }}" rel="self">{{ $session['title'] }}</a></h4>
+                <h4><a href="/{{ $session['links']['session']['uri'] }}">{{ $session['title'] }}</a></h4>
 
                 <div class="row descriptions">
                     <div class="description-short">
