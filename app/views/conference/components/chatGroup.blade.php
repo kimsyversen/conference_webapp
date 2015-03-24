@@ -22,13 +22,9 @@
 
             </div>
             <div class="col-xs-8 col-sm-10 chat-title">
-                <a href="/{{$uri}}" class="text-muted" style="text-decoration:none;"> {{ConferenceHelper::getShortDescription($last_message, 8) }}...</a>
-
+                <a href="/{{$uri}}" style="text-decoration:none;"> <span class="text-muted">Last message:</span> {{ConferenceHelper::getShortDescription($last_message, 8) }}...</a>
             </div>
-
         </div>
     </div>
-
-
 </div>
 
