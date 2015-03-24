@@ -5,7 +5,7 @@
     @include('conference.layouts.partials.errors-and-messages')
 
     <!-- Heading -->
-    @include('conference.layouts.partials.page-header', ['text' => 'Personal schedule'])
+    @include('conference.layouts.partials.page-header', ['text' => 'My schedule'])
 
     @if(isset($data['data']))
         @if(!empty($data['data']))
