@@ -39,7 +39,7 @@ $(document).ready(function(){
                             $(this).detach();
                         });
                     else
-                        buttonContainer.closest('.session-item').closest('.row').fadeOut('slow', function() {
+                        buttonContainer.closest('.session').closest('.row').fadeOut('slow', function() {
                             $(this).detach();
                         });
                 }
