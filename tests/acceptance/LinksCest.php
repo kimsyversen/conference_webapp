@@ -93,7 +93,7 @@ class LinksCest
 	private function is_authenticated_and_on_main_page(AcceptanceTester $I)
 	{
 		$I->seeLink('All conferences', '/conferences');
-		$I->seeLink('Profile', '/profile');
+		/*$I->seeLink('Profile', '/profile');*/
 		$I->seeLink('Log out', '/logout');
 
 		$I->seeLink('About the application', '/about');

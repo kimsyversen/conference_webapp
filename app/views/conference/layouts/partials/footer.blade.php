@@ -6,7 +6,7 @@
                 <ul class="list-unstyled">
                     <li class="footer-list-item"><a href="{{ route('about_creators_path') }}">About the application</a></li>
                     <li class="footer-list-item"><a href="{{ route('featurette_path') }}">Features of this application</a></li>
-                    <li class="nav-item"> {{ link_to_route('conferences_path', 'All conferences', null, ['name' => 'all-conferences-link'] ) }} </li>
+                    <li class="nav-item"> {{ link_to_route('conferences_path', 'All conferences' ) }} </li>
                 </ul>
             </div>
         </div>
