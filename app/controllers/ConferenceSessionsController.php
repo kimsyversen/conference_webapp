@@ -67,8 +67,7 @@ class ConferenceSessionsController extends \BaseController {
 			$this->client->send($request);
 
 			return View::Make('conference.components.button', [
-			'id' => 'remove-from-schedule',
-			'buttonClass' => 'btn button-dark with-border button-schedule',
+			'buttonClass' => 'btn button-dark with-border button-schedule button-schedule-remove',
 			'text' => 'Remove from schedule',
 			'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-remove',
 			'value' =>  $requestedSessionId]);
@@ -95,13 +94,7 @@ class ConferenceSessionsController extends \BaseController {
 			//TODO: Gjøre noe med respons?
 			$response = $this->client->send($request);
 
-			return View::Make('conference.components.button', [
-				'id' => 'add-to-schedule',
-				'buttonClass' => 'btn button-dark with-border button-schedule',
-				'text' => 'Add to schedule',
-				'spanClass' => 'glyphicon glyphicon glyphicon glyphicon-save',
-				'value' =>  $requestedSessionId]);
-
+			return View::Make('conference.components.buttons.button-schedule-add',['value' =>  $requestedSessionId]);
 		}
 	}
 }

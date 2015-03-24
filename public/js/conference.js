@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('.session').on('click', '#remove-from-schedule', function(e){
+    $('.session').on('click', '.button-schedule-remove', function(e){
         e.preventDefault();
         var button = $(this);
 
@@ -55,7 +55,7 @@ $(document).ready(function(){
         })
     });
 
-    $('.session').on('click', '#add-to-schedule', function(e){
+    $('.session').on('click', '.button-schedule-add', function(e){
       e.preventDefault();
 
         var button = $(this);
@@ -94,7 +94,7 @@ $(document).ready(function(){
         })
     });
 
-    $(".conference-item").on("click", "#button-conference-more", function(){
+    $(".conference-item").on("click", ".button-more", function(){
 
         //Find conference-item DOM element
         var conferenceItem = $(this).parent().parent().parent();
@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 
 
-    $(".session").on("click", "#button-session-more", function(){
+    $(".session").on("click", ".button-more", function(){
         //Walk up in the DOM tree
         var parent = $(this).closest('.session');
 
