@@ -239,7 +239,8 @@
   line-height: 1;
   font-family: 'Lato', sans-serif; }
 .event-time-data .hour, .event .event-time .hour {
-  display: none; }
+  margin-top: 0.2em;
+  font-size: 0.9em; }
 
 @media (max-width: 767px) {
   .event .event-time {

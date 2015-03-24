@@ -9,23 +9,38 @@
                     <div class="col-xs-12 month">
                         {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'M') }}
                     </div>
+
+                    <div class="col-xs-12 hour">
+                        {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i') }} -
+
+                        {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i') }}
+                    </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 info">
                 <h4><a href="/{{ $session['links']['session']['uri'] }}">{{ $session['title'] }}</a></h4>
 
                 <div class="row descriptions">
+                    <div class="col-xs-12 session-info">
+                        <ul>
+                            <li><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }} </li>
+                            <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</li>
+                            @if(isset($session['confirmed']) && $session['confirmed'] == false)
+                                <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span>Session is cancelled</li>
+                            @endif
+                        </ul>
+                    </div>
                     <div class="description-short">
                         <div class="col-xs-12">
-                            <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
-                            <p><span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</p>
+                            @if(!empty($session['description']) )
+                                <p> {{ ConferenceHelper::getShortDescription($session['description'], 5) }}</p>
+                            @endif
                         </div>
                     </div>
 
                     <div class="description-long hidden">
                         <div class="col-xs-12">
-                            <p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true"></span> {{ ConferenceHelper::formatTimestamp($session['start_date']['date'],'H:i')  }} - {{ ConferenceHelper::formatTimestamp($session['end_date']['date'],'H:i')  }}</p>
-                            <p><span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</p>
+
                             <p>{{ $session['description'] }}</p>
                         </div>
                     </div>
@@ -49,38 +64,62 @@
             @if($schedule_type == 'conference')
                 @if($authenticated)
                     @if($session['in_personal_schedule'] == true)
-                        <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
-                            @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
-                        </div>
+                        @if(empty($session['description']))
+                            <div class="col-xs-12 col-sm-12 nopadding container-button-schedule">
+                                @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
+                            </div>
+                        @else
+                            <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
+                                @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
+                            </div>
+                        @endif
                     @else
-                        <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
-                            @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
+                        @if(!empty($session['description']))
+                            <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
+                                @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
+                            </div>
+                        @else
+                            <div class="col-xs-12 col-sm-12 nopadding container-button-schedule">
+                                @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
+                            </div>
+                        @endif
+                    @endif
+                    @if(!empty($session['description']))
+                         <div class="col-xs-5 col-sm-6 nopadding">
+                            @include('conference.components.buttons.button-read-more')
+                         </div>
+                    @endif
+                @else
+                    @if(!empty($session['description']))
+                        <div class="col-xs-12 col-sm-12 nopadding">
+                            @include('conference.components.buttons.button-read-more')
                         </div>
                     @endif
-                    <div class="col-xs-5 col-sm-6 nopadding">
-                        @include('conference.components.buttons.button-read-more')
-                    </div>
-                @else
-                    <div class="col-xs-12 col-sm-12 nopadding">
-                        @include('conference.components.buttons.button-read-more')
-                    </div>
                 @endif
             @endif
 
-            @if($schedule_type == 'personal')
-                <div class="col-xs-7 col-sm-6 nopadding container-button-schedule personal">
-                    @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
-                </div>
-                <div class="col-xs-5 col-sm-6 nopadding">
-                    @include('conference.components.buttons.button-read-more')
-                </div>
+{{--            @if($schedule_type == 'personal')
+                    @if(empty($session['description']))
+                        <div class="col-xs-12 col-sm-12 nopadding container-button-schedule personal">
+                            @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
+                        </div>
+                    @else
+                        <div class="col-xs-7 col-sm-6 nopadding container-button-schedule personal">
+                            @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
+                        </div>
+
+                        <div class="col-xs-5 col-sm-6 nopadding">
+                            @include('conference.components.buttons.button-read-more')
+                        </div>
+                    @endif
+
             @endif
 
             @if($schedule_type == 'session')
                 <div class="col-xs-12 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
-            @endif
+            @endif--}}
         </div>
     </div>
 </div>
