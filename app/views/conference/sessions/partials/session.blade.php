@@ -57,11 +57,11 @@
                             @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
                         </div>
                     @endif
-                    <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
+                    <div class="col-xs-5 col-sm-6 nopadding">
                         @include('conference.components.buttons.button-read-more')
                     </div>
                 @else
-                    <div class="col-xs-12 col-sm-12 nopadding button-more-parent">
+                    <div class="col-xs-12 col-sm-12 nopadding">
                         @include('conference.components.buttons.button-read-more')
                     </div>
                 @endif
@@ -71,13 +71,13 @@
                 <div class="col-xs-7 col-sm-6 nopadding container-button-schedule personal">
                     @include('conference.components.buttons.button-schedule-remove', [ 'value' =>  $session['id'] ])
                 </div>
-                <div class="col-xs-5 col-sm-6 nopadding button-more-parent">
+                <div class="col-xs-5 col-sm-6 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
             @endif
 
             @if($schedule_type == 'session')
-                <div class="col-xs-12 nopadding button-more-parent">
+                <div class="col-xs-12 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
             @endif

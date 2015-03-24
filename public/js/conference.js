@@ -95,22 +95,23 @@ $(document).ready(function(){
     });
 
     $(".conference-item").on("click", ".button-more", function(){
-
-        //Find conference-item DOM element
-        var conferenceItem = $(this).parent().parent().parent();
-
-        //Find button
-        var button = conferenceItem.find('button');
+        //Find the first conference-item up in the DOM tree
+        var conferenceItem = $(this).closest('.conference-item');
 
         //Toggle hidden on the description text
         conferenceItem.find('.description .text').toggleClass('hidden');
 
-        //Change text on the button
-        button.text( button.text() === "Read more" ? 'Close' : "Read more");
+        //Find button
+        var button = conferenceItem.find('.button-more');
+
+        //Swap glyph on button
+        var glyph = button.find('.glyphicon').toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
+
+        //Find the last span inside the button
+        var buttonText = button.find('.button-text');
+
+        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");
     });
-
-
-
 
     $(".session").on("click", ".button-more", function(){
         //Walk up in the DOM tree

@@ -36,7 +36,8 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 ">
-                            <button class='btn form-control button-conference button-dark button-more' id="button-conference-more">Read more</button>
+                            @include('conference.components.buttons.button-read-more')
+                            {{--<button class='btn form-control button-conference button-dark button-more' id="button-conference-more">Read more</button>--}}
                         </div>
                     </div>
                 </div>
