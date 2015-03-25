@@ -14,9 +14,7 @@
                                 <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</li>
                             @endif
 
-                            @if(isset($session['confirmed']) && $session['confirmed'] == 1)
-                                <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Confirmed</li>
-                            @else
+                            @if(isset($session['confirmed']) && $session['confirmed'] == 0)
                                 <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelled</li>
                             @endif
 
