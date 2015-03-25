@@ -30,9 +30,9 @@
 
                             @if(isset($session['confirmed']) && ($session['category'] == 'professional' || $session['category'] == 'social'))
                                 @if($session['confirmed'] == 1)
-                                    <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Session is confirmed</li>
+                                    <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Confirmed</li>
                                 @else
-                                    <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Session is cancelled</li>
+                                    <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelled</li>
                                 @endif
                             @endif
                         </ul>
