@@ -82,9 +82,12 @@ textarea {
 }
 
 .item {
-
   background-color: rgb(255, 255, 255);
   @extend .default-box-shadow;
+}
+.item-push {
+  margin-top: 2em;
+  padding: 0.5em;
 }
 
 /** Snippets from http://bootsnipp.com/snippets/featured/circle-button */

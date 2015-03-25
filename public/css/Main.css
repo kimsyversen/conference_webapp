@@ -420,6 +420,10 @@ textarea {
 .item, .conference-item, .event-default, .event, .rating-item {
   background-color: white; }
 
+.item-push {
+  margin-top: 2em;
+  padding: 0.5em; }
+
 /** Snippets from http://bootsnipp.com/snippets/featured/circle-button */
 .btn-circle {
   width: 30px;
