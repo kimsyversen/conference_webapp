@@ -6,7 +6,7 @@
 
         @include('conference.layouts.partials.errors-and-messages')
 
-        @include('conference.layouts.partials.page-header', ['text' => 'Details about session'])
+        @include('conference.layouts.partials.page-header', ['text' => 'Details about event'])
 
         @if(isset($data['data']) && !empty($data['data']))
             @include('conference.layouts.partials.delimiter', ['text' => 'Event information', 'value' => ''])
