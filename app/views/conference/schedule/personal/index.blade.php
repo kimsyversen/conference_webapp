@@ -11,7 +11,7 @@
         @if(!empty($data['data']))
             @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
         @else
-            <p class="lead text-center">Your personal schedule is empty.</p>
+            <p class="lead text-center">Your schedule is empty.</p>
         @endif
     @endif
 @stop
