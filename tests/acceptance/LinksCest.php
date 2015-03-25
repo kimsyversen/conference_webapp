@@ -107,7 +107,7 @@ class LinksCest
 		$this->is_authenticated_and_on_main_page($I);
 
 		$I->seeLink('Home', '/conferences/1');
-		$I->seeLink('Schedule', '/conferences/1/schedule');
+		$I->seeLink('Conference schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 		$I->seeLink('My schedule', '/conferences/1/schedule');
 		$I->seeLink('Newsfeed', '/conferences/1/newsfeed');
@@ -132,7 +132,7 @@ class LinksCest
 	{
 		$I->seeLink('All conferences', '/conferences');
 		$I->seeLink('Home', '/conferences/1');
-		$I->seeLink('Schedule', '/conferences/1/schedule');
+		$I->seeLink('Conference schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 
 		$I->seeLink('About the application', '/about');

@@ -67,7 +67,7 @@ Breadcrumbs::register('chat', function($breadcrumbs) {
 
 Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
-	$breadcrumbs->push("Your schedule", route('personal_schedule_path'));
+	$breadcrumbs->push("My schedule", route('personal_schedule_path'));
 
 });
 
@@ -82,9 +82,11 @@ Breadcrumbs::register('profile', function($breadcrumbs) {
 Breadcrumbs::register('schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
 	if(Session::has('conference_id'))
-		$breadcrumbs->push("Schedule", route('schedule_path', ['conference_id' => Session::get('conference_id')]));
+		$breadcrumbs->push("Conference schedule", route('schedule_path', ['conference_id' => Session::get('conference_id')]));
 	else
-		$breadcrumbs->push("Schedule", route('schedule_path'));
+		$breadcrumbs->push("Conference schedule", route('schedule_path'));
+
+	//TODO: elsen over.. er den noe vits?
 });
 
 

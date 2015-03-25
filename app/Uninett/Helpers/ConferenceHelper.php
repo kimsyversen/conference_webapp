@@ -39,7 +39,7 @@ class ConferenceHelper {
 		for($i=0; $i < $words; $i++)
 			$sentence = $sentence . ' ' . $array[$i];
 
-		return $sentence;
+		return $sentence . "...";
 	}
 
 	/**
@@ -67,6 +67,7 @@ class ConferenceHelper {
 			}
 		}
 		return substr($string, 0, strlen($string) -2);
+
 	}
 
 	public static function timestampToCarbon($timestamp)

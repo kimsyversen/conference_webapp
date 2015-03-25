@@ -9,11 +9,11 @@
         @include('conference.layouts.partials.page-header', ['text' => 'Details about session'])
 
         @if(isset($data['data']) && !empty($data['data']))
-            @include('conference.layouts.partials.delimiter', ['text' => 'Session information', 'value' => ''])
+            @include('conference.layouts.partials.delimiter', ['text' => 'Event information', 'value' => ''])
 
             @include('conference.sessions.partials.session', ['session' => $data['data'], 'schedule_type' => 'conference'])
 
-            @include('conference.layouts.partials.delimiter', ['text' => 'Say what you think about this session', 'value' => ''])
+            @include('conference.layouts.partials.delimiter', ['text' => 'Say what you think about this event', 'value' => ''])
 
             @include('conference.sessions.partials.rating', ['status' => $status])
         @endif
