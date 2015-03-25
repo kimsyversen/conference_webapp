@@ -11,6 +11,11 @@ gulp.task('css', function()
         .pipe(sass())
         .pipe(autoprefixer('last 10 version'))
         .pipe(gulp.dest('public/css'))
+
+    gulp.src('app/assets/sass/Admin.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(gulp.dest('public/css'))
 });
 
 

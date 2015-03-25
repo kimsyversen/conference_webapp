@@ -46,3 +46,7 @@ Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' =>
 Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 	return File::get(storage_path() . "/loaderio-aef6c70fb68412153005721ed69b906e.txt");
 });
+
+
+/* ADMIN */
+//Route::get('/admin', ['as' => 'home_path', 'uses' => 'Uninett\Admin\AdminController@index' ]);
