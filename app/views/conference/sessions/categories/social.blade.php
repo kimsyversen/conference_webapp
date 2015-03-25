@@ -19,7 +19,6 @@
                             @else
                                 <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelled</li>
                             @endif
-
                         </ul>
                     </div>
                     <div class="description-short">
@@ -32,7 +31,6 @@
 
                     <div class="description-long hidden">
                         <div class="col-xs-12">
-
                             <p>{{ $session['description'] }}</p>
                         </div>
                     </div>

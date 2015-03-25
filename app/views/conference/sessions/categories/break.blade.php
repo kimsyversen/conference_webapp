@@ -30,7 +30,6 @@
 
                     <div class="description-long hidden">
                         <div class="col-xs-12">
-
                             <p>{{ $session['description'] }}</p>
                         </div>
                     </div>

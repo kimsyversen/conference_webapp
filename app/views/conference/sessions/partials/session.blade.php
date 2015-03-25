@@ -11,5 +11,5 @@
 @endif
 
 @if($session['category'] == 'other')
-    @include('conference.sessions.categories.break')
+    @include('conference.sessions.categories.other')
 @endif
