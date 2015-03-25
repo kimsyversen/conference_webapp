@@ -28,10 +28,12 @@
                                 <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ $session['location']  }}</li>
                             @endif
 
-                            @if(isset($session['confirmed']) && $session['confirmed'] == false)
-                                <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Session is cancelled</li>
-                            @else
-                                <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Session is confirmed</li>
+                            @if(isset($session['confirmed']))
+                                @if($session['confirmed'] == 1)
+                                    <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Session is confirmed</li>
+                                @else
+                                    <li> <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span> Session is cancelled</li>
+                                @endif
                             @endif
                         </ul>
                     </div>
