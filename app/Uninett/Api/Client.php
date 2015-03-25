@@ -88,6 +88,10 @@ class Client  {
 			if($errorCode === 404)
 				throw new NotFoundHttpException;
 
+
+			if($errorCode == 423)
+				return $this->responseFormatter->error(['You must active your account. Please check your email.']);
+
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			Log::debug($ex->getMessage());
