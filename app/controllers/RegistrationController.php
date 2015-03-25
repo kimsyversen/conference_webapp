@@ -34,7 +34,7 @@ class RegistrationController extends BaseController {
 
 		return Redirect::route('login_path')->with([
 				'data' => $response,
-				'messages' => ['Account was successfully created. You must check your email and activate your account.']
+				'messages' => ['Account was successfully created. You must check your email and activate your account. Allow a few minutes for it to arrive in your inbox.']
 		]);
 
 	}
