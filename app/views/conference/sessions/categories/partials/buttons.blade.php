@@ -12,23 +12,24 @@
                     </div>
                 @endif
             @else
-                @if(!empty($session['description']))
+                @if(!empty($session['description']) && $session['confirmed'] == 1)
                     <div class="col-xs-7 col-sm-6 nopadding container-button-schedule">
                         @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
                     </div>
-                @else
+                @endif
+                @if(empty($session['description']) && $session['confirmed'] == 1)
                     <div class="col-xs-12 col-sm-12 nopadding container-button-schedule">
                         @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
                     </div>
                 @endif
             @endif
-            @if(!empty($session['description']))
+            @if(!empty($session['description'])  && $session['confirmed'] == 1)
                 <div class="col-xs-5 col-sm-6 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
             @endif
         @else
-            @if(!empty($session['description']))
+            @if(!empty($session['description'])  && $session['confirmed'] == 1)
                 <div class="col-xs-12 col-sm-12 nopadding">
                     @include('conference.components.buttons.button-read-more')
                 </div>
