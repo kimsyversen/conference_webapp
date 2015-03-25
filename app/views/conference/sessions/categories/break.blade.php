@@ -17,7 +17,6 @@
                             @if(isset($session['confirmed']) && $session['confirmed'] == 0)
                                 <li> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelled</li>
                             @endif
-
                         </ul>
                     </div>
                     <div class="description-short">

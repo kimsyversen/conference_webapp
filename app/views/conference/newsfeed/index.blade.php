@@ -19,6 +19,7 @@
                             ])
                     @endforeach
                 </div>
+            </div>
 
 {{--                <div class="col-md-6 col-sm-12">
                     @foreach($twitter as $post)
