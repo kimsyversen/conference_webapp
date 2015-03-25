@@ -132,11 +132,11 @@ $(document).ready(function(){
 
    window.setTimeout(function() {
        $(".alert-info").toggleClass('fadeIn fadeOut').detach();
-    }, 5000);
+    }, 30000);
 
     window.setTimeout(function() {
         $(".alert-danger").toggleClass('fadeIn fadeOut').detach();
-    }, 5000);
+    }, 30000);
 
 
     $(".login-button").on("click", function() {
