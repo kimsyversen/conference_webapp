@@ -90,7 +90,7 @@ class Client  {
 
 
 			if($errorCode == 423)
-				return $this->responseFormatter->error(['You must active your account. Please check your email.']);
+				return $this->responseFormatter->error(['You must active your account. Please check your email.w']);
 
 			$errorCode = $ex->getResponse()->getStatusCode();
 
