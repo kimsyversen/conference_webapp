@@ -35,5 +35,7 @@
                 </div>
             </div>
         </div>
+        @include('conference.sessions.categories.partials.buttons')
     </div>
 </div>
+
