@@ -20,18 +20,6 @@
                     @endforeach
                 </div>
             </div>
-
-{{--                <div class="col-md-6 col-sm-12">
-                    @foreach($twitter as $post)
-
-                        @include('conference.components.message', [
-                        'classes' => 'newspost-twitter',
-                        'title' => 'Post from Twitter',
-                        'time' => $post['created_at'] ,
-                        'body' => $post['text']
-                        ])
-                    @endforeach
-                </div>
-            </div>--}}
         @endif
+
 @stop

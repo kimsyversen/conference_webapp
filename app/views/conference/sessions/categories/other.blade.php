@@ -1,7 +1,7 @@
 <div class="row session" data-value="{{ $session['id'] }}" data-url="/{{ $session['links']['session']['uri'] }}">
-    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+    <div class="col-xs-12">
         <div class="row event">
-            <div class="col-xs-2 col-sm-3 col-md-2 event-time">
+            <div class="col-xs-3 col-sm-4 col-md-3  col-lg-2 event-time">
                 @include('conference.sessions.categories.partials.time')
             </div>
             <div class="col-xs-12 col-sm-8 col-md-9 info">

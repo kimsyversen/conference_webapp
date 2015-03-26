@@ -3,7 +3,7 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 
 @import 'defaults';
-
+@import 'components/offcanvas-menu';
 @import 'components/featurette';
 @import 'components/nav';
 @import 'components/footer';
@@ -116,4 +116,36 @@ textarea {
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px;
+}
+
+
+.navbar-top {
+ background-color: #afb0b3;
+  a {
+    margin-right: 10px;
+  }
+
+}
+
+.sidebar-offcanvas .nav-item a {
+  text-decoration: none;
+}
+
+.navbar-right .nav-item a {
+  text-decoration: none;
+}
+
+.navbar-top .navbar-header a {
+  text-decoration: none;
+
+
+}
+
+.navbar-toggle {
+  color: black;
+
+  span {
+    background-color: black;
+  }
+
 }

@@ -26,7 +26,8 @@
   -webkit-transition: 0.3s;
           transition: 0.3s;
   bottom: 0;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
+  font-size: 0.9em; }
 
 .button-dark {
   background-color: #b5b8b8;
@@ -49,6 +50,106 @@
   background-color: #c2c5c5;
   padding: 1em;
   margin: 1em 0 1em 0; }
+
+/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook */
+.wrapper, .row {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0; }
+
+.wrapper:before, .wrapper:after, .column:before, .column:after {
+  content: "";
+  display: table; }
+
+.wrapper:after, .column:after {
+  clear: both; }
+
+.column {
+  height: 100%;
+  overflow: auto;
+  *zoom: 1; }
+
+.column .padding {
+  padding: 0;
+  margin: 0; }
+
+.box {
+  bottom: 0;
+  /* increase for footer use */
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #444444; }
+
+#main {
+  background-color: #e9eaed;
+  padding-left: 0;
+  padding-right: 0; }
+
+#main .img-circle {
+  margin-top: 18px;
+  height: 70px;
+  width: 70px; }
+
+#sidebar {
+  padding: 0px;
+  padding-top: 15px; }
+
+#sidebar, #sidebar a, #sidebar-footer a {
+  color: #ffffff;
+  background-color: transparent;
+  text-shadow: 0 0 2px #000000;
+  padding-left: 5px; }
+
+#sidebar .nav li > a:hover {
+  background-color: #393939; }
+
+.logo {
+  display: block;
+  padding: 3px;
+  background-color: #fff;
+  color: #3B5999;
+  height: 28px;
+  width: 28px;
+  margin: 9px;
+  margin-right: 2px;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 1px;
+  border-radius: 2px; }
+
+#sidebar-footer {
+  background-color: #444;
+  position: absolute;
+  bottom: 5px;
+  padding: 5px; }
+
+#footer {
+  margin-bottom: 20px; }
+
+/*
+ * off canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out; }
+  .row-offcanvas-left.active {
+    left: 33%; }
+  .row-offcanvas-left.active .sidebar-offcanvas {
+    left: -33%;
+    position: absolute;
+    top: 0;
+    width: 33%;
+    margin-left: 5px; }
+  #sidebar, #sidebar a, #sidebar-footer a {
+    padding-left: 3px; } }
 
 .featurette {
   margin-top: 3em;
@@ -136,67 +237,6 @@
       .conference-item .body .description .text {
         padding: 0.5em; }
 
-/*
-.session-item {
-  background-color: rgb(255, 255, 255);
-
-  @extend .default-box-shadow;
-
-
-
-  a {
-    text-decoration: underline;
-  }
-
-  .header {
-    padding: 0.3em;
-    .time {
-      font-size: 0.8em;
-      float: right;
-      display: block;
-    }
-    .location {
-      font-size: 0.5em
-    }
-
-    .avatar {
-      padding: 0.5em 0 0 1em;
-      float: left;
-      font-size: 1.5em;
-      color: #1b800a;
-
-    }
-    .title {
-      padding: 0.5em 0 0.5em 0;
-      font-size: 1em;
-      h4 {
-        font-weight: 400;
-      }
-    }
-  }
-
-
-
-  .buttons {
-    .with-border {
-      border-right: 1px dashed #000;
-    }
-  }
-
-  .information {
-    .location {
-      font-size: 1em;
-    }
-  }
-}
-
-.session-group {
-  padding: 1em;
-}
-
-.session {
-
-}*/
 /* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 /*  background-color: rgb(79, 153, 197);*/
 .session {
@@ -240,11 +280,12 @@
   font-family: 'Lato', sans-serif; }
 .event-time-data .day, .event .event-time .day {
   display: block;
-  font-size: 56pt;
+  font-size: 48pt;
   font-weight: 100;
   line-height: 1;
   font-family: 'Lato', sans-serif; }
 .event-time-data .hour, .event .event-time .hour {
+  display: block;
   margin-top: 0.2em;
   font-size: 0.9em; }
 
@@ -449,3 +490,22 @@ textarea {
   font-size: 24px;
   line-height: 1.33;
   border-radius: 35px; }
+
+.navbar-top {
+  background-color: #afb0b3; }
+  .navbar-top a {
+    margin-right: 10px; }
+
+.sidebar-offcanvas .nav-item a {
+  text-decoration: none; }
+
+.navbar-right .nav-item a {
+  text-decoration: none; }
+
+.navbar-top .navbar-header a {
+  text-decoration: none; }
+
+.navbar-toggle {
+  color: black; }
+  .navbar-toggle span {
+    background-color: black; }

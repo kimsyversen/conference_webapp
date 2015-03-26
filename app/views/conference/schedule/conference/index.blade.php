@@ -5,6 +5,7 @@
         @include('conference.layouts.partials.doFirstTimeStuff')
 
         @include('conference.layouts.partials.page-header', ['text' => 'Conference schedule'])
+
         @if(isset($data['data']))
             @if(!empty($data))
                 @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'conference'])

@@ -16,8 +16,9 @@
     @endif
 @stop
 
+{{--
 <script>
     $(document).ready(function() {
         $("#button-session-more").trigger("click");
     });
-</script>
+</script>--}}

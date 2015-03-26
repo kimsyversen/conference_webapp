@@ -220,3 +220,19 @@ $(document).ready(function(){
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+/*Start  JS from http://www.bootstrapzero.com/bootstrap-template/facebook */
+
+/* off-canvas sidebar toggle */
+
+$('[data-toggle=offcanvas]').click(function() {
+    $(this).toggleClass('visible-xs text-center');
+    $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+    $('.row-offcanvas').toggleClass('active');
+    $('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+    $('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+    $('#btnShow').toggle();
+});
+
+/*End */
