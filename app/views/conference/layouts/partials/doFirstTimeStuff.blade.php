@@ -3,9 +3,9 @@
         <div class="row site-notice">
             <div class="col-xs-12 text-center">
 
-                <p class="lead">Hi! We see that this is the first time you use this application. Do you want a short presentation of what you can do with this application?</p>
+                <p class="lead">Hi! This is a message that you will only see the first time you visit this application. Do you want a short presentation of the features of this application? If not, you can always see the presentation again. Just scroll to the bottom of the page and click on "Features of this application".</p>
                 <div class="btn-group">
-                    <a href="{{ route('featurette_path')}}" class="btn button-dark">Give me a quick tour</a>
+                    <a href="{{ route('featurette_path')}}" class="btn button-dark">Give me a short presentation</a>
                     <a href="#" class="btn button-dark" id="dismiss">Dismiss</a>
                 </div>
             </div>
