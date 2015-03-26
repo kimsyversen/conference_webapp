@@ -5,8 +5,9 @@ $(document).ready(function(){
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session').find('.event').find('.info h4 a').attr('href');
-        var sessionId = button.attr('value');
+        var sessionContainer = button.closest('.session');
+        var url = sessionContainer.attr('data-url');
+        var sessionId = sessionContainer.attr('data-value');
 
         $.ajax({
             context: button,
@@ -60,10 +61,12 @@ $(document).ready(function(){
         var button = $(this);
 
         //Find URL to resource
-        var url = button.closest('.session').find('.event').find('.info h4 a').attr('href');
-        var sessionId = button.attr('value');
+        var sessionContainer = button.closest('.session');
+        var url = sessionContainer.attr('data-url');
+        var sessionId = sessionContainer.attr('data-value');
 
-        $.ajax({
+
+       $.ajax({
             type: 'post',
             url: url,
             data: {session_id : sessionId},
