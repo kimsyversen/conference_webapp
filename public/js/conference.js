@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    /** Footer to bottom */
+    var pageHeight = $(window).height();
+    var footerHeight = $('#footer').height();
+    var footerTop = $('#footer').position().top + footerHeight;
+
+    if (footerTop < pageHeight) {
+        $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
+    }
+
+
+
+
     $('.session').on('click', '.button-schedule-remove', function(e){
         e.preventDefault();
         var button = $(this);

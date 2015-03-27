@@ -55,14 +55,34 @@
                 </div>
 
                 <div class="padding" id="top">
+
                     <div class="full col-xs-12">
-                        <div class="row">
+                        <div class="row content-wrapper">
                             @yield('content')
+
                         </div>
+
                         @include('conference.layouts.partials.goto-top')
+
+                        <div id="footer">
+                            <div class="row">
+                                    <div class=" col-xs-12 text-center">
+                                        <h4>Other information</h4>
+                                        <ul class="list-unstyled">
+                                            <li class="footer-list-item"><a href="{{ route('about_creators_path') }}">About the application</a></li>
+                                            <li class="footer-list-item"><a href="{{ route('featurette_path') }}">Features of this application</a></li>
+                                            <li class="nav-item"> {{ link_to_route('conferences_path', 'All conferences' ) }} </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
+
+
         </div>
     </div>
 </div>
@@ -72,6 +92,12 @@
     {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
     {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
+
+    <script>
+
+        $(document).ready(function() {
+
+    </script>
 @show
 </body>
 </html>

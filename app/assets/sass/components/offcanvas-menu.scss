@@ -2,6 +2,9 @@
    Some of the code are modified
 */
 
+.wrapper {
+  min-height: 100%;
+}
 .wrapper, .row {
   height: 100%;
   margin-left:0;
@@ -46,11 +49,7 @@
   background-color:#e9eaed;
   padding-left:0;
   padding-right:0;
-}
-#main .img-circle {
-  margin-top:18px;
-  height:70px;
-  width:70px;
+
 }
 
 #sidebar {
@@ -90,9 +89,6 @@
   position:absolute;
   bottom:5px;
   padding:5px;
-}
-#footer {
-  margin-bottom:20px;
 }
 
 

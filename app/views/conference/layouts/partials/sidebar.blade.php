@@ -22,11 +22,7 @@
             <li class="nav-item"><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i> Refresh </a> </li>
         </ul>
 
-        <ul class="list-unstyled hidden-xs" id="sidebar-footer">
-            <li class="footer-list-item"><a href="{{ route('about_creators_path') }}"><i class="glyphicon glyphicon-menu-right"></i> About the application</a></li>
-            <li class="footer-list-item"><a href="{{ route('featurette_path') }}"><i class="glyphicon glyphicon-menu-right"></i>Features of this application</a></li>
 
-        </ul>
 
         <ul class="nav visible-xs" id="xs-menu">
             @if(Session::has('conference_id'))
