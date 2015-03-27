@@ -10,6 +10,10 @@ $(document).ready(function(){
     }
 
 
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
 
 
     $('.session').on('click', '.button-schedule-remove', function(e){

@@ -41,12 +41,7 @@
             <div class="column col-sm-10 col-xs-11" id="main">
                 <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+
 
                         <a class="navbar-brand" href="{{ route('conferences_path')}}">
                             <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
@@ -74,6 +69,7 @@
 
 @section('javascript')
     {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+    {{ HTML::script('components/vendor/fastclick/lib/fastclick.js') }}
     {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
     {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
