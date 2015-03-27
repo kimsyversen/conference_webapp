@@ -43,7 +43,7 @@ class ConferenceSessionsController extends \BaseController {
 		}
 
 
-		return View::make('conference.sessions.index')->with([
+		return View::make('conference.events.show')->with([
 			'data' =>  $response,
 			'status' => $status
 		]);

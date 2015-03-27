@@ -51,7 +51,9 @@
   padding: 1em;
   margin: 1em 0 1em 0; }
 
-/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook */
+/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook
+   Some of the code are modified
+*/
 .wrapper, .row {
   height: 100%;
   margin-left: 0;
@@ -151,6 +153,25 @@
   #sidebar, #sidebar a, #sidebar-footer a {
     padding-left: 3px; } }
 
+.navbar-top {
+  background-color: #afb0b3; }
+  .navbar-top a {
+    margin-right: 10px; }
+
+.navbar-toggle {
+  color: black; }
+  .navbar-toggle span {
+    background-color: black; }
+
+.navbar-right .nav-item a {
+  text-decoration: none; }
+
+.navbar-top .navbar-header a {
+  text-decoration: none; }
+
+.sidebar-offcanvas .nav-item a {
+  text-decoration: none; }
+
 .featurette {
   margin-top: 3em;
   margin-bottom: 2em; }
@@ -181,17 +202,6 @@
       padding: 0 0.4em 0 0.1em; }
     .featurette p {
       font-size: 2em; } }
-
-.navbar-conference a {
-  text-decoration: none; }
-.navbar-conference .home-link {
-  margin-top: -2px; }
-.navbar-conference .navbar-user-image {
-  float: left;
-  position: relative;
-  top: -2px;
-  left: -6px;
-  font-size: 1.8em; }
 
 .footer-conference {
   background-color: #2c2c2c; }
@@ -240,7 +250,8 @@
 /* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 /*  background-color: rgb(79, 153, 197);*/
 .session {
-  margin-bottom: 2em; }
+  padding: 0;
+  margin: 0; }
 
 .event-default, .event {
   margin-top: 1em;
@@ -360,9 +371,6 @@
   /*    background-image: none;
     background-color: #2ea7af;*/ }
 
-.rating-item {
-  padding: 1em; }
-
 .chat-intro-text {
   margin-top: 1em; }
 
@@ -457,63 +465,9 @@ textarea {
 .about-the-application {
   font-size: 1.6em; }
 
-.circle {
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  color: white;
-  background-color: darkgreen;
-  line-height: 1.428571429;
-  border-radius: 50%; }
-
 .item, .conference-item, .event-default, .event, .rating-item {
   background-color: white; }
 
 .item-push {
   margin-top: 2em;
   padding: 0.5em; }
-
-/** Snippets from http://bootsnipp.com/snippets/featured/circle-button */
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px; }
-
-.btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px; }
-
-.btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 35px; }
-
-.navbar-top {
-  background-color: #afb0b3; }
-  .navbar-top a {
-    margin-right: 10px; }
-
-.sidebar-offcanvas .nav-item a {
-  text-decoration: none; }
-
-.navbar-right .nav-item a {
-  text-decoration: none; }
-
-.navbar-top .navbar-header a {
-  text-decoration: none; }
-
-.navbar-toggle {
-  color: black; }
-  .navbar-toggle span {
-    background-color: black; }

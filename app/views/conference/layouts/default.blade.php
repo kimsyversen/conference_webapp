@@ -26,7 +26,7 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('components/vendor/bootstrap/dist/css/bootstrap.min.css') }}
-    {{ HTML::style('components/vendor/bootstrap3-dialog/dist/css/bootstrap-dialog.min.js') }}
+    {{ HTML::style('partials') }}
     {{ HTML::style('components/vendor/animate-css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
 
@@ -37,7 +37,7 @@
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
-            @include('conference.layouts.components.sidebar')
+            @include('conference.layouts.partials.sidebar')
             <div class="column col-sm-10 col-xs-11" id="main">
                 <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
@@ -62,7 +62,7 @@
 
                         <div class="push"></div>
                         @include('conference.layouts.partials.goto-top')
-                        @include('conference.layouts.components.footer')
+                        @include('conference.layouts.partials.footer')
                     </div>
                 </div>
             </div>

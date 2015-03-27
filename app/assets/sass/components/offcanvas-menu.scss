@@ -1,14 +1,12 @@
-/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook */
-
-
+/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook
+   Some of the code are modified
+*/
 
 .wrapper, .row {
   height: 100%;
   margin-left:0;
   margin-right:0;
 }
-
-
 
 .wrapper:before, .wrapper:after,
 .column:before, .column:after {
@@ -130,3 +128,30 @@
   }
 }
 
+.navbar-top {
+  background-color: #afb0b3;
+  a {
+    margin-right: 10px;
+  }
+}
+
+.navbar-toggle {
+  color: black;
+
+  span {
+    background-color: black;
+  }
+
+}
+
+.navbar-right .nav-item a {
+  text-decoration: none;
+}
+
+.navbar-top .navbar-header a {
+  text-decoration: none;
+}
+
+.sidebar-offcanvas .nav-item a {
+  text-decoration: none;
+}

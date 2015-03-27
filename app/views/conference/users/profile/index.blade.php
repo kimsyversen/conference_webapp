@@ -1,6 +1,6 @@
 @extends('conference.layouts.default')
 @section('content')
-    @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('profile') ])
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('profile') ])
     @include('conference.layouts.partials.errors-and-messages')
 
     <div class="row">

@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 
 @section('content')
-    @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('registration') ])
     @include('conference.layouts.partials.errors-and-messages')
 
     @include('conference.layouts.partials.page-header', ['text' => 'Create account'])

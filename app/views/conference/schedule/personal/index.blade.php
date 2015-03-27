@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 @section('content')
 
-    @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('personal_schedule') ])
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('personal_schedule') ])
     @include('conference.layouts.partials.errors-and-messages')
 
     <!-- Heading -->
@@ -9,7 +9,7 @@
 
     @if(isset($data['data']))
         @if(!empty($data['data']))
-            @include('conference.sessions.partials.group', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
+            @include('conference.events.eventGroup', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
         @else
             <p class="lead text-center">Your schedule is empty.</p>
         @endif
