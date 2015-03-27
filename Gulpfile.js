@@ -24,20 +24,55 @@ gulp.task('js', function()
 
 });
 
+/*gulp.task('compile-css', function()
+{
+    gulp.src('app/assets/sass/Main.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(gulp.dest('public/css'))
+
+    gulp.src('app/assets/sass/Admin.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(gulp.dest('public/css'))
+});*/
+
+/*gulp.src('app/assets/sass/Main.scss')
+    .pipe(sass())
+    .pipe(autoprefixer('last 10 version'))
+    .pipe(gulp.dest('app/assets/css/Main.css',  {overwrite: true}));
+
+var basePath = "public/components/vendor/";
+gulp.src(
+    [
+        basePath + "bootstrap/dist/css/bootstrap.min.css",
+        basePath + "add-to-homescreen/style/addtohomescreen.css",
+        basePath + "animate-css/animate.min.css",
+        basePath + "bootstrap3-dialog/src/css/bootstrap-dialog.css",
+        "app/assets/css/Main.css"
+    ])
+    .pipe(concatCss("conference.min.css"))
+    .pipe(cssmin())
+    .pipe(gulp.dest('public/css'));*/
+
 gulp.task('css', function()
 {
     var basePath = "public/components/vendor/";
-    gulp.src(
-        [
+
+    gulp.src('app/assets/sass/Main.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(gulp.src([
             basePath + "bootstrap/dist/css/bootstrap.min.css",
             basePath + "add-to-homescreen/style/addtohomescreen.css",
             basePath + "animate-css/animate.min.css",
             basePath + "bootstrap3-dialog/src/css/bootstrap-dialog.css",
             "app/assets/css/Main.css"
-        ])
+        ]))
         .pipe(concatCss("conference.min.css"))
         .pipe(cssmin())
-        .pipe(gulp.dest('public/css'));
+        .pipe(gulp.dest('public/css'))
+
 });
 
 
