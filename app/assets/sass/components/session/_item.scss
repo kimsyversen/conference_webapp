@@ -1,11 +1,8 @@
-/* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
-
-/*  background-color: rgb(79, 153, 197);*/
+/* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
 .session {
   padding: 0;
   margin: 0;
-
 }
 
 .event-default {
@@ -13,6 +10,18 @@
   margin-top: 1em;
   padding: 0px;
 
+  .professional {
+    background-color: rgb(197, 64, 11);
+  }
+  .social {
+    background-color: rgb(79, 153, 197);
+  }
+  .break {
+    background-color: rgb(61, 197, 91);
+  }
+  .other {
+    background-color: rgb(197, 89, 179);
+  }
 
   .description-short, .description-long {
     color: black;
@@ -22,8 +31,6 @@
   }
 
   @extend .default-box-shadow;
-
-
   .session-info {
     ul {
       list-style-type: none;
@@ -94,12 +101,11 @@
       display: inline-block;
       width: 100%;
       color: rgb(255, 255, 255);
-       background-color: rgb(197, 64, 11);
+
       text-align: center;
       text-transform: uppercase;
 
     }
-
     .social {
       font-size: 1.5em;
       @extend .social-links;
@@ -125,7 +131,6 @@
       text-align: center;
       text-transform: uppercase;
       color: rgb(255, 255, 255);
-      background-color: rgb(197, 64, 11);
 
       .row {
         padding: 0.8em;

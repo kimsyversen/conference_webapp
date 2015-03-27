@@ -247,8 +247,7 @@
       .conference-item .body .description .text {
         padding: 0.5em; }
 
-/* Partially borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
-/*  background-color: rgb(79, 153, 197);*/
+/* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 .session {
   padding: 0;
   margin: 0; }
@@ -256,6 +255,14 @@
 .event-default, .event {
   margin-top: 1em;
   padding: 0px; }
+  .event-default .professional, .event .professional {
+    background-color: #c5400b; }
+  .event-default .social, .event .social {
+    background-color: #4f99c5; }
+  .event-default .break, .event .break {
+    background-color: #3dc55b; }
+  .event-default .other, .event .other {
+    background-color: #c559b3; }
   .event-default .description-short, .event .description-short, .event-default .description-long, .event .description-long {
     color: black; }
     .event-default .description-short p, .event .description-short p, .event-default .description-long p, .event .description-long p {
@@ -306,7 +313,6 @@
     display: inline-block;
     width: 100%;
     color: white;
-    background-color: #c5400b;
     text-align: center;
     text-transform: uppercase; }
   .event .social {
@@ -322,8 +328,7 @@
       padding-bottom: 99999px;
       text-align: center;
       text-transform: uppercase;
-      color: white;
-      background-color: #c5400b; }
+      color: white; }
       .event .event-time .row {
         padding: 0.8em; }
     .event .social {

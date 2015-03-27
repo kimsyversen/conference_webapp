@@ -4,7 +4,6 @@
     @include('conference.layouts.partials.errors-and-messages')
     @include('conference.layouts.partials.page-header', ['text' => 'Sign In'])
 
-
     <div class="col-md-3"></div>
     <div class="col-md-6 forms form-small">
         {{ Form::open(['route' => 'login_path', 'method' => 'post']) }}
@@ -28,5 +27,4 @@
 
         {{ Form::close() }}
     </div>
-
 @stop
