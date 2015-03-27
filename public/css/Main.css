@@ -273,11 +273,13 @@
     color: black; }
     .event-default .description-short p, .event .description-short p, .event-default .description-long p, .event .description-long p {
       margin: 15px 0 0 -15px; }
-  .event-default .session-info ul, .event .session-info ul {
-    list-style-type: none;
-    margin: 0;
-    margin-left: -15px;
-    padding: 0; }
+  .event-default .session-info, .event .session-info {
+    margin-bottom: 10px; }
+    .event-default .session-info ul, .event .session-info ul {
+      list-style-type: none;
+      margin: 0;
+      margin-left: -15px;
+      padding: 0; }
   .event-default .event-time-data .month, .event .event-time-data .month, .event .event-time .month {
     display: block;
     font-size: 24pt;
