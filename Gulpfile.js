@@ -1,9 +1,7 @@
 var gulp = require('gulp');
-
+var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
-
 var sass = require('gulp-sass');
-
 var autoprefixer = require('gulp-autoprefixer');
 
 
@@ -20,6 +18,11 @@ gulp.task('css', function()
         .pipe(gulp.dest('public/css'))
 });
 
+gulp.task('js', function() {
+    gulp.src('app/assets/javascript/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('public/js'))
+});
 
 gulp.task('production', function()
 {

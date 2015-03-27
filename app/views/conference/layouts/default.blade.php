@@ -30,8 +30,7 @@
     {{ HTML::style('partials') }}
     {{ HTML::style('components/vendor/animate-css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
-
-    {{ HTML::style('css/addtohomescreen.css') }}
+    {{ HTML::style('components/vendor/add-to-homescreen/style/addtohomescreen.css') }}
 </head>
 
 <body>
@@ -67,11 +66,13 @@
 </div>
 
 @section('javascript')
+    {{ HTML::script('components/vendor/add-to-homescreen/src/addtohomescreen.min.js') }}
     {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
     {{ HTML::script('components/vendor/fastclick/lib/fastclick.js') }}
     {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
     {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
+
 @show
 </body>
 </html>
