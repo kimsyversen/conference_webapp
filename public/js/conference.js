@@ -177,7 +177,7 @@ $(document).ready(function(){
     });
 
 
-    $("#register-button").on("click",  function() {
+    $(".gsregister-button").on("click",  function() {
         BootstrapDialog.show({
             title: 'Register',
             description: 'Register a new account',
