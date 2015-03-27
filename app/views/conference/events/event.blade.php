@@ -7,7 +7,7 @@
                         @include('conference.events.partials.time')
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-9 info">
+                    <div class="col-xs-12 col-sm-9 col-md-9 info">
                         <h4><a href="/{{ $session['links']['session']['uri'] }}">{{ $session['title'] }}</a></h4>
                         <div class="row descriptions">
                             <div class="col-xs-12 session-info">
