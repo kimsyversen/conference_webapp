@@ -17,6 +17,7 @@
                         @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])
                     </div>
                 @endif
+
                 @if(empty($session['description']) && $session['confirmed'] == 1)
                     <div class="col-xs-12 col-sm-12 nopadding container-button-schedule">
                         @include('conference.components.buttons.button-schedule-add', [ 'value' =>  $session['id'] ])

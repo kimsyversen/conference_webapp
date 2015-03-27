@@ -45,7 +45,7 @@
             <div class="column col-sm-10 col-xs-11" id="main">
 
                 <!-- top nav -->
-                <div class="navbar navbar-top  navbar-static-top">
+                <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">Toggle</span>
@@ -54,7 +54,11 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                            @if(Session::has('conference_id'))
+                        <a class="navbar-brand" href="{{ route('conferences_path')}}">
+                            <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
+                        </a>
+
+               {{--             @if(Session::has('conference_id'))
                                 <a class="navbar-brand home-link" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">
                                     <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
                                 </a>
@@ -63,27 +67,8 @@
                                 <a class="navbar-brand" href="{{ route('conferences_path')}}">
                                     <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Browse conferences</span>
                                 </a>
-                            @endif
+                            @endif--}}
                     </div>
-
-                    <nav class="collapse navbar-collapse" role="navigation">
-                        <ul class="nav navbar-nav navbar-right">
-                            @if($authenticated)
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class='glyphicon glyphicon-cog  navbar-user-image'> </i>Settings <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        {{--<li class="nav-item">  {{ link_to_route('profile_path', "Profile") }} </li>--}}
-                                        <li class="nav-item "> {{ link_to_route('logout_path', 'Log out') }} </li>
-                                    </ul>
-                                </li>
-                            @else
-                                {{--<li class="nav-item"> {{ link_to_route('registration_path', 'Register') }} </li>--}}
-                                <li class="nav-item"> <a href="#" id="register-button"><i class="glyphicon glyphicon-pencil"></i> Register</a></li>
-                                {{--<li class="nav-item"> {{ link_to_route('login_path', 'Login', null, ['id' => 'login-button']) }} </li>--}}
-                                <li class="nav-item"> <a href="#" class="login-button"><i class="glyphicon glyphicon-user"></i> Login</a></li>
-                            @endif
-                        </ul>
-                    </nav>
                 </div>
 
                 <div class="padding">
