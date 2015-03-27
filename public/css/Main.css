@@ -138,8 +138,21 @@
 @media screen and (max-width: 768px) {
   .row-offcanvas {
     position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out; }
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -ms-transform: translateZ(0) translateX(0);
+    -webkit-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: 300ms ease all;
+    transition: 300ms ease all;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
   .row-offcanvas-left.active {
     left: 33%; }
   .row-offcanvas-left.active .sidebar-offcanvas {
