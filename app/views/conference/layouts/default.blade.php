@@ -62,9 +62,9 @@
 
                         </div>
 
-                        @include('conference.layouts.partials.goto-top')
+     {{--                   @include('conference.layouts.partials.goto-top')
 
-                        @include('conference.layouts.partials.footer')
+                        @include('conference.layouts.partials.footer')--}}
                     </div>
                 </div>
             </div>
