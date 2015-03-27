@@ -40,34 +40,16 @@ gulp.task('css', function()
         .pipe(gulp.dest('public/css'));
 });
 
+
 gulp.task('production', function()
 {
-    gulp.src('app/assets/sass/Main.scss')
-        .pipe(sass())
-        .pipe(cssmin())
-        .pipe(autoprefixer('last 10 version'))
-        .pipe(gulp.dest('public/css'))
-
-    gulp.src('app/assets/sass/Admin.scss')
-        .pipe(sass())
-        .pipe(cssmin())
-        .pipe(autoprefixer('last 10 version'))
-        .pipe(gulp.dest('public/css'))
-
-    gulp.src('app/assets/javascript/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('public/js'))
+    gulp.run('css');
+    gulp.run('js');
 });
 
-
-
-
-
-
 gulp.task('watch', function() {
-
-   gulp.watch('app/assets/sass*//***/*//*.scss', ['css']);
-   gulp.watch('app/assets/javascript/src*/*.js', ['js']);
+   gulp.watch('app/assets/sass/**/*.scss', ['css']);
+   gulp.watch('app/assets/javascript/**/*.js', ['js']);
 });
 
 
