@@ -441,7 +441,9 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  width: 100%; }
 
 html, body {
   height: 100%; }
