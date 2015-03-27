@@ -54,15 +54,12 @@
                     </div>
                 </div>
 
-                <div class="padding">
+                <div class="padding" id="top">
                     <div class="full col-xs-12">
                         <div class="row">
                             @yield('content')
                         </div>
-
-                        <div class="push"></div>
                         @include('conference.layouts.partials.goto-top')
-                        @include('conference.layouts.partials.footer')
                     </div>
                 </div>
             </div>

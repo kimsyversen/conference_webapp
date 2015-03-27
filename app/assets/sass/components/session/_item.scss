@@ -8,7 +8,7 @@
 .event-default {
   @extend .item;
   margin-top: 1em;
-  padding: 0px;
+  padding: 0;
 
   .professional {
     background-color: rgb(197, 64, 11);
@@ -29,8 +29,6 @@
       margin: 15px 0 0 -15px;
     }
   }
-
-  @extend .default-box-shadow;
   .session-info {
     ul {
       list-style-type: none;
@@ -39,59 +37,62 @@
       padding: 0;
     }
   }
+
+  .event-time-data {
+    .month {
+      display: block;
+      font-size: 24pt;
+      font-weight: 100;
+      line-height: 1;
+      font-family: 'Lato', sans-serif;
+
+    }
+    .day {
+      display: block;
+      font-size: 48pt;
+      font-weight: 100;
+      line-height: 1;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .hour {
+      display: block;
+      margin-top: 0.2em;
+      font-size: 1em;
+    }
+  }
+  .social-links {
+    .facebook a, .twitter a,  .google-plus a {
+      display: block;
+      width: 100%;
+      color: rgb(75, 110, 168) !important;
+    }
+    .twitter a {
+      color: rgb(79, 213, 248) !important;
+    }
+    .google-plus a {
+      color: rgb(221, 75, 57) !important;
+    }
+    .facebook:hover a {
+      color: rgb(255, 255, 255) !important;
+      background-color: rgb(75, 110, 168) !important;
+    }
+    .twitter:hover a {
+      color: rgb(255, 255, 255) !important;
+      background-color: rgb(79, 213, 248) !important;
+    }
+    .google-plus:hover a {
+      color: rgb(255, 255, 255) !important;
+      background-color: rgb(221, 75, 57) !important;
+    }
+  }
+
 }
 
 
-.social-links {
-  .facebook a, .twitter a,  .google-plus a {
-    display: block;
-    width: 100%;
-    color: rgb(75, 110, 168) !important;
-  }
-  .twitter a {
-    color: rgb(79, 213, 248) !important;
-  }
-  .google-plus a {
-    color: rgb(221, 75, 57) !important;
-  }
-  .facebook:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(75, 110, 168) !important;
-  }
-  .twitter:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(79, 213, 248) !important;
-  }
-  .google-plus:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(221, 75, 57) !important;
-  }
-}
 
-.event-time-data {
-  .month {
-    display: block;
-    font-size: 24pt;
-    font-weight: 100;
-    line-height: 1;
-    font-family: 'Lato', sans-serif;
 
-  }
-  .day {
-    display: block;
-    font-size: 48pt;
-    font-weight: 100;
-    line-height: 1;
-    font-family: 'Lato', sans-serif;
-  }
 
-  .hour {
-    display: block;
-    margin-top: 0.2em;
-
-    font-size: 0.9em;
-  }
-}
 @media(max-width:767px){
   .event {
     @extend .event-default;

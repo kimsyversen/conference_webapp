@@ -5,7 +5,7 @@
 .site-default-background-color, html, body {
   background-color: #d7d9d9; }
 
-.default-box-shadow, .site-notice, .form-small, .event-default, .event, .message, .chat-group, .item, .conference-item, .rating-item {
+.default-box-shadow, .site-notice, .form-small, .message, .chat-group, .item, .conference-item, .event-default, .event, .rating-item {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 .default-heading-lightweight, .default-heading {
@@ -254,7 +254,7 @@
 
 .event-default, .event {
   margin-top: 1em;
-  padding: 0px; }
+  padding: 0; }
   .event-default .professional, .event .professional {
     background-color: #c5400b; }
   .event-default .social, .event .social {
@@ -272,41 +272,39 @@
     margin: 0;
     margin-left: -15px;
     padding: 0; }
-
-.social-links .facebook a, .event .social .facebook a, .social-links .twitter a, .event .social .twitter a, .social-links .google-plus a, .event .social .google-plus a {
-  display: block;
-  width: 100%;
-  color: #4b6ea8 !important; }
-.social-links .twitter a, .event .social .twitter a {
-  color: #4fd5f8 !important; }
-.social-links .google-plus a, .event .social .google-plus a {
-  color: #dd4b39 !important; }
-.social-links .facebook:hover a, .event .social .facebook:hover a {
-  color: white !important;
-  background-color: #4b6ea8 !important; }
-.social-links .twitter:hover a, .event .social .twitter:hover a {
-  color: white !important;
-  background-color: #4fd5f8 !important; }
-.social-links .google-plus:hover a, .event .social .google-plus:hover a {
-  color: white !important;
-  background-color: #dd4b39 !important; }
-
-.event-time-data .month, .event .event-time .month {
-  display: block;
-  font-size: 24pt;
-  font-weight: 100;
-  line-height: 1;
-  font-family: 'Lato', sans-serif; }
-.event-time-data .day, .event .event-time .day {
-  display: block;
-  font-size: 48pt;
-  font-weight: 100;
-  line-height: 1;
-  font-family: 'Lato', sans-serif; }
-.event-time-data .hour, .event .event-time .hour {
-  display: block;
-  margin-top: 0.2em;
-  font-size: 0.9em; }
+  .event-default .event-time-data .month, .event .event-time-data .month, .event .event-time .month {
+    display: block;
+    font-size: 24pt;
+    font-weight: 100;
+    line-height: 1;
+    font-family: 'Lato', sans-serif; }
+  .event-default .event-time-data .day, .event .event-time-data .day, .event .event-time .day {
+    display: block;
+    font-size: 48pt;
+    font-weight: 100;
+    line-height: 1;
+    font-family: 'Lato', sans-serif; }
+  .event-default .event-time-data .hour, .event .event-time-data .hour, .event .event-time .hour {
+    display: block;
+    margin-top: 0.2em;
+    font-size: 1em; }
+  .event-default .social-links .facebook a, .event .social-links .facebook a, .event .social .facebook a, .event-default .social-links .twitter a, .event .social-links .twitter a, .event .social .twitter a, .event-default .social-links .google-plus a, .event .social-links .google-plus a, .event .social .google-plus a {
+    display: block;
+    width: 100%;
+    color: #4b6ea8 !important; }
+  .event-default .social-links .twitter a, .event .social-links .twitter a, .event .social .twitter a {
+    color: #4fd5f8 !important; }
+  .event-default .social-links .google-plus a, .event .social-links .google-plus a, .event .social .google-plus a {
+    color: #dd4b39 !important; }
+  .event-default .social-links .facebook:hover a, .event .social-links .facebook:hover a, .event .social .facebook:hover a {
+    color: white !important;
+    background-color: #4b6ea8 !important; }
+  .event-default .social-links .twitter:hover a, .event .social-links .twitter:hover a, .event .social .twitter:hover a {
+    color: white !important;
+    background-color: #4fd5f8 !important; }
+  .event-default .social-links .google-plus:hover a, .event .social-links .google-plus:hover a, .event .social .google-plus:hover a {
+    color: white !important;
+    background-color: #dd4b39 !important; }
 
 @media (max-width: 767px) {
   .event .event-time {
