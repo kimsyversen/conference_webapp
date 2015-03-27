@@ -148,7 +148,6 @@ $(document).ready(function(){
 
     });
 
-
    window.setTimeout(function() {
        $(".alert-info").toggleClass('fadeIn fadeOut').detach();
     }, 30000);
