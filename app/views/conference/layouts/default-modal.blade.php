@@ -5,7 +5,7 @@
 	<title>Conferences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ HTML::style('css/bootstrap.min.css') }}
+    {{ HTML::style('components/vendor/bootstrap/dist/css/bootstrap.min.css') }}
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
     {{ HTML::style('css/Main.css') }}
@@ -16,7 +16,7 @@
     @yield('content')
 
     @section('javascript')
-        {{ HTML::script('js/jquery-2.1.3.min.js') }}
+        {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
         {{ HTML::script('js/jquery-ui.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/bootstrap-dialog.min.js') }}

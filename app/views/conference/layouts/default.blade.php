@@ -32,18 +32,16 @@
     {{ HTML::style('css/addtohomescreen.css') }}
 
 </head>
-
-
 <body>
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
             @include('conference.layouts.components.sidebar')
 
-            <!-- main right col -->
+
             <div class="column col-sm-10 col-xs-11" id="main">
 
-                <!-- top nav -->
+
                 <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -56,24 +54,13 @@
                         <a class="navbar-brand" href="{{ route('conferences_path')}}">
                             <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
                         </a>
-
-               {{--             @if(Session::has('conference_id'))
-                                <a class="navbar-brand home-link" href="{{ route('conference_path', ['conference_id' => Session::get('conference_id')])  }}">
-                                    <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
-                                </a>
-                            @else
-
-                                <a class="navbar-brand" href="{{ route('conferences_path')}}">
-                                    <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Browse conferences</span>
-                                </a>
-                            @endif--}}
                     </div>
                 </div>
 
                 <div class="padding">
                     <div class="full col-xs-12">
 
-                        <!-- content -->
+
                         <div class="row">
                             @yield('content')
                         </div>
@@ -81,11 +68,12 @@
                         <div class="push"></div>
                         @include('conference.layouts.partials.goto-top')
 
-                        @include('conference.layouts.partials.footer')
+                        @include('conference.layouts.components.footer')
+
                     </div>
                 </div>
             </div>
-        </div>    <!-- /main -->
+        </div>
     </div>
 </div>
 
