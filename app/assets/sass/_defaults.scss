@@ -55,8 +55,16 @@
     background-color: darken(#E9EAEA, 7%);
     border: 1px solid #c3c3c3;
   }
-
 }
+
+@media(max-width:420px){
+  .button-dark, .button-light {
+    span {
+      font-size: 0.85em;
+    }
+  }
+}
+
 
 .button-light {
   border-top: 1px solid #c3c3c3;

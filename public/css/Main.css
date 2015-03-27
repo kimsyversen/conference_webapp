@@ -36,6 +36,10 @@
     background-color: #d7d9d9;
     border: 1px solid #c3c3c3; }
 
+@media (max-width: 420px) {
+  .button-dark span, .button-light span {
+    font-size: 0.85em; } }
+
 .button-light {
   border-top: 1px solid #c3c3c3;
   margin-top: 0.4em; }
