@@ -254,13 +254,16 @@
   padding: 0;
   margin: 0; }
 
-.categories .professional {
+.professional-event {
   background-color: #c5400b; }
-.categories .social {
+
+.social-event {
   background-color: #4f99c5; }
-.categories .break {
+
+.break-event {
   background-color: #3dc55b; }
-.categories .other {
+
+.other-event {
   background-color: #c559b3; }
 
 .event-default, .event {

@@ -5,20 +5,20 @@
   margin: 0;
 }
 
-.categories {
-  .professional {
-    background-color: rgb(197, 64, 11);
-  }
-  .social {
-    background-color: rgb(79, 153, 197);
-  }
-  .break {
-    background-color: rgb(61, 197, 91);
-  }
-  .other {
-    background-color: rgb(197, 89, 179);
-  }
+
+.professional-event {
+  background-color: rgb(197, 64, 11);
 }
+.social-event {
+  background-color: rgb(79, 153, 197);
+}
+.break-event {
+  background-color: rgb(61, 197, 91);
+}
+.other-event {
+  background-color: rgb(197, 89, 179);
+}
+
 
 .event-default {
   @extend .item;
