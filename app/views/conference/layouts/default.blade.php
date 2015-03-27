@@ -25,8 +25,7 @@
     <meta name="msapplication-wide310x150logo" content="/img/widetile.png" />
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
-    {{--   {{ HTML::style('css/bootstrap-simplex.min.css') }}--}}
-    {{ HTML::style('css/bootstrap.min.css') }}
+    {{ HTML::style('components/vendor/bootstrap/dist/css/bootstrap.min.css') }}
     {{ HTML::style('css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
     {{ HTML::style('css/bootstrap-dialog.min.css') }}
@@ -96,8 +95,8 @@
 {{--@include('conference.layouts.partials.footer')--}}
 
 @section('javascript')
-    {{ HTML::script('js/jquery-2.1.3.min.js') }}
-    {{ HTML::script('js/bootstrap.min.js') }}
+    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+    {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
     {{ HTML::script('js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
     {{ HTML::script('js/addtohomescreen.min.js') }}
