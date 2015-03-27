@@ -73,7 +73,6 @@
     {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
     {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
-
 @show
 </body>
 </html>
