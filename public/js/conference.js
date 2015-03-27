@@ -159,7 +159,6 @@ $(document).ready(function(){
 
 
     $(".login-button").on("click", function() {
-
         BootstrapDialog.show({
             title: 'Login',
             description: 'Login to your account',
@@ -177,7 +176,7 @@ $(document).ready(function(){
     });
 
 
-    $(".gsregister-button").on("click",  function() {
+    $(".register-button").on("click",  function() {
         BootstrapDialog.show({
             title: 'Register',
             description: 'Register a new account',
