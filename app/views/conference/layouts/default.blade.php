@@ -74,11 +74,6 @@
     {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
 
-    <script>
-
-        $(document).ready(function() {
-
-    </script>
 @show
 </body>
 </html>
