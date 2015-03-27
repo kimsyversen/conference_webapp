@@ -37,8 +37,6 @@
             <div class="column col-sm-10 col-xs-11" id="main">
                 <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
-
-
                         <a class="navbar-brand" href="{{ route('conferences_path')}}">
                             <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
                         </a>
