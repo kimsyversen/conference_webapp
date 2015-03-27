@@ -1,4 +1,4 @@
-<div class="container-fluid footer-conference">
+<div id="footer" class="container-fluid">
     <div class="row">
         <div class="footer">
             <div class=" col-xs-12 text-center">
