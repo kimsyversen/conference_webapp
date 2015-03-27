@@ -29,12 +29,9 @@ html {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow:hidden;
-  width:100%;
 }
 html, body {
   height: 100%;
-
   @extend .site-default-background-color;
 }
 
@@ -64,9 +61,9 @@ textarea {
 
 .item {
   background-color: rgb(255, 255, 255);
-
   @extend .default-box-shadow;
 }
+
 .item-push {
   margin-top: 2em;
   padding: 0.5em;

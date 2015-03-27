@@ -231,25 +231,22 @@
 
 .conference-item {
   margin: 1em; }
-  .conference-item button {
-    color: black; }
-  .conference-item .header img {
+  .conference-item img {
     width: 100%;
-    /* height: 100%;*/
     height: auto; }
-  .conference-item .body {
+  .conference-item .asdf {
     padding: 0.5em; }
-    .conference-item .body .name {
+    .conference-item .asdf .name {
       padding: 0.5em;
       text-align: center;
       font-size: 1.3em; }
-    .conference-item .body .time {
+    .conference-item .asdf .time {
       padding: .9em;
       text-align: right;
       font-size: 0.8em; }
-    .conference-item .body .description {
+    .conference-item .asdf .description {
       padding: .2em; }
-      .conference-item .body .description .text {
+      .conference-item .asdf .description .text {
         padding: 0.5em; }
 
 /* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
@@ -441,9 +438,7 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden;
-  width: 100%; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 html, body {
   height: 100%; }

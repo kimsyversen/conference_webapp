@@ -2,17 +2,18 @@
 
 @if(count($data) == 1)
     @foreach($data as $conference)
-    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-1 col-sm-12 col-md-offset-3 col-md-6">
+    <div class="col-sm-2 col-md-2 col-lg-3"></div>
+    <div class="nopadding col-xs-12 col-sm-9 col-md-9 col-lg-6">
         <div class="conference-item">
-            <div class="row header">
-                <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 nopadding">
                     <a href="/{{$conference['link']['uri'] }}">
                         <img class="img-responsive" src="{{ $conference['banner']}}" alt="{{ $conference['name']}}">
                     </a>
                 </div>
             </div>
 
-            <div class="body">
+            <div class="asdf">
                 <div class="row">
                     <div class="col-xs-12">
                         <div>
@@ -35,7 +36,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 ">
+                <div class="col-xs-12 nopadding ">
                     @include('conference.partials.buttons.button-read-more')
                     {{--<button class='btn form-control button-conference button-dark button-more' id="button-conference-more">Read more</button>--}}
                 </div>
@@ -44,14 +45,16 @@
     </div>
     @endforeach
 
+
     @else
     @foreach(array_chunk($data, 2) as $row)
         <div class="row">
             @foreach($row as $conference)
-                <div class="col-xs-offset-0 col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6">
+
+                <div class="nopadding col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="conference-item">
                         <div class="row header">
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 nopadding">
                                 <a href="/{{$conference['link']['uri'] }}">
                                     <img class="img-responsive" src="{{ $conference['banner']}}" alt="{{ $conference['name']}}">
                                 </a>
@@ -81,9 +84,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-12 nopadding">
                                 @include('conference.partials.buttons.button-read-more')
-                                {{--<button class='btn form-control button-conference button-dark button-more' id="button-conference-more">Read more</button>--}}
                             </div>
                         </div>
                     </div>
@@ -91,7 +93,6 @@
             @endforeach
         </div>
     @endforeach
-
 @endif
 
 

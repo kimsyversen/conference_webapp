@@ -1,20 +1,13 @@
 .conference-item {
   @extend .item;
   margin: 1em;
-
-  button {
-    color: black;
-  }
-  .header {
-    img {
-      width: 100%;
-     /* height: 100%;*/
-
-      height: auto;
-    }
+  img {
+    width: 100%;
+    height: auto;
   }
 
-  .body {
+  .asdf{
+
     padding: 0.5em;
 
     .name {
