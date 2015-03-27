@@ -16,10 +16,7 @@
     @yield('content')
 
     @section('javascript')
-        {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
-        {{ HTML::script('js/jquery-ui.min.js') }}
-        {{ HTML::script('js/bootstrap.min.js') }}
-        {{ HTML::script('js/bootstrap-dialog.min.js') }}
+        {{ HTML::script('js/conference.js') }}
     @show
 </body>
 </html>

@@ -66,7 +66,7 @@ class ConferenceSessionsController extends \BaseController {
 
 			$this->client->send($request);
 
-			return View::make('conference.components.buttons.button-schedule-remove', [ 'value' =>  $requestedSessionId ]);
+			return View::make('conference.partials.buttons.button-schedule-remove', [ 'value' =>  $requestedSessionId ]);
 		}
 	}
 
@@ -89,7 +89,7 @@ class ConferenceSessionsController extends \BaseController {
 			//TODO: Gjøre noe med respons?
 			$response = $this->client->send($request);
 
-			return View::Make('conference.components.buttons.button-schedule-add',['value' =>  $requestedSessionId]);
+			return View::Make('conference.partials.buttons.button-schedule-add',['value' =>  $requestedSessionId]);
 		}
 	}
 }

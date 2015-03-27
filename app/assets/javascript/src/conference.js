@@ -76,13 +76,17 @@ $(document).ready(function(){
         e.preventDefault();
         var button = $(this);
 
+
+
         //Find URL to resource
         var sessionContainer = button.closest('.session');
         var url = sessionContainer.attr('data-url');
         var sessionId = sessionContainer.attr('data-value');
 
+        console.log(url);
+        console.log(sessionId);
 
-       $.ajax({
+        $.ajax({
             type: 'post',
             url: url,
             data: {session_id : sessionId},
@@ -148,8 +152,8 @@ $(document).ready(function(){
 
     });
 
-   window.setTimeout(function() {
-       $(".alert-info").toggleClass('fadeIn fadeOut').detach();
+    window.setTimeout(function() {
+        $(".alert-info").toggleClass('fadeIn fadeOut').detach();
     }, 30000);
 
     window.setTimeout(function() {
@@ -193,14 +197,13 @@ $(document).ready(function(){
     });
 
     $("#dismiss").on("click",  function() {
-       var container = $(this).closest('.container-fluid');
+        var container = $(this).closest('.container-fluid');
         container.detach();
     });
 });
 
 
 (function() {
-
     $('form[data-remote]').on('submit', function(e) {
         e.preventDefault();
         var form = $(this);
@@ -215,7 +218,6 @@ $(document).ready(function(){
 
                 parent.children().detach();
 
-
                 parent.fadeOut("slow", function(){
                     var p = $("<div class='col-xs-12 text-center default-heading'> <h4>This session has been rated</h4></div>").show();
                     $(this).append(p);
@@ -228,10 +230,8 @@ $(document).ready(function(){
 
 
 
-/*Start  JS from http://www.bootstrapzero.com/bootstrap-template/facebook */
 
 /* off-canvas sidebar toggle */
-
 $('[data-toggle=offcanvas]').click(function() {
     $(this).toggleClass('visible-xs text-center');
     $(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
