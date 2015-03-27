@@ -253,17 +253,18 @@
   padding: 0;
   margin: 0; }
 
+.categories .professional {
+  background-color: #c5400b; }
+.categories .social {
+  background-color: #4f99c5; }
+.categories .break {
+  background-color: #3dc55b; }
+.categories .other {
+  background-color: #c559b3; }
+
 .event-default, .event {
   margin-top: 1em;
   padding: 0; }
-  .event-default .professional, .event .professional {
-    background-color: #c5400b; }
-  .event-default .social, .event .social {
-    background-color: #4f99c5; }
-  .event-default .break, .event .break {
-    background-color: #3dc55b; }
-  .event-default .other, .event .other {
-    background-color: #c559b3; }
   .event-default .description-short, .event .description-short, .event-default .description-long, .event .description-long {
     color: black; }
     .event-default .description-short p, .event .description-short p, .event-default .description-long p, .event .description-long p {

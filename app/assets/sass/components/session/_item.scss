@@ -5,11 +5,7 @@
   margin: 0;
 }
 
-.event-default {
-  @extend .item;
-  margin-top: 1em;
-  padding: 0;
-
+.categories {
   .professional {
     background-color: rgb(197, 64, 11);
   }
@@ -22,6 +18,13 @@
   .other {
     background-color: rgb(197, 89, 179);
   }
+}
+
+.event-default {
+  @extend .item;
+  margin-top: 1em;
+  padding: 0;
+
 
   .description-short, .description-long {
     color: black;
@@ -126,7 +129,6 @@
 
     .event-time {
       @extend .event-time-data;
-
       margin-bottom: -99999px;
       padding-bottom: 99999px;
       text-align: center;

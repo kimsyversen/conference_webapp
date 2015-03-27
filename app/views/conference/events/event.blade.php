@@ -2,8 +2,8 @@
     @section('item')
         <div class="row session nopadding" data-value="{{ $session['id'] }}" data-url="/{{ $session['links']['session']['uri'] }}">
             <div class="col-xs-12">
-                <div class="row event">
-                    <div class="col-xs-3 col-sm-4 col-md-3 col-lg-2 event-time {{ $session['category']  }}">
+                <div class="row event categories">
+                    <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 event-time {{ $session['category']  }}">
                         @include('conference.events.partials.time')
                     </div>
 
@@ -27,9 +27,14 @@
                             </div>
                         </div>
                     </div>
+              {{--      <div class="col-xs-12 col-sm-2 col-md-1 social">
+                      @include('conference.events.partials.social')
+                    </div>--}}
                 </div>
                 @include('conference.events.partials.buttons')
+
             </div>
+
         </div>
     @overwrite
 
