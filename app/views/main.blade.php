@@ -1,8 +1,6 @@
 @extends('conference.layouts.default')
 
 @section('content')
-
-
         <div class="row">
             <div class='col-xs-12'>
                 {{ Breadcrumbs::render('conferences') }}
@@ -13,7 +11,6 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1>Home</h1>
-
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget neque in eros volutpat pretium. Vivamus justo augue, tempor non dolor eget, bibendum lobortis justo. Donec tristique nulla ut dui placerat, ac pharetra leo lobortis. Praesent in blandit tortor. Curabitur eget scelerisque sapien. Nam in iaculis augue, sit amet aliquam eros. Donec in erat est. Sed fermentum diam eu sodales vestibulum. In non ipsum non nisl scelerisque facilisis. Duis ut rutrum elit. Etiam enim turpis, tempus et sapien sit amet, facilisis tempus felis. Sed viverra non purus sed tristique. Vestibulum vel condimentum felis, nec laoreet sem. Vivamus sed leo tempus, mollis nisl maximus, ullamcorper urna.
 

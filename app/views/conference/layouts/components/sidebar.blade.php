@@ -31,10 +31,10 @@
                 @if(isset($authenticated) && $authenticated === true)
                     <li class="nav-item"><a href="{{ route('personal_schedule_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-tasks"></i> </a> </li>
                     <li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-comment"></i> </a> </li>
-                    <li class="nav-item"> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i></a></li>
+                    <li class="nav-item"> <a href="{{ route('logout_path')}}" class="text-center"><i class="glyphicon glyphicon-log-out" ></i></a></li>
                 @else
-                    <li class="nav-item"> <a href="#" id="register-button"><i class="glyphicon glyphicon-pencil"></i> </a></li>
-                    <li class="nav-item"> <a href="#" class="login-button"><i class="glyphicon glyphicon-log-in"></i> </a></li>
+                    <li class="nav-item"> <a href="#" id="register-button" class="text-center"><i class="glyphicon glyphicon-pencil"></i> </a></li>
+                    <li class="nav-item"> <a href="#" class="login-button text-center"><i class="glyphicon glyphicon-log-in"></i> </a></li>
                 @endif
             @endif
             <li class="nav-item"><a href="{{ URL::current() }}" class="text-center"><i class="glyphicon glyphicon-refresh"></i>  </a> </li>

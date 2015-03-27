@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 @section('content')
     <div class="container">
-        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('maps') ])
+        @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('maps') ])
         @include('conference.layouts.partials.errors-and-messages')
 
 

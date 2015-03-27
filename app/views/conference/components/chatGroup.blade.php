@@ -19,7 +19,6 @@
         </div>
         <div class="row">
             <div class="col-xs-2 col-sm-2 chat-avatar">
-
             </div>
             <div class="col-xs-8 col-sm-10 chat-title">
                 <a href="/{{$uri}}" style="text-decoration:none;"> <span class="text-muted">Last message:</span> {{ConferenceHelper::getShortDescription($last_message, 8) }}...</a>

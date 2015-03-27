@@ -15,7 +15,7 @@
   .description-short, .description-long {
     color: black;
     p {
-      margin: 0.5em;
+      margin: 15px 0 0 -15px;
     }
   }
 
@@ -26,9 +26,10 @@
     ul {
       list-style-type: none;
       margin: 0;
+      margin-left: -15px;
       padding: 0;
-    }
 
+    }
   }
 }
 
@@ -88,6 +89,7 @@
     @extend .event-default;
 
     .event-time {
+      @extend .event-time-data;
       display: inline-block;
       width: 100%;
       color: rgb(255, 255, 255);
@@ -95,8 +97,6 @@
       text-align: center;
       text-transform: uppercase;
 
-
-      @extend .event-time-data;
     }
 
     .social {
@@ -107,30 +107,32 @@
 }
 
 @media(min-width:768px){
+  .session-info {
+    ul {
+      margin-left: -15px;
+    }
+  }
   .event {
     @extend .event-default;
     overflow: hidden;
 
     .event-time {
+      @extend .event-time-data;
+
       margin-bottom: -99999px;
       padding-bottom: 99999px;
-
       text-align: center;
       text-transform: uppercase;
-
       color: rgb(255, 255, 255);
       background-color: rgb(197, 64, 11);
 
       .row {
         padding: 0.8em;
       }
-      @extend .event-time-data;
     }
 
     .social {
-
       font-size: 1.5em;
-
       @extend .social-links;
     }
   }

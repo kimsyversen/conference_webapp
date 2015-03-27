@@ -34,7 +34,6 @@ gulp.task('production', function()
         .pipe(cssmin())
         .pipe(autoprefixer('last 10 version'))
         .pipe(gulp.dest('public/css'))
-
 });
 
 

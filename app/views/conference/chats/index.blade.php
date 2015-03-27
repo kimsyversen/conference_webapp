@@ -1,6 +1,6 @@
 @extends('conference.layouts.default')
 @section('content')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
+    @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
     @include('conference.layouts.partials.errors-and-messages')
 
     @if(isset($data) && !empty($data))

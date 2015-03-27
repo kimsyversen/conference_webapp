@@ -2,7 +2,7 @@
 
 @section('content')
 
-        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
+        @include('conference.layouts.components.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
 
         @include('conference.layouts.partials.errors-and-messages')
 
