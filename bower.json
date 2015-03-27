@@ -2,6 +2,9 @@
   "name": "Conferencebook",
   "dependencies": {
     "jquery": "~2.1.3",
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0",
+    "bootstrap3-dialog": "~1.34.3",
+    "animate-css": "~3.2.6"
   }
 }

@@ -26,22 +26,19 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('components/vendor/bootstrap/dist/css/bootstrap.min.css') }}
-    {{ HTML::style('css/animate.min.css') }}
+    {{ HTML::style('components/vendor/bootstrap3-dialog/dist/css/bootstrap-dialog.min.js') }}
+    {{ HTML::style('components/vendor/animate-css/animate.min.css') }}
     {{ HTML::style('css/Main.css') }}
-    {{ HTML::style('css/bootstrap-dialog.min.css') }}
-    {{ HTML::style('css/addtohomescreen.css') }}
 
+    {{ HTML::style('css/addtohomescreen.css') }}
 </head>
+
 <body>
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
             @include('conference.layouts.components.sidebar')
-
-
             <div class="column col-sm-10 col-xs-11" id="main">
-
-
                 <div class="navbar navbar-top navbar-static-top">
                     <div class="navbar-header" >
                         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -59,17 +56,13 @@
 
                 <div class="padding">
                     <div class="full col-xs-12">
-
-
                         <div class="row">
                             @yield('content')
                         </div>
 
                         <div class="push"></div>
                         @include('conference.layouts.partials.goto-top')
-
                         @include('conference.layouts.components.footer')
-
                     </div>
                 </div>
             </div>
@@ -77,23 +70,11 @@
     </div>
 </div>
 
-
-
-
-{{--@include('conference.layouts.partials.footer')--}}
-
 @section('javascript')
     {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
     {{ HTML::script('components/vendor/bootstrap/dist/js/bootstrap.min.js') }}
-    {{ HTML::script('js/bootstrap-dialog.min.js') }}
+    {{ HTML::script('components/vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js') }}
     {{ HTML::script('js/conference.js') }}
-    {{ HTML::script('js/addtohomescreen.min.js') }}
-    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
-
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    @show
+@show
 </body>
 </html>

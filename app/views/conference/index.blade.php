@@ -13,3 +13,13 @@
         @endif
     @endif
 @stop
+
+@section('javascript')
+    @parent
+    {{ HTML::script('js/addtohomescreen.min.js') }}
+    <script> $(document).ready(function(){ addToHomescreen(); }); </script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+@stop
