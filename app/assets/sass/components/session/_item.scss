@@ -1,30 +1,12 @@
 /* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
-.session {
-  padding: 0;
-  margin: 0;
-}
 
-
-.professional-event {
-  background-color: rgb(197, 64, 11);
-}
-.social-event {
-  background-color: rgb(79, 153, 197);
-}
-.break-event {
-  background-color: rgb(61, 197, 91);
-}
-.other-event {
-  background-color: rgb(197, 89, 179);
-}
-
+/* Defaults */
 
 .event-default {
   @extend .item;
   margin-top: 1em;
   padding: 0;
-
 
   .description-short, .description-long {
     color: black;
@@ -45,7 +27,7 @@
   .event-time-data {
     .month {
       display: block;
-      font-size: 24pt;
+      font-size: 20pt;
       font-weight: 100;
       line-height: 1;
       font-family: 'Lato', sans-serif;
@@ -53,7 +35,7 @@
     }
     .day {
       display: block;
-      font-size: 48pt;
+      font-size: 40pt;
       font-weight: 100;
       line-height: 1;
       font-family: 'Lato', sans-serif;
@@ -65,6 +47,7 @@
       font-size: 1em;
     }
   }
+
   .social-links {
     .facebook a, .twitter a,  .google-plus a {
       display: block;
@@ -90,7 +73,20 @@
       background-color: rgb(221, 75, 57) !important;
     }
   }
+}
 
+
+.professional-event {
+  background-color: rgb(197, 64, 11);
+}
+.social-event {
+  background-color: rgb(79, 153, 197);
+}
+.break-event {
+  background-color: rgb(61, 197, 91);
+}
+.other-event {
+  background-color: rgb(197, 89, 179);
 }
 
 

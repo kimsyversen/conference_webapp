@@ -234,38 +234,23 @@
   .conference-item img {
     width: 100%;
     height: auto; }
-  .conference-item .asdf {
+  .conference-item .body {
     padding: 0.5em; }
-    .conference-item .asdf .name {
+    .conference-item .body .name {
       padding: 0.5em;
       text-align: center;
       font-size: 1.3em; }
-    .conference-item .asdf .time {
+    .conference-item .body .time {
       padding: .9em;
       text-align: right;
       font-size: 0.8em; }
-    .conference-item .asdf .description {
+    .conference-item .body .description {
       padding: .2em; }
-      .conference-item .asdf .description .text {
+      .conference-item .body .description .text {
         padding: 0.5em; }
 
 /* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
-.session {
-  padding: 0;
-  margin: 0; }
-
-.professional-event {
-  background-color: #c5400b; }
-
-.social-event {
-  background-color: #4f99c5; }
-
-.break-event {
-  background-color: #3dc55b; }
-
-.other-event {
-  background-color: #c559b3; }
-
+/* Defaults */
 .event-default, .event {
   margin-top: 1em;
   padding: 0; }
@@ -282,13 +267,13 @@
       padding: 0; }
   .event-default .event-time-data .month, .event .event-time-data .month, .event .event-time .month {
     display: block;
-    font-size: 24pt;
+    font-size: 20pt;
     font-weight: 100;
     line-height: 1;
     font-family: 'Lato', sans-serif; }
   .event-default .event-time-data .day, .event .event-time-data .day, .event .event-time .day {
     display: block;
-    font-size: 48pt;
+    font-size: 40pt;
     font-weight: 100;
     line-height: 1;
     font-family: 'Lato', sans-serif; }
@@ -313,6 +298,18 @@
   .event-default .social-links .google-plus:hover a, .event .social-links .google-plus:hover a, .event .social .google-plus:hover a {
     color: white !important;
     background-color: #dd4b39 !important; }
+
+.professional-event {
+  background-color: #c5400b; }
+
+.social-event {
+  background-color: #4f99c5; }
+
+.break-event {
+  background-color: #3dc55b; }
+
+.other-event {
+  background-color: #c559b3; }
 
 @media (max-width: 767px) {
   .event .event-time {

@@ -1,5 +1,3 @@
-
-
 @if(count($data) == 1)
     @foreach($data as $conference)
     <div class="col-sm-2 col-md-2 col-lg-3"></div>
@@ -12,8 +10,7 @@
                     </a>
                 </div>
             </div>
-
-            <div class="asdf">
+            <div class="body">
                 <div class="row">
                     <div class="col-xs-12">
                         <div>
@@ -24,7 +21,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="description descripton-of-conference">
@@ -37,17 +33,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 nopadding ">
-
+                <div class="col-xs-12 nopadding">
                     @include('conference.partials.buttons.button-read-more')
-                    {{--<button class='btn form-control button-conference button-dark button-more' id="button-conference-more">Read more</button>--}}
                 </div>
             </div>
         </div>
     </div>
     @endforeach
-
-
     @else
     @foreach(array_chunk($data, 2) as $row)
         <div class="row">
