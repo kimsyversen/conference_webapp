@@ -315,6 +315,11 @@
     .event .social {
       font-size: 1.5em; } }
 
+.cancelled {
+  color: #ff0000; }
+  .cancelled span {
+    color: #ff0000; }
+
 /*
 @media(max-width:767px){}
 @media(min-width:768px){}
