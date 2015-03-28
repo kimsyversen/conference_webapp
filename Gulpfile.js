@@ -47,7 +47,6 @@ gulp.task('css', function()
         .pipe(concatCss("conference.min.css"))
         .pipe(cssmin())
         .pipe(gulp.dest('public/css'));
-
 });
 
 
