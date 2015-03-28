@@ -20,7 +20,7 @@ gulp.task('js', function()
         ])
         .pipe(concat('conference.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('public/js'))
+        .pipe(gulp.dest('public/js'));
 });
 
 

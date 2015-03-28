@@ -76,8 +76,6 @@ $(document).ready(function(){
         e.preventDefault();
         var button = $(this);
 
-
-
         //Find URL to resource
         var sessionContainer = button.closest('.session');
         var url = sessionContainer.attr('data-url');
