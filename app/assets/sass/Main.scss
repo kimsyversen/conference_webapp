@@ -1,6 +1,9 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+/*@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");*/
+
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 
 @import 'defaults';
 @import 'components/offcanvas-menu';
@@ -14,10 +17,8 @@
 @import 'components/chat/item';
 @import 'components/map/item';
 
-/** Main layout **/
-/** Main layout **/
-
 * {
+
   margin: 0;
 }
 
@@ -28,13 +29,12 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 html, body {
   height: 100%;
   @extend .site-default-background-color;
 }
-
 
 .page-header-hr {
   border-bottom: 1px solid #ccc;
@@ -68,6 +68,3 @@ textarea {
   margin-top: 2em;
   padding: 0.5em;
 }
-
-
-/* EEEEEEEEEEEEE */

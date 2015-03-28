@@ -26,11 +26,12 @@
     <meta name="msapplication-wide310x150logo" content="/img/widetile.png" />
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
+{{--    {{ HTML::style('components/vendor/animate-css/animate.min.css') }}--}}
     {{ HTML::style('css/conference.min.css') }}
 </head>
 
 <body>
-<div class="wrapper">
+<div class="wrapper animated pulse">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">
             @include('conference.layouts.partials.sidebar')

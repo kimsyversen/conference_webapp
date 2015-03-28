@@ -1,12 +1,11 @@
-/* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
+/* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
-
-/* Defaults */
 
 .event-default {
   @extend .item;
   margin-top: 1em;
   padding: 0;
+
 
   .description-short, .description-long {
     color: black;
@@ -30,7 +29,8 @@
       font-size: 20pt;
       font-weight: 100;
       line-height: 1;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato, sans-serif;
+
 
     }
     .day {
@@ -38,7 +38,7 @@
       font-size: 40pt;
       font-weight: 100;
       line-height: 1;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato, sans-serif;
     }
 
     .hour {
@@ -88,9 +88,6 @@
 .other-event {
   background-color: rgb(197, 89, 179);
 }
-
-
-
 
 
 @media(max-width:767px){

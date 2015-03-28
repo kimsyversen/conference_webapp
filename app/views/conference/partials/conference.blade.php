@@ -2,7 +2,7 @@
     @foreach(array_chunk($data, 2) as $row)
         <div class="row">
             @foreach($row as $conference)
-                <div class="nopadding col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="nopadding col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
                     <div class="conference-item">
                         <div class="row header">
                             <div class="col-xs-12 nopadding">

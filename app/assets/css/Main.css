@@ -1,6 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+/*@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");*/
 /** Side wide defaults  **/
 .site-default-background-color, html, body {
   background-color: #d7d9d9; }
@@ -249,8 +250,7 @@
       .conference-item .body .description .text {
         padding: 0.5em; }
 
-/* Some of the CSS code are  borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
-/* Defaults */
+/* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 .event-default, .event {
   margin-top: 1em;
   padding: 0; }
@@ -270,13 +270,13 @@
     font-size: 20pt;
     font-weight: 100;
     line-height: 1;
-    font-family: 'Lato', sans-serif; }
+    font-family: Lato, sans-serif; }
   .event-default .event-time-data .day, .event .event-time-data .day, .event .event-time .day {
     display: block;
     font-size: 40pt;
     font-weight: 100;
     line-height: 1;
-    font-family: 'Lato', sans-serif; }
+    font-family: Lato, sans-serif; }
   .event-default .event-time-data .hour, .event .event-time-data .hour, .event .event-time .hour {
     display: block;
     margin-top: 0.2em;
@@ -430,7 +430,6 @@
 .maps-item {
   margin-top: 2em; }
 
-/** Main layout **/
 * {
   margin: 0; }
 
@@ -440,7 +439,7 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/ }
 
 html, body {
   height: 100%; }
