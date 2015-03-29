@@ -1,5 +1,4 @@
-@extends('conference.partials.item')
-    @section('item')
+
         <div class="row session nopadding" data-value="{{ $session['id'] }}" data-url="/{{ $session['links']['session']['uri'] }}">
             <div class="col-xs-12">
                 <div class="row event categories">
@@ -35,6 +34,6 @@
                 @include('conference.events.partials.buttons')
             </div>
         </div>
-    @overwrite
+
 
 

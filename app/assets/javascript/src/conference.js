@@ -14,6 +14,39 @@ $(document).ready(function(){
         FastClick.attach(document.body);
     });
 
+    /* Function from http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
+    $("#filter").keyup(function(){
+
+        // Retrieve the input field text and reset the count to zero
+        var filter = $(this).val(), count = 0;
+
+        // Loop through the comment list
+        $(".session").each(function(){
+
+            // If the list item does not contain the text phrase fade it out
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+
+                var group = $(this).closest('.session-group');
+
+                $(this).fadeOut();
+                group.find('.session-information').fadeOut();
+                /*if(group.children('.row').length === 2)*/
+                    group.find('.session-information').fadeOut();
+
+
+                // Show the list item if the phrase matches and increase the count by 1
+            } else {
+                $(this).show();
+                $(this).closest('.session-group').find('.session-information').show();
+                count++;
+            }
+        });
+
+        // Update the count
+        var numberItems = count;
+        $("#filter-count").text(+count + "Results");
+    });
+
 
 
     $('.session').on('click', '.button-schedule-remove', function(e){
@@ -158,41 +191,6 @@ $(document).ready(function(){
         $(".alert-danger").toggleClass('fadeIn fadeOut').detach();
     }, 60000);
 
-
-/*    $(".login-button").on("click", function() {
-        BootstrapDialog.show({
-            title: 'Login',
-            description: 'Login to your account',
-            message: function(dialog) {
-                var $message = $('<div></div>');
-                var pageToLoad = dialog.getData('pageToLoad');
-                $message.load(pageToLoad);
-
-                return $message;
-            },
-            data: {
-                'pageToLoad': '/loginmodal'
-            }
-        });
-    });*/
-
-
-/*    $(".register-button").on("click",  function() {
-        BootstrapDialog.show({
-            title: 'Register',
-            description: 'Register a new account',
-            message: function(dialog) {
-                var $message = $('<div></div>');
-                var pageToLoad = dialog.getData('pageToLoad');
-                $message.load(pageToLoad);
-
-                return $message;
-            },
-            data: {
-                'pageToLoad': '/registermodal'
-            }
-        });
-    });*/
 
     $("#dismiss").on("click",  function() {
         var container = $(this).closest('.container-fluid');
