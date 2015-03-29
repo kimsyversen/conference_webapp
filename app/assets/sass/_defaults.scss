@@ -80,10 +80,36 @@
   background-color: white;
 }
 
-.site-notice {
+/*.site-notice {
   background-color: darken(#E9EAEA, 15%);
   padding: 1em;
   @extend .default-box-shadow;
   margin: 1em 0 1em 0;
+}*/
+
+
+
+.site-notice {
+  .alert {
+    .exclamation {
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-iteration-count: 12;
+
+    }
+  }
 }
 
+/* Alerts */
+.alert {
+  button {
+    .close {
+      span {
+        font-size: 1.5em;
+      }
+
+    }
+  }
+
+}
+/*MORDI*/

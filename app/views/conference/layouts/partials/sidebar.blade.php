@@ -15,8 +15,8 @@
                     <li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-comment"></i> Chats</a> </li>
                     <li class="nav-item"> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> Log out</a></li>
                 @else
-                    <li class="nav-item"> <a href="#" class="register-button"><i class="glyphicon glyphicon-pencil"></i> Register</a></li>
-                    <li class="nav-item"> <a href="#" class="login-button"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
+                    <li class="nav-item"> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> Register</a></li>
+                    <li class="nav-item"> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
                 @endif
             @endif
             <li class="nav-item"><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i> Refresh </a> </li>
@@ -35,8 +35,8 @@
                     <li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-comment"></i> </a> </li>
                     <li class="nav-item"> <a href="{{ route('logout_path')}}" class="text-center"><i class="glyphicon glyphicon-log-out" ></i></a></li>
                 @else
-                    <li class="nav-item"> <a href="#" class="register-button text-center"><i class="glyphicon glyphicon-pencil"></i> </a></li>
-                    <li class="nav-item"> <a href="#" class="login-button text-center"><i class="glyphicon glyphicon-log-in"></i></a></li>
+                    <li class="nav-item"> <a href="#" class="register-button text-center" data-toggle="modal" data-target="#registerModal">><i class="glyphicon glyphicon-pencil"></i> </a></li>
+                    <li class="nav-item"> <a href="#" class="login-button text-center" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i></a></li>
                 @endif
             @endif
             <li class="nav-item"><a href="{{ URL::current() }}" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a> </li>

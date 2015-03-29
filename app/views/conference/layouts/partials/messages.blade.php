@@ -6,7 +6,6 @@
                 {{ $message }}
             @endforeach
         </ul>
-
     </div>
 @endif
 

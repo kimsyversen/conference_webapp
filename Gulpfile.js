@@ -14,7 +14,6 @@ gulp.task('js', function()
             basePath + "jquery/dist/jquery.min.js",
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
-            basePath + "bootstrap3-dialog/src/js/bootstrap-dialog.js",
             basePath + "fastclick/lib/fastclick.js",
             "app/assets/javascript/src/conference.js"
         ])
@@ -39,7 +38,6 @@ gulp.task('css', function()
         basePath + "bootstrap/dist/css/bootstrap.css",
         basePath + "animate-css/animate.css",
         basePath + "add-to-homescreen/style/addtohomescreen.css",
-        basePath + "bootstrap3-dialog/src/css/bootstrap-dialog.css",
         basePath + "font-awesome/css/font-awesome.css",
         basePath + "lato-font/css/lato-font.css",
         "app/assets/css/Main.css"

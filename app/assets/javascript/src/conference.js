@@ -152,14 +152,14 @@ $(document).ready(function(){
 
     window.setTimeout(function() {
         $(".alert-info").toggleClass('fadeIn fadeOut').detach();
-    }, 30000);
+    }, 60000);
 
     window.setTimeout(function() {
         $(".alert-danger").toggleClass('fadeIn fadeOut').detach();
-    }, 30000);
+    }, 60000);
 
 
-    $(".login-button").on("click", function() {
+/*    $(".login-button").on("click", function() {
         BootstrapDialog.show({
             title: 'Login',
             description: 'Login to your account',
@@ -174,10 +174,10 @@ $(document).ready(function(){
                 'pageToLoad': '/loginmodal'
             }
         });
-    });
+    });*/
 
 
-    $(".register-button").on("click",  function() {
+/*    $(".register-button").on("click",  function() {
         BootstrapDialog.show({
             title: 'Register',
             description: 'Register a new account',
@@ -192,7 +192,7 @@ $(document).ready(function(){
                 'pageToLoad': '/registermodal'
             }
         });
-    });
+    });*/
 
     $("#dismiss").on("click",  function() {
         var container = $(this).closest('.container-fluid');

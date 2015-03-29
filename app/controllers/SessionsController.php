@@ -59,7 +59,7 @@ class SessionsController extends \BaseController {
 
 		AccessToken::set($response);
 
-		return Redirect::back()->with('messages', ['You are now logged in']);
+		return Redirect::back()->with('success', 'You are now logged in to your account.');
 
 	}
 
@@ -69,15 +69,15 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy()
 	{
-		$messages = ['You have now been logged out'];
+		$info = 'You have now been logged out';
 
 		if(Session::has('conference_id')){
 			$conference_id = Session::get('conference_id');
 
 			Session::flush();
 
-			return Redirect::route('conference_path', ['conference_id' => $conference_id])->with($messages);
+			return Redirect::route('conference_path', ['conference_id' => $conference_id])->with(compact('info'));
 		}
-		return Redirect::route('conferences_path')->with($messages);
+		return Redirect::route('conferences_path')->with(compact('info'));
 	}
 }

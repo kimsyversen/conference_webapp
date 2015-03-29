@@ -2,7 +2,7 @@
 @section('content')
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('schedule') ])
         @include('conference.layouts.partials.errors-and-messages')
-        @include('conference.layouts.partials.doFirstTimeStuff')
+        @include('conference.partials.doFirstTimeStuff')
 
         @include('conference.layouts.partials.page-header', ['text' => 'Conference schedule'])
 

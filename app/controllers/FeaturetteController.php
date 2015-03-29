@@ -4,6 +4,6 @@ class FeaturetteController extends \BaseController {
 
 	public function create()
 	{
-		return View::make('conference.other.features');
+		return View::make('conference.features');
 	}
 }

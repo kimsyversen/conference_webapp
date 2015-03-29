@@ -3,7 +3,7 @@
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('newsfeed') ])
         @include('conference.layouts.partials.errors-and-messages')
         @include('conference.layouts.partials.page-header', ['text' => 'Newsfeed'])
-        @include('conference.layouts.partials.doFirstTimeStuff')
+        @include('conference.partials.doFirstTimeStuff')
 
         @if(isset($data) && !empty($data))
 

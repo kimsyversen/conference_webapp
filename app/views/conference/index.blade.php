@@ -2,7 +2,10 @@
 @section('content')
     @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
     @include('conference.layouts.partials.errors-and-messages')
-    @include('conference.layouts.partials.doFirstTimeStuff')
+    @include('conference.partials.doFirstTimeStuff')
+
+    {{--<a class="alert-link" href="{{ route('featurette_path')}}">Give me a short presentation</a></p>--}}
+   {{-- @include('conference.partials.doFirstTimeStuff', ['text' => 'Hi! This is a message that you will only see the first time you visit this application. Do you want a short presentation of the features of this application? If not, you can always see the presentation again. Just scroll to the bottom of the page and click on "Features of this application".'])--}}
 
     @if(isset($data))
         @if(!empty($data))
