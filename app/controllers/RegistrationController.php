@@ -15,11 +15,6 @@ class RegistrationController extends BaseController {
 		return View::make('conference.registration.create');
 	}
 
-	public function createModal()
-	{
-		return View::make('conference.registration.create-modal');
-	}
-
 	public function store()
 	{
 		$request = (new Uninett\Api\Request)

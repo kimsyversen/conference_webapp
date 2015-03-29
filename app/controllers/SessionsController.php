@@ -32,13 +32,6 @@ class SessionsController extends \BaseController {
 		return View::make('conference.sessions.create');
 	}
 
-	/**
-	 * @return \Illuminate\View\View
-	 */
-	public function createModal()
-	{
-		return View::make('conference.sessions.create-modal');
-	}
 
 	/**
 	 * Login user
