@@ -29,13 +29,11 @@ $(document).ready(function(){
         });
     });
 
-    /* Function from http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
+    /* Function is partly from http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
     $("#filter").keyup(function(){
-
-        // Retrieve the input field text and reset the count to zero
         var filter = $(this).val(), count = 0;
 
-        // Loop through the comment list
+
         $(".session").each(function(){
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
@@ -44,7 +42,6 @@ $(document).ready(function(){
 
             } else {
                 var session = $(this);
-
                 session.closest('.session-group').find('.session-information').show();
                 session.show();
                 count++;
@@ -57,7 +54,11 @@ $(document).ready(function(){
             $("#filter-count").empty();
     });
 
+    $("#advanced-options").on('click', '.close', function(){
+        var content = $(this).closest('#advanced-options').find('.content');
 
+        content.slideToggle();
+    });
 
 
 
