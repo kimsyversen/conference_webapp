@@ -18,7 +18,7 @@ gulp.task('js', function()
             "app/assets/javascript/src/conference.js"
         ])
         .pipe(concat('conference.min.js'))
-        .pipe(uglify())
+ /*       .pipe(uglify())*/
         .pipe(gulp.dest('public/js'));
 });
 

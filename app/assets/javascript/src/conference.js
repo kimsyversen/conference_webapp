@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    appendButtons();
 
     /** Footer to bottom */
     var pageHeight = $(window).height();
@@ -12,6 +13,19 @@ $(document).ready(function(){
 
     $(function() {
         FastClick.attach(document.body);
+    });
+
+    $('.conference-button-day').on('click', function () {
+        var value = $(this).attr('data-value');
+        var body = $('body');
+        $("body .session-group").each(function(){
+            var group = $(this);
+
+            if(group.attr('data-value') === value)
+                group.show();
+            else
+                group.hide();
+        });
     });
 
     /* Function from http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
@@ -40,8 +54,11 @@ $(document).ready(function(){
             $("#filter-count").text(+count + " results");
         else
             $("#filter-count").empty();
-
     });
+
+
+
+
 
     $('.session').on('click', '.button-schedule-remove', function(e){
         e.preventDefault();
@@ -231,4 +248,41 @@ $('[data-toggle=offcanvas]').click(function() {
     $('#btnShow').toggle();
 });
 
+
+/* Function from http://manasbhardwaj.net/get-unique-values-from-a-javascript-array-using-jquery/ */
+function GetUnique(inputArray)
+{
+    var outputArray = [];
+    for (var i = 0; i < inputArray.length; i++)
+    {
+        if ((jQuery.inArray(inputArray[i], outputArray)) == -1)
+        {
+            outputArray.push(inputArray[i]);
+        }
+    }
+    return outputArray;
+}
 /*End */
+
+
+function appendButtons() {
+    var days = [];
+    var body = $(this).closest('body');
+
+    console.log(body);
+    $(".session-group").each(function() {
+        var value = $(this).attr('data-value');
+        days.push(value);
+    });
+
+
+    var uniqueDays = GetUnique(days);
+
+    var buttonGroup = $('#button-days');
+
+
+    $.each(uniqueDays, function(index, value) {
+        buttonGroup.append("<button class='conference-button-day' data-value="+ value + ">" + value + "</button>");
+    });
+}
+

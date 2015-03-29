@@ -1,14 +1,3 @@
-@section('navbar-top')
-    @parent
-    <div class="row">
-        <div class="col-xs-12">
-            <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" autocomplete="off" />
-        </div>
-        <div class="col-xs-12 text-center">
-            <span class="text-center" id="filter-count"></span>
-        </div>
-    </div>
-@endsection
 <div class="row session nopadding" data-value="{{ $session['id'] }}" data-url="/{{ $session['links']['session']['uri'] }}">
     <div class="col-xs-12">
         <div class="row event categories">
@@ -44,6 +33,5 @@
         @include('conference.events.partials.buttons')
     </div>
 </div>
-
 
 

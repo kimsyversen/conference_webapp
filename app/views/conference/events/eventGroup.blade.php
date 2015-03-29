@@ -7,8 +7,11 @@
         </div>
 </div>
 
+<div id="button-days" class='btn-group' role='group' aria-label='...'></div>
+
+
 @foreach($data['data'] as $sessionGroup)
-    <div class="session-group">
+    <div class="session-group" data-value="{{ ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'m/d')  }}">
         @include('conference.layouts.partials.delimiter', ['text' => 'Events starting from', 'value' => ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'H:i')])
 
         @foreach($sessionGroup['sessions'] as $session)
