@@ -7,7 +7,12 @@
         </div>
 </div>
 
-<div id="button-days" class='btn-group' role='group' aria-label='...'></div>
+<div id="button-days" class='btn-group' role='group' aria-label='...'>
+    <input type="text" class="text-input form-control" placeholder="Search">
+
+</div>
+
+
 
 
 @foreach($data['data'] as $sessionGroup)

@@ -17,6 +17,7 @@ $(document).ready(function(){
 
     $('.conference-button-day').on('click', function () {
         var value = $(this).attr('data-value');
+
         var body = $('body');
         $("body .session-group").each(function(){
             var group = $(this);
@@ -284,5 +285,7 @@ function appendButtons() {
     $.each(uniqueDays, function(index, value) {
         buttonGroup.append("<button class='conference-button-day' data-value="+ value + ">" + value + "</button>");
     });
+
+    buttonGroup.append("<button class='conference-button-day' data-value='all'>All </button>");
 }
 
