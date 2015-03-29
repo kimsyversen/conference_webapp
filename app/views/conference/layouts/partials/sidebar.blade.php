@@ -19,6 +19,10 @@
                     <li class="nav-item"> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
                 @endif
             @endif
+
+                @if(!Session::has('conference_id'))
+                    <li class="nav-item">  <span class="text-center "><i class="glyphicon glyphicon-exclamation-sign"> </i> You will have more choises here when you enter a conference. </span> </li>
+                @endif
             <li class="nav-item"><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i> Refresh </a> </li>
         </ul>
 
@@ -39,6 +43,10 @@
                     <li class="nav-item"> <a href="#" class="login-button text-center" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i></a></li>
                 @endif
             @endif
+
+                @if(!Session::has('conference_id'))
+                    <li class="nav-item"> <a href="#" class="text-center"><i class="glyphicon glyphicon-exclamation-sign"> </i> </a> </li>
+                @endif
             <li class="nav-item"><a href="{{ URL::current() }}" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a> </li>
         </ul>
     </div>
