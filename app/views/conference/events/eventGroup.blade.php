@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="padding: 1em;">
     <div class="col-xs-12">
         <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" autocomplete="off" />
     </div>

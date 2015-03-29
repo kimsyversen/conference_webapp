@@ -42,12 +42,10 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="padding" id="top">
 
                     <div class="full col-xs-12">
                         <div class="row content-wrapper">
-
                             @yield('content')
 
                         </div>
