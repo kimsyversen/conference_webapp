@@ -19,8 +19,8 @@ Route::get('/', ['as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/maps', [ 'as' => 'maps_path', 'uses' => 'ConferenceMapsController@index' ]);
-Route::get('conferences/{conference_id}/chats', [ 'as' => 'chats_path', 'uses' => 'ConferenceChatsController@index' ]);
-Route::get('conferences/{conference_id}/chats/{chat_id}', [ 'as' => 'chat_path', 'uses' => 'ConferenceChatsController@show' ]);
+/*Route::get('conferences/{conference_id}/chats', [ 'as' => 'chats_path', 'uses' => 'ConferenceChatsController@index' ]);
+Route::get('conferences/{conference_id}/chats/{chat_id}', [ 'as' => 'chat_path', 'uses' => 'ConferenceChatsController@show' ]);*/
 Route::get('conferences/{conference_id}/newsfeed', [ 'as' => 'newsfeed_path', 'uses' => 'ConferenceNewsFeedController@index' ]);
 Route::get('conferences/{conference_id}/schedule', [ 'as' => 'schedule_path', 'uses' => 'ConferenceScheduleController@index' ]);
 Route::get('conferences/{conference_id}/schedule/personal', [ 'as' => 'personal_schedule_path', 'uses' => 'ConferencePersonalScheduleController@index' ]);

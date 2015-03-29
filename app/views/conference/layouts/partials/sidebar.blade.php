@@ -12,7 +12,7 @@
 
                 @if(isset($authenticated) && $authenticated === true)
                     <li class="nav-item"><a href="{{ route('personal_schedule_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-tasks"></i> My schedule</a> </li>
-                    <li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-comment"></i> Chats</a> </li>
+                    {{--<li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-comment"></i> Chats</a> </li>--}}
                     <li class="nav-item"> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> Log out</a></li>
                 @else
                     <li class="nav-item"> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> Register</a></li>
@@ -36,7 +36,7 @@
 
                 @if(isset($authenticated) && $authenticated === true)
                     <li class="nav-item"><a href="{{ route('personal_schedule_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-tasks"></i> </a> </li>
-                    <li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-comment"></i> </a> </li>
+                    {{--<li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}" class="text-center"><i class="glyphicon glyphicon-comment"></i> </a> </li>--}}
                     <li class="nav-item"> <a href="{{ route('logout_path')}}" class="text-center"><i class="glyphicon glyphicon-log-out" ></i></a></li>
                 @else
                     <li class="nav-item"> <a href="#" class="register-button text-center" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> </a></li>
