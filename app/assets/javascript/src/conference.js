@@ -22,7 +22,7 @@ $(document).ready(function(){
         $("body .session-group").each(function(){
             var group = $(this);
 
-            if(group.attr('data-value') === value)
+            if(group.attr('data-value') === value || value === 'all')
                 group.show();
             else
                 group.hide();
@@ -283,9 +283,9 @@ function appendButtons() {
 
 
     $.each(uniqueDays, function(index, value) {
-        buttonGroup.append("<button class='conference-button-day' data-value="+ value + ">" + value + "</button>");
+        buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value="+ value + ">" + value + "</a>");
     });
 
-    buttonGroup.append("<button class='conference-button-day' data-value='all'>All </button>");
+    buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value='all'>All </a>");
 }
 

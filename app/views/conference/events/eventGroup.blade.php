@@ -1,16 +1,20 @@
 <div class="row" style="padding: 1em;">
-    <div class="col-xs-12">
-        <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" autocomplete="off" />
+    <div class="col-xs-12 col-md-6 ">
+        <input type="text" class="text-input form-control pull-left" placeholder="Search events" id="filter" value="" autocomplete="off" />
     </div>
-    <div class="col-xs-12 text-center">
-        <span class="text-center" id="filter-count"></span>
+    <div class="col-xs-12 col-md-6 ">
+
+        <div id="button-days" class='btn-group pull-right' role='group' aria-label='...'>
         </div>
-</div>
 
-<div id="button-days" class='btn-group' role='group' aria-label='...'>
-    <input type="text" class="text-input form-control" placeholder="Search">
 
 </div>
+
+<div class="row">
+
+    </div>
+</div>
+
 
 
 
