@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" />
+        <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" autocomplete="off" />
     </div>
     <div class="col-xs-12 text-center">
         <span class="text-center" id="filter-count"></span>

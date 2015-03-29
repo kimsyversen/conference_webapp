@@ -22,12 +22,10 @@ $(document).ready(function(){
 
         // Loop through the comment list
         $(".session").each(function(){
-
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut();
-
                 $(this).closest('.session-group').find('.session-information').fadeOut();
+                $(this).fadeOut();
 
             } else {
                 var session = $(this);
