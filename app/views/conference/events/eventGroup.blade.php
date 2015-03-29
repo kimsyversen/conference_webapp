@@ -1,12 +1,10 @@
 <div class="row">
     <div class="col-xs-12">
-        <form id="live-search" action="" class="styled" method="post">
-            <fieldset>
-                <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" />
-            </fieldset>
-        </form>
-        <span class="input-group-addon"id="filter-count"></span>
+        <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" />
     </div>
+    <div class="col-xs-12 text-center">
+        <span class="text-center" id="filter-count"></span>
+        </div>
 </div>
 
 @foreach($data['data'] as $sessionGroup)
