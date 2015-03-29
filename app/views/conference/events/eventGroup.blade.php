@@ -3,7 +3,7 @@
         <div class="row" style="padding: 1em; background-color: #afb0b3;">
             <div class="row">
                 <div class="col-xs-12">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">More options <span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="font-size: 1em;"></span></button>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">Advanced <span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="font-size: 1em;"></span></button>
                 </div>
             </div>
             <div class="content">
@@ -21,11 +21,7 @@
     </div>
 </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $('#advanced-options').find('.content').slideUp();
-    });
-</script>
+
 @foreach($data['data'] as $sessionGroup)
     <div class="session-group" data-value="{{ ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'m/d')  }}">
         @include('conference.layouts.partials.delimiter', ['text' => 'Events starting from', 'value' => ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'H:i')])

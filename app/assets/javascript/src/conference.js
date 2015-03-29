@@ -1,5 +1,6 @@
 $(document).ready(function(){
     appendButtons();
+    $('#advanced-options').find('.content').toggleClass('toggled');
 
     /** Footer to bottom */
     var pageHeight = $(window).height();
@@ -57,7 +58,7 @@ $(document).ready(function(){
     $("#advanced-options").on('click', '.close', function(){
         var content = $(this).closest('#advanced-options').find('.content');
 
-        content.slideToggle();
+        content.toggleClass('toggled');
     });
 
 
