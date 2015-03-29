@@ -65,3 +65,34 @@ textarea {
   margin-top: 2em;
   padding: 0.5em;
 }
+
+.nav-conference {
+
+  margin-top: 100px;
+  border-top: 1px solid #000;
+
+ li {
+  list-style-type: none;
+
+   a {
+
+      font-size: 1em;
+      color: White;
+
+      &:hover {
+        background-color: white;
+        color: black;
+        display: block;
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+
+/** MODS TO PURE PUSHER */
+
+.pure-pusher {
+  @extend .site-default-background-color;
+}

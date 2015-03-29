@@ -1,4 +1,4 @@
-@extends('conference.layouts.default')
+@extends('conference.layouts.default2')
 @section('content')
         @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('schedule') ])
         @include('conference.layouts.partials.errors-and-messages')

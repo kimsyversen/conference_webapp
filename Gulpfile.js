@@ -32,18 +32,24 @@ gulp.task('css', function()
         .pipe(autoprefixer('last 10 version'))
         .pipe(gulp.dest('app/assets/css/'));
 
+    gulp.src('app/assets/sass/pure-drawer.scss')
+        .pipe(sass())
+        .pipe(autoprefixer('last 10 version'))
+        .pipe(gulp.dest('app/assets/css/'));
+
     var basePath = "public/components/vendor/";
 
     gulp.src([
-        basePath + "bootstrap/dist/css/bootstrap.css",
+       basePath + "bootstrap/dist/css/bootstrap.css",
         basePath + "animate-css/animate.css",
         basePath + "add-to-homescreen/style/addtohomescreen.css",
         basePath + "font-awesome/css/font-awesome.css",
         basePath + "lato-font/css/lato-font.css",
+        "app/assets/css/pure-drawer.css",
         "app/assets/css/Main.css"
     ])
         .pipe(concatCss("conference.min.css"))
-        .pipe(cssmin())
+     /*   .pipe(cssmin())*/
         .pipe(gulp.dest('public/css'));
 });
 

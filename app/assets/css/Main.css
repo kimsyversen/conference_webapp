@@ -1,7 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 /** Side wide defaults  **/
-.site-default-background-color, html, body {
+.site-default-background-color, html, body, .pure-pusher {
   background-color: #d7d9d9; }
 
 .default-box-shadow, .form-small, .message, .chat-group, .item, .conference-item, .event-default, .event, .rating-item {
@@ -480,3 +480,19 @@ textarea {
 .item-push {
   margin-top: 2em;
   padding: 0.5em; }
+
+.nav-conference {
+  margin-top: 100px;
+  border-top: 1px solid #000; }
+  .nav-conference li {
+    list-style-type: none; }
+    .nav-conference li a {
+      font-size: 1em;
+      color: White; }
+      .nav-conference li a:hover {
+        background-color: white;
+        color: black;
+        display: block;
+        width: 100%; }
+
+/** MODS TO PURE PUSHER */
