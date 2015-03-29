@@ -61,6 +61,20 @@ textarea {
   @extend .default-box-shadow;
 }
 
+.item-positioned {
+  @extend .item;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.item-positioned-with-text {
+  @extend .item-positioned ;
+  p,span,i {
+    padding: 1em;
+    margin-top: 1em;
+  }
+}
+
 .item-push {
   margin-top: 2em;
   padding: 0.5em;
@@ -75,7 +89,7 @@ textarea {
   list-style-type: none;
 
    a {
-
+    text-decoration: none;
       font-size: 1em;
       color: White;
 

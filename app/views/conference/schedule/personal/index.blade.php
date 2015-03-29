@@ -1,10 +1,19 @@
+
 @extends('conference.layouts.default')
+@section('breadcrumb')
+    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('personal_schedule') ])
+@stop
+
+@section('errors-and-messages')
+    @include('conference.layouts.partials.errors-and-messages')
+@stop
+
+@section('first-time-stuff')
+    @include('conference.partials.doFirstTimeStuff')
+@stop
+
 @section('content')
 
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('personal_schedule') ])
-    @include('conference.layouts.partials.errors-and-messages')
-
-    <!-- Heading -->
     @include('conference.layouts.partials.page-header', ['text' => 'My schedule'])
 
     @if(isset($data['data']))
@@ -16,9 +25,8 @@
     @endif
 @stop
 
-{{--
 <script>
     $(document).ready(function() {
         $("#button-session-more").trigger("click");
     });
-</script>--}}
+</script>

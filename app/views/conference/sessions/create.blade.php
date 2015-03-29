@@ -1,9 +1,18 @@
 @extends('conference.layouts.default')
-@section('content')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('login') ])
-    @include('conference.layouts.partials.errors-and-messages')
-    @include('conference.layouts.partials.page-header', ['text' => 'Sign In'])
+    @section('breadcrumb')
+        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('login') ])
+    @stop
 
+    @section('errors-and-messages')
+        @include('conference.layouts.partials.errors-and-messages')
+    @stop
+
+    @section('first-time-stuff')
+        @include('conference.partials.doFirstTimeStuff')
+    @stop
+
+@section('content')
+    @include('conference.layouts.partials.page-header', ['text' => 'Sign In'])
     <div class="col-md-3"></div>
     <div class="col-md-6 forms form-small">
         {{ Form::open(['route' => 'login_path', 'method' => 'post']) }}

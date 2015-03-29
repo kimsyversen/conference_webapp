@@ -4,7 +4,7 @@
 .site-default-background-color, html, body, .pure-pusher {
   background-color: #d7d9d9; }
 
-.default-box-shadow, .form-small, .message, .chat-group, .item, .conference-item, .event-default, .event, .rating-item {
+.default-box-shadow, .form-small, .message, .chat-group, .item, .conference-item, .event-default, .event, .rating-item, .item-positioned, .item-positioned-with-text {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
 
 .default-heading-lightweight, .default-heading {
@@ -49,12 +49,6 @@
 .breadcrumb {
   background-color: white; }
 
-/*.site-notice {
-  background-color: darken(#E9EAEA, 15%);
-  padding: 1em;
-  @extend .default-box-shadow;
-  margin: 1em 0 1em 0;
-}*/
 .site-notice .alert .exclamation {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
@@ -67,7 +61,6 @@
 .alert button .close span {
   font-size: 1.5em; }
 
-/*MORDI*/
 /* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook
    Some of the code are modified
 */
@@ -221,12 +214,11 @@
 
 #footer {
   border-top: 1px solid #ccc;
-  margin: 10px 0 0 10px; }
+  background-color: #444444; }
   #footer a {
-    /*color: #fffaf5;*/
-    color: #000000; }
+    color: #fffaf5; }
   #footer h4 {
-    color: #444444;
+    color: #fffaf5;
     font-weight: normal; }
   #footer ul li {
     margin-top: 0.5em;
@@ -474,8 +466,16 @@ textarea {
 .about-the-application {
   font-size: 1.6em; }
 
-.item, .conference-item, .event-default, .event, .rating-item {
+.item, .conference-item, .event-default, .event, .rating-item, .item-positioned, .item-positioned-with-text {
   background-color: white; }
+
+.item-positioned, .item-positioned-with-text {
+  margin-top: 1em;
+  padding: 1em; }
+
+.item-positioned-with-text p, .item-positioned-with-text span, .item-positioned-with-text i {
+  padding: 1em;
+  margin-top: 1em; }
 
 .item-push {
   margin-top: 2em;
@@ -487,6 +487,7 @@ textarea {
   .nav-conference li {
     list-style-type: none; }
     .nav-conference li a {
+      text-decoration: none;
       font-size: 1em;
       color: White; }
       .nav-conference li a:hover {

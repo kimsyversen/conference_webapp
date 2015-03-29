@@ -1,8 +1,17 @@
 @extends('conference.layouts.default')
-@section('content')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
-    @include('conference.layouts.partials.errors-and-messages')
+    @section('breadcrumb')
+        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chats') ])
+    @stop
 
+    @section('errors-and-messages')
+        @include('conference.layouts.partials.errors-and-messages')
+    @stop
+
+    @section('first-time-stuff')
+        @include('conference.partials.doFirstTimeStuff')
+    @stop
+
+@section('content')
     @if(isset($data) && !empty($data))
         @include('conference.layouts.partials.page-header', ['text' => 'Chats'])
 

@@ -30,33 +30,57 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <div class="box">
-        <div class="row row-offcanvas row-offcanvas-left">
-            @include('conference.layouts.partials.sidebar')
-            <div class="column col-sm-10 col-xs-11" id="main">
-                <div class="navbar navbar-top navbar-static-top">
-                    <div class="navbar-header" >
-                        <a class="navbar-brand" href="{{ route('conferences_path')}}">
-                            <i class='glyphicon glyphicon-home' aria-hidden="true"> </i><span> Home</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="padding" id="top">
+<div class="pure-container" data-effect="pure-effect-slide">
 
-                    <div class="full col-xs-12">
-                        <div class="row content-wrapper">
-                            @yield('content')
 
-                        </div>
-                    @include('conference.layouts.partials.goto-top')
-                    @include('conference.layouts.partials.footer')
-                    </div>
-                </div>
+    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+    <nav class="pure-drawer " data-position="left">
+        <div class="row">
+            <ul class="nav nav-stacked nav-conference">
+                @if(Session::has('conference_id'))
+                    <li><a href="{{ route('schedule_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-list-alt"></i> Conference schedule</a> </li>
+                    <li><a href="{{ route('maps_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-map-marker"></i> Maps</a> </li>
+                    <li><a href="{{ route('newsfeed_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-earphone"></i> Newsfeed</a> </li>
+
+                    @if(isset($authenticated) && $authenticated === true)
+                        <li><a href="{{ route('personal_schedule_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-tasks"></i> My schedule</a> </li>
+                        {{--<li class="nav-item"><a href="{{ route('chats_path', ['conference_id' => Session::get('conference_id')]) }}"><i class="glyphicon glyphicon-comment"></i> Chats</a> </li>--}}
+                        <li"> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> Log out</a></li>
+                    @else
+                        <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> Register</a></li>
+                        <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> Login</a></li>
+                    @endif
+                @endif
+
+                @if(!Session::has('conference_id'))
+                    <li>  <span class="text-center "><i class="glyphicon glyphicon-exclamation-sign"> </i> You will have more choises here when you enter a conference. </span> </li>
+                @endif
+                <li><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i> Refresh </a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pure-pusher-container">
+
+        <div class="pure-pusher">
+
+            <div class="container" style="margin-top: 100px;">
+                @yield('breadcrumb')
+                @yield('errors-and-messages')
+                @yield('first-time-stuff')
+                @yield('content')
             </div>
+
+            @include('conference.layouts.partials.goto-top')
+            @include('conference.layouts.partials.footer')
         </div>
     </div>
+    <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
 </div>
+
+
 @include('conference.layouts.modals.signin')
 @include('conference.layouts.modals.register')
 
