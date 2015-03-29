@@ -62,18 +62,8 @@
 @include('conference.layouts.modals.signin')
 @include('conference.layouts.modals.register')
 
-
-
-
-
-
 @section('javascript')
     {{ HTML::script('js/conference.min.js') }}
-    <scripts>
-        $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').focus()
-        })
-    </scripts>
 @show
 </body>
 </html>
