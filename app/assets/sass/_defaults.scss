@@ -1,86 +1,26 @@
 /** Side wide defaults  **/
-
-.site-default-background-color {
-  background-color: darken(#E9EAEA, 7%);
-}
-.default-box-shadow {
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-}
-
-.default-heading-lightweight {
-  font-weight: 400;
-}
-
-.default-heading-color {
-  color: #2F2F2F;
-
-}
-
-.default-link-hover-color {
-  color: #3f90ff;
-}
-
 .default-heading {
-  @extend .default-heading-lightweight;
-  @extend .default-heading-color;
-
-}
-* h1, h2, h3, h4, h5, h6  {
-  @extend .default-heading-color;
+  @include heading(light);
 }
 
-* a {
-  @extend .default-heading-color;
-  text-decoration: underline;
-}
-
-.button-conference {
-  border-radius: 0;
-  width: 100%;
-  transition: 0.3s;
-  bottom: 0;
-  -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.75);
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.75);
-  font-size: 0.9em;
+* h1, h2, h3, h4, h5, h6, * a  {
+  @include heading(light);
 }
 
 .button-dark {
-  background-color: darken(#E9EAEA, 20%);
-  color: black;
-
-  &:hover {
-    background-color: darken(#E9EAEA, 7%);
-    border: 1px solid #c3c3c3;
-  }
+  @include button($type: dark, $color: #E9EAEA);
 }
-
-@media(max-width:420px){
-  .button-dark, .button-light {
-    span {
-      font-size: 0.85em;
-    }
-  }
-}
-
 
 .button-light {
-  border-top: 1px solid #c3c3c3;
-  margin-top: 0.4em;
+  @include button($type: light, $color: #c3c3c3);
+}
 
-  &:hover {
-    background-color: #c3c3c3;
-    border: 1px solid darken(#E9EAEA, 30%);
+.conference-breadcrumb {
+  li a {
+    text-decoration: underline;
   }
-}
 
- .breadcrumb {
-/*  background-color: white;*/
-   background-color: transparent;
 }
-
 
 .site-notice {
   .alert {

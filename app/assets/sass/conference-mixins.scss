@@ -1,0 +1,70 @@
+@mixin boxShadow() {
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+}
+
+@mixin button($color, $type: dark) {
+  border-radius: 0;
+  width: 100%;
+  transition: 0.3s;
+  bottom: 0;
+  font-size: 1em;
+  @include boxShadow;
+
+  @if $type == light {
+    border: 1px solid lighten($color, 20%);
+    background-color: $color;
+
+    &:hover {
+      background-color: $color;
+      border: 1px solid darken($color, 30%);
+    }
+  }
+  @if $type == dark {
+    background-color: darken($color, 30%);
+    &:hover {
+      background-color: lighten($color, 2%);
+      border: 1px solid $color;
+    }
+  }
+
+  @media(max-width:420px){
+    font-size: 0.9em;
+  }
+
+  @media(min-width:421px){
+    font-size: 1em;
+  }
+
+
+}
+
+@mixin heading($type: light, $color: #2F2F2F) {
+  color: $color;
+
+  @if $type == light {
+    font-weight: 400;
+  } @else {
+    font-weight: 600;
+  }
+}
+
+@mixin link($color : #3f90ff) {
+  color: black;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color;
+  }
+  &:active {
+    color: saturate($color, 30%);
+  }
+}
+
+@mixin item($bg: white) {
+  background-color: $bg;
+  margin-top: 1em;
+  padding: 0;
+  @include boxShadow;
+}

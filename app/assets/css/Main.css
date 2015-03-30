@@ -1,54 +1,55 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 /** Side wide defaults  **/
-.site-default-background-color, html, body {
-  background-color: #d7d9d9; }
-
-.default-box-shadow, .form-small, .message, .chat-group, .item, .conference-item, .event-default, .event, .rating-item, .item-positioned, .item-positioned-with-text {
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
-
-.default-heading-lightweight, .default-heading {
+.default-heading {
+  color: #2F2F2F;
   font-weight: 400; }
 
-.default-heading-color, .default-heading, * h1, h2, h3, h4, h5, h6, * a, .message .panel .panel-heading .title h3 {
-  color: #2F2F2F; }
+* h1, h2, h3, h4, h5, h6, * a {
+  color: #2F2F2F;
+  font-weight: 400; }
 
-.default-link-hover-color, #footer a:hover {
-  color: #3f90ff; }
-
-* a {
-  text-decoration: underline; }
-
-.button-conference {
+.button-dark {
   border-radius: 0;
   width: 100%;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   bottom: 0;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75);
-  font-size: 0.9em; }
-
-.button-dark {
-  background-color: #b5b8b8;
-  color: black; }
+  font-size: 1em;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  background-color: #9b9f9f; }
   .button-dark:hover {
-    background-color: #d7d9d9;
-    border: 1px solid #c3c3c3; }
-
-@media (max-width: 420px) {
-  .button-dark span, .button-light span {
-    font-size: 0.85em; } }
+    background-color: #eeefef;
+    border: 1px solid #E9EAEA; }
+  @media (max-width: 420px) {
+    .button-dark {
+      font-size: 0.9em; } }
+  @media (min-width: 421px) {
+    .button-dark {
+      font-size: 1em; } }
 
 .button-light {
-  border-top: 1px solid #c3c3c3;
-  margin-top: 0.4em; }
+  border-radius: 0;
+  width: 100%;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  bottom: 0;
+  font-size: 1em;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid #f6f6f6;
+  background-color: #c3c3c3; }
   .button-light:hover {
     background-color: #c3c3c3;
-    border: 1px solid #9b9f9f; }
+    border: 1px solid #767676; }
+  @media (max-width: 420px) {
+    .button-light {
+      font-size: 0.9em; } }
+  @media (min-width: 421px) {
+    .button-light {
+      font-size: 1em; } }
 
-.breadcrumb {
-  /*  background-color: white;*/
-  background-color: transparent; }
+.conference-breadcrumb li a {
+  text-decoration: underline; }
 
 .site-notice .alert .exclamation {
   -webkit-animation-duration: 3s;
@@ -79,126 +80,6 @@
 
 #footer {
   margin-top: 30px; }
-
-/* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook
-   Some of the code are modified
-*/
-.wrapper {
-  min-height: 100%; }
-
-.wrapper, .row {
-  height: 100%;
-  margin-left: 0;
-  margin-right: 0; }
-
-.wrapper:before, .wrapper:after, .column:before, .column:after {
-  content: "";
-  display: table; }
-
-.wrapper:after, .column:after {
-  clear: both; }
-
-.column {
-  height: 100%;
-  overflow: auto;
-  *zoom: 1; }
-
-.column .padding {
-  padding: 0;
-  margin: 0; }
-
-.box {
-  bottom: 0;
-  /* increase for footer use */
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #444444; }
-
-#main {
-  background-color: #e9eaed;
-  padding-left: 0;
-  padding-right: 0;
-  overflow-y: scroll;
-  /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch; }
-
-#sidebar {
-  padding: 0px;
-  padding-top: 15px; }
-
-#sidebar, #sidebar a, #sidebar-footer a {
-  color: #ffffff;
-  background-color: transparent;
-  text-shadow: 0 0 2px #000000;
-  padding-left: 5px; }
-
-#sidebar .nav li > a:hover {
-  background-color: #393939; }
-
-.logo {
-  display: block;
-  padding: 3px;
-  background-color: #fff;
-  color: #3B5999;
-  height: 28px;
-  width: 28px;
-  margin: 9px;
-  margin-right: 2px;
-  margin-left: 15px;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 0 1px;
-  border-radius: 2px; }
-
-#sidebar-footer {
-  background-color: #444;
-  position: absolute;
-  bottom: 5px;
-  padding: 5px; }
-
-/*
- * off canvas sidebar
- * --------------------------------------------------
- */
-@media screen and (max-width: 768px) {
-  .row-offcanvas {
-    position: relative;
-    /*    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;*/ }
-  .row-offcanvas-left.active {
-    left: 33%; }
-  .row-offcanvas-left.active .sidebar-offcanvas {
-    left: -33%;
-    position: absolute;
-    top: 0;
-    width: 33%;
-    margin-left: 5px; }
-  #sidebar, #sidebar a, #sidebar-footer a {
-    padding-left: 3px; } }
-
-.navbar-top {
-  background-color: #afb0b3; }
-  .navbar-top a {
-    margin-right: 10px; }
-
-.navbar-toggle {
-  color: black; }
-  .navbar-toggle span {
-    background-color: black; }
-
-.navbar-right .nav-item a {
-  text-decoration: none; }
-
-.navbar-top .navbar-header a {
-  text-decoration: none; }
-
-.sidebar-offcanvas .nav-item a {
-  text-decoration: none; }
 
 .featurette {
   margin-top: 3em;
@@ -275,18 +156,20 @@
 
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 .event-default, .event {
+  background-color: white;
   margin-top: 1em;
-  padding: 0; }
+  padding: 0;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
   .event-default .description-short, .event .description-short, .event-default .description-long, .event .description-long {
     color: black; }
     .event-default .description-short p, .event .description-short p, .event-default .description-long p, .event .description-long p {
-      margin: 15px 0 0 -15px; }
+      margin: 10px 0 0 -5px; }
   .event-default .session-info, .event .session-info {
     margin-bottom: 10px; }
     .event-default .session-info ul, .event .session-info ul {
       list-style-type: none;
       margin: 0;
-      margin-left: -15px;
+      margin-left: -5px;
       padding: 0; }
   .event-default .event-time-data .month, .event .event-time-data .month, .event .event-time .month {
     display: block;
@@ -402,6 +285,12 @@
   /*    background-image: none;
     background-color: #2ea7af;*/ }
 
+.rating-item {
+  background-color: white;
+  margin-top: 1em;
+  padding: 0;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }
+
 .chat-intro-text {
   margin-top: 1em; }
 
@@ -454,15 +343,16 @@
   margin-top: 2em; }
 
 * {
+  padding: 0;
   margin: 0; }
 
 html {
-  font-family: sans-serif;
+  /*
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;*/ }
 
 body {
-  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/ }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 html, body {
   height: 100%; }
@@ -485,10 +375,11 @@ textarea {
 .about-the-application {
   font-size: 1.6em; }
 
-.item, .conference-item, .event-default, .event, .rating-item, .item-positioned, .item-positioned-with-text {
-  background-color: white; }
-
 .item-positioned, .item-positioned-with-text {
+  background-color: white;
+  margin-top: 1em;
+  padding: 0;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
   margin-top: 1em;
   padding: 1em; }
 

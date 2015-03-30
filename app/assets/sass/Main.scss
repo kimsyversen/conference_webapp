@@ -1,9 +1,10 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 
-
+@import 'conference-globals';
+@import 'conference-mixins';
 @import 'defaults';
-@import 'components/offcanvas-menu';
+
 @import 'components/featurette';
 @import 'components/footer';
 @import 'components/forms';
@@ -15,22 +16,21 @@
 @import 'components/map/item';
 
 * {
-
+  padding: 0;
   margin: 0;
 }
 
 html {
-  font-family: sans-serif;
+/*
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;*/
 }
 
 body {
-  /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 html, body {
   height: 100%;
-  @extend .site-default-background-color;
 }
 
 .page-header-hr {
@@ -56,13 +56,10 @@ textarea {
   font-size: 1.6em;
 }
 
-.item {
-  background-color: rgb(255, 255, 255);
-  @extend .default-box-shadow;
-}
+
 
 .item-positioned {
-  @extend .item;
+  @include item();
   margin-top: 1em;
   padding: 1em;
 }
@@ -81,7 +78,6 @@ textarea {
 }
 
 .nav-conference {
-
   margin-top: 100px;
   border-top: 1px solid #000;
 
@@ -100,7 +96,6 @@ textarea {
         width: 100%;
       }
     }
-
   }
 }
 
