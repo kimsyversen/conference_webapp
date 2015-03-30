@@ -15,6 +15,7 @@
 .event-default {
   @include item($margin-positions: top, $margin-value: 1em);
   @include boxShadow($blur: 2px);
+
   .description-short, .description-long {
     color: black;
     p {
@@ -70,8 +71,8 @@
           @include eventDateTime($font-size: 40pt);
         }
         .hour {
-          @include eventDateTime($font-size: 12pt);
-          font-weight: 500;
+          @include eventDateTime($font-size: 14pt);
+          font-weight: 800;
         }
 
       display: inline-block;
