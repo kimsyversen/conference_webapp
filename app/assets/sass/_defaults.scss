@@ -77,7 +77,8 @@
 }
 
  .breadcrumb {
-  background-color: white;
+/*  background-color: white;*/
+   background-color: transparent;
 }
 
 
@@ -105,3 +106,34 @@
 
 }
 
+.conference-breadcrumb {
+
+  list-style-type: circle;
+  margin: 10px;
+    li {
+
+      display: inline;
+
+
+    }
+  .active {
+    color: grey;
+  }
+
+}
+
+
+#advanced-options {
+  background-color: lightgrey;
+  div > div {
+    padding : 1em;
+  }
+
+  * a {
+    text-decoration: none;
+  }
+}
+
+#footer {
+  margin-top: 30px;
+}

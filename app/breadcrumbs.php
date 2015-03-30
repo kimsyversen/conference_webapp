@@ -3,7 +3,7 @@
 
 
 Breadcrumbs::register('conferences', function($breadcrumbs) {
-	$breadcrumbs->push('Conferences', route('conferences_path'));
+	$breadcrumbs->push('Home', route('conferences_path'));
 });
 
 

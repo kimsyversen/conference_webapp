@@ -1,6 +1,15 @@
 $(document).ready(function(){
     appendButtons();
-    $('#advanced-options').find('.content').toggleClass('toggled');
+
+    $('#advanced-options').find('.row').toggleClass('toggled');
+
+
+    $(".options").on('click', '.close', function() {
+        var body = $('body');
+        var advanced = body.find('#advanced-options');
+        advanced.toggleClass('toggled');
+        $(this).find('span').toggleClass('glyphicon-menu-down glyphicon-menu-up');
+    });
 
     /** Footer to bottom */
     var pageHeight = $(window).height();
@@ -55,11 +64,6 @@ $(document).ready(function(){
             $("#filter-count").empty();
     });
 
-    $("#advanced-options").on('click', '.close', function(){
-        var content = $(this).closest('#advanced-options').find('.content');
-
-        content.toggleClass('toggled');
-    });
 
 
 
@@ -288,6 +292,6 @@ function appendButtons() {
         buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value="+ value + ">" + value + "</a>");
     });
 
-    buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value='all'>All </a>");
+    buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value='all'>Show all days </a>");
 }
 

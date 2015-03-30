@@ -1,25 +1,25 @@
-<div class="container-fluid" class="item">
-<div id="advanced-options">
-        <div class="row" style="padding: 1em; background-color: #afb0b3;">
-            <div class="row">
-                <div class="col-xs-12">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">Advanced <span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="font-size: 1em;"></span></button>
-                </div>
-            </div>
-            <div class="content">
-            <div class="col-xs-12 col-md-6 ">
-                <p>Search in events</p>
-                <input type="text" class="text-input form-control" placeholder="Search events" id="filter" value="" autocomplete="off" />
-            </div>
-            <div class="col-xs-12 col-md-6 ">
+<div class="row options">
+    <div class="col-xs-12 ">
+        <a href="#" type="button" class="btn btn-default close" data-dismiss="alert" aria-label="Advanced" style="text-decoration: none; background: transparent; border: 0; color: black; font-size: 1em;">Search in schedule
+            <span class="glyphicon glyphicon-menu-down" style="color:black;" aria-hidden="true" style="font-size: 1em;"> </span>
+        </a>
+    </div>
+</div>
 
-                <div id="button-days" class='btn-group' role='group' aria-label='...'>
-                    <p>Filter by day</p>
-                </div>
+
+<div class="container-fluid">
+
+    <div class="row toggled" id="advanced-options">
+        <div class="padding">
+            <div class="col-xs-12 col-md-6">
+                <label>Find event by free text</label>
+                <input type="text" class="text-input form-control" placeholder="Find event by free text" id="filter" value="" autocomplete="off" />
+            </div>
+            <div class="col-xs-12 col-md-6 btn-group" aria-label='Days' id="button-days">
+                <label style="display:block">Filter the shedule by days</label>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 @foreach($data['data'] as $sessionGroup)

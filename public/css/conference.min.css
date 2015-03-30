@@ -18707,8 +18707,7 @@ Copyright (c) 2014 Daniel Eden
 
 .site-default-background-color,
 html,
-body,
-.pure-pusher {
+body {
   background-color: #d7d9d9;
 }
 
@@ -18791,7 +18790,8 @@ h6,
 }
 
 .breadcrumb {
-  background-color: white;
+  /*  background-color: white;*/
+  background-color: transparent;
 }
 
 .site-notice .alert .exclamation {
@@ -18807,6 +18807,35 @@ h6,
 
 .alert button .close span {
   font-size: 1.5em;
+}
+
+.conference-breadcrumb {
+  list-style-type: circle;
+  margin: 10px;
+}
+
+.conference-breadcrumb li {
+  display: inline;
+}
+
+.conference-breadcrumb .active {
+  color: grey;
+}
+
+#advanced-options {
+  background-color: lightgrey;
+}
+
+#advanced-options div > div {
+  padding: 1em;
+}
+
+#advanced-options * a {
+  text-decoration: none;
+}
+
+#footer {
+  margin-top: 30px;
 }
 
 /* CSS from http://www.bootstrapzero.com/bootstrap-template/facebook
@@ -19488,3 +19517,9 @@ textarea {
 }
 
 /** MODS TO PURE PUSHER */
+
+.pure-pusher {
+  /*@extend .site-default-background-color;*/
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc);
+}

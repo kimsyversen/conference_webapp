@@ -116,5 +116,6 @@ textarea {
 /** MODS TO PURE PUSHER */
 
 .pure-pusher {
-  @extend .site-default-background-color;
+  /*@extend .site-default-background-color;*/
+  background: linear-gradient(#E9EAEA, darken(#E9EAEA, 12%))
 }
