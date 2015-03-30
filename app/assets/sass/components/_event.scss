@@ -30,20 +30,6 @@
       padding: 0;
     }
   }
-  .event-time-data {
-    .month {
-      @include eventDateTime($font-size: 20pt);
-    }
-    .day {
-      @include eventDateTime($font-size: 40pt);
-    }
-
-    .hour {
-      @include eventDateTime($font-size: 12pt);
-      font-weight: 200;
-    }
-  }
-
   .social-links {
     .facebook a, .twitter a,  .google-plus a {
       display: block;
@@ -72,15 +58,22 @@
 }
 
 
-
-
-
 @media(max-width:767px){
   .event {
     @extend .event-default;
 
     .event-time {
-      @extend .event-time-data;
+        .month {
+          @include eventDateTime($font-size: 20pt);
+        }
+        .day {
+          @include eventDateTime($font-size: 40pt);
+        }
+        .hour {
+          @include eventDateTime($font-size: 12pt);
+          font-weight: 500;
+        }
+
       display: inline-block;
       width: 100%;
       color: rgb(255, 255, 255);
@@ -107,7 +100,18 @@
     overflow: hidden;
 
     .event-time {
-      @extend .event-time-data;
+        .month {
+          @include eventDateTime($font-size: 20pt);
+        }
+        .day {
+          @include eventDateTime($font-size: 40pt);
+        }
+
+        .hour {
+          @include eventDateTime($font-size: 12pt);
+          font-weight: 200;
+        }
+
       margin-bottom: -99999px;
       padding-bottom: 99999px;
       text-align: center;
