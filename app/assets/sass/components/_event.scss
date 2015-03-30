@@ -62,9 +62,7 @@
 @media(max-width:767px){
   .event {
     @extend .event-default;
-
     .event-time {
-
         .month {
           @include eventDateTime($font-size: 24pt);
 
@@ -75,7 +73,7 @@
 
         }
         .hour {
-          @include eventDateTime($font-size: 12pt);
+          @include eventDateTime($font-size: 14pt);
           font-weight: 200;
           margin-bottom: 5px;
         }
