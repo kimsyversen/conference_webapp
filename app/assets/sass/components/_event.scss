@@ -64,15 +64,19 @@
     @extend .event-default;
 
     .event-time {
+
         .month {
           @include eventDateTime($font-size: 20pt);
+
         }
         .day {
           @include eventDateTime($font-size: 40pt);
+          margin-top: 5px;
         }
         .hour {
-          @include eventDateTime($font-size: 14pt);
-          font-weight: 500;
+          @include eventDateTime($font-size: 12pt);
+          font-weight: 300;
+          margin-bottom: 5px;
         }
 
       display: inline-block;
@@ -81,7 +85,6 @@
 
       text-align: center;
       text-transform: uppercase;
-
     }
     .social {
       font-size: 1.5em;
@@ -92,6 +95,7 @@
 
 @media(min-width:768px){
   .session-info {
+
     ul {
       margin-left: -15px;
     }

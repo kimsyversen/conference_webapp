@@ -18958,16 +18958,18 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
+    margin-top: 5px;
   }
 
   .event .event-time .hour {
     display: block;
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 100;
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
-    font-weight: 800;
+    font-weight: 300;
+    margin-bottom: 5px;
   }
 
   .event .social {
