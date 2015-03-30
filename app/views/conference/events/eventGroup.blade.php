@@ -1,6 +1,6 @@
 <div class="row options">
     <div class="col-xs-12 ">
-        <a href="#" type="button" class="close" style="text-decoration: none; background: transparent; border: 0; color: black; font-size: 1em;">Search in schedule <span class="glyphicon glyphicon-menu-down" style="color:black;" aria-hidden="true" style="font-size: 1em;"> </span>
+        <a href="#" class="close">Search in schedule <span class="glyphicon glyphicon-menu-down" style="color:black;" aria-hidden="true" style="font-size: 1em;"> </span>
         </a>
     </div>
 </div>

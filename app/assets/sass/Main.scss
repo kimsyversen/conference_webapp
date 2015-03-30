@@ -155,6 +155,16 @@ textarea {
   }
 }
 
+.options {
+
+  a {
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.13em;
+  }
+}
 
 #advanced-options {
   background-color: darken($default-background-color, 20%);
