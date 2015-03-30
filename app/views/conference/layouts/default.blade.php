@@ -5,7 +5,6 @@
     <title>Conferencebook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
@@ -39,7 +38,7 @@
     <div class="pure-pusher-container">
         <div class="pure-pusher">
 
-            <div class="container" style="margin-top: 100px;">
+            <div class="container" style="margin-top: 45px;">
                 @yield('breadcrumb')
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')
@@ -50,7 +49,6 @@
         </div>
     </div>
     <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
-
 </div>
 
 
@@ -61,5 +59,4 @@
     {{ HTML::script('js/conference.min.js') }}
 @show
 </body>
-
 </html>

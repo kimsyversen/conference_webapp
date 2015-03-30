@@ -14124,8 +14124,8 @@ body {
 }
 
 .pure-toggle:focus ~ .pure-toggle-label {
-  border-color: #1fc08e;
-  color: #1fc08e;
+  border-color: #c5400b;
+  color: #c5400b;
 }
 
 .pure-toggle-label {
@@ -14151,14 +14151,14 @@ body {
 }
 
 .pure-toggle-label:hover {
-  border-color: #1fc08e;
-  color: #1fc08e;
+  border-color: #c5400b;
+  color: #c5400b;
 }
 
 .pure-toggle-label:hover .pure-toggle-icon,
 .pure-toggle-label:hover .pure-toggle-icon:before,
 .pure-toggle-label:hover .pure-toggle-icon:after {
-  background-color: #1fc08e;
+  background-color: #c5400b;
 }
 
 .pure-toggle-label:active {
@@ -14222,8 +14222,8 @@ body {
 .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'],
 .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'],
 .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] {
-  border-color: #1fc08e;
-  color: #1fc08e;
+  border-color: black;
+  color: black;
 }
 
 .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon,
@@ -18835,6 +18835,22 @@ Copyright (c) 2014 Daniel Eden
 
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
+.professional-event {
+  background-color: #c5400b;
+}
+
+.social-event {
+  background-color: #4f99c5;
+}
+
+.break-event {
+  background-color: #3dc55b;
+}
+
+.other-event {
+  background-color: #c559b3;
+}
+
 .event-default,
 .event {
   background-color: white;
@@ -18948,22 +18964,6 @@ Copyright (c) 2014 Daniel Eden
 .event .social .google-plus:hover a {
   color: white !important;
   background-color: #dd4b39 !important;
-}
-
-.professional-event {
-  background-color: #c5400b;
-}
-
-.social-event {
-  background-color: #4f99c5;
-}
-
-.break-event {
-  background-color: #3dc55b;
-}
-
-.other-event {
-  background-color: #c559b3;
 }
 
 @media (max-width: 767px) {
@@ -19149,7 +19149,6 @@ html {
 }
 
 body {
-  padding: 45px 0 0 0;
   background-color: #E9EAEA;
 }
 
@@ -19260,15 +19259,6 @@ textarea {
   resize: none;
 }
 
-/*.goto-top {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.about-the-application {
-  font-size: 1.6em;
-}*/
-
 .item-positioned {
   background-color: white;
   margin-false: 0;
@@ -19374,7 +19364,14 @@ textarea {
 
 .nav-conference {
   margin-top: 100px;
-  border-top: 1px solid #000;
+  border-top: 1px solid #ff0000;
+}
+
+@media (min-width: 640px) {
+  .nav-conference {
+    width: 315px;
+    border-top: 1px solid #ff0000;
+  }
 }
 
 .nav-conference li {
@@ -19382,14 +19379,20 @@ textarea {
 }
 
 .nav-conference li a {
+  margin-left: 10px;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: White;
 }
 
 .nav-conference li a:hover {
-  background-color: white;
-  color: black;
-  display: block;
   width: 100%;
+  color: black;
+}
+
+@media (min-width: 640px) {
+  .nav-conference li a:hover {
+    width: 305px;
+    color: black;
+  }
 }

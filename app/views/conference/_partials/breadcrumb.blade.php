@@ -1,4 +1,3 @@
-
 @if ($breadcrumbs)
         <div class="row">
             <hr />
@@ -14,9 +13,8 @@
                     @endforeach
                 </ul>
             </div>
+            <hr />
         </div>
-        <hr />
+
 @endif
 
-{{--
-<span class="glyphicon glyphicon-chevron-right"></span>--}}

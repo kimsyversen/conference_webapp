@@ -1,4 +1,4 @@
-<nav class="pure-drawer " data-position="left">
+<nav class="pure-drawer" data-position="left">
     <div class="row">
         <ul class="nav nav-stacked nav-conference">
             @if(Session::has('conference_id'))

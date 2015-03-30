@@ -83,6 +83,18 @@
   margin-top: 1em; }
 
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
+.professional-event {
+  background-color: #c5400b; }
+
+.social-event {
+  background-color: #4f99c5; }
+
+.break-event {
+  background-color: #3dc55b; }
+
+.other-event {
+  background-color: #c559b3; }
+
 .event-default, .event {
   background-color: white;
   margin-top: 1em;
@@ -137,18 +149,6 @@
   .event-default .social-links .google-plus:hover a, .event .social-links .google-plus:hover a, .event .social .google-plus:hover a {
     color: white !important;
     background-color: #dd4b39 !important; }
-
-.professional-event {
-  background-color: #c5400b; }
-
-.social-event {
-  background-color: #4f99c5; }
-
-.break-event {
-  background-color: #3dc55b; }
-
-.other-event {
-  background-color: #c559b3; }
 
 @media (max-width: 767px) {
   .event .event-time {
@@ -277,7 +277,6 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  padding: 45px 0 0 0;
   background-color: #E9EAEA; }
 
 html, body {
@@ -346,14 +345,6 @@ html, body {
 textarea {
   resize: none; }
 
-/*.goto-top {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-.about-the-application {
-  font-size: 1.6em;
-}*/
 .item-positioned {
   background-color: white;
   margin-false: 0;
@@ -432,15 +423,22 @@ textarea {
 
 .nav-conference {
   margin-top: 100px;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #ff0000; }
+  @media (min-width: 640px) {
+    .nav-conference {
+      width: 315px;
+      border-top: 1px solid #ff0000; } }
   .nav-conference li {
     list-style-type: none; }
     .nav-conference li a {
+      margin-left: 10px;
       text-decoration: none;
-      font-size: 1em;
+      font-size: 1.2em;
       color: White; }
       .nav-conference li a:hover {
-        background-color: white;
-        color: black;
-        display: block;
-        width: 100%; }
+        width: 100%;
+        color: black; }
+      @media (min-width: 640px) {
+        .nav-conference li a:hover {
+          width: 305px;
+          color: black; } }

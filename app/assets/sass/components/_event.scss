@@ -1,16 +1,15 @@
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
-
-
-@mixin eventDateTime($font-size, $margin-positions : false, $margin-value: 0)
-{
-  display: block;
-  font-size: $font-size;
-  font-weight: 100;
-  line-height: 1;
-  font-family: Lato, sans-serif;
-  @each $position in $margin-positions {
-    margin-#{$position}: $margin-value;
-  }
+.professional-event {
+  background-color: rgb(197, 64, 11);
+}
+.social-event {
+  background-color: rgb(79, 153, 197);
+}
+.break-event {
+  background-color: rgb(61, 197, 91);
+}
+.other-event {
+  background-color: rgb(197, 89, 179);
 }
 
 .event-default {
@@ -72,18 +71,7 @@
 }
 
 
-.professional-event {
-  background-color: rgb(197, 64, 11);
-}
-.social-event {
-  background-color: rgb(79, 153, 197);
-}
-.break-event {
-  background-color: rgb(61, 197, 91);
-}
-.other-event {
-  background-color: rgb(197, 89, 179);
-}
+
 
 
 @media(max-width:767px){

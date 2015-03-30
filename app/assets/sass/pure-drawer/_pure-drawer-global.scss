@@ -21,9 +21,9 @@ $pure-drawer-animation-duration-flipY: 1000ms !default;
 $pure-drawer-animation-duration-zoom: 1000ms !default;
 
 /*$toggler-color: lighten(#374c5d, 20%) !default;*/
-$toggler-color: lighten(#000000, 20%) !default;
-$toggler-checked-color: #1fc08e !default;
-$toggler-focus-color: #1fc08e !default;
+$toggler-color: lighten(black, 20%) !default;
+$toggler-checked-color: black !default;
+$toggler-focus-color: rgb(197, 64, 11) !default;
 
 $drawer-bgcolor: #444444 !default; /* 374c5d*/
 
