@@ -19195,11 +19195,6 @@ h6 a,
   text-decoration: underline;
 }
 
-* a:hover {
-  background-color: #cfd1d1;
-  color: inherit;
-}
-
 .button-dark {
   border-radius: 0;
   width: 100%;

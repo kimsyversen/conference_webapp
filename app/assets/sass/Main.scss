@@ -52,12 +52,6 @@ html, body {
 
 }
 
-* a {
-  &:hover {
-    background-color: darken($default-background-color, 10%);
-    color: inherit;
-  }
-}
 
 .button-dark {
   @include button($type: dark, $color: #E9EAEA);
@@ -156,7 +150,6 @@ textarea {
 }
 
 .options {
-
   a {
     text-decoration: none;
     background: transparent;
