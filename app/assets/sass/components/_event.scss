@@ -39,7 +39,8 @@
     }
 
     .hour {
-      @include eventDateTime($font-size: 10pt);
+      @include eventDateTime($font-size: 12pt);
+      font-weight: 200;
     }
   }
 

@@ -18912,11 +18912,12 @@ Copyright (c) 2014 Daniel Eden
 .event .event-time-data .hour,
 .event .event-time .hour {
   display: block;
-  font-size: 10pt;
+  font-size: 12pt;
   font-weight: 100;
   line-height: 1;
   font-family: Lato, sans-serif;
   margin-false: 0;
+  font-weight: 200;
 }
 
 .event-default .social-links .facebook a,
