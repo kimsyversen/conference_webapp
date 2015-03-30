@@ -1,11 +1,15 @@
-<div class="container-fluid site-notice">
-    <div class="alert alert-info alert-dismissible animated fadeIn" style="color: black">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="font-size: 2em;">&times;</span></button>
-        <div class="info-circle" style="float: left; padding: 0.5em;">
-            <i class="glyphicon glyphicon-info-sign" style="font-size:3em;"></i>
-        </div>
-        <div style="margin-top: 1em;">
-            <p style="font-size:1.3em;"> {{ $info }} </p>
+<div class="site-notice">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="alert alert-info alert-dismissible animated fadeIn">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="info-circle">
+                    <i class="fa fa-info-circle"></i>
+                </div>
+                <div class="message">
+                    <p> {{ $info or 'It should be a message here but it was not specified' }} </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

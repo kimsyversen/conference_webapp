@@ -1,5 +1,5 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900,400italic");
 
 @import 'conference-defaults';
 @import 'conference-mixins';
@@ -109,29 +109,38 @@ textarea {
   }
 
   .exclamation {
-      float: left;
-      @include animation(3s, 2s, 12);
-      i {
-        color: #000;
-        font-size: 1.5em;
-        margin-top: 12px;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-      }
+    font-size: 1.5em;
+    float: left;
+    @include animation(3s, 2s, 12);
+    i {
+      color: #000;
+      font-size: 1.5em;
+      margin-top: 9px;
+      padding-left: 0.1em;
+      padding-right: 0.3em;
+    }
 
   }
   .checker {
+    font-size: 1.5em;
+    float: left;
     @include animation(3s, 2s, 2);
     font-size: 1.5em;
     margin-top: 8px;
-    padding-left: 0.5em;
+    padding-left: 0.6em;
     padding-right: 0.5em;
 
-    float: left;
   }
   .info-circle {
-    @include animation(3s, 2s, 2);
+    i {
+      padding: 0.4em 0.5em 0.5em 0.5em;
+      font-size: 2em;
+
+      @include animation(3s, 2s, 2);
+    }
+    float: left;
   }
+
 
 }
 

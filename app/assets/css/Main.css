@@ -1,5 +1,5 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400,700");
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900,400italic");
 .featurette {
   margin-top: 3em;
   margin-bottom: 2em; }
@@ -103,7 +103,7 @@
   .event-default .description-short, .event .description-short, .event-default .description-long, .event .description-long {
     color: black; }
     .event-default .description-short p, .event .description-short p, .event-default .description-long p, .event .description-long p {
-      margin: 10px 0 0 -5px; }
+      margin: 10px 0 10px -5px; }
   .event-default .session-info, .event .session-info {
     margin-bottom: 10px; }
     .event-default .session-info ul, .event .session-info ul {
@@ -138,7 +138,7 @@
     text-transform: uppercase; }
     .event .event-time .month {
       display: block;
-      font-size: 20pt;
+      font-size: 24pt;
       font-weight: 100;
       line-height: 1;
       font-family: Lato, sans-serif;
@@ -158,7 +158,7 @@
       line-height: 1;
       font-family: Lato, sans-serif;
       margin-false: 0;
-      font-weight: 300;
+      font-weight: 200;
       margin-bottom: 5px; }
   .event .social {
     font-size: 1.5em; } }
@@ -176,7 +176,7 @@
       color: white; }
       .event .event-time .month {
         display: block;
-        font-size: 20pt;
+        font-size: 24pt;
         font-weight: 100;
         line-height: 1;
         font-family: Lato, sans-serif;
@@ -397,6 +397,7 @@ textarea {
 .alert .close span {
   font-size: 1.5em; }
 .alert .exclamation {
+  font-size: 1.5em;
   float: left;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
@@ -407,10 +408,12 @@ textarea {
   .alert .exclamation i {
     color: #000;
     font-size: 1.5em;
-    margin-top: 12px;
-    padding-left: 0.5em;
-    padding-right: 0.5em; }
+    margin-top: 9px;
+    padding-left: 0.1em;
+    padding-right: 0.3em; }
 .alert .checker {
+  font-size: 1.5em;
+  float: left;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-delay: 2s;
@@ -419,16 +422,19 @@ textarea {
           animation-iteration-count: 2;
   font-size: 1.5em;
   margin-top: 8px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  float: left; }
+  padding-left: 0.6em;
+  padding-right: 0.5em; }
 .alert .info-circle {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2; }
+  float: left; }
+  .alert .info-circle i {
+    padding: 0.4em 0.5em 0.5em 0.5em;
+    font-size: 2em;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-iteration-count: 2;
+            animation-iteration-count: 2; }
 
 .conference-breadcrumb {
   margin: 10px; }

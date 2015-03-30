@@ -27,6 +27,7 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('css/conference.min.css') }}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
     <div class="pure-pusher-container">
         <div class="pure-pusher">
 
-            <div class="container" style="margin-top: 45px;">
+            <div class="container" style="margin-top: 80px;">
                 @yield('breadcrumb')
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')

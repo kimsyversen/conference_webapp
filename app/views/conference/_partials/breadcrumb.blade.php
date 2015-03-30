@@ -1,6 +1,7 @@
 @if ($breadcrumbs)
+    <hr />
         <div class="row">
-            <hr />
+
             <div class="col-xs-12 text-center">
                 <span>You are here</span>
                 <ul class="conference-breadcrumb">
@@ -13,8 +14,8 @@
                     @endforeach
                 </ul>
             </div>
-            <hr />
-        </div>
 
+        </div>
+        <hr />
 @endif
 

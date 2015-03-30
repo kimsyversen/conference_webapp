@@ -19,7 +19,7 @@
   .description-short, .description-long {
     color: black;
     p {
-      margin: 10px 0 0 -5px;
+      margin: 10px 0 10px -5px;
     }
   }
   .session-info {
@@ -66,16 +66,17 @@
     .event-time {
 
         .month {
-          @include eventDateTime($font-size: 20pt);
+          @include eventDateTime($font-size: 24pt);
 
         }
         .day {
           @include eventDateTime($font-size: 40pt);
           margin-top: 5px;
+
         }
         .hour {
           @include eventDateTime($font-size: 12pt);
-          font-weight: 300;
+          font-weight: 200;
           margin-bottom: 5px;
         }
 
@@ -106,7 +107,7 @@
 
     .event-time {
         .month {
-          @include eventDateTime($font-size: 20pt);
+          @include eventDateTime($font-size: 24pt);
         }
         .day {
           @include eventDateTime($font-size: 40pt);
