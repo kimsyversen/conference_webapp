@@ -72,7 +72,7 @@
         }
         .hour {
           @include eventDateTime($font-size: 14pt);
-          font-weight: 800;
+          font-weight: 500;
         }
 
       display: inline-block;
