@@ -1,10 +1,10 @@
 @extends('conference.layouts.default')
 @section('breadcrumb')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chat) ])
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chat) ])
 @stop
 
 @section('errors-and-messages')
-    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.partials.errors-and-messages')
 @stop
 
 @section('first-time-stuff')

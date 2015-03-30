@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 @section('content')
 
-    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.partials.errors-and-messages')
 
     <div class="container">
         <div class="col-xs-12 text-center">

@@ -1,11 +1,11 @@
 
 @extends('conference.layouts.default')
     @section('breadcrumb')
-        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('maps') ])
+        @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('maps') ])
     @stop
 
     @section('errors-and-messages')
-        @include('conference.layouts.partials.errors-and-messages')
+        @include('conference.partials.errors-and-messages')
     @stop
 
     @section('first-time-stuff')
@@ -14,7 +14,7 @@
 
 
     @section('content')
-        @include('conference.layouts.partials.page-header', ['text' => 'Maps'])
+        @include('conference.partials.page-header', ['text' => 'Maps'])
 
         @if(isset($data) && !empty($data))
             @foreach($data['data'] as $map)

@@ -2,7 +2,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-6">
-            @include('conference.layouts.partials.errors')
+            @include('conference.partials.errors')
 
             @unless(!isset($user['data']))
                 <?php $user = $user['data']; ?>

@@ -6,7 +6,7 @@
                 {{ Breadcrumbs::render('conferences') }}
             </div>
         </div>
-        @include('conference.layouts.partials.errors-and-messages')
+        @include('conference.partials.errors-and-messages')
 
         <div class="row">
             <div class="col-xs-12">

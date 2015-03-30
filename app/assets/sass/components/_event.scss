@@ -1,9 +1,21 @@
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
 
-.event-default {
-  @include item;
+@mixin eventDateTime($font-size, $margin-positions : false, $margin-value: 0)
+{
+  display: block;
+  font-size: $font-size;
+  font-weight: 100;
+  line-height: 1;
+  font-family: Lato, sans-serif;
+  @each $position in $margin-positions {
+    margin-#{$position}: $margin-value;
+  }
+}
 
+.event-default {
+  @include item($margin-positions: top, $margin-value: 1em);
+  @include boxShadow($blur: 2px);
   .description-short, .description-long {
     color: black;
     p {
@@ -19,29 +31,16 @@
       padding: 0;
     }
   }
-
   .event-time-data {
     .month {
-      display: block;
-      font-size: 20pt;
-      font-weight: 100;
-      line-height: 1;
-      font-family: Lato, sans-serif;
-
-
+      @include eventDateTime($font-size: 20pt);
     }
     .day {
-      display: block;
-      font-size: 40pt;
-      font-weight: 100;
-      line-height: 1;
-      font-family: Lato, sans-serif;
+      @include eventDateTime($font-size: 40pt);
     }
 
     .hour {
-      display: block;
-      margin-top: 0.2em;
-      font-size: 1em;
+      @include eventDateTime($font-size: 10pt);
     }
   }
 
@@ -144,12 +143,3 @@
     color: #ff0000;
   }
 }
-
-
-
-/*
-@media(max-width:767px){}
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
-*/

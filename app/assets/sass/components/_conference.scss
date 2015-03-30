@@ -1,13 +1,16 @@
 .conference-item {
-  @extend .item;
-  margin: 1em;
+  @include item;
+  a {
+    text-decoration: underline;
+  }
+  padding: 0;
+  margin: 0;
   img {
     width: 100%;
     height: auto;
   }
 
   .body{
-
     padding: 0.5em;
 
     .name {
@@ -29,4 +32,8 @@
       }
     }
   }
+}
+
+.row-conference {
+  margin-top: 1em;
 }

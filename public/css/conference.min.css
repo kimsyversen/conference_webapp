@@ -18703,129 +18703,6 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-/** Side wide defaults  **/
-
-.default-heading {
-  color: #2F2F2F;
-  font-weight: 400;
-}
-
-* h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-* a {
-  color: #2F2F2F;
-  font-weight: 400;
-}
-
-.button-dark {
-  border-radius: 0;
-  width: 100%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  bottom: 0;
-  font-size: 1em;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
-  background-color: #9b9f9f;
-}
-
-.button-dark:hover {
-  background-color: #eeefef;
-  border: 1px solid #E9EAEA;
-}
-
-@media (max-width: 420px) {
-  .button-dark {
-    font-size: 0.9em;
-  }
-}
-
-@media (min-width: 421px) {
-  .button-dark {
-    font-size: 1em;
-  }
-}
-
-.button-light {
-  border-radius: 0;
-  width: 100%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  bottom: 0;
-  font-size: 1em;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
-  border: 1px solid #f6f6f6;
-  background-color: #c3c3c3;
-}
-
-.button-light:hover {
-  background-color: #c3c3c3;
-  border: 1px solid #767676;
-}
-
-@media (max-width: 420px) {
-  .button-light {
-    font-size: 0.9em;
-  }
-}
-
-@media (min-width: 421px) {
-  .button-light {
-    font-size: 1em;
-  }
-}
-
-.conference-breadcrumb li a {
-  text-decoration: underline;
-}
-
-.site-notice .alert .exclamation {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-iteration-count: 12;
-  animation-iteration-count: 12;
-}
-
-/* Alerts */
-
-.alert button .close span {
-  font-size: 1.5em;
-}
-
-.conference-breadcrumb {
-  list-style-type: circle;
-  margin: 10px;
-}
-
-.conference-breadcrumb li {
-  display: inline;
-}
-
-.conference-breadcrumb .active {
-  color: grey;
-}
-
-#advanced-options {
-  background-color: lightgrey;
-}
-
-#advanced-options div > div {
-  padding: 1em;
-}
-
-#advanced-options * a {
-  text-decoration: none;
-}
-
-#footer {
-  margin-top: 30px;
-}
-
 .featurette {
   margin-top: 3em;
   margin-bottom: 2em;
@@ -18912,7 +18789,15 @@ h6,
 }
 
 .conference-item {
-  margin: 1em;
+  background-color: white;
+  margin-false: 0;
+  padding: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.conference-item a {
+  text-decoration: underline;
 }
 
 .conference-item img {
@@ -18944,6 +18829,10 @@ h6,
   padding: 0.5em;
 }
 
+.row-conference {
+  margin-top: 1em;
+}
+
 /* Some of the CSS code are borrowed from http://bootsnipp.com/snippets/featured/event-list and modified */
 
 .event-default,
@@ -18951,7 +18840,7 @@ h6,
   background-color: white;
   margin-top: 1em;
   padding: 0;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
 .event-default .description-short,
@@ -18989,6 +18878,7 @@ h6,
   font-weight: 100;
   line-height: 1;
   font-family: Lato, sans-serif;
+  margin-false: 0;
 }
 
 .event-default .event-time-data .day,
@@ -18999,14 +18889,18 @@ h6,
   font-weight: 100;
   line-height: 1;
   font-family: Lato, sans-serif;
+  margin-false: 0;
 }
 
 .event-default .event-time-data .hour,
 .event .event-time-data .hour,
 .event .event-time .hour {
   display: block;
-  margin-top: 0.2em;
-  font-size: 1em;
+  font-size: 10pt;
+  font-weight: 100;
+  line-height: 1;
+  font-family: Lato, sans-serif;
+  margin-false: 0;
 }
 
 .event-default .social-links .facebook a,
@@ -19120,13 +19014,6 @@ h6,
   color: #ff0000;
 }
 
-/*
-@media(max-width:767px){}
-@media(min-width:768px){}
-@media(min-width:992px){}
-@media(min-width:1200px){}
-*/
-
 .message {
   margin: 1em;
 }
@@ -19180,9 +19067,8 @@ h6,
 
 .rating-item {
   background-color: white;
-  margin-top: 1em;
+  margin-false: 0;
   padding: 0;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
 }
 
 .chat-intro-text {
@@ -19258,18 +19144,106 @@ h6,
 }
 
 html {
-  /*
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;*/
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 45px 0 0 0;
+  background-color: #E9EAEA;
 }
 
 html,
 body {
   height: 100%;
+}
+
+.default-heading {
+  color: #2F2F2F;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+.default-heading a {
+  text-decoration: underline;
+}
+
+* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+* a {
+  color: #2F2F2F;
+  font-weight: 300;
+}
+
+* h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+* a a {
+  text-decoration: underline;
+}
+
+.button-dark {
+  border-radius: 0;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  bottom: 0;
+  font-size: 1em;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  background-color: #9b9f9f;
+}
+
+.button-dark:hover {
+  background-color: #eeefef;
+  border: 1px solid #E9EAEA;
+}
+
+@media (max-width: 420px) {
+  .button-dark {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 421px) {
+  .button-dark {
+    font-size: 1em;
+  }
+}
+
+.button-light {
+  border-radius: 0;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  bottom: 0;
+  font-size: 1em;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  border: 1px solid #f6f6f6;
+  background-color: #c3c3c3;
+}
+
+.button-light:hover {
+  background-color: #c3c3c3;
+  border: 1px solid #767676;
+}
+
+@media (max-width: 420px) {
+  .button-light {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 421px) {
+  .button-light {
+    font-size: 1em;
+  }
 }
 
 .page-header-hr {
@@ -19286,35 +19260,116 @@ textarea {
   resize: none;
 }
 
-.goto-top {
+/*.goto-top {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 .about-the-application {
   font-size: 1.6em;
-}
+}*/
 
-.item-positioned,
-.item-positioned-with-text {
+.item-positioned {
   background-color: white;
-  margin-top: 1em;
+  margin-false: 0;
   padding: 0;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
   margin-top: 1em;
   padding: 1em;
 }
 
-.item-positioned-with-text p,
-.item-positioned-with-text span,
-.item-positioned-with-text i {
-  padding: 1em;
-  margin-top: 1em;
+.toggled {
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 0;
+  border-width: 0;
 }
 
-.item-push {
-  margin-top: 2em;
-  padding: 0.5em;
+.options a {
+  color: black;
+  font-size: 1.5em;
+}
+
+/* Alerts */
+
+.alert .close span {
+  font-size: 1.5em;
+}
+
+.alert .exclamation {
+  float: left;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 12;
+  animation-iteration-count: 12;
+}
+
+.alert .exclamation i {
+  color: #000;
+  font-size: 1.5em;
+  margin-top: 12px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.alert .checker {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  font-size: 1.5em;
+  margin-top: 8px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  float: left;
+}
+
+.alert .info-circle {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+}
+
+.conference-breadcrumb {
+  margin: 10px;
+}
+
+.conference-breadcrumb li a {
+  text-decoration: underline;
+}
+
+.conference-breadcrumb li {
+  display: inline;
+}
+
+.conference-breadcrumb .active {
+  color: grey;
+}
+
+#advanced-options {
+  background-color: lightgrey;
+}
+
+#advanced-options div > div {
+  padding: 1em;
+}
+
+#advanced-options * a {
+  text-decoration: none;
+}
+
+/** MODS TO PURE PUSHER */
+
+.pure-pusher {
+  background: -webkit-linear-gradient(#E9EAEA, #cfd1d1);
+  background: linear-gradient(#E9EAEA, #cfd1d1);
 }
 
 .nav-conference {
@@ -19337,20 +19392,4 @@ textarea {
   color: black;
   display: block;
   width: 100%;
-}
-
-.toggled {
-  overflow: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 0;
-  border-width: 0;
-}
-
-/** MODS TO PURE PUSHER */
-
-.pure-pusher {
-  /*@extend .site-default-background-color;*/
-  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
-  background: linear-gradient(#E9EAEA, #cacccc);
 }

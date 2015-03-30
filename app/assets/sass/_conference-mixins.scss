@@ -1,7 +1,7 @@
-@mixin boxShadow() {
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+@mixin boxShadow($horizontal: 0px, $vertical: 0px, $blur : 1px ,$spread: 0px) {
+  -webkit-box-shadow: $horizontal $vertical $blur $spread rgba(0,0,0,0.75);
+  -moz-box-shadow: $horizontal $vertical $blur $spread rgba(0,0,0,0.75);
+  box-shadow: $horizontal $vertical $blur $spread rgba(0,0,0,0.75);
 }
 
 @mixin button($color, $type: dark) {
@@ -36,15 +36,17 @@
   @media(min-width:421px){
     font-size: 1em;
   }
-
-
 }
 
 @mixin heading($type: light, $color: #2F2F2F) {
   color: $color;
 
+  a {
+    text-decoration: underline;
+  }
+
   @if $type == light {
-    font-weight: 400;
+    font-weight: 300;
   } @else {
     font-weight: 600;
   }
@@ -62,9 +64,18 @@
   }
 }
 
-@mixin item($bg: white) {
+@mixin item($bg: white, $margin-positions: false, $margin-value: 0, $padding: 0) {
   background-color: $bg;
-  margin-top: 1em;
-  padding: 0;
-  @include boxShadow;
+
+  @each $position in $margin-positions {
+    margin-#{$position}: $margin-value;
+  }
+
+  padding: $padding;
+}
+
+@mixin animation($duration: 3s, $delay: 2s, $iterations: 12) {
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: $iterations;
 }

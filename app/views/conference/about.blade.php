@@ -1,10 +1,10 @@
 @extends('conference.layouts.default')
 @section('content')
 
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('about_creators') ])
-    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('about_creators') ])
+    @include('conference.partials.errors-and-messages')
 
-    @include('conference.layouts.partials.page-header', ['text' => 'Om applikasjonen (Norwegian)'])
+    @include('conference.partials.page-header', ['text' => 'Om applikasjonen (Norwegian)'])
 
     <div class="container">
         <div class="row row-center">

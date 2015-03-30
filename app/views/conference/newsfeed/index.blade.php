@@ -1,8 +1,8 @@
 @extends('conference.layouts.default')
 @section('content')
-        @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('newsfeed') ])
-        @include('conference.layouts.partials.errors-and-messages')
-        @include('conference.layouts.partials.page-header', ['text' => 'Newsfeed'])
+        @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('newsfeed') ])
+        @include('conference.partials.errors-and-messages')
+        @include('conference.partials.page-header', ['text' => 'Newsfeed'])
         @include('conference.partials.doFirstTimeStuff')
 
         @if(isset($data) && !empty($data))

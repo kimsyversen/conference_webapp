@@ -1,22 +1,22 @@
 @extends('conference.layouts.default')
 
 @section('content')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('session') ])
 
-    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.partials.errors-and-messages')
 
-    @include('conference.layouts.partials.page-header', ['text' => 'Details about event'])
+    @include('conference.partials.page-header', ['text' => 'Details about event'])
 
     @if(isset($data['data']) && !empty($data['data']))
 
         @if(($data['data']['confirmed']) == 0)
             @include('conference.partials.notice', ['text' => 'Event is cancelled'])
         @else
-            @include('conference.layouts.partials.delimiter', ['text' => 'Event information', 'value' => ''])
+            @include('conference.partials.delimiter', ['text' => 'Event information', 'value' => ''])
 
             @include('conference.events.event', ['session' => $data['data'], 'schedule_type' => 'conference'])
 
-            @include('conference.layouts.partials.delimiter', ['text' => 'Say what you think about this event', 'value' => ''])
+            @include('conference.partials.delimiter', ['text' => 'Say what you think about this event', 'value' => ''])
 
             @include('conference.events.partials.rating.rating', ['status' => $status])
         @endif

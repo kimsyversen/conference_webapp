@@ -1,11 +1,11 @@
 @extends('conference.layouts.default')
 
 @section('breadcrumb')
-    @include('conference.layouts.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('schedule') ])
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('schedule') ])
 @stop
 
 @section('errors-and-messages')
-    @include('conference.layouts.partials.errors-and-messages')
+    @include('conference.partials.errors-and-messages')
 @stop
 
 @section('first-time-stuff')
@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-    @include('conference.layouts.partials.page-header', ['text' => 'Conference schedule'])
+    @include('conference.partials.page-header', ['text' => 'Conference schedule'])
 
     @if(isset($data['data']))
         @if(!empty($data))
