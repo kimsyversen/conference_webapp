@@ -2,7 +2,7 @@
         <div class="row">
             <hr />
             <div class="col-xs-12 text-center">
-                <span class="text-muted">Quick navigation</span>
+                <span>You are here</span>
                 <ul class="conference-breadcrumb">
                     @foreach ($breadcrumbs as $breadcrumb)
                         @if (!$breadcrumb->last)

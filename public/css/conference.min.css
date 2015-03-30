@@ -19138,6 +19138,13 @@ Copyright (c) 2014 Daniel Eden
   margin-top: 2em;
 }
 
+/** MODS TO PURE PUSHER */
+
+.pure-pusher {
+  background: -webkit-linear-gradient(#E9EAEA, #cfd1d1);
+  background: linear-gradient(#E9EAEA, #cfd1d1);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -19186,6 +19193,11 @@ h5 a,
 h6 a,
 * a a {
   text-decoration: underline;
+}
+
+* a:hover {
+  background-color: #cfd1d1;
+  color: inherit;
 }
 
 .button-dark {
@@ -19344,22 +19356,19 @@ textarea {
 }
 
 #advanced-options {
-  background-color: lightgrey;
+  background-color: #b5b8b8;
 }
 
 #advanced-options div > div {
   padding: 1em;
 }
 
-#advanced-options * a {
+#advanced-options a {
   text-decoration: none;
 }
 
-/** MODS TO PURE PUSHER */
-
-.pure-pusher {
-  background: -webkit-linear-gradient(#E9EAEA, #cfd1d1);
-  background: linear-gradient(#E9EAEA, #cfd1d1);
+#footer {
+  margin-top: 50px;
 }
 
 .nav-conference {
@@ -19381,13 +19390,15 @@ textarea {
 .nav-conference li a {
   margin-left: 10px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: 100;
   color: White;
 }
 
 .nav-conference li a:hover {
   width: 100%;
   color: black;
+  font-weight: 400;
 }
 
 @media (min-width: 640px) {
