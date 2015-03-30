@@ -1,5 +1,4 @@
-@extends('conference.partials.item')
-@section('item')
+<div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 rating-item">
             @if($status == -1)
@@ -15,5 +14,7 @@
             @endif
         </div>
     </div>
-@overwrite
+</div>
+
+
 
