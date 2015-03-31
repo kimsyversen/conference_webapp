@@ -20,8 +20,9 @@
                 </div>
 
                 <div class="form-group">
-                    {{ link_to_route('register_path', "Register a new account") }}
+                    <p>Need an account? <a href="{{route('register_path') }}"> Register a new account</a></p>
                 </div>
+                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

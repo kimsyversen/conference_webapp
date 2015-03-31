@@ -31,7 +31,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
             "app/Uninett/Api/",
-            "app/Uninett/Helpers/"
+            "app/Uninett/Helpers/",
+            "app/Uninett/Filters/"
 		]
 	},
     "psr-4": {

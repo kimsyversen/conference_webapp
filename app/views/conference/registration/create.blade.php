@@ -35,6 +35,10 @@
                 </div>
 
                 <div class="form-group">
+                    <p>Do you already have an account? <a href="{{ route('login_path') }}"> Log in</a></p>
+                </div>
+
+                <div class="form-group">
                     {{ Form::submit('Sign up', ['class' => 'form-control btn btn-primary']) }}
                 </div>
                 {{ Form::close() }}

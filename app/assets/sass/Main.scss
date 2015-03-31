@@ -59,6 +59,10 @@ html, body {
   @include heading(light);
 }
 
+* a {
+  text-decoration: underline;
+}
+
 .button-dark {
   @include button($type: dark, $color: #E9EAEA);
 }

@@ -333,6 +333,9 @@ html, body {
   * h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, * a a {
     text-decoration: underline; }
 
+* a {
+  text-decoration: underline; }
+
 .button-dark {
   border-radius: 0;
   width: 100%;

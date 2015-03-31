@@ -30,8 +30,9 @@
         <div class="form-group">
             {{ Form::submit('Sign in', ['class' => 'form-control btn btn-primary']) }}
         </div>
+
         <div class="form-group">
-            {{ link_to_route('register_path', "Register a new account") }}
+            <p>Need an account? <a href="{{route('register_path') }}"> Register a new account</a></p>
         </div>
 
         {{ Form::close() }}

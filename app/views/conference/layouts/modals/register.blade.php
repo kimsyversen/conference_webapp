@@ -23,6 +23,9 @@
                     {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => 'Confirm the password']) }}
                 </div>
 
+                <div class="form-group">
+                    <p>Do you already have an account? <a href="{{ route('login_path') }}"> Log in</a></p>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

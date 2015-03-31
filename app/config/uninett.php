@@ -15,6 +15,8 @@ return [
 	'api_accesstoken_endpoint_url' => 'https://shadowcat.uninett.no/oauth/access_token',
 
 	'base_url' => 'https://turbo.uninett.no',
+	
+	'cache_time' => 60,
 ];
 
 

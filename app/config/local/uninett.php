@@ -15,4 +15,7 @@ return [
 	'api_accesstoken_endpoint_url' => 'http://localhost:8000/oauth/access_token',
 
 	'base_url' => 'https://localhost:8000',
+
+
+	'cache_time' => 60,
 ];

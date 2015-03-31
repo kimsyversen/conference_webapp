@@ -1,16 +1,16 @@
 <?php
-Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ]);
-Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ]);
+Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ])->before('cache.fetch')->after('cache.put');
+Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ])->before('cache.fetch')->after('cache.put');
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
-Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create'])->before('redirectIfAuthenticated');
-Route::get('loginmodal', ['as' => 'login_modal_path', 'uses' => 'SessionsController@createModal']);
+Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create'])->before('redirectIfAuthenticated')->before('cache.fetch')->after('cache.put');
+Route::get('loginmodal', ['as' => 'login_modal_path', 'uses' => 'SessionsController@createModal'])->before('cache.fetch')->after('cache.put');
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
-Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]);
+Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]); //->before('cache.fetch')->after('cache.put');
 
-Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]);
+Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);

@@ -1,5 +1,8 @@
 <?php
 
+Route::filter('cache.fetch', 'Uninett\Filters\CacheFilter@fetch');
+Route::filter('cache.put', 'Uninett\Filters\CacheFilter@put');
+
 /*
 |--------------------------------------------------------------------------
 | Application & Route Filters
