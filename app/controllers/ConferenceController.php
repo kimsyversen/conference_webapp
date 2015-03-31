@@ -17,16 +17,12 @@ class ConferenceController extends \BaseController {
 
 
 	public function index()
-
 	{
 		$request = (new Uninett\Api\Request)
 			->setMethod('GET')
 			->setUrl("{$this->api_endpoint}/conferences");
 
 		$response = $this->client->send($request);
-
-
-
 
 		return View::make('conference.index')->with($response);
 	}

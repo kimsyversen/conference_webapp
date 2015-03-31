@@ -52,7 +52,7 @@ class SessionsController extends \BaseController {
 
 		AccessToken::set($response);
 
-		return Redirect::back()->with('success', 'You are now logged in to your account.');
+		return Redirect::back()->with('success', Lang::get('alert.success.loggedin'));
 
 	}
 
@@ -62,15 +62,15 @@ class SessionsController extends \BaseController {
 	 */
 	public function destroy()
 	{
-		$info = 'You have now been logged out';
+		$success = Lang::get('alert.success.loggedout');
 
 		if(Session::has('conference_id')){
 			$conference_id = Session::get('conference_id');
 
 			Session::flush();
 
-			return Redirect::route('conference_path', ['conference_id' => $conference_id])->with(compact('info'));
+			return Redirect::route('conference_path', ['conference_id' => $conference_id])->with(compact('success'));
 		}
-		return Redirect::route('conferences_path')->with(compact('info'));
+		return Redirect::route('conferences_path')->with(compact('success'));
 	}
 }

@@ -12,6 +12,4 @@ class AboutCreatorsController extends \BaseController {
 	{
 		return View::make('conference.about');
 	}
-
-
 }
