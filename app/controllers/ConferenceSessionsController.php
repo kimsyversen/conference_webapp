@@ -10,6 +10,8 @@ class ConferenceSessionsController extends \BaseController {
 	{
 		$this->client = $client;
 		parent::__construct();
+
+		$this->sendVariablesToJavascript();
 	}
 
 

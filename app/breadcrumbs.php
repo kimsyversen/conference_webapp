@@ -11,7 +11,7 @@ Breadcrumbs::register('registration', function($breadcrumbs) {
 
 Breadcrumbs::register('login', function($breadcrumbs) {
 	$breadcrumbs->parent('conferences');
-	$breadcrumbs->push(Lang::get('menu.signin'), route('login_path'));
+	$breadcrumbs->push(Lang::get('menu.login'), route('login_path'));
 });
 
 

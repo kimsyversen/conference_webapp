@@ -18,4 +18,7 @@ return array(
 	'all_conferences' => 'All Conferences',
 	'event' => 'Event',
 	'rating' => 'Rating',
+
+
+	'footer_title' => 'Other information'
 );

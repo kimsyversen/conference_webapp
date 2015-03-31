@@ -12,27 +12,27 @@
     @stop
 
 @section('content')
-    @include('conference.partials.page-header', ['text' => 'Sign In'])
+    @include('conference.partials.page-header', ['text' => Lang::get('forms.sign-in.title')])
     <div class="col-md-3"></div>
     <div class="col-md-6 forms form-small">
         {{ Form::open(['route' => 'login_path', 'method' => 'post']) }}
 
         <div class="form-group">
-            {{ Form::label('username', 'Email:', ['class' => 'control-label']) }}
-            {{ Form::text('username', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Email ']) }}
+            {{ Form::label('username', Lang::get('forms.email'), ['class' => 'control-label']) }}
+            {{ Form::text('username', null, ['class' => 'form-control', 'required' => 'required', 'placeholder' => Lang::get('forms.email') ] ) }}
         </div>
 
         <div class="form-group">
-            {{ Form::label('password', 'Password:', ['class' => 'control-label']) }}
-            {{ Form::password('password', ['class' => 'form-control', 'required' => 'required', 'placeholder' => 'Password ']) }}
+            {{ Form::label('password', Lang::get('forms.password'), ['class' => 'control-label']) }}
+            {{ Form::password('password', ['class' => 'form-control', 'required' => 'required', 'placeholder' => Lang::get('forms.password')] ) }}
         </div>
 
         <div class="form-group">
-            {{ Form::submit('Sign in', ['class' => 'form-control btn btn-primary']) }}
+            {{ Form::submit(Lang::get('forms.sign-in.button_send'), ['class' => 'form-control btn btn-primary']) }}
         </div>
 
         <div class="form-group">
-            <p>Need an account? <a href="{{route('register_path') }}"> Register a new account</a></p>
+            <p>{{ Lang::get('forms.sign-in.message')  }} <a href="{{route('register_path') }}"> {{ Lang::get('forms.sign-in.message_link')  }}</a></p>
         </div>
 
         {{ Form::close() }}

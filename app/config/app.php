@@ -124,7 +124,7 @@ return array(
 		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
 		'Laracasts\Utilities\UtilitiesServiceProvider',
-	   'Thujohn\Twitter\TwitterServiceProvider',
+
 
 	),
 

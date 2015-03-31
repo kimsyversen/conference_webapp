@@ -10,18 +10,18 @@
 @stop
 
 @section('content')
-    @include('conference.partials.page-header', ['text' => 'Details about event'])
+    @include('conference.partials.page-header', ['text' => Lang::get('event.show.heading')])
 
     @if(isset($data['data']) && !empty($data['data']))
 
         @if(($data['data']['confirmed']) == 0)
-            @include('conference.partials.notice', ['text' => 'Event is cancelled'])
+            @include('conference.partials.notice', ['text' => Lang::get('event.show.cancelled')])
         @else
-            @include('conference.partials.delimiter', ['text' => 'Event information', 'value' => ''])
+            @include('conference.partials.delimiter', ['text' => Lang::get('event.show.delimiter'), 'value' => ''])
 
             @include('conference.events.event', ['session' => $data['data'], 'schedule_type' => 'conference'])
 
-            @include('conference.partials.delimiter', ['text' => 'Say what you think about this event', 'value' => ''])
+            @include('conference.partials.delimiter', ['text' => Lang::get('event.show.rate-heading'), 'value' => ''])
 
             @include('conference.events.partials.rating.rating', ['status' => $status])
         @endif

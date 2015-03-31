@@ -2,7 +2,9 @@
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Session;
+use Laracasts\Utilities\JavaScript\Facades\JavaScript;
 
 
 class BaseController extends Controller {
@@ -40,5 +42,13 @@ class BaseController extends Controller {
 	public function userIsAuthenticated()
 	{
 		return Session::has('access_token');
+	}
+
+	protected function sendVariablesToJavascript()
+	{
+
+		Javascript::put([
+			'button' => Lang::get('button'),
+		]);
 	}
 }

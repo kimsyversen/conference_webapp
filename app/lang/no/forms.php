@@ -6,10 +6,10 @@ return array(
     'close' => 'Lukk',
 
     'sign-in' => array(
-        'title' => 'Logg inn på dimn bruker',
+        'title' => 'Logg inn på din brukerkonto',
         'button_send' => 'Logg inn',
-        'message' => 'Trenger du konto?',
-        'message_link' => 'Lag ny konto'
+        'message' => 'Trenger du brukerkonto?',
+        'message_link' => 'Lag ny brukerkonto'
     ),
 
     'sign-up' => array(

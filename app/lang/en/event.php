@@ -1,0 +1,21 @@
+<?php
+return array(
+	'filter' => array(
+		'title' => 'Search in schedule',
+		'title-free' =>  'Find event by free text',
+		'title-buttons' => 'Filter the schedule by days'
+	),
+	'heading' => 'Events starting from',
+
+	'buttons' => array(
+		'all-days' => 'Show all days'
+	),
+
+
+	'show' => array(
+		'cancelled' => 'Event is cancelled',
+		'delimiter' => 'Details about event',
+		'heading' => 'Event information',
+		'rate-heading' => 'Tell us what you think about this event'
+	),
+);

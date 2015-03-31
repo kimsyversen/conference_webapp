@@ -1,5 +1,7 @@
 <?php
 
+use Laracasts\Utilities\JavaScript\Facades\JavaScript;
+
 class ConferenceController extends \BaseController {
 
 	private $client;
@@ -9,24 +11,25 @@ class ConferenceController extends \BaseController {
 		parent::__construct();
 
 		$this->client = $client;
+
+		$this->sendVariablesToJavascript();
 	}
 
 
 	public function index()
-	{
-		//If we want to utilize caching
-	/*	if(Cache::has('conferences'))
-			return View::make('conference.index')->with(Cache::get('conferences'));*/
 
-		$request = (new Uninett\Api\Request)->setMethod('GET')->setUrl("{$this->api_endpoint}/conferences");
+	{
+		$request = (new Uninett\Api\Request)
+			->setMethod('GET')
+			->setUrl("{$this->api_endpoint}/conferences");
 
 		$response = $this->client->send($request);
 
-		/*Cache::put('conferences', $response, 60);*/
+
+
 
 		return View::make('conference.index')->with($response);
 	}
-
 	public function getConferenceById($conference_id)
 	{
 		$request = (new Uninett\Api\Request)

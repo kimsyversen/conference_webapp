@@ -1,6 +1,8 @@
 $(document).ready(function(){
     appendButtons();
 
+
+
     $('#advanced-options').find('.row').toggleClass('toggled');
 
 
@@ -175,12 +177,13 @@ $(document).ready(function(){
         var button = conferenceItem.find('.button-more');
 
         //Swap glyph on button
-        var glyph = button.find('.glyphicon').toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
+        button.find('.glyphicon').toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
 
         //Find the last span inside the button
         var buttonText = button.find('.button-text');
 
-        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");
+
+        buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close : Uninett.button.more);
     });
 
     $(".session").on("click", ".button-more", function(){
@@ -200,7 +203,8 @@ $(document).ready(function(){
         var buttonText = button.last();
 
         //Change its text
-        buttonText.text( buttonText.text() === "Read more" ? 'Close' : "Read more");
+
+        buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close: Uninett.button.more);
 
     });
 
@@ -290,7 +294,5 @@ function appendButtons() {
     $.each(uniqueDays, function(index, value) {
         buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value="+ value + ">" + value + "</a>");
     });
-
-    buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value='all'>Show all days </a>");
 }
 

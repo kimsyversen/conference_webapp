@@ -1,10 +1,10 @@
 <div class="row session nopadding" data-value="{{ $session['id'] }}" data-url="/{{ $session['links']['session']['uri'] }}">
     <div class="col-xs-12">
         <div class="row event categories">
-
             <div class="col-xs-3 event-time {{$session['category']}}-event">
                 @include('conference.events.partials.time')
             </div>
+
             <div class="col-xs-12 col-sm-8 col-md-8 info">
                 <h4><a href="/{{ $session['links']['session']['uri'] }}">{{ $session['title'] }}</a></h4>
                 <div class="row descriptions">
@@ -26,9 +26,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xs-12 col-sm-1 col-md-1 social">
               @include('conference.events.partials.social')
             </div>
+
         </div>
         @include('conference.events.partials.buttons')
     </div> <!-- end col-xs-12 -->

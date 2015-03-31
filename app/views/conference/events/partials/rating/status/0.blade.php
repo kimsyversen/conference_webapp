@@ -4,7 +4,7 @@
         <div class="rating-form">
             {{ Form::open(['data-remote', 'route' => 'ajax.user.post.rating']) }}
             <div class="form-group">
-                {{ Form::label('score', 'Give it a score (5 is best):', ['class' => 'control-label']) }}
+                {{ Form::label('score', Lang::get('rate.0.form.score-label'), ['class' => 'control-label']) }}
 
                 {{ Form::selectRange(
                     'score',
@@ -15,12 +15,12 @@
             </div>
 
             <div class="form-group">
-                {{ Form::label('comment', 'Anything to comment?', ['class' => 'control-label']) }}
-                {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => 3, 'placeholder' => "Giving comment is optional."]) }}
+                {{ Form::label('comment', Lang::get('rate.0.form.comment-title'), ['class' => 'control-label']) }}
+                {{ Form::textarea('comment', null, ['class' => 'form-control', 'rows' => 3, 'placeholder' => Lang::get('rate.0.form.comment-placeholder') ]) }}
             </div>
 
             <div class="form-group">
-                {{ Form::submit('Submit', ['class' => 'btn btn-primary form-control']) }}
+                {{ Form::submit(Lang::get('rate.0.form.submit'), ['class' => 'btn btn-primary form-control']) }}
             </div>
             {{ Form::close() }}
         </div>

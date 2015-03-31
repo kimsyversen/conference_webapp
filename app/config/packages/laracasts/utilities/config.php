@@ -11,8 +11,8 @@ return [
     | you want to prepend the JavaScript variables to.
     |
     */
-    'bind_js_vars_to_this_view' => 'layouts.partials.footer',
-
+    'bind_js_vars_to_this_view' => 'conference.layouts.partials.footer',
+    //'bind_js_vars_to_this_view' => 'layouts/partials/footer',
     /*
     |--------------------------------------------------------------------------
     | JavaScript Namespace
@@ -23,6 +23,6 @@ return [
     | That way, from your JS, you may do something like `Laracasts.myVar`.
     |
     */
-    'js_namespace' => 'window'
+    'js_namespace' => 'Uninett'
 
 ];

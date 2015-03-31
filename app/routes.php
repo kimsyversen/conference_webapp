@@ -1,4 +1,6 @@
 <?php
+
+
 Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ])->before('cache.fetch')->after('cache.put');
 Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ])->before('cache.fetch')->after('cache.put');
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
@@ -50,3 +52,12 @@ Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 
 /* ADMIN */
 //Route::get('/admin', ['as' => 'home_path', 'uses' => 'Uninett\Admin\AdminController@index' ]);
+
+Route::get('hello', function(){
+	Laracasts\Utilities\JavaScript\Facades\JavaScript::put([
+		'mordi' => 'mordi'
+	]);
+
+	return View::make('hello');
+
+});

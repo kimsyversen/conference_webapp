@@ -2,7 +2,7 @@
 @section('content')
         @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('newsfeed') ])
         @include('conference.partials.errors-and-messages')
-        @include('conference.partials.page-header', ['text' => 'Newsfeed'])
+        @include('conference.partials.page-header', ['text' => Lang::get('menu.newsfeed')])
         @include('conference.partials.doFirstTimeStuff')
 
         @if(isset($data) && !empty($data))

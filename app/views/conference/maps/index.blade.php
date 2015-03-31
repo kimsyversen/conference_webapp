@@ -14,7 +14,7 @@
 
 
     @section('content')
-        @include('conference.partials.page-header', ['text' => 'Maps'])
+        @include('conference.partials.page-header', ['text' => Lang::get('menu.maps')])
 
         @if(isset($data) && !empty($data))
             @foreach($data['data'] as $map)

@@ -18,4 +18,7 @@ return array(
 	'all_conferences' => 'Alle konferanser',
 	'event' => 'Hendelse',
 	'rating' => 'Vurdering',
+
+
+	'footer_title' => 'Annet'
 );

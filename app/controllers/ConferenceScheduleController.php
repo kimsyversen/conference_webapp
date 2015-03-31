@@ -10,6 +10,8 @@ class ConferenceScheduleController extends \BaseController {
 	{
 		$this->client = $client;
 		parent::__construct();
+
+		$this->sendVariablesToJavascript();
 	}
 
 	public function index($conference_id)
@@ -23,6 +25,7 @@ class ConferenceScheduleController extends \BaseController {
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule");
 
 		$response = $this->client->send($request);
+
 
 		return View::make('conference.schedule.conference.index')->with(['data' => $response]);
 	}
