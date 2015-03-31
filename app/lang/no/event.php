@@ -1,5 +1,6 @@
 <?php
 return array(
+	'cancelled' => 'Kansellert',
 	'filter' => array(
 		'title' => 'Søk i konferanseprogrammet',
 		'title-free' =>  'Finn en hendelse ved fritekst',

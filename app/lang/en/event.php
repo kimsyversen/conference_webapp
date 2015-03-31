@@ -1,5 +1,6 @@
 <?php
 return array(
+	'cancelled' => 'Cancelled',
 	'filter' => array(
 		'title' => 'Search in schedule',
 		'title-free' =>  'Find event by free text',
@@ -10,6 +11,7 @@ return array(
 	'buttons' => array(
 		'all-days' => 'Show all days'
 	),
+
 
 
 	'show' => array(

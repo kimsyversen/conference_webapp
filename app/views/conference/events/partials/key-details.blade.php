@@ -4,6 +4,6 @@
     @endif
 
     @if(isset($session['confirmed']) && $session['confirmed'] == 0)
-        <li class="cancelled"> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelled</li>
+        <li class="cancelled"> <span class="glyphicon glyphicon glyphicon-remove" aria-hidden="true"></span> {{ Lang::get('event.cancelled') }}</li>
     @endif
 </ul>
