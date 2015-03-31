@@ -13,4 +13,6 @@ return [
 	'api_base_uri' => 'http://localhost:8000',
 	'api_endpoint_uri' => 'http://localhost:8000/api/v1',
 	'api_accesstoken_endpoint_url' => 'http://localhost:8000/oauth/access_token',
+
+	'base_url' => 'https://localhost:8000',
 ];

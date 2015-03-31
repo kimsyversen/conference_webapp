@@ -5,7 +5,6 @@
     </div>
 </div>
 
-
 <div class="container-fluid">
     <div class="row toggled" id="advanced-options">
         <div class="padding">
