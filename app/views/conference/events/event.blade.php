@@ -20,7 +20,6 @@
                     </div>
                     <div class="description-long hidden">
                         <div class="col-xs-12">
-
                             <p><i class="fa fa-quote-left text-muted" style="font-size: 2.5em; padding: 0 0.5em 0 0 ;"></i>{{ $session['description'] }}</p>
                         </div>
                     </div>
