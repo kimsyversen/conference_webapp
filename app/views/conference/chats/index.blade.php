@@ -13,7 +13,7 @@
 
 @section('content')
     @if(isset($data) && !empty($data))
-        @include('conference.partials.page-header', ['text' => 'Chats'])
+        @include('conference.partials.page-header', ['text' => Lang::get('messages.index.title')])
 
         @foreach($data['data'] as $chat)
 

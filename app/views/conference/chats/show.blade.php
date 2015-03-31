@@ -1,6 +1,6 @@
 @extends('conference.layouts.default')
 @section('breadcrumb')
-    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chat) ])
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chat') ])
 @stop
 
 @section('errors-and-messages')
@@ -14,6 +14,8 @@
 
 @section('content')
     @if(isset($chat['data']) && !empty($chat['data']))
+        @include('conference.partials.page-header', ['text' => Lang::get('messages.show.title')])
+
            @foreach($chat['data']['messages'] as $message)
                    @include('conference.partials.chatMessage', [
                        'uri' => $chat['data']['link'],
