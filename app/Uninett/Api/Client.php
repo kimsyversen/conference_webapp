@@ -2,6 +2,7 @@
 
 use Codeception\Lib\Connector\Guzzle;
 use Guzzle\Common\Exception\GuzzleException;
+use Illuminate\Support\Facades\Lang;
 use Log;
 use Session;
 use Guzzle\Http\Client as GuzzleClient;
@@ -63,12 +64,12 @@ class Client  {
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			if($errorCode == 400)
-				return $this->responseFormatter->error(['Bad request']);
+				return $this->responseFormatter->error([Lang::get('error.400')]);
 			/**
 			 * Check for 4xx status codes that is returned from the API
 			 */
 			if($errorCode == 401)
-				return $this->responseFormatter->error(['Wrong credentials!']);
+				return $this->responseFormatter->error([Lang::get('error.401')]);
 
 			/**
 			 * If validation exception, parse the response to a format the error view understands.
@@ -90,13 +91,13 @@ class Client  {
 
 
 			if($errorCode == 423)
-				return $this->responseFormatter->error(['You must active your account. Please check your email.w']);
+				return $this->responseFormatter->error([Lang::get('error.423')]);
 
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			Log::debug($ex->getMessage());
 			return $this->responseFormatter
-				->error(["A not implemented translation for error code {$errorCode} occured"]);
+				->error([Lang::get('error.4xx') . $errorCode]);
 
 		}
 		catch(ServerErrorResponseException $ex)
@@ -104,14 +105,20 @@ class Client  {
 			$message = $ex->getResponse();
 			$errorCode = $ex->getResponse()->getStatusCode();
 
+
+			if($errorCode == 501)
+				return $this->responseFormatter
+					->error([Lang::get('error.501') . $errorCode]);
+
+
 			return $this->responseFormatter
-				->error(["Cannot connect to server. Errorcode {$errorCode}"]);
+				->error([Lang::get('error.server-error') . $errorCode]);
 		}
 		catch(CurlException $ex)
 		{
 			//IF curl cannot connect to API
 			//string '[curl] 7: Failed to connect to localhost port 8000: Connection refused [url] http://localhost:8000/api/v1/conferences/3/schedule' (length=128)
-			return $this->responseFormatter->error(["It seems like the application cannot reach the server"]);
+			return $this->responseFormatter->error([Lang::get('error.curl-error')]);
 		}
 	}
 
@@ -132,7 +139,7 @@ class Client  {
 			$errorCode = $ex->getResponse()->getStatusCode();
 
 			return $this->responseFormatter
-				->error(["A not implemented translation for error code {$errorCode} occured with message {$message}"]);
+				->error([Lang::get('error.server-error') . $errorCode  . ". " .  Lang::get('error.with-message') . $message ]);
 		}
 		catch(GuzzleException $ex)
 		{
@@ -149,7 +156,7 @@ class Client  {
 		 */
 		catch(RuntimeException $ex)
 		{
-			return $this->responseFormatter->error(["Could not parse the response from API"]);
+			return $this->responseFormatter->error([Lang::get('error.runtime-error') ]);
 		}
 	}
 }
