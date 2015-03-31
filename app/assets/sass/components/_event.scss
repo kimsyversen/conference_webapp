@@ -65,12 +65,12 @@
     .event-time {
         .month {
           @include eventDateTime($font-size: 24pt);
-          font-weight: 300;
+          font-weight: 100;
         }
         .day {
           @include eventDateTime($font-size: 40pt);
           margin-top: 5px;
-          font-weight: 300;
+          font-weight: 100;
 
         }
         .hour {
@@ -107,11 +107,11 @@
     .event-time {
         .month {
           @include eventDateTime($font-size: 24pt);
-          font-weight: 300;
+          font-weight: 100;
         }
         .day {
           @include eventDateTime($font-size: 40pt);
-          font-weight: 300;
+          font-weight: 100;
         }
 
         .hour {
