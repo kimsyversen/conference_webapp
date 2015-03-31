@@ -19,7 +19,7 @@ class CacheFilter {
 		if(Cache::has($key)) return Cache::get($key);
 
 	}
-	public function put(Route $route, Request $request, Response $response){
+	public function put(Route $route, Request $request, $response){
 
 		Log::debug('Putting view into cache');
 

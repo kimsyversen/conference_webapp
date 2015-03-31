@@ -2,7 +2,7 @@
     <br>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <span>You are here</span>
+                <span>{{ Lang::get('breadcrumb.title') }}</span>
                 <ul class="conference-breadcrumb">
                     @foreach ($breadcrumbs as $breadcrumb)
                         @if (!$breadcrumb->last)

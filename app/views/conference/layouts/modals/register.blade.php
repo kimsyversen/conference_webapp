@@ -3,33 +3,34 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Register a new account</h4>
+                <h4 class="modal-title" id="myModalLabel">{{ Lang::get('forms.sign-up.title')  }}</h4>
             </div>
             <div class="modal-body">
                 {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
 
                 <div class="form-group">
-                    {{ Form::label('email', 'Email:', ['class' => 'control-label']) }}
-                    {{ Form::text('email', null, ['required', 'class' => 'form-control', 'placeholder' => 'Email']) }}
+                    {{ Form::label('email', Lang::get('forms.email'), ['class' => 'control-label']) }}
+                    {{ Form::text('email', null, ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.email')]) }}
                 </div>
 
                 <div class="form-group">
-                    {{ Form::label('password', 'Password:', ['class' => 'control-label']) }}
-                    {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => 'Password']) }}
+                    {{ Form::label(Lang::get('forms.password'), Lang::get('forms.password'), ['class' => 'control-label']) }}
+                    {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.password')]) }}
                 </div>
 
                 <div class="form-group">
-                    {{ Form::label('password_confirmation', 'Password confirmation:', ['class' => 'control-label']) }}
-                    {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => 'Confirm the password']) }}
+                    {{ Form::label('password_confirmation', Lang::get('forms.password_confirmation'), ['class' => 'control-label']) }}
+                    {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => Lang::get('forms.password_confirmation')]) }}
                 </div>
 
                 <div class="form-group">
-                    <p>Do you already have an account? <a href="{{ route('login_path') }}"> Log in</a></p>
+                    <p>{{ Lang::get('forms.sign-up.message')  }} <a href="{{ route('login_path') }}"> {{ Lang::get('forms.sign-up.message_link')  }}</a></p>
                 </div>
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                {{ Form::submit('Sign up', ['class' => 'btn btn-primary']) }}
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{Lang::get('forms.close')  }}</button>
+                {{ Form::submit(Lang::get('forms.sign-up.button_send'), ['class' => 'btn btn-primary']) }}
             </div>
             {{ Form::close() }}
         </div>
