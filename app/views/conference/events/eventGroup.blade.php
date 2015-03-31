@@ -7,7 +7,6 @@
 
 
 <div class="container-fluid">
-
     <div class="row toggled" id="advanced-options">
         <div class="padding">
             <div class="col-xs-12 col-md-6">
