@@ -25,6 +25,7 @@ $(document).ready(function(){
         FastClick.attach(document.body);
     });
 
+
     $('.conference-button-day').on('click', function () {
         var value = $(this).attr('data-value');
 
@@ -60,8 +61,10 @@ $(document).ready(function(){
 
         if( $("#filter").val().length > 0)
             $("#filter-count").text(+count + " results");
-        else
+        else {
             $("#filter-count").empty();
+        }
+
     });
 
 
@@ -276,17 +279,13 @@ function appendButtons() {
     var days = [];
     var body = $(this).closest('body');
 
-    console.log(body);
     $(".session-group").each(function() {
         var value = $(this).attr('data-value');
         days.push(value);
     });
 
-
     var uniqueDays = GetUnique(days);
-
     var buttonGroup = $('#button-days');
-
 
     $.each(uniqueDays, function(index, value) {
         buttonGroup.append("<a href='#' class='btn btn-default conference-button-day' data-value="+ value + ">" + value + "</a>");

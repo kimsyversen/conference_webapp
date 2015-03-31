@@ -16,10 +16,18 @@
 
 /** MODS TO PURE PUSHER */
 
-.pure-pusher {
-  background: linear-gradient($default-background-color, darken($default-background-color, 10%));
+
+@media(max-width:767px) {
+  .pure-pusher {
+  .container {
+    margin-top: 90px;
+  }
 }
 
+}
+.pure-pusher {
+  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
+}
 
 * {
   padding: 0;
@@ -143,10 +151,11 @@ textarea {
 }
 
 .conference-breadcrumb {
+  margin: 50px;
   li a {
     text-decoration: underline;
   }
-  margin: 10px;
+
   li {
     display: inline;
 
@@ -221,3 +230,5 @@ textarea {
     }
   }
 }
+
+//margin-top: 80px;

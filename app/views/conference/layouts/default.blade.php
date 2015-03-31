@@ -39,7 +39,7 @@
     <div class="pure-pusher-container">
         <div class="pure-pusher">
 
-            <div class="container" style="margin-top: 80px;">
+            <div class="container">
                 @yield('breadcrumb')
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')

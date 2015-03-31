@@ -16592,6 +16592,7 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
+    font-weight: 300;
   }
 
   .event .event-time .day {
@@ -16602,6 +16603,7 @@ Copyright (c) 2014 Daniel Eden
     font-family: Lato, sans-serif;
     margin-false: 0;
     margin-top: 5px;
+    font-weight: 300;
   }
 
   .event .event-time .hour {
@@ -16611,7 +16613,7 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 5px;
   }
 
@@ -16810,9 +16812,15 @@ Copyright (c) 2014 Daniel Eden
 
 /** MODS TO PURE PUSHER */
 
+@media (max-width: 767px) {
+  .pure-pusher .container {
+    margin-top: 90px;
+  }
+}
+
 .pure-pusher {
-  background: -webkit-linear-gradient(#E9EAEA, #cfd1d1);
-  background: linear-gradient(#E9EAEA, #cfd1d1);
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc);
 }
 
 * {
@@ -17013,7 +17021,7 @@ textarea {
 }
 
 .conference-breadcrumb {
-  margin: 10px;
+  margin: 50px;
 }
 
 .conference-breadcrumb li a {
