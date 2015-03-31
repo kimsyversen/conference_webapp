@@ -106,14 +106,16 @@
     .event-time {
         .month {
           @include eventDateTime($font-size: 24pt);
+          font-weight: 300;
         }
         .day {
           @include eventDateTime($font-size: 40pt);
+          font-weight: 300;
         }
 
         .hour {
           @include eventDateTime($font-size: 12pt);
-          font-weight: 200;
+          font-weight: 300;
         }
 
       margin-bottom: -99999px;

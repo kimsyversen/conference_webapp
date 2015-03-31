@@ -16644,6 +16644,7 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
+    font-weight: 300;
   }
 
   .event .event-time .day {
@@ -16653,6 +16654,7 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
+    font-weight: 300;
   }
 
   .event .event-time .hour {
@@ -16662,7 +16664,7 @@ Copyright (c) 2014 Daniel Eden
     line-height: 1;
     font-family: Lato, sans-serif;
     margin-false: 0;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .event .event-time .row {

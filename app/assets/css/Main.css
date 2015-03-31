@@ -180,14 +180,16 @@
         font-weight: 100;
         line-height: 1;
         font-family: Lato, sans-serif;
-        margin-false: 0; }
+        margin-false: 0;
+        font-weight: 300; }
       .event .event-time .day {
         display: block;
         font-size: 40pt;
         font-weight: 100;
         line-height: 1;
         font-family: Lato, sans-serif;
-        margin-false: 0; }
+        margin-false: 0;
+        font-weight: 300; }
       .event .event-time .hour {
         display: block;
         font-size: 12pt;
@@ -195,7 +197,7 @@
         line-height: 1;
         font-family: Lato, sans-serif;
         margin-false: 0;
-        font-weight: 200; }
+        font-weight: 300; }
       .event .event-time .row {
         padding: 0.8em; }
     .event .social {
