@@ -80,7 +80,7 @@
 @include('conference.layouts.modals.register')
 
 @section('javascript')
-    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+{{--    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}--}}
     {{ HTML::script('js/conference.min.js') }}
 
 @show

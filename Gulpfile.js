@@ -11,16 +11,15 @@ gulp.task('js', function()
     var basePath = "public/components/vendor/";
     gulp.src(
         [
-         /*   basePath + "jquery/dist/jquery.js",*/
-           /* "public/packages/frenzy/turbolinks/turbolinks.js",*/
+            basePath + "jquery/dist/jquery.js",
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
             basePath + "fastclick/lib/fastclick.js",
-            "app/assets/javascript/src/conference.js",
-          /*  "public/packages/frenzy/turbolinks/jquery.turbolinks.js"*/
+            "app/assets/javascript/src/conference.js"
+
         ])
         .pipe(concat('conference.min.js'))
-     /*   .pipe(uglify())*/
+        .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
 
