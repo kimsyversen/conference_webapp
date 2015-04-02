@@ -16,11 +16,16 @@ Route::filter('cache.put', 'Uninett\Filters\CacheFilter@put');*/
 
 App::before(function($request)
 {
+	App::setLocale('en');
 	\Uninett\Helpers\AccessToken::validate();
 
 	if(!Cookie::has('has_visited_before')) {
 		Session::put('has_visited_before', true);
 		Cookie::queue('has_visited_before', true);
+	}
+
+	if(Session::has('language')) {
+		App::setLocale(Session::get('language'), Config::get('app.locale'));
 	}
 });
 

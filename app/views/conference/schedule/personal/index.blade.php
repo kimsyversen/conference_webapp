@@ -13,7 +13,6 @@
 @stop
 
 @section('content')
-
     @include('conference.partials.page-header', ['text' => 'My schedule'])
 
     @if(isset($data['data']))

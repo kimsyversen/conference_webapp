@@ -1,5 +1,6 @@
 @extends('conference.layouts.default')
     @section('breadcrumb')
+
         @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('chats') ])
     @stop
 

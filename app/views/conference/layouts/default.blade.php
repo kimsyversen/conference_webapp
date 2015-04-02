@@ -40,10 +40,18 @@
         <div class="pure-pusher">
 
             <div class="container">
+                <div class="row">
+                    <div class="col-xs-offset-4 col-xs-5 col-sm-offset-5 col-sm-6">
+                        @include('conference.partials.options.language')
+                    </div>
+                </div>
+                <hr />
+
                 @yield('breadcrumb')
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')
                 @yield('content')
+
             </div>
             @include('conference.layouts.partials.footer')
             @include('conference.partials.goto-top')
@@ -56,8 +64,11 @@
 @include('conference.layouts.modals.signin')
 @include('conference.layouts.modals.register')
 
+
 @section('javascript')
     {{ HTML::script('js/conference.min.js') }}
 @show
+
+
 </body>
 </html>

@@ -29,7 +29,7 @@
                                     <div class="description descripton-of-conference">
                                         <div class="text hidden">
                                             <hr>
-                                            <p> <i class="fa fa-quote-left text-muted" style="font-size: 2.5em; padding: 0 0.5em 0 0 ;"></i>gs{{ $conference['description'] }}</p>
+                                            <p> <i class="fa fa-quote-left text-muted" style="font-size: 2.5em; padding: 0 0.5em 0 0 ;"></i>{{ $conference['description'] }}</p>
                                         </div>
                                     </div>
                                 </div>

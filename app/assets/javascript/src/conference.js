@@ -1,10 +1,7 @@
 $(document).ready(function(){
     appendButtons();
 
-
-
     $('#advanced-options').find('.row').toggleClass('toggled');
-
 
     $(".options").on('click', '.close', function() {
         var body = $('body');
@@ -70,6 +67,9 @@ $(document).ready(function(){
     });
 
 
+    $('#show-options-link').on('click', function(){
+        $('#advanced-options').toggleClass('toggle toggled');
+    });
 
 
     $('.session').on('click', '.button-schedule-remove', function(e){
@@ -245,12 +245,33 @@ $(document).ready(function(){
                     parent.fadeIn(2000);
                 });
             }
-        })();
+        });
     });
 })();
 
 
+(function() {
+     $('#frm-language .dropdown-menu li').on('click', function(e){
 
+         var data = $(this).attr('data-value');
+
+         var form = $(this).closest('#frm-language');
+         var method = form.attr('method');
+         var url = form.attr('action');
+
+        $.ajax({
+             type: method,
+             url: url,
+             data: {'language' : data},
+             success: function (d) {
+
+             },
+            error: function(request, errorType, errorMessage) {
+                alert(errorMessage);
+            }
+         });
+    });
+ })();
 
 /* off-canvas sidebar toggle */
 $('[data-toggle=offcanvas]').click(function() {

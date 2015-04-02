@@ -14,6 +14,7 @@
 
     @section('content')
         @include('conference.partials.page-header', ['text' => Lang::get('forms.sign-up.title')])
+
         <div class="col-md-3"></div>
         <div class="col-md-6 forms form-small">
                 {{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}

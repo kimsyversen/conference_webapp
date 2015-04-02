@@ -20,5 +20,11 @@ return array(
 	'rating' => 'Vurdering',
 
 
-	'footer_title' => 'Annet'
+	'footer_title' => 'Annet',
+
+	'change-language' => array(
+		'change-language' => 'Bytt språk',
+		'norwegian' => 'Norsk',
+		'english' => 'Engelsk'
+	)
 );

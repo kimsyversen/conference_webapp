@@ -20,5 +20,15 @@ return array(
 	'rating' => 'Rating',
 
 
-	'footer_title' => 'Other information'
+	'footer_title' => 'Other information',
+
+
+
+
+	'change-language' => array(
+		'change-language' => 'Change language',
+		'norwegian' => 'Norwegian',
+		'english' => 'English'
+	)
+
 );

@@ -29,12 +29,9 @@ class RatingsController extends BaseController {
 					return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
 			}
 		}
-		else
-		{
+		else {
 			return View::Make('conference.sessions.partials.rating', ['status' => -1]);
 		}
-
-
 
 		return Redirect::route('conferences_path')->with([
 			'errors' =>  ['Something went wrong when trying to display the rating form.']
@@ -51,8 +48,7 @@ class RatingsController extends BaseController {
 
 		//This method does not account for posting rating for the same session twice. That should be handled by the get method.
 
-		if (Request::ajax())
-		{
+		if (Request::ajax()) {
 			if ($this->userIsAuthenticated()) {
 
 				$data = [

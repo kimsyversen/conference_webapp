@@ -12,19 +12,16 @@
     @include('conference.partials.doFirstTimeStuff')
 @stop
 
+
 @section('content')
     @include('conference.partials.page-header', ['text' => Lang::get('menu.schedule')])
 
     @if(isset($data['data']))
         @if(!empty($data))
+
             @include('conference.events.eventGroup', ['sessionGroup' => $data['data'], 'schedule_type' => 'conference'])
         @else
             <p class="lead"> {{ Lang::get('schedule.empty') }}</p>
         @endif
     @endif
 @stop
-
-
-
-
-

@@ -13,6 +13,7 @@
 
 @section('content')
     @include('conference.partials.page-header', ['text' => Lang::get('forms.sign-in.title')])
+
     <div class="col-md-3"></div>
     <div class="col-md-6 forms form-small">
         {{ Form::open(['route' => 'login_path', 'method' => 'post']) }}
