@@ -299,6 +299,10 @@
 
 /*@import '../../../public/components/vendor/world-flags-sprite/stylesheets/flags32.scss';
 $flags-images-path: '../../../public/components/vendor/world-flags-sprite/images';*/
+@media (min-width: 768px) {
+  #frm-language {
+    margin-top: 50px; } }
+
 #frm-language .btn-change-language {
   color: black;
   background-color: transparent;
