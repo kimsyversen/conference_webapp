@@ -22,4 +22,13 @@ return array(
 	'3' => array(
 		'already-rated' => 'You have already rated this event.'
 	),
+
+	'4' => array(
+		'has-rated' => 'You gave this event a rating.'
+	),
+
+	'5' => array(
+		'rate-error' => 'Sorry! Something went wrong.'
+	),
 );
+

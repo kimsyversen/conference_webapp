@@ -221,31 +221,27 @@ $(document).ready(function(){
 });
 
 
-(function() {
-    $('form[data-remote]').on('submit', function(e) {
-        e.preventDefault();
-        var form = $(this);
-        var method = form.find('input[name="_method"]').val() || 'POST';
 
-        $.ajax({
-            type: method,
-            url: form.prop('action'),
-            data: form.serialize(),
-            success: function(data) {
-                var parent = form.closest('.row');
+$('form[data-remote]').on('submit', function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var method = form.find('input[name="_method"]').val() || 'POST';
 
-                parent.children().detach();
-
-                parent.fadeOut("slow", function(){
-                    var p = $("<div class='col-xs-12 text-center default-heading'> <h4>This session has been rated</h4></div>").show();
-                    $(this).append(p);
-                    parent.fadeIn(2000);
-                });
-            }
-        });
+    $.ajax({
+        type: method,
+        url: form.prop('action'),
+        dataType: 'html',
+        data: form.serialize(),
+        success: function(data) {
+            var parent = form.closest('.row');
+            parent.children().detach();
+            parent.fadeOut("fast", function(){
+                $(this).append(data);
+                parent.fadeIn(2000);
+            });
+        }
     });
-})();
-
+});
 
 
 $('#frm-language .dropdown-menu li').on('click', function(e){

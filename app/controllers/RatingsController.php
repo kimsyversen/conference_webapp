@@ -68,8 +68,11 @@ class RatingsController extends BaseController {
 
 				$response = $this->client->send($request);
 
-				//return View::Make('conference.sessions.partials.rating', ['status' => $response['data'][0]['code']]);
-				return $response;
+				if(isset($response['data'])) {
+					return View::Make('conference.events.partials.rating.status.4');
+				}
+
+				return View::Make('conference.events.partials.rating.status.5');
 			}
 		}
 		else

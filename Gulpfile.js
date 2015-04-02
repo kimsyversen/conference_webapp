@@ -18,7 +18,7 @@ gulp.task('js', function()
             "app/assets/javascript/src/conference.js"
         ])
         .pipe(concat('conference.min.js'))
- /*       .pipe(uglify())*/
+        .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
 
@@ -49,7 +49,7 @@ gulp.task('css', function()
         "app/assets/css/Main.css"
     ])
         .pipe(concatCss("conference.min.css"))
-     /*   .pipe(cssmin())*/
+        .pipe(cssmin())
         .pipe(gulp.dest('public/css'));
 });
 

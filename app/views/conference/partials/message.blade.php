@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="time">
-                        {{ ConferenceHelper::timeStampToHuman($time) }}
+                        {{ ConferenceHelper::formatTimestamp($time,'Y-m-d H:i')  }}
                     </div>
                 </div>
             </div>

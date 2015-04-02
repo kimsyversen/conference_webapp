@@ -1,11 +1,8 @@
-
-    <div class="row">
-        <div class="col-xs-12">
-            @include('conference.partials.options.filter')
-        </div>
+<div class="row">
+    <div class="col-xs-12">
+        @include('conference.partials.options.filter')
     </div>
-
-
+</div>
 
 @include('conference.partials.options.filter-options')
 
@@ -15,7 +12,6 @@
 
         @foreach($sessionGroup['sessions'] as $session)
             @include('conference.events.event', ['session' => $session, 'schedule_type' => $schedule_type])
-
         @endforeach
     </div>
 @endforeach

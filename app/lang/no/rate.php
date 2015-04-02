@@ -22,4 +22,11 @@ return array(
 	'3' => array(
 		'already-rated' => 'Du har allerede vurdert denne hendelsen.'
 	),
+
+	'4' => array(
+		'has-rated' => 'Du ga vurdering til denne hendelsen.'
+	),
+	'5' => array(
+		'rate-error' => 'Unnskyld! Noe gikk galt.'
+	),
 );

@@ -6,7 +6,8 @@
         </div>
         <div>
             <p> {{ Lang::get('firstvisit.firsttimestuff.message') }}
-                <a class="alert-link" href="{{ route('featurette_path')}}"> {{ Lang::get('firstvisit.firsttimestuff.link') }}</a></p>
+                <a class="alert-link" href="{{ route('featurette_path')}}"> {{ Lang::get('firstvisit.firsttimestuff.link') }} </a>
+            </p>
         </div>
     </div>
 </div>
