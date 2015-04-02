@@ -33,7 +33,7 @@
     <!-- Expand the details about session when entered and remove the button-->
     <script>
         $(document).ready(function() {
-            $("#button-session-more").trigger("click");
+            $(".button-more").trigger("click");
         });
     </script>
 @stop

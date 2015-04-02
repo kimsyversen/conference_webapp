@@ -6,7 +6,7 @@
                     <div class="conference-item">
                         <div class="row header">
                             <div class="col-xs-12 ">
-                                <a href="/{{$conference['link']['uri'] }}">
+                                <a href="/{{$conference['link']['uri'] }}#content">
                                     <img class="img-responsive" src="{{ $conference['banner']}}" alt="{{ $conference['name']}}">
                                 </a>
                             </div>
@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div>
-                                        <span class="name"> <a href="/{{$conference['link']['uri'] }}" class="conference-link"> {{ substr($conference['name'],0, 30) }}</a></span>
+                                        <span class="name"> <a href="/{{$conference['link']['uri'] }}#content" class="conference-link"> {{ substr($conference['name'],0, 30) }}</a></span>
                                     </div>
                                     <div>
                                         <span class="time">{{ ConferenceHelper::timestampToBeingEnds( $conference['start_date']['date'], $conference['end_date']['date'], 'Y/d/m') }} in {{ $conference['country'] }}, {{ $conference['city'] }}</span>

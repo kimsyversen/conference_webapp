@@ -1,4 +1,3 @@
-{{--
 <nav class="pure-drawer" data-position="left">
     <div class="row">
         <ul class="nav nav-stacked nav-conference">
@@ -23,12 +22,13 @@
             <li><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i>  {{ Lang::get('menu.refresh') }} </a> </li>
         </ul>
     </div>
-</nav>--}}
+</nav>
 
 
 
 
 
+{{--
 <nav class="pure-drawer" data-position="left">
     <div class="row">
         <ul class="nav nav-stacked nav-conference">
@@ -53,4 +53,4 @@
             <li><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i>  {{ Lang::get('menu.refresh') }} </a> </li>
         </ul>
     </div>
-</nav>
+</nav>--}}

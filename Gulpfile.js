@@ -20,7 +20,7 @@ gulp.task('js', function()
           /*  "public/packages/frenzy/turbolinks/jquery.turbolinks.js"*/
         ])
         .pipe(concat('conference.min.js'))
-    /*    .pipe(uglify())*/
+        .pipe(uglify())
         .pipe(gulp.dest('public/js'));
 });
 
