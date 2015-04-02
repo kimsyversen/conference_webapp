@@ -27,8 +27,17 @@
     {{ HTML::style('css/conference.min.css') }}
     {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css') }}
 
-    {{--{{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}--}}
+
+
+    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+    {{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}
+
+    {{ HTML::script('js/conference.min.js') }}
+
     {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
+
+
+
 
 
 </head>
@@ -78,8 +87,15 @@
 
 
 @section('javascript')
-    {{ HTML::script('js/conference.min.js') }}
 
+    <script>
+        $(document).on('page:fetch', function() {
+            $('selector').css( 'cursor', 'wait' );
+        });
+        $(document).on('page:change', function() {
+            $('selector').css( 'cursor', 'initial' );
+        });
+    </script>
 @show
 </body>
 </html>

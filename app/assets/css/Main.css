@@ -523,6 +523,9 @@ textarea {
   font-size: 1.2em;
   color: black;
   font-weight: 400; }
+  .options #show-options-link:hover {
+    cursor: pointer;
+    background: #d3d3d3; }
   @media (max-width: 500px) {
     .options #show-options-link {
       font-size: 1em; } }

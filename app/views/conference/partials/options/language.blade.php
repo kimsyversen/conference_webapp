@@ -19,8 +19,8 @@
         </button>
         <input id="language" name="language" type="hidden">
         <ul class="dropdown-menu" role="menu" onchange="submit();">
-            <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en" data-pjax="#pure-container">{{ Lang::get('menu.change-language.english')  }}</a></li>
-            <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no"  data-pjax="#pure-container">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
+            <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
+            <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
         </ul>
     </div>
     {{ Form::close()}}

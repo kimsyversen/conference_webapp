@@ -11,7 +11,7 @@ gulp.task('js', function()
     var basePath = "public/components/vendor/";
     gulp.src(
         [
-            basePath + "jquery/dist/jquery.js",
+         /*   basePath + "jquery/dist/jquery.js",*/
            /* "public/packages/frenzy/turbolinks/turbolinks.js",*/
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
@@ -20,7 +20,7 @@ gulp.task('js', function()
           /*  "public/packages/frenzy/turbolinks/jquery.turbolinks.js"*/
         ])
         .pipe(concat('conference.min.js'))
-        .pipe(uglify())
+     /*   .pipe(uglify())*/
         .pipe(gulp.dest('public/js'));
 });
 

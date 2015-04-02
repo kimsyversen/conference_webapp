@@ -276,6 +276,10 @@ textarea {
   font-size: 1.2em;
   color: black;
   font-weight: 400;
+  &:hover {
+    cursor: pointer;
+    background: #d3d3d3;
+  }
 
   @media(max-width:500px) {
     font-size: 1em;

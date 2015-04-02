@@ -1,15 +1,38 @@
+
 $(document).ready(function(){
+    $(document).on('click', '#show-options-link', function(){
+        $('#advanced-options').toggleClass('toggle toggled');
+        appendButtons();
+    });
 
 
-    appendButtons();
-
-    $('#advanced-options').find('.row').toggleClass('toggled');
-
-    $(".options").on('click', '.close', function() {
+    $(document).on('click', '.options .close', function(){
+   /* $(".options").on('click', '.close', function() {*/
         var body = $('body');
         var advanced = body.find('#advanced-options');
         advanced.toggleClass('toggled');
         $(this).find('span').toggleClass('glyphicon-menu-down glyphicon-menu-up');
+    });
+
+
+    $(document).on('click', '#frm-language .dropdown-menu li', function(e){
+        var data = $(this).attr('data-value');
+
+        var form = $(this).closest('#frm-language');
+        var method = form.attr('method');
+        var url = form.attr('action');
+
+        $.ajax({
+            type: method,
+            url: url,
+            data: {'language' : data},
+            success: function (d) {
+
+            },
+            error: function(request, errorType, errorMessage) {
+                alert(errorMessage);
+            }
+        });
     });
 
 
@@ -23,12 +46,11 @@ $(document).ready(function(){
         $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
     }
 
-    $(function() {
+
         FastClick.attach(document.body);
-    });
 
 
-    $('.conference-button-day').on('click', function () {
+    $(document).on('click', '.conference-button-day', function(e){
         var value = $(this).attr('data-value');
 
         var body = $('body');
@@ -43,7 +65,7 @@ $(document).ready(function(){
     });
 
     /* Function is partly from http://www.designchemical.com/blog/index.php/jquery/live-text-search-function-using-jquery/ */
-    $("#filter").keyup(function(){
+    $(document).on('keyup', '#filter', function(){
         var filter = $(this).val(), count = 0;
 
         $(".session").each(function(){
@@ -68,13 +90,7 @@ $(document).ready(function(){
 
     });
 
-
-    $('#show-options-link').on('click', function(){
-        $('#advanced-options').toggleClass('toggle toggled');
-    });
-
-
-    $('.session').on('click', '.button-schedule-remove', function(e){
+    $(document).on('click', '.button-schedule-remove', function(e){
         e.preventDefault();
         var button = $(this);
 
@@ -130,7 +146,8 @@ $(document).ready(function(){
         })
     });
 
-    $('.session').on('click', '.button-schedule-add', function(e){
+    $(document).on('click', '.button-schedule-add', function(e){
+   /* $('.session').on('click', '.button-schedule-add', function(e){*/
         e.preventDefault();
         var button = $(this);
 
@@ -166,7 +183,7 @@ $(document).ready(function(){
         })
     });
 
-    $(".conference-item").on("click", ".button-more", function(){
+    $(document).on('click', '.conference-item .button-more', function(e){
         //Find the first conference-item up in the DOM tree
         var conferenceItem = $(this).closest('.conference-item');
 
@@ -186,7 +203,7 @@ $(document).ready(function(){
         buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close : Uninett.button.more);
     });
 
-    $(".session").on("click", ".button-more", function(){
+    $(document).on("click", ".session .button-more", function(){
         //Walk up in the DOM tree
         var parent = $(this).closest('.session');
 
@@ -217,55 +234,36 @@ $(document).ready(function(){
     }, 60000);
 
 
-    $("#dismiss").on("click",  function() {
+    $(document).on("click", '#dismiss',  function() {
         var container = $(this).closest('.container-fluid');
         container.detach();
     });
-});
 
+    $(document).on('submit', 'form#frm-rating', function(e){
+ /*   $('form[data-remote]').on('submit', function(e) {*/
+        e.preventDefault();
+        var form = $(this);
+        var method = form.find('input[name="_method"]').val() || 'POST';
 
-
-$('form[data-remote]').on('submit', function(e) {
-    e.preventDefault();
-    var form = $(this);
-    var method = form.find('input[name="_method"]').val() || 'POST';
-
-    $.ajax({
-        type: method,
-        url: form.prop('action'),
-        dataType: 'html',
-        data: form.serialize(),
-        success: function(data) {
-            var parent = form.closest('.row');
-            parent.children().detach();
-            parent.fadeOut("fast", function(){
-                $(this).append(data);
-                parent.fadeIn(2000);
-            });
-        }
+        $.ajax({
+            type: method,
+            url: form.prop('action'),
+            dataType: 'html',
+            data: form.serialize(),
+            success: function(data) {
+                var parent = form.closest('.row');
+                parent.children().detach();
+                parent.fadeOut("fast", function(){
+                    $(this).append(data);
+                    parent.fadeIn(2000);
+                });
+            }
+        });
     });
+
 });
 
 
-$('#frm-language .dropdown-menu li').on('click', function(e){
-     var data = $(this).attr('data-value');
-
-     var form = $(this).closest('#frm-language');
-     var method = form.attr('method');
-     var url = form.attr('action');
-
-    $.ajax({
-         type: method,
-         url: url,
-         data: {'language' : data},
-         success: function (d) {
-
-         },
-        error: function(request, errorType, errorMessage) {
-            alert(errorMessage);
-        }
-     });
-});
 
 
 /* Function from http://manasbhardwaj.net/get-unique-values-from-a-javascript-array-using-jquery/ */
