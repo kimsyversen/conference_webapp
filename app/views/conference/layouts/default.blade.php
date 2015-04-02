@@ -25,6 +25,7 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('css/conference.min.css') }}
+    {{ HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css') }}
 
     {{--{{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}--}}
     {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
