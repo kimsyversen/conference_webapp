@@ -80,10 +80,6 @@
 
 
 @section('javascript')
-
-
 @show
-
-
 </body>
 </html>
