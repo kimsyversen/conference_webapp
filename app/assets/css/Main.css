@@ -9,8 +9,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../../../../public/components/vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -1721,7 +1721,6 @@
 .fa-medium:before {
   content: "\f23a"; }
 
-/*@import "../../../public/components/vendor/font-awesome/scss/font-awesome";*/
 .featurette {
   margin-top: 3em;
   margin-bottom: 2em; }
