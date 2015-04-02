@@ -4,12 +4,6 @@
     @include('conference.partials.errors-and-messages')
     @include('conference.partials.doFirstTimeStuff')
 
-    @include('conference.partials.alerts.danger')
-    @include('conference.partials.alerts.info')
-    @include('conference.partials.alerts.success')
-    @include('conference.partials.alerts.warning')
-    @include('conference.partials.alerts.firstvisit')
-
     @if(isset($data))
         @if(!empty($data))
             @include('conference.partials.page-header', ['text' => Lang::get('conference.title')])
