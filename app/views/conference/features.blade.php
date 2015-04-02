@@ -74,7 +74,7 @@
         <div class="row goto-top">
             <div class="col-md-1"></div>
             <div class="col-md-10 text-center ">
-                <a href="{{ route('conferences_pathgs') }}">Go home</a>
+                <a href="{{ route('conferences_path') }}">Go home</a>
             </div>
         </div>
     </div>
