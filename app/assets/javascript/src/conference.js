@@ -1,7 +1,9 @@
 
-$(document).ready(function(){
+$(document).ready(function() {
 
     appendButtons();
+});
+
     $(document).on('click', '#show-options-link', function(){
         $('#advanced-options').toggleClass('toggle toggled');
 
@@ -263,7 +265,9 @@ $(document).ready(function(){
         });
     });
 
+/*
 });
+*/
 
 
 
