@@ -36,10 +36,6 @@
 
     {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}--}}
 
-
-
-
-
 </head>
 
 <body>
@@ -80,23 +76,13 @@
 </div>
 
 
-
-
 @include('conference.layouts.modals.signin')
 @include('conference.layouts.modals.register')
-
 
 @section('javascript')
     {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
     {{ HTML::script('js/conference.min.js') }}
-    <script>
-        $(document).on('page:fetch', function() {
-            $('selector').css( 'cursor', 'wait' );
-        });
-        $(document).on('page:change', function() {
-            $('selector').css( 'cursor', 'initial' );
-        });
-    </script>
+
 @show
 </body>
 </html>
