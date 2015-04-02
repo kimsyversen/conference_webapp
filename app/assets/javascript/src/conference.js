@@ -243,7 +243,6 @@ $('form[data-remote]').on('submit', function(e) {
     });
 });
 
-
 $('#frm-language .dropdown-menu li').on('click', function(e){
      var data = $(this).attr('data-value');
 
