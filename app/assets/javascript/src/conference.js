@@ -243,6 +243,7 @@ $('form[data-remote]').on('submit', function(e) {
     });
 });
 
+
 $('#frm-language .dropdown-menu li').on('click', function(e){
      var data = $(this).attr('data-value');
 
@@ -278,7 +279,6 @@ function GetUnique(inputArray)
     return outputArray;
 }
 /*End */
-
 
 function appendButtons() {
     var days = [];

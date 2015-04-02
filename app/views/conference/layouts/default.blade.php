@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>ConferenceBook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    {{--<meta name="HandheldFriendly" content="true" />--}}
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
@@ -26,7 +25,7 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('css/conference.min.css') }}
- {{--   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">--}}
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -41,15 +40,13 @@
 
             <div class="container">
                 <div class="im-centered row">
-
                     <div class="col-xs-12 text-center">
-
                         @include('conference.partials.options.language')
                     </div>
                 </div>
 
                {{-- <div class="row">
-                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2   center-block" style="float:none">
+                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 center-block" style="float:none">
                         @include('conference.partials.options.language')
                     </div>
                 </div>--}}

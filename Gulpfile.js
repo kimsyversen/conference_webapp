@@ -43,7 +43,6 @@ gulp.task('css', function()
        basePath + "bootstrap/dist/css/bootstrap.css",
         basePath + "animate-css/animate.css",
         basePath + "add-to-homescreen/style/addtohomescreen.css",
-        basePath + "font-awesome/css/font-awesome.css",
         basePath + "lato-font/css/lato-font.css",
         "app/assets/css/pure-drawer.css",
         "app/assets/css/Main.css"
