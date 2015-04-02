@@ -29,12 +29,12 @@
 
 
 
-    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+{{--    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
     {{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}
 
     {{ HTML::script('js/conference.min.js') }}
 
-    {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
+    {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}--}}
 
 
 
@@ -87,7 +87,8 @@
 
 
 @section('javascript')
-
+    {{ HTML::script('components/vendor/jquery/dist/jquery.min.js') }}
+    {{ HTML::script('js/conference.min.js') }}
     <script>
         $(document).on('page:fetch', function() {
             $('selector').css( 'cursor', 'wait' );
