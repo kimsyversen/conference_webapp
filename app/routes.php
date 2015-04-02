@@ -32,7 +32,9 @@ Route::delete('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'se
 
 
 
-
+Route::get('secret', function() {
+	return View::make('conference.secret');
+});
 
 /**
  * AJAX Routes
