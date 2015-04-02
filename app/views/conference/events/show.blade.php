@@ -36,9 +36,9 @@
             $(".button-more").trigger("click");
         });
 */
-        $(document).on('page:load', function() {
+   /*     $(document).on('page:load', function() {
             $(".session .button-more").trigger("click");
         });
-
+*/
     </script>
 @stop
