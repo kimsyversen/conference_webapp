@@ -1,8 +1,10 @@
 
 $(document).ready(function(){
+
+    appendButtons();
     $(document).on('click', '#show-options-link', function(){
         $('#advanced-options').toggleClass('toggle toggled');
-        appendButtons();
+
     });
 
 
