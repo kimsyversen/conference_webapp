@@ -304,12 +304,9 @@ $flags-images-path: '../../../public/components/vendor/world-flags-sprite/images
   background-color: transparent;
   border: 0;
   padding: 0;
-  font-size: 1.2em; }
+  font-size: 1em; }
   #frm-language .btn-change-language:hover {
     background-color: lightgray; }
-  @media (max-width: 500px) {
-    #frm-language .btn-change-language {
-      font-size: 1em; } }
 
 #frm-language .dropdown-menu a {
   text-decoration: none; }
@@ -474,17 +471,6 @@ textarea {
 .im-centered {
   margin: auto;
   max-width: 150px; }
-
-.dropdown-menu {
-  left: 50%;
-  right: auto;
-  text-align: center;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
-
-.dropdown-menu {
-  right: -25px !important; }
 
 .conference-breadcrumb {
   /*margin: 50px;*/ }

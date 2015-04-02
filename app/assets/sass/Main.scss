@@ -24,15 +24,10 @@ $flags-images-path: '../../../public/components/vendor/world-flags-sprite/images
   background-color: transparent;
   border: 0;
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   &:hover {
     background-color: lightgray;
   }
-
-  @media(max-width:500px) {
-    font-size: 1em;
-  }
-
 }
 
 #frm-language .dropdown-menu {
@@ -194,17 +189,6 @@ textarea {
 
 //Next snippet found at http://stackoverflow.com/questions/19941414/center-a-row-using-bootstrap-3
 .im-centered { margin: auto; max-width: 150px;}
-
-.dropdown-menu {
-  left: 50%;
-  right: auto;
-  text-align: center;
-  transform: translate(-50%, 0);
-}
-
-.dropdown-menu{
-  right: -25px !important;
-}
 
 .conference-breadcrumb {
   /*margin: 50px;*/
