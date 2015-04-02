@@ -7,6 +7,7 @@
     "add-to-homescreen": "~3.1.1",
     "lato": "~0.3.0",
     "lato-font": "~1.1.0",
-    "world-flags-sprite": "*"
+    "world-flags-sprite": "*",
+    "font-awesome-sass": "~4.3.1"
   }
 }

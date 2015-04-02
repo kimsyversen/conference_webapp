@@ -9,4 +9,12 @@
     @include('conference.partials.alerts.warning')
     @include('conference.partials.alerts.firstvisit')
 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <i class="fa fa-github"></i>
+            </div>
+        </div>
+    </div>
+
 @stop

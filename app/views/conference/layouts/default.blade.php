@@ -25,7 +25,7 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('css/conference.min.css') }}
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  {{--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">--}}
 </head>
 
 <body>
