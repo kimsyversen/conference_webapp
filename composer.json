@@ -11,7 +11,9 @@
         "guzzle/guzzle": "3.9.*@dev",
         "laracasts/flash": "~1.2",
 		"davejamesmiller/laravel-breadcrumbs": "2.*",
-        "laracasts/utilities": "~1.0"
+        "laracasts/utilities": "~1.0",
+        "frenzy/turbolinks": "1.0.1"
+
 	},
     "require-dev": {
       "codeception/codeception" : "~2.0",
@@ -41,11 +43,13 @@
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
+            "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Resources/public/js\" frenzy/turbolinks",
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
             "php artisan ide-helper:generate",
+            "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Resources/public/js\" frenzy/turbolinks",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [

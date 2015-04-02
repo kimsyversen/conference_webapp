@@ -124,6 +124,7 @@ return array(
 		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
 		'Laracasts\Utilities\UtilitiesServiceProvider',
+		'Frenzy\Turbolinks\TurbolinksServiceProvider'
 
 
 	),

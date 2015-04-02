@@ -12,13 +12,15 @@ gulp.task('js', function()
     gulp.src(
         [
             basePath + "jquery/dist/jquery.min.js",
+            basePath + "jquery-pjax/jquery.pjax.js",
+            "app/assets/javascript/src/pjax.js",
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
             basePath + "fastclick/lib/fastclick.js",
             "app/assets/javascript/src/conference.js"
         ])
         .pipe(concat('conference.min.js'))
-        .pipe(uglify())
+    /*    .pipe(uglify())*/
         .pipe(gulp.dest('public/js'));
 });
 

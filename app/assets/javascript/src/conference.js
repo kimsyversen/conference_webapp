@@ -10,6 +10,8 @@ $(document).ready(function(){
         $(this).find('span').toggleClass('glyphicon-menu-down glyphicon-menu-up');
     });
 
+
+
     /** Footer to bottom */
     var pageHeight = $(window).height();
     var footerHeight = $('#footer').height();
@@ -18,7 +20,6 @@ $(document).ready(function(){
     if (footerTop < pageHeight) {
         $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
     }
-
 
     $(function() {
         FastClick.attach(document.body);

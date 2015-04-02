@@ -25,11 +25,15 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{ HTML::style('css/conference.min.css') }}
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    {{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}
+    {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
+    {{ HTML::script('js/conference.min.js') }}
 </head>
 
 <body>
-<div class="pure-container" data-effect="pure-effect-slide">
+<div class="pure-container" id="pure-container" data-effect="pure-effect-slide">
     <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
     <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
@@ -76,7 +80,8 @@
 
 
 @section('javascript')
-    {{ HTML::script('js/conference.min.js') }}
+
+
 @show
 
 
