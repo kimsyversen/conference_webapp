@@ -1,3 +1,4 @@
 .rating-item {
+  @include boxShadow;
   @include item();
 }

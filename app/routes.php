@@ -43,7 +43,7 @@ Route::get('secret', function() {
 Route::post('ajax/change_language', ['as' => 'ajax.user.language.change', 'uses' => 'LocalizationController@store']);
 
 //Fjerne get?
-/*Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);*/
+Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);
 
 Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' => 'RatingsController@store' ]);
 

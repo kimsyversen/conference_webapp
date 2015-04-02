@@ -75,7 +75,8 @@ class RatingsController extends BaseController {
 				return View::Make('conference.events.partials.rating.status.5');
 			}
 		}
-		else
-			Log::error('Someome tried to make a wrong call in RatingsController@store');
+		Log::error('Someome tried to make a wrong call in RatingsController@store');
+			return Redirect::back()->with(['error' =>  Lang::get('error.not-specified')]);
+
 	}
 }

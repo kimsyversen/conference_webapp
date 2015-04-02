@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid rating-item">
     <div class="row">
-        <div class="col-xs-12 rating-item">
+        <div class="col-xs-12 ">
             @if($status == -1)
                 @include('conference.events.partials.rating.status.-1')
             @elseif($status == 0)

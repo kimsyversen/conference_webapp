@@ -15,7 +15,7 @@ return array(
 
 	'show' => array(
 		'cancelled' => 'Hendelsen er avlyst',
-		'delimiter' => 'Mer informasjon om ehendelsen',
+		'delimiter' => 'Mer informasjon om hendelsen',
 		'heading' => 'Om hendelsen',
 		'rate-heading' => 'Fortell hva du synes om denne hendelsen'
 	),

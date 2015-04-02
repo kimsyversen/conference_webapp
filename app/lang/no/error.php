@@ -18,4 +18,6 @@ return array(
 
 
 	'with-message' => 'med meldingen',
+
+	'not-specified' => 'Unnskyld. Noe gikk galt.'
 );

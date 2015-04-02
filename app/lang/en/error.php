@@ -17,4 +17,6 @@ return array(
 	'runtime-error' => 'Could not parse the response from API".',
 
 	'with-message' => 'with message',
+
+	'not-specified' => 'Sorry. Something went wrong.'
 );

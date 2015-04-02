@@ -242,6 +242,7 @@
     background-color: #2ea7af;*/ }
 
 .rating-item {
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
   background-color: white;
   margin-false: 0;
   padding: 0; }
