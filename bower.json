@@ -8,6 +8,6 @@
     "lato": "~0.3.0",
     "lato-font": "~1.1.0",
     "world-flags-sprite": "*",
-    "font-awesome-sass": "~4.3.1"
+    "font-awesome": "~4.3.0"
   }
 }

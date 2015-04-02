@@ -18,7 +18,6 @@
 
             @if(!Session::has('conference_id'))
                 <li> <a href="#" class="disabled"><i class="glyphicon glyphicon-exclamation-sign"> </i> {{ Lang::get('menu.menu_message') }}</li>
-
                 @if(isset($authenticated) && $authenticated === false)
                     <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }}</a></li>
                     <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }}</a></li>

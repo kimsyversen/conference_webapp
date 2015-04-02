@@ -13,6 +13,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <i class="fa fa-github"></i>
+                <i class="fa fa-beer fa-lg"></i>
             </div>
         </div>
     </div>
