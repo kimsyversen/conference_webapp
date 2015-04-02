@@ -40,11 +40,21 @@
         <div class="pure-pusher">
 
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-offset-4 col-xs-5 col-sm-offset-5 col-sm-6">
+                <div class="im-centered row">
+
+                    <div class="col-xs-12 text-center">
+
                         @include('conference.partials.options.language')
                     </div>
                 </div>
+
+               {{-- <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2   center-block" style="float:none">
+                        @include('conference.partials.options.language')
+                    </div>
+                </div>--}}
+
+
                 <hr />
 
                 @yield('breadcrumb')

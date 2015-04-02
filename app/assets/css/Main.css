@@ -471,16 +471,20 @@ textarea {
     -webkit-animation-iteration-count: 2;
             animation-iteration-count: 2; }
 
-.dropdown {
-  text-align: center; }
-
-.button, .dropdown-menu {
-  margin: 10px auto; }
+.im-centered {
+  margin: auto;
+  max-width: 150px; }
 
 .dropdown-menu {
-  width: 200px;
   left: 50%;
-  margin-left: -100px; }
+  right: auto;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
+
+.dropdown-menu {
+  right: -25px !important; }
 
 .conference-breadcrumb {
   /*margin: 50px;*/ }
