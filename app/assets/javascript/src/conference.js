@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
     appendButtons();
 
     $('#advanced-options').find('.row').toggleClass('toggled');

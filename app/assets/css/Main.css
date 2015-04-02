@@ -443,14 +443,12 @@ textarea {
   margin: auto;
   max-width: 150px; }
 
-.conference-breadcrumb {
-  /*margin: 50px;*/ }
-  .conference-breadcrumb li a {
-    text-decoration: underline; }
-  .conference-breadcrumb li {
-    display: inline; }
-  .conference-breadcrumb .active {
-    color: grey; }
+.conference-breadcrumb li a {
+  text-decoration: underline; }
+.conference-breadcrumb li {
+  display: inline; }
+.conference-breadcrumb .active {
+  color: grey; }
 
 .options a {
   text-decoration: none;

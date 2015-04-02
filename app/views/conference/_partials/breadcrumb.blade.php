@@ -1,4 +1,5 @@
 @if ($breadcrumbs)
+    <hr />
         <div class="row">
             <div class="col-xs-12 text-center">
                 <span>{{ Lang::get('breadcrumb.title') }}</span>

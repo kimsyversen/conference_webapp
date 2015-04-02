@@ -50,14 +50,11 @@
                         @include('conference.partials.options.language')
                     </div>
                 </div>--}}
-
-
-                <hr />
-
                 @yield('breadcrumb')
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')
                 @yield('content')
+
             </div>
             @include('conference.partials.goto-top')
             @include('conference.layouts.partials.footer')
