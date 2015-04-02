@@ -27,10 +27,10 @@
     {{ HTML::style('css/conference.min.css') }}
 
     {{--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">--}}
-
-    {{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}
-    {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
     {{ HTML::script('js/conference.min.js') }}
+    {{--{{ HTML::script('packages/frenzy/turbolinks/jquery.turbolinks.js') }}--}}
+    {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}
+
 
 </head>
 
@@ -79,6 +79,8 @@
 
 
 @section('javascript')
+
+
 @show
 </body>
 </html>
