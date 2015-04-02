@@ -58,14 +58,17 @@
                 @yield('errors-and-messages')
                 @yield('first-time-stuff')
                 @yield('content')
-
             </div>
-            @include('conference.layouts.partials.footer')
             @include('conference.partials.goto-top')
+            @include('conference.layouts.partials.footer')
         </div>
+
     </div>
+
     <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
 </div>
+
+
 
 
 @include('conference.layouts.modals.signin')

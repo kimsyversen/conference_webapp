@@ -17,57 +17,6 @@
 /*@import '../../../public/components/vendor/world-flags-sprite/stylesheets/flags32.scss';
 $flags-images-path: '../../../public/components/vendor/world-flags-sprite/images';*/
 
-#frm-language {
-  @media(min-width:768px) {
-    margin-top: 50px;
-  }
-
-
-}
-#frm-language .btn-change-language{
-
-  color: black;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  font-size: 1em;
-  &:hover {
-    background-color: lightgray;
-  }
-}
-
-#frm-language .dropdown-menu {
-  a {
-    text-decoration: none;
-  }
-}
-.options #show-options-link {
-  font-size: 1.2em;
-  color: black;
-  font-weight: 400;
-
-  @media(max-width:500px) {
-    font-size: 1em;
-  }
-
-}
-
-
-/** MODS TO PURE PUSHER */
-
-
-@media(max-width:767px) {
-  .pure-pusher {
-  .container {
-    margin-top: 90px;
-  }
-}
-
-}
-.pure-pusher {
-  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -81,6 +30,7 @@ html {
 
 body {
   background-color: $default-background-color;
+
 }
 
 html, body {
@@ -236,8 +186,22 @@ textarea {
   margin-top: 50px;
 
 }
+/** MODS TO PURE PUSHER */
 
 
+@media(max-width:767px) {
+  .pure-pusher {
+    .container {
+      margin-top: 90px;
+    }
+  }
+
+}
+.pure-pusher {
+  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
+
+
+}
 
 // Navigation bar
 
@@ -250,6 +214,10 @@ textarea {
     border-top: 1px solid #ff0000;
   }
 
+  .menu-info {
+    color: white;
+  }
+
   li {
     list-style-type: none;
 
@@ -257,7 +225,7 @@ textarea {
       margin-left: 10px;
       text-decoration: none;
       font-size: 1.5em;
-      font-weight: 100;
+      font-weight: 200;
       color: White;
 
       &:hover {
@@ -277,4 +245,39 @@ textarea {
   }
 }
 
-//margin-top: 80px;
+#frm-language {
+  @media(min-width:768px) {
+    margin-top: 50px;
+  }
+
+
+}
+#frm-language .btn-change-language{
+
+  color: black;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 1em;
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+#frm-language .dropdown-menu {
+  a {
+    text-decoration: none;
+  }
+}
+.options #show-options-link {
+  font-size: 1.2em;
+  color: black;
+  font-weight: 400;
+
+  @media(max-width:500px) {
+    font-size: 1em;
+  }
+
+}
+
+

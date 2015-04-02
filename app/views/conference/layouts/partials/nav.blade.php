@@ -17,7 +17,7 @@
             @endif
 
             @if(!Session::has('conference_id'))
-                <li>  <span class="text-center "><i class="glyphicon glyphicon-exclamation-sign"> </i> {{ Lang::get('menu.menu_message') }}</span> </li>
+                <li> <a href="#" class="disabled"><i class="glyphicon glyphicon-exclamation-sign"> </i> {{ Lang::get('menu.menu_message') }}</a> </li>
             @endif
             <li><a href="{{ URL::current() }}"><i class="glyphicon glyphicon-refresh"></i>  {{ Lang::get('menu.refresh') }} </a> </li>
         </ul>

@@ -299,39 +299,6 @@
 
 /*@import '../../../public/components/vendor/world-flags-sprite/stylesheets/flags32.scss';
 $flags-images-path: '../../../public/components/vendor/world-flags-sprite/images';*/
-@media (min-width: 768px) {
-  #frm-language {
-    margin-top: 50px; } }
-
-#frm-language .btn-change-language {
-  color: black;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  font-size: 1em; }
-  #frm-language .btn-change-language:hover {
-    background-color: lightgray; }
-
-#frm-language .dropdown-menu a {
-  text-decoration: none; }
-
-.options #show-options-link {
-  font-size: 1.2em;
-  color: black;
-  font-weight: 400; }
-  @media (max-width: 500px) {
-    .options #show-options-link {
-      font-size: 1em; } }
-
-/** MODS TO PURE PUSHER */
-@media (max-width: 767px) {
-  .pure-pusher .container {
-    margin-top: 90px; } }
-
-.pure-pusher {
-  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
-  background: linear-gradient(#E9EAEA, #cacccc); }
-
 * {
   padding: 0;
   margin: 0; }
@@ -502,6 +469,15 @@ textarea {
 #footer {
   margin-top: 50px; }
 
+/** MODS TO PURE PUSHER */
+@media (max-width: 767px) {
+  .pure-pusher .container {
+    margin-top: 90px; } }
+
+.pure-pusher {
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc); }
+
 .nav-conference {
   margin-top: 100px;
   border-top: 1px solid #ff0000; }
@@ -509,13 +485,15 @@ textarea {
     .nav-conference {
       width: 315px;
       border-top: 1px solid #ff0000; } }
+  .nav-conference .menu-info {
+    color: white; }
   .nav-conference li {
     list-style-type: none; }
     .nav-conference li a {
       margin-left: 10px;
       text-decoration: none;
       font-size: 1.5em;
-      font-weight: 100;
+      font-weight: 200;
       color: White; }
       .nav-conference li a:hover {
         width: 100%;
@@ -525,3 +503,27 @@ textarea {
         .nav-conference li a:hover {
           width: 305px;
           color: black; } }
+
+@media (min-width: 768px) {
+  #frm-language {
+    margin-top: 50px; } }
+
+#frm-language .btn-change-language {
+  color: black;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 1em; }
+  #frm-language .btn-change-language:hover {
+    background-color: lightgray; }
+
+#frm-language .dropdown-menu a {
+  text-decoration: none; }
+
+.options #show-options-link {
+  font-size: 1.2em;
+  color: black;
+  font-weight: 400; }
+  @media (max-width: 500px) {
+    .options #show-options-link {
+      font-size: 1em; } }
