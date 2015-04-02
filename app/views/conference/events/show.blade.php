@@ -37,7 +37,7 @@
         });
 */
         $(document).on('page:load', function() {
-            $(".button-more").trigger("click");
+            $(".session .button-more").trigger("click");
         });
 
     </script>

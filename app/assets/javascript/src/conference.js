@@ -2,6 +2,20 @@
 $(document).ready(function() {
 
     appendButtons();
+
+
+    /** Footer to bottom */
+    var pageHeight = $(window).height();
+    var footerHeight = $('#footer').height();
+    var footerTop = $('#footer').position().top + footerHeight;
+
+    if (footerTop < pageHeight) {
+        $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
+    }
+
+
+    FastClick.attach(document.body);
+
 });
 
     $(document).on('click', '#show-options-link', function(){
@@ -41,17 +55,6 @@ $(document).ready(function() {
 
 
 
-    /** Footer to bottom */
-    var pageHeight = $(window).height();
-    var footerHeight = $('#footer').height();
-    var footerTop = $('#footer').position().top + footerHeight;
-
-    if (footerTop < pageHeight) {
-        $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
-    }
-
-
-        FastClick.attach(document.body);
 
 
     $(document).on('click', '.conference-button-day', function(e){
