@@ -1,7 +1,7 @@
 @include('conference.partials.page-header', ['text' => Lang::get('menu.schedule')])
 <p class="text-muted description">
     There are four types of events that may appear in the conference program.
-    All events have location and a possible description which can be seen by clicking on "{{ Lang::get('button.more') }}".
+    All events have location and a possible description which can be seen by clicking on "{{ Lang::get('button.more') }}". If you are signed in to your account, you also have the possibility to add the events to {{ Lang::get('menu.personal_schedule')  }}.
     If the event is cancelled, you will see a red cross and text.
 
     If you want, you may share on Facebook, Twitter and Google+.
@@ -9,8 +9,7 @@
 
 <p class="text-muted description">
     You can search in events by free text or filter by day.
-    Look for <span id="show-options-link" style="color:black">{{ Lang::get('event.filter.title')  }}<span class="glyphicon glyphicon-menu-down" style="color:black" aria-hidden="true" > </span></span> and try it yourself.
-    Try in on the name of the events under.
+    Look for <span id="show-options-link" style="color:black">{{ Lang::get('event.filter.title')  }}<span class="glyphicon glyphicon-menu-down" style="color:black" aria-hidden="true" > </span></span> and try it yourself on the name, or any word from the text in the  events under.
 </p>
 
 
