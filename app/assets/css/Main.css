@@ -34,7 +34,7 @@
       font-size: 2em; } }
 
 .footer {
-  border-top: 1px solid #ccc;
+  margin-top: 50px;
   background-color: #444444; }
   .footer a {
     color: #fffaf5; }
@@ -477,8 +477,15 @@ textarea {
   #advanced-options a {
     text-decoration: none; }
 
-.navbar-default a {
-  text-decoration: none; }
+.navbar-default {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: 0; }
+  .navbar-default a {
+    text-decoration: none; }
+  .navbar-default .navbar-brand {
+    margin-top: -3px; }
 
 /*.nav-conference {
   margin-top: 100px;

@@ -191,10 +191,19 @@ textarea {
   }
 }
 .navbar-default {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
   a {
     text-decoration: none;
   }
+  .navbar-brand {
+    margin-top: -3px;
+  }
 }
+
+
 // Navigation bar
 
 /*.nav-conference {
