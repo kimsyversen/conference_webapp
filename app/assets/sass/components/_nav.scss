@@ -17,7 +17,7 @@
   }
   ul li {
     &:hover {
-      background-color: darken($default-background-color;
+      background-color: $default-background-color;
       text-decoration: underline;
     }
     .active {
