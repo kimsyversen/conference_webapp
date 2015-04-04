@@ -68,6 +68,14 @@ App::down(function()
 	return Response::make("Be right back!", 503);
 });
 
+
+require app_path().'/errors.php';
+
+require app_path().'/macros.php';
+
+require app_path().'/bindings.php';
+
+
 /*
 |--------------------------------------------------------------------------
 | Require The Filters File
@@ -81,8 +89,3 @@ App::down(function()
 
 require app_path().'/filters.php';
 
-require app_path().'/errors.php';
-
-require app_path().'/macros.php';
-
-require app_path().'/bindings.php';

@@ -7,7 +7,21 @@
     text-decoration: none;
   }
   .navbar-brand {
-    margin-top: -3px;
+   font-size: 1em;
+
+  }
+  .navbar-brand.active {
+
+    background-color: $default-background-color;
+
+  }
+  ul li {
+    &:hover {
+      background-color: $default-background-color;
+    }
+    .active {
+      background-color: $default-background-color;
+    }
   }
 
 

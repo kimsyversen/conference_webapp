@@ -124,7 +124,8 @@ return array(
 		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
 		'Laracasts\Utilities\UtilitiesServiceProvider',
-		'Frenzy\Turbolinks\TurbolinksServiceProvider'
+		'Frenzy\Turbolinks\TurbolinksServiceProvider',
+		'HieuLe\Active\ActiveServiceProvider',
 
 
 	),
@@ -195,7 +196,8 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
 		'Flash' => 'Laracasts\Flash\Flash',
-		'Twitter' => 'Thujohn\Twitter\TwitterFacade'
+		'Twitter' => 'Thujohn\Twitter\TwitterFacade',
+		'Active' => 'HieuLe\Active\Facades\Active'
 	),
 
 );

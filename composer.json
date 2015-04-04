@@ -12,7 +12,8 @@
         "laracasts/flash": "~1.2",
 		"davejamesmiller/laravel-breadcrumbs": "2.*",
         "laracasts/utilities": "~1.0",
-        "frenzy/turbolinks": "1.0.1"
+        "frenzy/turbolinks": "1.0.1",
+        "hieu-le/active": "~1.0"
 
 	},
     "require-dev": {

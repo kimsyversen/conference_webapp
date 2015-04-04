@@ -1,6 +1,5 @@
 <?php
 
-
 Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ])->before('cache.fetch')->after('cache.put');
 Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ])->before('cache.fetch')->after('cache.put');
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);

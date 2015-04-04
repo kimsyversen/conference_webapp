@@ -14,7 +14,13 @@
   .navbar-default a {
     text-decoration: none; }
   .navbar-default .navbar-brand {
-    margin-top: -3px; }
+    font-size: 1em; }
+  .navbar-default .navbar-brand.active {
+    background-color: #E9EAEA; }
+  .navbar-default ul li:hover {
+    background-color: #E9EAEA; }
+  .navbar-default ul li .active {
+    background-color: #E9EAEA; }
   .navbar-default .glyphicon-globe {
     font-size: 1em; }
 
