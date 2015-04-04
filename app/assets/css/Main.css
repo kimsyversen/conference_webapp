@@ -33,15 +33,15 @@
     .featurette p {
       font-size: 2em; } }
 
-#footer {
+.footer {
   border-top: 1px solid #ccc;
   background-color: #444444; }
-  #footer a {
+  .footer a {
     color: #fffaf5; }
-  #footer h4 {
+  .footer h4 {
     color: #fffaf5;
     font-weight: normal; }
-  #footer ul li {
+  .footer ul li {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-size: 1.1em; }
@@ -312,7 +312,19 @@ body {
   background-color: #E9EAEA; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  min-height: 100%; }
+
+.footer, .push {
+  height: 150px; }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -150px;
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc); }
 
 .default-heading {
   color: #2F2F2F;
@@ -465,44 +477,48 @@ textarea {
   #advanced-options a {
     text-decoration: none; }
 
-#footer {
-  margin-top: 50px; }
+.navbar-default a {
+  text-decoration: none; }
 
-/** MODS TO PURE PUSHER */
-@media (max-width: 767px) {
-  .pure-pusher .container {
-    margin-top: 90px; } }
-
-.pure-pusher {
-  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
-  background: linear-gradient(#E9EAEA, #cacccc); }
-
-.nav-conference {
+/*.nav-conference {
   margin-top: 100px;
-  border-top: 1px solid #ff0000; }
-  @media (min-width: 640px) {
-    .nav-conference {
-      width: 315px;
-      border-top: 1px solid #ff0000; } }
-  .nav-conference .menu-info {
-    color: white; }
-  .nav-conference li {
-    list-style-type: none; }
-    .nav-conference li a {
+
+  border-top: 1px solid #ff0000;
+  @media(min-width:640px) {
+    width: 315px;
+    border-top: 1px solid #ff0000;
+  }
+
+  .menu-info {
+    color: white;
+  }
+
+  li {
+    list-style-type: none;
+
+    a {
       margin-left: 10px;
       text-decoration: none;
       font-size: 1.5em;
       font-weight: 200;
-      color: White; }
-      .nav-conference li a:hover {
+      color: White;
+
+      &:hover {
         width: 100%;
         color: black;
-        font-weight: 400; }
-      @media (min-width: 640px) {
-        .nav-conference li a:hover {
+        font-weight: 400;
+      }
+      @media(min-width:640px) {
+        &:hover {
           width: 305px;
-          color: black; } }
+          color: black;
 
+        }
+      }
+
+    }
+  }
+}*/
 @media (min-width: 768px) {
   #frm-language {
     margin-top: 50px; } }

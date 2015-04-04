@@ -5,13 +5,13 @@ $(document).ready(function() {
 
 
     /** Footer to bottom */
-    var pageHeight = $(window).height();
+/*    var pageHeight = $(window).height();
     var footerHeight = $('#footer').height();
     var footerTop = $('#footer').position().top + footerHeight;
 
     if (footerTop < pageHeight) {
         $('#footer').css('margin-top', (pageHeight - footerTop) + 'px');
-    }
+    }*/
 
 
     FastClick.attach(document.body);
@@ -52,10 +52,6 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
-
 
     $(document).on('click', '.conference-button-day', function(e){
         var value = $(this).attr('data-value');

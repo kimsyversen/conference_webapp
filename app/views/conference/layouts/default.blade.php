@@ -37,43 +37,27 @@
     {{ HTML::script('packages/frenzy/turbolinks/turbolinks.js') }}--}}
 
 </head>
-
 <body>
-<div class="pure-container" id="pure-container" data-effect="pure-effect-slide">
-    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
-    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
-
+<header>
     @include('conference.layouts.partials.nav')
+</header>
 
-    <div class="pure-pusher-container">
-        <div class="pure-pusher">
-
-            <div class="container">
-                <div class="im-centered row">
-                    <div class="col-xs-12 text-center">
-                        @include('conference.partials.options.language')
-                    </div>
-                </div>
-
-               {{-- <div class="row">
-                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2 center-block" style="float:none">
-                        @include('conference.partials.options.language')
-                    </div>
-                </div>--}}
-                @yield('breadcrumb')
-                @yield('errors-and-messages')
-                @yield('first-time-stuff')
-                @yield('content')
-
+<div class="wrapper">
+    <div class="container">
+        <div class="im-centered row">
+            <div class="col-xs-12 text-center">
+                @include('conference.partials.options.language')
             </div>
-            @include('conference.partials.goto-top')
-            @include('conference.layouts.partials.footer')
         </div>
-
+        @yield('breadcrumb')
+        @yield('errors-and-messages')
+        @yield('first-time-stuff')
+        @yield('content')
     </div>
-
-    <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+    <div class="push"></div>
 </div>
+@include('conference.partials.goto-top')
+@include('conference.layouts.partials.footer')
 
 
 @include('conference.layouts.modals.signin')

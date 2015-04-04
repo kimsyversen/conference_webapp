@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-    @include('conference.partials.page-header', ['text' => 'My schedule'])
+    @include('conference.partials.page-header', ['text' => Lang::get('menu.personal_schedule')])
 
     @if(isset($data['data']))
         @if(!empty($data['data']))
