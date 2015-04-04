@@ -44,8 +44,6 @@ gulp.task('css', function()
         basePath + "bootstrap/dist/css/bootstrap.css",
         basePath + "animate-css/animate.css",
         basePath + "add-to-homescreen/style/addtohomescreen.css",
-        basePath + "lato-font/css/lato-font.css",
-        basePath + "font-awesome/css/font-awesome.css",
         "app/assets/css/Main.css"
     ])
         .pipe(concatCss("conference.min.css"))

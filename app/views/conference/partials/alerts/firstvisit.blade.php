@@ -1,8 +1,8 @@
 <div class="site-notice">
     <div class="alert alert-info alert-dismissible animated fadeIn">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <div class="exclamation animated flash">
-            <i class="fa fa-exclamation-circle"></i>
+        <div class="bell animated flash">
+            <i class="glyphicon glyphicon-bell"></i>
         </div>
         <div>
             <p> {{ Lang::get('firstvisit.firsttimestuff.message') }}

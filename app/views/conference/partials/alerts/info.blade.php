@@ -4,7 +4,7 @@
             <div class="alert alert-info alert-dismissible animated fadeIn">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="info-circle">
-                    <i class="fa fa-info-circle"></i>
+                    <i class="glyphicon glyphicon-info-sign"></i>
                 </div>
                 <div class="message">
                     <p> {{ $info or 'It should be a message here but it was not specified' }} </p>

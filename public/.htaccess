@@ -1,15 +1,3 @@
-#START MIME-types for font-awesome
-
-    AddType application/vnd.ms-fontobject .eot
-    AddType application/font-woff .woff
-    AddType application/x-font-truetype .ttf
-    AddType image/svg+xml .svg
-    AddType application/x-font-opentype .otf
-
-    # could use application/octet-stream for default binary file transfer
-    #AddType application/octet-stream .otf .ttf
-#END #MIME-types for font-awesome
-
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
