@@ -1,9 +1,6 @@
-/*@import url("//fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
-@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900,400italic");*/
 
-
-/*$fa-font-path: "../components/vendor/font-awesome/fonts" !default;
-@import "../../../public/components/vendor/font-awesome/scss/font-awesome";*/
+/*$flags-images-path: "http://localhost:8001/components/vendor/world-flags-sprite/images";*/
+@import "../../../public/components/vendor/world-flags-sprite/stylesheets/flags32.scss";
 
 
 @import 'conference-defaults';
@@ -18,6 +15,9 @@
 @import 'components/rating';
 @import 'components/chat';
 @import 'components/map';
+
+
+
 
 
 

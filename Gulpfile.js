@@ -41,11 +41,11 @@ gulp.task('css', function()
     var basePath = "public/components/vendor/";
 
     gulp.src([
-       basePath + "bootstrap/dist/css/bootstrap.css",
+        basePath + "bootstrap/dist/css/bootstrap.css",
         basePath + "animate-css/animate.css",
         basePath + "add-to-homescreen/style/addtohomescreen.css",
         basePath + "lato-font/css/lato-font.css",
-        "app/assets/css/pure-drawer.css",
+      /*  basePath + "font-awesome/css/font-awesome.css",*/
         "app/assets/css/Main.css"
     ])
         .pipe(concatCss("conference.min.css"))
