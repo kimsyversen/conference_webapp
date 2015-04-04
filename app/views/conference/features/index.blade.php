@@ -18,9 +18,12 @@
         @include('conference.features.partials.schedule')
         </div>
 
+        <div>
+            @include('conference.features.partials.mySchedule')
+        </div>
 
         <div>
-
+            @include('conference.features.partials.account')
         </div>
 
     </div>

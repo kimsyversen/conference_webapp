@@ -7,6 +7,16 @@
     If you want, you may share on Facebook, Twitter and Google+.
 </p>
 
+<p class="text-muted description">
+    You can search in events by free text or filter by day.
+    Look for <span id="show-options-link" style="color:black">{{ Lang::get('event.filter.title')  }}<span class="glyphicon glyphicon-menu-down" style="color:black" aria-hidden="true" > </span></span> and try it yourself.
+    Try in on the name of the events under.
+</p>
+
+
+@include('conference.partials.options.filter-options')
+
+
 <?php  $currentUrl = URL::full()  ?>
 
 <?php $professional = array(
@@ -136,3 +146,6 @@
 ); ?>
 
 @include('conference.events.event', ['session' => $other, 'schedule_type' => 'session'])
+
+
+
