@@ -2,6 +2,32 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900,400italic");*/
 /*$fa-font-path: "../components/vendor/font-awesome/fonts" !default;
 @import "../../../public/components/vendor/font-awesome/scss/font-awesome";*/
+.navbar-default {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  /* .dropdown-settings a {
+     margin-top: -10px;
+     font-size: 1.5em;
+   }
+
+   .dropdown-settings .glyphicon-cog{
+     font-size: 1.5em;
+   }*/ }
+  .navbar-default a {
+    text-decoration: none; }
+  .navbar-default .navbar-brand {
+    margin-top: -3px; }
+  .navbar-default .glyphicon-globe {
+    font-size: 1em; }
+
+.logged-in {
+  color: green; }
+
+.logged-out {
+  color: #c51c0d; }
+
 .featurette {
   margin-top: 3em;
   margin-bottom: 2em; }
@@ -350,8 +376,7 @@ html, body {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
   background-color: #9b9f9f; }
   .button-dark:hover {
-    background-color: #eeefef;
-    border: 1px solid #E9EAEA; }
+    background-color: #eeefef; }
   @media (max-width: 420px) {
     .button-dark {
       font-size: 0.9em; } }
@@ -370,8 +395,7 @@ html, body {
   border: 1px solid #f6f6f6;
   background-color: #c3c3c3; }
   .button-light:hover {
-    background-color: #c3c3c3;
-    border: 1px solid #767676; }
+    background-color: #bebebe; }
   @media (max-width: 420px) {
     .button-light {
       font-size: 0.9em; } }
@@ -470,65 +494,6 @@ textarea {
   #advanced-options a {
     text-decoration: none; }
 
-.navbar-default {
-  padding: 0;
-  margin: 0;
-  border-radius: 0;
-  border: 0;
-  /* .dropdown-settings a {
-    margin-top: -10px;
-    font-size: 1.5em;
-  }
-
-  .dropdown-settings .glyphicon-cog{
-    font-size: 1.5em;
-  }*/ }
-  .navbar-default a {
-    text-decoration: none; }
-  .navbar-default .navbar-brand {
-    margin-top: -3px; }
-  .navbar-default .glyphicon-globe {
-    font-size: 1em; }
-
-/*.nav-conference {
-  margin-top: 100px;
-
-  border-top: 1px solid #ff0000;
-  @media(min-width:640px) {
-    width: 315px;
-    border-top: 1px solid #ff0000;
-  }
-
-  .menu-info {
-    color: white;
-  }
-
-  li {
-    list-style-type: none;
-
-    a {
-      margin-left: 10px;
-      text-decoration: none;
-      font-size: 1.5em;
-      font-weight: 200;
-      color: White;
-
-      &:hover {
-        width: 100%;
-        color: black;
-        font-weight: 400;
-      }
-      @media(min-width:640px) {
-        &:hover {
-          width: 305px;
-          color: black;
-
-        }
-      }
-
-    }
-  }
-}*/
 @media (min-width: 768px) {
   #frm-language {
     margin-top: 50px; } }

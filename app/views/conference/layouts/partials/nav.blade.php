@@ -27,7 +27,7 @@
          <ul class="nav navbar-nav navbar-right">
                  <li class="dropdown">
                      <a href="#" class="dropdown-toggle dropdown-settings" data-toggle="dropdown" role="button" aria-expanded="false">
-                         <i class="glyphicon glyphicon-cog" style="color: <?php if (isset($authenticated) && $authenticated === false) echo 'red'; else echo 'green'; ?>"> </i> {{ Lang::get('menu.settings') }} </a>
+                         <i class="glyphicon glyphicon-cog <?php if (isset($authenticated) && $authenticated === false) echo 'logged-out'; else echo 'logged-in'; ?>"> </i> {{ Lang::get('menu.settings') }} <span class="caret"></span></a>
                      <ul class="dropdown-menu" role="menu">
                          @if(isset($authenticated) && $authenticated === false)
                              <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
