@@ -19,7 +19,7 @@
                 Nettsiden bruker en sikker tilkopling og passord blir kryptert.
 
                 Vi håper du vil ta i bruk applikasjonen, og fortell gjerne hva du synes om den.
-                </p>
+
             </div>
         </div>
     </div>
