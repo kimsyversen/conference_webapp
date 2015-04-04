@@ -230,9 +230,10 @@
       font-size: 1.5em; } }
 
 .cancelled {
-  color: #ff0000; }
+  color: #c51c0d; }
   .cancelled span {
-    color: #ff0000; }
+    font-size: 0.9em;
+    color: #c51c0d; }
 
 .message {
   margin: 1em; }
