@@ -1,4 +1,4 @@
-@include('conference.partials.page-header', ['text' => 'Conference program'])
+@include('conference.partials.page-header', ['text' => Lang::get('menu.schedule')])
 <p class="text-muted description">
     There are four types of events that may appear in the conference program.
     All events have location and a possible description which can be seen by clicking on "{{ Lang::get('button.more') }}".
