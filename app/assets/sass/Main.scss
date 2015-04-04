@@ -106,6 +106,7 @@ textarea {
 /* Alerts */
 .alert {
   .close {
+
     span {
       font-size: 1.5em;
     }
@@ -125,6 +126,7 @@ textarea {
 
   }
   .checker {
+    color: black;
     font-size: 1.5em;
     float: left;
     @include animation(3s, 2s, 2);
@@ -133,6 +135,7 @@ textarea {
   }
 
   .info-circle {
+    color: black;
     i {
       padding: 0.4em 0.6em 0.6em 0.3em;
       font-size: 2em;
