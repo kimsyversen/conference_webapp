@@ -10,7 +10,6 @@
             <a class="navbar-brand" href="{{ route('conferences_path') }}"> <i class="glyphicon glyphicon-home"></i> {{ Lang::get('menu.home') }}</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @if(Session::has('conference_id'))
@@ -25,14 +24,39 @@
                 @endif
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                @if(isset($authenticated) && $authenticated === false)
-                    <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }}</a></li>
-                    <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }}</a></li>
-                @else
-                    <li> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
-                @endif
+         <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown">
+                     <a href="#" class="dropdown-toggle dropdown-settings" data-toggle="dropdown" role="button" aria-expanded="false">
+                         <i class="glyphicon glyphicon-cog"> </i> Settings </a>
+                     <ul class="dropdown-menu" role="menu">
+                         @if(isset($authenticated) && $authenticated === false)
+                             <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
+                             <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>
+                         @else
+                             <li> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
+                         @endif
+                     </ul>
+                 </li>
+                 <li class="dropdown hidden-xs">
+                     <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>   </a>
+                     <ul class="dropdown-menu" role="menu" onchange="submit();">
+                         <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
+                         <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
+                     </ul>
+                </li>
+
+             <li class="dropdown visible-xs">
+                 <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i> {{ Lang::get('menu.change-language.change-language')  }} <span class="caret"></span>  </a>
+                 <ul class="dropdown-menu" role="menu" onchange="submit();">
+                     <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
+                     <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
+                 </ul>
+             </li>
             </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
+
+{{ Form::open(['route' => 'ajax.user.language.change', 'id' => 'frm-language', 'class' => 'hidden']) }}
+<input id="language" name="language" type="hidden">
+{{ Form::close()}}

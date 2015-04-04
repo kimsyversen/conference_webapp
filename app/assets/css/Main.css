@@ -437,7 +437,6 @@ textarea {
           animation-delay: 2s;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
-  font-size: 1.5em;
   margin-top: 1px;
   padding: 0.5em; }
 .alert .info-circle {
@@ -451,10 +450,6 @@ textarea {
             animation-delay: 2s;
     -webkit-animation-iteration-count: 2;
             animation-iteration-count: 2; }
-
-.im-centered {
-  margin: auto;
-  max-width: 150px; }
 
 .conference-breadcrumb li a {
   text-decoration: underline; }
@@ -481,11 +476,21 @@ textarea {
   padding: 0;
   margin: 0;
   border-radius: 0;
-  border: 0; }
+  border: 0;
+  /* .dropdown-settings a {
+    margin-top: -10px;
+    font-size: 1.5em;
+  }
+
+  .dropdown-settings .glyphicon-cog{
+    font-size: 1.5em;
+  }*/ }
   .navbar-default a {
     text-decoration: none; }
   .navbar-default .navbar-brand {
     margin-top: -3px; }
+  .navbar-default .glyphicon-globe {
+    font-size: 1em; }
 
 /*.nav-conference {
   margin-top: 100px;

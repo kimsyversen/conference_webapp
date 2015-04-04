@@ -137,27 +137,19 @@ textarea {
     font-size: 1.5em;
     float: left;
     @include animation(3s, 2s, 2);
-    font-size: 1.5em;
     margin-top: 1px;
     padding: 0.5em;
-
   }
 
   .info-circle {
     i {
       padding: 0.5em 0.6em 0.6em 0.3em;
-
       font-size: 2em;
-
       @include animation(3s, 2s, 2);
     }
     float: left;
   }
-
 }
-
-//Next snippet found at http://stackoverflow.com/questions/19941414/center-a-row-using-bootstrap-3
-.im-centered { margin: auto; max-width: 150px;}
 
 .conference-breadcrumb {
   li a {
@@ -202,6 +194,20 @@ textarea {
   }
   .navbar-brand {
     margin-top: -3px;
+  }
+
+
+ /* .dropdown-settings a {
+    margin-top: -10px;
+    font-size: 1.5em;
+  }
+
+  .dropdown-settings .glyphicon-cog{
+    font-size: 1.5em;
+  }*/
+
+  .glyphicon-globe {
+    font-size: 1em;
   }
 }
 

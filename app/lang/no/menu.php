@@ -23,7 +23,7 @@ return array(
 	'footer_title' => 'Annet',
 
 	'change-language' => array(
-		'change-language' => 'Endre språkinstillinger',
+		'change-language' => 'Språk',
 		'norwegian' => 'Norsk',
 		'english' => 'Engelsk'
 	)

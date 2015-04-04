@@ -3,11 +3,8 @@
   background-color: #444444;
   a {
     color: #fffaf5;
-
-
     &:hover {
       @extend .default-link-hover-color;
-
     }
   }
   h4 {

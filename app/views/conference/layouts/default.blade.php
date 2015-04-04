@@ -44,11 +44,6 @@
 
 <div class="wrapper">
     <div class="container">
-        <div class="im-centered row">
-            <div class="col-xs-12 text-center">
-                @include('conference.partials.options.language')
-            </div>
-        </div>
         @yield('breadcrumb')
         @yield('errors-and-messages')
         @yield('first-time-stuff')

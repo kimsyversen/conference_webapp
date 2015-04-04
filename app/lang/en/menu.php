@@ -26,7 +26,7 @@ return array(
 
 
 	'change-language' => array(
-		'change-language' => 'Change language',
+		'change-language' => 'Language',
 		'norwegian' => 'Norwegian',
 		'english' => 'English'
 	)
