@@ -16,7 +16,6 @@ Route::filter('cache.put', 'Uninett\Filters\CacheFilter@put');*/
 
 App::before(function($request)
 {
-	App::setLocale('en');
 	\Uninett\Helpers\AccessToken::validate();
 
 	if(!Cookie::has('has_visited_before')) {
@@ -24,8 +23,8 @@ App::before(function($request)
 		Cookie::queue('has_visited_before', true);
 	}
 
-	if(Session::has('language')) {
-		App::setLocale(Session::get('language'), Config::get('app.locale'));
+	if(Cookie::has('language')) {
+		App::setLocale(Cookie::get('language'), Config::get('app.locale'));
 	}
 });
 

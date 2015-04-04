@@ -19,6 +19,7 @@ return array(
 	'event' => 'Event',
 	'rating' => 'Rating',
 
+	'settings' => 'Settings',
 
 	'footer_title' => 'Other information',
 

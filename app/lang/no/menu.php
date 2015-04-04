@@ -19,6 +19,7 @@ return array(
 	'event' => 'Hendelse',
 	'rating' => 'Vurdering',
 
+	'settings' => 'Instillinger',
 
 	'footer_title' => 'Annet',
 

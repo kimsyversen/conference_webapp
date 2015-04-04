@@ -30,6 +30,7 @@ class LocalizationController extends \BaseController {
 
 			if($validator->passes()) {
 				Session::put('language', $language);
+				Cookie::queue('language', $language);
 				App::setLocale($language);
 				return Redirect::back();
 			}
