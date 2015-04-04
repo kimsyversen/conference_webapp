@@ -1,4 +1,4 @@
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalTitle" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,7 +13,7 @@
                     </div>
 
                     <div class="form-group">
-                        {{ Form::label(Lang::get('forms.password'), Lang::get('forms.password'), ['class' => 'control-label']) }}
+                        {{ Form::label('password', Lang::get('forms.password'), ['class' => 'control-label']) }}
                         {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.password')]) }}
                     </div>
 

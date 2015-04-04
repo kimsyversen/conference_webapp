@@ -1,5 +1,5 @@
 
-<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signInModal" aria-hidden="true">
+<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
