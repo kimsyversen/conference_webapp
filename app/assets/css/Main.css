@@ -308,10 +308,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
-  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
-  background: linear-gradient(#E9EAEA, #cacccc); }
-
 html, body {
   height: 100%;
   min-height: 100%; }
@@ -320,6 +316,8 @@ html, body {
   height: 150px; }
 
 .wrapper {
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc);
   padding-top: 70px;
   min-height: 100%;
   height: auto !important;

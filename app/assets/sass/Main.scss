@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
+
 
 }
 
@@ -46,6 +46,7 @@ html, body {
 }
 
 .wrapper {
+  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
   padding-top: 70px;
   min-height: 100%;
   height: auto !important;
