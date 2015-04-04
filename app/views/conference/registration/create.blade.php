@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    {{ Form::label(Lang::get('forms.password'), Lang::get('forms.password'), ['class' => 'control-label']) }}
+                    {{ Form::label('password', Lang::get('forms.password'), ['class' => 'control-label']) }}
                     {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.password')]) }}
                 </div>
 
