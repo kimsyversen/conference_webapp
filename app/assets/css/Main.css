@@ -18,7 +18,8 @@
   .navbar-default .navbar-brand.active {
     background-color: #E9EAEA; }
   .navbar-default ul li:hover {
-    background-color: #E9EAEA; }
+    background-color: #E9EAEA;
+    text-decoration: underline; }
   .navbar-default ul li .active {
     background-color: #E9EAEA; }
   .navbar-default .glyphicon-globe {
