@@ -165,7 +165,7 @@
       font-size: 24pt;
       font-weight: 100;
       line-height: 1;
-      font-family: Lato, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin-false: 0;
       font-weight: 100; }
     .event .event-time .day {
@@ -173,7 +173,7 @@
       font-size: 40pt;
       font-weight: 100;
       line-height: 1;
-      font-family: Lato, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin-false: 0;
       margin-top: 5px;
       font-weight: 100; }
@@ -182,7 +182,7 @@
       font-size: 14pt;
       font-weight: 100;
       line-height: 1;
-      font-family: Lato, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin-false: 0;
       font-weight: 300;
       margin-bottom: 5px; }
@@ -205,7 +205,7 @@
         font-size: 24pt;
         font-weight: 100;
         line-height: 1;
-        font-family: Lato, sans-serif;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-false: 0;
         font-weight: 100; }
       .event .event-time .day {
@@ -213,7 +213,7 @@
         font-size: 40pt;
         font-weight: 100;
         line-height: 1;
-        font-family: Lato, sans-serif;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-false: 0;
         font-weight: 100; }
       .event .event-time .hour {
@@ -221,7 +221,7 @@
         font-size: 12pt;
         font-weight: 100;
         line-height: 1;
-        font-family: Lato, sans-serif;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-false: 0;
         font-weight: 300; }
       .event .event-time .row {
@@ -510,12 +510,15 @@ textarea {
   text-decoration: none; }
 
 .options #show-options-link {
+  color: #2F2F2F;
   font-size: 1.2em;
-  color: black;
-  font-weight: 400; }
+  font-weight: 300; }
   .options #show-options-link:hover {
     cursor: pointer;
     background: #d3d3d3; }
+  .options #show-options-link .glyphicon {
+    color: #2F2F2F;
+    font-weight: 300; }
   @media (max-width: 500px) {
     .options #show-options-link {
       font-size: 1em; } }

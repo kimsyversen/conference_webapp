@@ -204,12 +204,19 @@ textarea {
   }
 }
 .options #show-options-link {
+  color: $default-heading-color;
   font-size: 1.2em;
-  color: black;
-  font-weight: 400;
+
+  font-weight: 300;
   &:hover {
     cursor: pointer;
     background: #d3d3d3;
+  }
+
+  .glyphicon {
+    color: $default-heading-color;
+
+    font-weight: 300;
   }
 
   @media(max-width:500px) {

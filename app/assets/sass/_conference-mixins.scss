@@ -85,7 +85,7 @@
   font-size: $font-size;
   font-weight: 100;
   line-height: 1;
-  font-family: Lato, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   @each $position in $margin-positions {
     margin-#{$position}: $margin-value;
