@@ -309,7 +309,9 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  background-color: #E9EAEA; }
+  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
+  background: linear-gradient(#E9EAEA, #cacccc);
+  padding-top: 70px; }
 
 html, body {
   height: 100%;
@@ -322,9 +324,7 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -150px;
-  background: -webkit-linear-gradient(#E9EAEA, #cacccc);
-  background: linear-gradient(#E9EAEA, #cacccc); }
+  margin: 0 auto -150px; }
 
 .default-heading {
   color: #2F2F2F;

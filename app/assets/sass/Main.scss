@@ -32,7 +32,8 @@ html {
 }
 
 body {
-  background-color: $default-background-color;
+  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
+  padding-top: 70px;
 }
 
 html, body {
@@ -49,7 +50,7 @@ html, body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -150px;
-  background: linear-gradient($default-background-color, darken($default-background-color, 12%));
+
 }
 
 
