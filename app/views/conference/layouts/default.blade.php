@@ -24,6 +24,7 @@
     <meta name="msapplication-wide310x150logo" content="/img/widetile.png" />
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
+    {{HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css')}}
     {{ HTML::style('css/conference.min.css') }}
 </head>
 <body>
