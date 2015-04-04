@@ -15,6 +15,7 @@
 
 @include('conference.partials.options.filter-options')
 
+@include('conference.partials.options.filter-options-count')
 
 <?php  $currentUrl = URL::full()  ?>
 

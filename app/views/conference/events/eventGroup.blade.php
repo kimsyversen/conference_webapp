@@ -6,6 +6,10 @@
 
 @include('conference.partials.options.filter-options')
 
+
+@include('conference.partials.options.filter-options-count')
+
+
 @foreach($data['data'] as $sessionGroup)
     <div class="session-group" data-value="{{ ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'m/d')  }}">
         @include('conference.partials.delimiter', ['text' => Lang::get('event.heading'), 'value' => ConferenceHelper::formatTimestamp($sessionGroup['start_date']['date'],'H:i')])
