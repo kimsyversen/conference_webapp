@@ -6,6 +6,7 @@
             @include('conference.features.partials.navigationbar')
         </div>
 
+        <hr>
         <div>
             @include('conference.features.partials.newsfeed')
         </div>
@@ -14,14 +15,15 @@
             <p>Write about messages?</p>
         </div>--}}
 
+        <hr>
         <div>
         @include('conference.features.partials.schedule')
         </div>
-
+        <hr>
         <div>
             @include('conference.features.partials.mySchedule')
         </div>
-
+        <hr>
         <div>
             @include('conference.features.partials.account')
         </div>

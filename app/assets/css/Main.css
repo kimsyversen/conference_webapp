@@ -18,18 +18,11 @@
   .navbar-default .navbar-brand.active {
     background-color: #E9EAEA; }
   .navbar-default ul li:hover {
-    background-color: #E9EAEA;
-    text-decoration: underline; }
+    background-color: #E9EAEA; }
   .navbar-default ul li .active {
     background-color: #E9EAEA; }
   .navbar-default .glyphicon-globe {
     font-size: 1em; }
-
-.logged-in {
-  color: green; }
-
-.logged-out {
-  color: #c51c0d; }
 
 .featurette {
   margin-top: 3em;
@@ -532,7 +525,19 @@ textarea {
       font-size: 1em; } }
 
 .features .description {
-  padding: 0.5em 2em 2em 2em; }
+  padding: 0.5em 2em 2em 2em;
+  margin: 1em; }
 
-.nohover:hover {
-  background-color: inherit !important; }
+#event-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+#event-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em; }
+
+#event-rating > span:hover:before, #event-rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: #ffb300; }

@@ -221,17 +221,28 @@ textarea {
   @media(max-width:500px) {
     font-size: 1em;
   }
-
 }
 
 .features .description {
     padding: 0.5em 2em 2em 2em;
-}
-
-.nohover {
-  &:hover {
-    background-color: inherit !important;
-  }
+    margin: 1em;
 }
 
 
+
+#event-rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+#event-rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+
+}
+#event-rating > span:hover:before,
+#event-rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: #ffb300;
+}

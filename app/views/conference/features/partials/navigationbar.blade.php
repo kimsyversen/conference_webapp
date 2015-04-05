@@ -1,10 +1,9 @@
 @include('conference.partials.page-header', ['text' => 'The navigation bar'])
 
 <p  class="text-muted description">
-    This is where you navigate around the site. It will look different if you are browsing from a mobile device, but the choices are still the same.
+    This is where you navigate around the site. It will look slightly different if you use a smartphone, tablet, or computer, but the choices are still the same.
     The menu will remember your last visisted conference, therefore you will have more choices once you visit one.
-    The settings-cog will be red if you are logged out and green if you are logged into your account.
-    The globe let you switch between English and Norwegian language (the conference program may still only be available in one language).
+    The globe let you switch between English and Norwegian language (the conference program may still only be available in one language). If you are on a mobile device, you might have to scroll when expanding the language menu.
 </p>
 
 <div class="container-fluid">
@@ -18,9 +17,26 @@
             </button>
             <a class="navbar-brand {{ Active::action('ConferenceController@index')  }}" href="{{ URL::full() }}"> <i class="glyphicon glyphicon-home"></i> {{ Lang::get('menu.home') }}</a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav visible-sm">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle dropdown-settings" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ Lang::get('menu.menu') }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        @if(Session::has('conference_id'))
+                            <li><a href="{{ URL::full() }}" class="{{ Active::action('ConferenceNewsFeedController@index') }}"><i class="glyphicon glyphicon-envelope"></i>  {{ Lang::get('menu.newsfeed') }}</a> </li>
+                            @if(isset($authenticated) && $authenticated === true)
+                                <li class="nav-item"><a href="{{ URL::full() }}" class="{{ Active::action(array('ConferenceChatsController@index', 'ConferenceChatsController@show')) }}"><i class="glyphicon glyphicon-comment"></i> {{ Lang::get('menu.messages') }}</a> </li>
+                                <li><a href="{{ URL::full() }}" class="{{ Active::action('ConferencePersonalScheduleController@index') }}"><i class="glyphicon glyphicon-tasks"></i>  {{ Lang::get('menu.personal_schedule') }}</a> </li>
+                            @endif
+                            <li><a href="{{ URL::full() }}" class="{{ Active::action('ConferenceMapsController@index') }}"><i class="glyphicon glyphicon-map-marker"></i>  {{ Lang::get('menu.maps') }}</a> </li>
+                            <li><a href="{{ URL::full() }}" class="{{ Active::action('ConferenceScheduleController@index') }}"><i class="glyphicon glyphicon-list-alt"></i>  {{ Lang::get('menu.schedule') }} </a> </li>
+                        @endif
+                    </ul>
+                </li>
+            </ul>
 
-        <div class="collapsed navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav hidden-sm">
                 @if(Session::has('conference_id'))
                     <li><a href="{{ URL::full() }}" class="{{ Active::action('ConferenceNewsFeedController@index') }}"><i class="glyphicon glyphicon-envelope"></i>  {{ Lang::get('menu.newsfeed') }}</a> </li>
                     @if(isset($authenticated) && $authenticated === true)
@@ -33,20 +49,15 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle dropdown-settings" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <i class="glyphicon glyphicon-cog <?php if (isset($authenticated) && $authenticated === false) echo 'logged-out'; else echo 'logged-in'; ?>"> </i> {{ Lang::get('menu.settings') }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        @if(isset($authenticated) && $authenticated === false)
-                            <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
-                            <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>
-                        @else
-                            <li> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
-                        @endif
-                    </ul>
-                </li>
+                @if(isset($authenticated) && $authenticated === false)
+                    <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
+                    <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>
+                @else
+                    <li> <a href="{{ URL::full() }}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
+                @endif
+
                 <li class="dropdown hidden-xs">
-                    <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>   </a>
+                    <a href="#" class="dropdown-toggle btn-change-language btn-lg" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>   </a>
                     <ul class="dropdown-menu" role="menu" onchange="submit();">
                         <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
                         <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
@@ -62,5 +73,11 @@
                 </li>
             </ul>
         </div>
+
+
+
+
+
+
     </nav>
 </div>

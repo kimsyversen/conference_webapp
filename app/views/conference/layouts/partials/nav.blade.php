@@ -41,30 +41,30 @@
                 @endif
             </ul>
 
-             <ul class="nav navbar-nav navbar-right">
-                 @if(isset($authenticated) && $authenticated === false)
-                     <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
-                     <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>
-                 @else
-                     <li> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
-                 @endif
+            <ul class="nav navbar-nav navbar-right">
+                @if(isset($authenticated) && $authenticated === false)
+                    <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
+                    <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>
+                @else
+                    <li> <a href="{{ route('logout_path')}}"><i class="glyphicon glyphicon-log-out"></i> {{ Lang::get('menu.logout') }}</a></li>
+                @endif
 
-                 <li class="dropdown hidden-xs">
-                     <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>   </a>
-                     <ul class="dropdown-menu" role="menu" onchange="submit();">
-                         <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
-                         <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
-                     </ul>
-                 </li>
+                <li class="dropdown hidden-xs">
+                    <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i>   </a>
+                    <ul class="dropdown-menu" role="menu" onchange="submit();">
+                        <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
+                        <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
+                    </ul>
+                </li>
 
-                 <li class="dropdown visible-xs">
-                     <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i> {{ Lang::get('menu.change-language.change-language')  }} <span class="caret"></span>  </a>
-                     <ul class="dropdown-menu" role="menu" onchange="submit();">
-                         <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
-                         <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
-                     </ul>
-                 </li>
-                </ul>
+                <li class="dropdown visible-xs">
+                    <a href="#" class="dropdown-toggle btn-change-language" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="glyphicon glyphicon-globe"></i> {{ Lang::get('menu.change-language.change-language')  }} <span class="caret"></span>  </a>
+                    <ul class="dropdown-menu" role="menu" onchange="submit();">
+                        <li onclick="$('#language').val('en'); $('#frm-language').submit();"><a href="#" data-value="en">{{ Lang::get('menu.change-language.english')  }}</a></li>
+                        <li onclick="$('#language').val('no'); $('#frm-language').submit();"><a href="#" data-value="no">{{ Lang::get('menu.change-language.norwegian')  }}</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

@@ -15,10 +15,10 @@
     background-color: $default-background-color;
 
   }
-  ul li {
+ ul li {
     &:hover {
       background-color: $default-background-color;
-      text-decoration: underline;
+
     }
     .active {
       background-color: $default-background-color;
@@ -40,11 +40,4 @@
   }
 }
 
-.logged-in {
-  color: green;
-}
-
-.logged-out {
-  color: #c51c0d;
-}
 
