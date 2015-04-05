@@ -1,6 +1,6 @@
 <?php
 return array(
-	'menu_message' => 'Menyen får flere valg etter at en konferanse er valgt.',
+	'menu' => 'Menu',
 	'home' => 'Home',
 	'schedule' => 'Schedule',
 	'personal_schedule' => 'My schedule',

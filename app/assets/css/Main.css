@@ -533,3 +533,6 @@ textarea {
 
 .features .description {
   padding: 0.5em 2em 2em 2em; }
+
+.nohover:hover {
+  background-color: inherit !important; }

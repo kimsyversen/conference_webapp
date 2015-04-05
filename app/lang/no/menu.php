@@ -1,6 +1,6 @@
 <?php
 return array(
-	'menu_message' => 'You will have more choises here when you enter a conference.',
+	'menu' => 'Meny',
 	'home' => 'Hjem',
 	'schedule' => 'Konferanseprogram',
 	'personal_schedule' => 'Mitt program',
