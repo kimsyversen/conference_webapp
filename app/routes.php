@@ -9,6 +9,8 @@ Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login'
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
+
+app_path();
 Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]); //->before('cache.fetch')->after('cache.put');
 
 Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');

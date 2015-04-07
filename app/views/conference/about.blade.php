@@ -4,21 +4,25 @@
     @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('about_creators') ])
     @include('conference.partials.errors-and-messages')
 
-    @include('conference.partials.page-header', ['text' => 'Om applikasjonen (Norwegian)'])
+    @include('conference.partials.page-header', ['text' => Lang::get('about.title')])
 
     <div class="container">
         <div class="row row-center">
             <div class="col-md-2"></div>
-            <div class="col-xs-12 col-md-8 text-center about-the-application">
+            <div class="col-xs-12 col-md-8 about-the-application">
 
-                <i class="fa fa-quote-left fa-3x pull-left "></i>
-                ...denne applikasjonen er laget av Kim Syversen og Magnus Lindgård Sandgren i forbindelse med deres masteroppgave ved NTNU, og i samarbeid med UNINETT.
-                Applikasjonen har som mål å gjøre det lettere for akkurat deg.
-                Du kan aksessere konferanse-programmet, legge til interessante sesjoner i egen agenda, se kart over konferanseområdet og motta meldinger på en nyhetsfeed eller direkte fra admin.
-                Om du ønsker, kan du være fullstendig anonym når du bruker applikasjonen, men hvis du skal ta i bruk personlig agenda så er en gyldig epost-adresse nødvendig.
-                Nettsiden bruker en sikker tilkopling og passord blir kryptert.
 
-                Vi håper du vil ta i bruk applikasjonen, og fortell gjerne hva du synes om den.
+                <p>{{ Lang::get('about.text_first') }}</p>
+
+                <ul style="list-style-type: bullet; margin-left: 2em;">
+                    <li>{{ Lang::get('about.list.1') }}</li>
+                    <li>{{ Lang::get('about.list.2') }}</li>
+                    <li>{{ Lang::get('about.list.3') }}</li>
+                    <li>{{ Lang::get('about.list.4') }}</li>
+                    <li>{{ Lang::get('about.list.5') }}</li>
+                </ul>
+
+                <p>{{ Lang::get('about.text_last') }}  </p>
 
             </div>
         </div>
