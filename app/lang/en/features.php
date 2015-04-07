@@ -15,7 +15,7 @@ return array(
 			'1' => 'There are four types of events that may appear in the conference program.',
 			'2' => 'All events have location and a possible description which can be seen by clicking on ',
 			'3' => 'If you are signed in to your account, you also have the possibility to add the events to',
-			'4' => 'If the event is cancelled, you will see a red cross and text. If you want, you may share on Facebook, Twitter and Google+.',
+			'4' => 'If the event is cancelled, you will see a red cross and text. If you want, you may share on Facebook, Twitter and Google+. If you wish to rate a event, click on any event. There you will find the possibility to give a 1-5 score and a optional comment.',
 			'5' => array(
 				'1' => ' You can search in events by free text or filter by day.',
 				'2' => 'Look for',

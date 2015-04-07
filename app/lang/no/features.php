@@ -16,9 +16,9 @@ return array(
 	'schedule' => array(
 		'description' => array(
 			'1' => 'Du kan finne opptil fire typer hendelser i konferanseprogrammet.',
-			'2' => 'Alle hendelser har en lokasjon og ofte en beskrivelse som kan ses ved å trykek på ',
+			'2' => 'Alle hendelser har en lokasjon og ofte en beskrivelse som kan ses ved å klikke på ',
 			'3' => 'Hvis du er innlogget får du mulighet til å legge til hendelser i',
-			'4' => 'Hvis hendelsen er kansellert, vil du et rødt kryss og rød tekst. Du kan også dele på Facebook, Twitter og Google+.',
+			'4' => 'Hvis hendelsen er kansellert, vil du et rødt kryss og rød tekst. Du kan også dele på Facebook, Twitter og Google+. Om du ønsker å legge igjen en vurdering, klikk deg inn på en hvilken som helst hendelse. Der har du mulighet til å gi en 1-5 score samt legge ved en valgfri kommentar.',
 			'5' => array(
 				'1' => 'Du kan søke i hendelser med fritekst eller vise programmet basert på dag.',
 				'2' => 'Se etter',
@@ -44,6 +44,7 @@ return array(
 				'title' => 'Hendelser som ikke av typene ovenfor.',
 				'category' => 'other'
 			),
+
 		)
 	),
 	'mschedule' => array(
