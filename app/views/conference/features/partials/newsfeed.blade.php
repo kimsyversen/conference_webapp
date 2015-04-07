@@ -2,7 +2,7 @@
 
 <?php $message_created_at = \Carbon\Carbon::now(); ?>
 <p  class="text-muted description">
-    Here you will find messages from the conference administration. It will contain both common messages and some that may only be ment for specific groups.
+    Here you will find messages from the conference administration. It will contain both common messages and some targeted messages (to see targeted messages requires an account) .
 </p>
 
 @include('conference.partials.message', [

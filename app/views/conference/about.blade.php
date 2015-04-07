@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row row-center">
             <div class="col-md-2"></div>
-            <div class="col-xs-12 col-md-8 about-the-application">
+            <div class="col-xs-12 col-md-8 about-the-application" style="margin-top:2em;">
 
 
                 <p>{{ Lang::get('about.text_first') }}</p>
