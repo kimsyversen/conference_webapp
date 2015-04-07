@@ -1,9 +1,7 @@
 @include('conference.partials.page-header', ['text' => 'The navigation bar'])
 
 <p  class="text-muted description">
-    This is where you navigate around the site. It will look slightly different if you use a smartphone, tablet, or computer, but the choices are still the same.
-    The menu will remember your last visisted conference, therefore you will have more choices once you visit one.
-    The globe let you switch between English and Norwegian language (the conference program may still only be available in one language). If you are on a mobile device, you might have to scroll when expanding the language menu.
+    {{ Lang::get('features.nav.description') }}
 </p>
 
 <div class="container-fluid">
@@ -73,11 +71,5 @@
                 </li>
             </ul>
         </div>
-
-
-
-
-
-
     </nav>
 </div>
