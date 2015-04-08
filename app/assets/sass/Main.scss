@@ -83,6 +83,9 @@ textarea {
   resize: none;
 }
 
+.shadow {
+  @include boxShadow;
+}
 .item-positioned {
   @include item;
   margin-top: 1em;

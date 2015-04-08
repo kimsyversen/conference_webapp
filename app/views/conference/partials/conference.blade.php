@@ -3,9 +3,9 @@
         <div class="row row-conference">
             @foreach($row as $conference)
                 <div class=" col-xs-12 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-8">
-                    <div class="conference-item">
+                    <div class="conference-item shadow">
                         <div class="row header">
-                            <div class="col-xs-12 ">
+                            <div class="col-xs-12">
                                 <a href="/{{$conference['link']['uri'] }}">
                                     <img class="img-responsive" src="{{ $conference['banner']}}" alt="{{ $conference['name']}}">
                                 </a>
