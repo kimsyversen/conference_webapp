@@ -78,7 +78,8 @@
                 firstDay: 1,
                 defaultDate: '2015-04-09',
                 defaultView: 'agendaDay',
-
+                axisFormat: 'H:mm',
+                timeFormat: 'H(:mm)',
                 /*                eventBackgroundColor: '#378006',
                  eventColor: '#378006',*/
                 minTime: '06:00:00',
