@@ -74,7 +74,8 @@
                 },
                 height: 'auto',
                 allDayDefault: false,
-                allDay: false,
+
+                allDaySlot: false,
                 firstDay: 1,
                 defaultDate: '2015-04-09',
                 defaultView: 'agendaDay',
@@ -84,52 +85,52 @@
                  eventColor: '#378006',*/
                 minTime: '06:00:00',
                 maxTime: '24:00:00',
-                events: Uninett.events
-//                events: [
-//                    {
-//                        title: 'Kurs 7 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
-//                        start: '2015-04-08T10:00:00',
-//                        end: '2015-04-08T11:00:00',
-//                        url: '#',
-//                        color: '#246134',
-//                        description: 'This is a cool event'
-//                    },
-//                    {
-//                        title: 'Kurs 6 - Big data og offentlig sektor',
-//                        start: '2015-04-09T09:00:00',
-//                        end: '2015-04-09T12:00:00',
-//                        url: '#',
-//
-//                        color: '#a26c39'
-//                    },
-//                    {
-//                        title: 'Kurs 5 - Offentlige anskaffelser til det beste',
-//                        start: '2015-04-09T12:00:00',
-//                        end: '2015-04-09T15:00:00',
-//                        url: '#',
-//                        color: '#123123'
-//                    },
-//                    {
-//                        title: 'Kurs 3 - Digital post',
-//                        start: '2015-04-09T12:00:00',
-//                        end: '2015-04-09T15:00:00',
-//                        url: '#',
-//                        color: '#f31231'
-//                    },
-//                    {
-//                        title: 'Kurs 1 - Prosjektveiviseren',
-//                        start: '2015-04-09T12:00:00',
-//                        end: '2015-04-09T15:00:00',
-//                        url: '#',
-//                        color: '#442223'
-//                    },
-//                    {
-//                        title: 'Workshop 6 - Finansieringsmuligheter i IKT 2025 og EU sitt Horizon 2020-program',
-//                        start: '2015-04-09T12:00:00',
-//                        end: '2015-04-09T15:00:00',
-//                        url: 'http://google.com/'
-//                    }
-//                ]
+           /*     events: Uninett.events*/
+               events: [
+                   {
+                       title: 'Kurs 7 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
+                       start: '2015-04-08T10:00:00',
+                       end: '2015-04-08T11:00:00',
+                       url: '#',
+                       color: '#246134',
+                       description: 'This is a cool event'
+                   },
+                   {
+                       title: 'Kurs 6 - Big data og offentlig sektor',
+                       start: '2015-04-09T09:00:00',
+                       end: '2015-04-09T12:00:00',
+                       url: '#',
+
+                       color: '#a26c39'
+                   },
+                   {
+                       title: 'Kurs 5 - Offentlige anskaffelser til det beste',
+                       start: '2015-04-09T12:00:00',
+                       end: '2015-04-09T15:00:00',
+                       url: '#',
+                       color: '#123123'
+                   },
+                   {
+                       title: 'Kurs 3 - Digital post',
+                       start: '2015-04-09T12:00:00',
+                       end: '2015-04-09T15:00:00',
+                       url: '#',
+                       color: '#f31231'
+                   },
+                   {
+                       title: 'Kurs 1 - Prosjektveiviseren',
+                       start: '2015-04-09T12:00:00',
+                       end: '2015-04-09T15:00:00',
+                       url: '#',
+                       color: '#442223'
+                   },
+                   {
+                       title: 'Workshop 6 - Finansieringsmuligheter i IKT 2025 og EU sitt Horizon 2020-program',
+                       start: '2015-04-09T12:00:00',
+                       end: '2015-04-09T15:00:00',
+                       url: 'http://google.com/'
+                   }
+               ]
             })
         });
     </script>
