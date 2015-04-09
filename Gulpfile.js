@@ -15,6 +15,9 @@ gulp.task('js', function()
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
             basePath + "fastclick/lib/fastclick.js",
+            basePath + "moment/moment.js",
+            basePath + "fullcalendar/dist/fullcalendar.js",
+            basePath + "fullcalendar/dist/gcal.js",
             "app/assets/javascript/src/conference.js"
 
         ])
@@ -46,6 +49,7 @@ gulp.task('css', function()
         basePath + "add-to-homescreen/style/addtohomescreen.css",
         basePath + "lato-font/css/lato-font.css",
         basePath + "font-awesome/css/font-awesome.css",
+        basePath + "fullcalendar/dist/fullcalendar.css",
         "app/assets/css/Main.css"
     ])
         .pipe(concatCss("conference.min.css"))

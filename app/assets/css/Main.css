@@ -544,3 +544,13 @@ textarea {
   content: "\2605";
   position: absolute;
   color: #ffb300; }
+
+.fc td, .fc th {
+  border-style: solid;
+  border-width: 0px;
+  padding: 0;
+  vertical-align: top; }
+
+.fc table {
+  background-color: white;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75); }

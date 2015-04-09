@@ -25,12 +25,22 @@
     <meta name="msapplication-square310x310logo" content="/img/largetile.png" />
 
     {{HTML::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css')}}
+
+{{--    {{ HTML::style('//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css') }}
+    {{ HTML::style('//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.print.css') }}--}}
     {{ HTML::style('css/conference.min.css') }}
+
+
+    {{ HTML::script('js/conference.min.js') }}
+
+{{--    {{ HTML::script('//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js') }}--}}
 </head>
 <body>
 <header>
     @include('conference.layouts.partials.nav')
 </header>
+
+
 
 <div class="wrapper">
     <div class="container">
@@ -49,7 +59,79 @@
 @include('conference.layouts.modals.register')
 
 @section('javascript')
-    {{ HTML::script('js/conference.min.js') }}
+    <script>
+        $(document).ready(function() {
+
+            // page is now ready, initialize the calendar...
+
+
+            $('#calendar').fullCalendar({
+
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'agendaWeek,agendaDay'
+                },
+                height: 'auto',
+                allDayDefault: false,
+                allDay: false,
+                firstDay: 1,
+                defaultDate: '2015-04-09',
+                defaultView: 'agendaDay',
+
+                /*                eventBackgroundColor: '#378006',
+                 eventColor: '#378006',*/
+                minTime: '06:00:00',
+                maxTime: '24:00:00',
+                events: [
+                    {
+                        title: 'Kurs 7 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
+                        start: '2015-04-08T10:00:00',
+                        end: '2015-04-08T11:00:00',
+                        url: '#',
+                        color: '#246134',
+                        description: 'This is a cool event'
+                    },
+                    {
+                        title: 'Kurs 6 - Big data og offentlig sektor',
+                        start: '2015-04-09T09:00:00',
+                        end: '2015-04-09T12:00:00',
+                        url: '#',
+
+                        color: '#a26c39'
+                    },
+                    {
+                        title: 'Kurs 5 - Offentlige anskaffelser til det beste',
+                        start: '2015-04-09T12:00:00',
+                        end: '2015-04-09T15:00:00',
+                        url: '#',
+                        color: '#123123'
+                    },
+                    {
+                        title: 'Kurs 3 - Digital post',
+                        start: '2015-04-09T12:00:00',
+                        end: '2015-04-09T15:00:00',
+                        url: '#',
+                        color: '#f31231'
+                    },
+                    {
+                        title: 'Kurs 1 - Prosjektveiviseren',
+                        start: '2015-04-09T12:00:00',
+                        end: '2015-04-09T15:00:00',
+                        url: '#',
+                        color: '#442223'
+                    },
+                    {
+                        title: 'Workshop 6 - Finansieringsmuligheter i IKT 2025 og EU sitt Horizon 2020-program',
+                        start: '2015-04-09T12:00:00',
+                        end: '2015-04-09T15:00:00',
+                        url: 'http://google.com/'
+                    }
+                ]
+            })
+        });
+    </script>
 @show
 </body>
 </html>
+

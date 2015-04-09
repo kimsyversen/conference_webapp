@@ -3,11 +3,26 @@
     @include('conference.partials.errors-and-messages')
     @include('conference.partials.doFirstTimeStuff')
 
+
+
+
+
+
+
+
+    <div class="container" style="margin-top: 50px;">
+        <div id='calendar'></div>
+    </div>
+
+
+
+
     @include('conference.partials.alerts.danger')
     @include('conference.partials.alerts.info')
     @include('conference.partials.alerts.success')
     @include('conference.partials.alerts.warning')
     @include('conference.partials.alerts.firstvisit')
+
 
     <div class="container">
         <div class="row  text-center">
@@ -29,22 +44,17 @@
             </div>
         </div>
     </div>
+
+
+
 @stop
 
 
 <script>
     $(document).on('click', '#event-rating span', function(){
-        alert('funka');
-    });
-    $(document).ready(function() {
-        alert('funka');
-        /*        $('#event-rating').on('click', function(){
 
-         var stars =  $(this).length;
-
-         alert(stars);
-         });*/
     });
+
 </script>
 
 
