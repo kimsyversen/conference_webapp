@@ -40,6 +40,7 @@ class ConferenceScheduleController extends \BaseController {
 					'title' => $session['title'],
 					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
 					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format(DateTime::ISO8601),
+					'location' => $session['location'],
 					'url' => '/' . $session['links']['session']['uri'],
 					'color' => $this->decideColor($session['category'])
 				];

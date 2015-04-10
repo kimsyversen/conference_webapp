@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="calendar-view toggle" style="margin-top: 1em;">
+<div class="calendar-view toggled" style="margin-top: 1em;">
     <div class="col-xs-12">
         <div id='calendar'></div>
     </div>
@@ -16,8 +16,7 @@
 
 
 
-<div class="traditional-view toggled">
-
+<div class="traditional-view toggle">
     <div class="row">
         <div class="col-xs-12">
             @include('conference.partials.options.filter')
@@ -67,13 +66,6 @@
                 day: Uninett.buttonText.day
             },
             dayNames : Uninett.dayNames,
-            eventRender: function (event, element, view) {
-
-             /*   $(element).css("min-height", "150px");*/
-
-
-            },
-
             height: 'auto',
             allDayDefault: false,
             allDaySlot: false,
