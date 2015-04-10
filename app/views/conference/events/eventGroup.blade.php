@@ -2,7 +2,7 @@
     <div class="col-xs-12 text-center" style="margin-top: 1em;">
         <div class="btn-group" role="group" aria-label="...">
             <button type="button" id="buttonCalendar" class="btn btn-default">{{ Lang::get('event.buttons.calendar-view') }}</button>
-            <button type="button" id="buttonAlerts" class="btn btn-default">{{ Lang::get('event.buttons.traditional-view') }}</button>gs
+            <button type="button" id="buttonAlerts" class="btn btn-default">{{ Lang::get('event.buttons.traditional-view') }}</button>
         </div>
     </div>
 </div>
@@ -86,5 +86,6 @@
             events: Uninett.events
         })
     });
+
 </script>
 
