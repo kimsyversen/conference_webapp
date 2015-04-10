@@ -46,16 +46,16 @@ class ConferenceScheduleController extends \BaseController {
 			'dayNames' => [
 				Lang::get('calendar.dayNames.monday'),
 				Lang::get('calendar.dayNames.tuesday'),
-				Lang::get('calendar.dayNames.wenesday'),
+				Lang::get('calendar.dayNames.wednesday'),
 				Lang::get('calendar.dayNames.thursday'),
 				Lang::get('calendar.dayNames.friday'),
 				Lang::get('calendar.dayNames.saturday'),
-				Lang::get('calendar.dayNames.sundary')
+				Lang::get('calendar.dayNames.sunday')
 			],
 			'buttonText' => [
 				'today' => Lang::get('calendar.buttonText.today'),
 				'week' => Lang::get('calendar.buttonText.week'),
-				'year' => Lang::get('calendar.buttonText.year'),
+				'day' => Lang::get('calendar.buttonText.day'),
 				'month' => Lang::get('calendar.buttonText.month'),
 			]
 		]);

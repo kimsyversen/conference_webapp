@@ -62,7 +62,7 @@
                 today : Uninett.buttonText.today,
                 month : Uninett.buttonText.month,
                 week : Uninett.buttonText.week,
-                day: Uninett.buttonText.daily,
+                day: Uninett.buttonText.day
             },
             dayNames : Uninett.dayNames,
             eventRender: function (event, element, view) {

@@ -3,7 +3,7 @@ return [
 	'dayNames' => array(
 		'monday' => 'Monday',
 		'tuesday' => 'Tuesday',
-		'wenesday' => 'Wenesday',
+		'wednesday' => 'Wednesday',
 		'thursday' => 'Thursday',
 		'friday' => 'Friday',
 		'saturday' => 'Saturday',

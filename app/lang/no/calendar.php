@@ -3,7 +3,7 @@ return [
 	'dayNames' => array(
 		'monday' => 'Mandag',
 		'tuesday' => 'Tirsdag',
-		'wenesday' => 'Onsdag',
+		'wednesday' => 'Onsdag',
 		'thursday' => 'Torsdag',
 		'friday' => 'Fredag',
 		'saturday' => 'Lørdag',
