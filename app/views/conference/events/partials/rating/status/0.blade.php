@@ -2,7 +2,6 @@
 <div class="row">
     <div class="col-xs-12 forms forms-small">
         <div class="rating-form">
-            {{--{{ Form::open(['id' => '#frm-rating', 'data-remote', 'route' => 'ajax.user.post.rating']) }}--}}
             {{ Form::open(['data-remote', 'id' => 'frm-rating', 'class' => 'remember', 'route' => 'ajax.user.post.rating']) }}
             <div class="form-group">
                 {{ Form::label('score', Lang::get('rate.0.form.score-label'), ['class' => 'control-label']) }}

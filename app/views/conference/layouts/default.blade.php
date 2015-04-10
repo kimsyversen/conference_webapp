@@ -92,8 +92,7 @@
                        start: '2015-04-08T10:00:00',
                        end: '2015-04-08T11:00:00',
                        url: '#',
-                       color: '#246134',
-                       description: 'This is a cool event'
+                       color: '#246134'
                    },
                    {
                        title: 'Kurs 6 - Big data og offentlig sektor',
