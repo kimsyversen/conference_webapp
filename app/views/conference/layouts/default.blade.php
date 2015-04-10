@@ -61,7 +61,7 @@
 @section('javascript')
     <script>
         $(document).ready(function() {
-
+            addToHomescreen();
             // page is now ready, initialize the calendar...
 
 
