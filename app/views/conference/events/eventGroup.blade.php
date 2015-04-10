@@ -7,14 +7,18 @@
     </div>
 </div>
 
-<div class="calendar-view " style="margin-top: 1em;">
+<div id='calendar'></div>
+
+<div class="calendar-view toggle" style="margin-top: 1em;">
     <div class="col-xs-12">
         <div id='calendar'></div>
     </div>
 </div>
 
 
-<div class="traditional-view ">
+
+<div class="traditional-view toggled">
+
     <div class="row">
         <div class="col-xs-12">
             @include('conference.partials.options.filter')
