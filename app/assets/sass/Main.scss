@@ -254,19 +254,19 @@ textarea {
 
 
 .fc td, .fc th {
-
-  border-width: 0;
   border: 0;
   padding: 0;
   vertical-align: top;
-}
-
-.fc table {
-
-
 }
 
 
 .fc-today {
   background-color: transparent !important;
 }
+
+/*
+.fc-event {
+
+  min-height: 50px !important;
+
+}*/

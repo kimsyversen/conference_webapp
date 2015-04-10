@@ -6,13 +6,10 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" id="buttonCalendar" class="btn btn-default">View calendar</button>
-                <button type="button" id="buttonAlerts" class="btn btn-default">View other</button>
 
-            </div>
+    <div class="row calendar-view ">
+        <div class="col-xs-12">
+            <div id='calendar'></div>
         </div>
     </div>
 
@@ -26,14 +23,9 @@
         </div>
     </div>
 
-    <div class="row calendar-view ">
-        <div class="col-xs-12">
-            <div id='calendar'></div>
-        </div>
-    </div>
 </div>
 
-{{--    <script>
+   <script>
         $(document).ready(function() {
 
 
@@ -47,7 +39,22 @@
                 defaultDate: '2015-04-05',
                 defaultView: 'agendaDay',
 
-                events: [{
+                allDayDefault: false,
+                allDaySlot: false,
+                firstDay: 1,
+
+                slotDuration: '00:15:00',
+
+                axisFormat: 'H:mm',
+                timeFormat: 'H(:mm)',
+                minTime: '06:00:00',
+                maxTime: '24:00:00',
+                eventAfterRender: function(event, element, view) {
+
+
+                },
+                events: [
+                    {
                     "title": "Registrering",
                     "start": "2015-04-05T08:30:01",
                     "end": "2015-04-05T09:30:00"
@@ -56,11 +63,35 @@
                     "title": "ASDF",
                     "start": "2015-04-05T08:30:01",
                     "end": "2015-04-05T09:30:00"
-                }
+                },
+                    {
+                        "title": "Registrering",
+                        "start": "2015-04-05T08:30:01",
+                        "end": "2015-04-05T09:30:00"
+
+                    }, {
+                        "title": "ASDF",
+                        "start": "2015-04-05T08:30:01",
+                        "end": "2015-04-05T09:30:00"
+                    },
+                    {
+                        "title": "Registrering",
+                        "start": "2015-04-05T08:30:01",
+                        "end": "2015-04-05T09:30:00"
+
+                    }, {
+                        "title": "ASDF",
+                        "start": "2015-04-05T09:30:00",
+                        "end": "2015-04-05T10:30:00"
+                    },{
+                        "title": "ASDFASDF",
+                        "start": "2015-04-05T10:30:00",
+                        "end": "2015-04-05T10:45:00"
+                    }
                 ]
             })
         });
-    </script>--}}
+    </script>
 
 <script>
     $(document).ready(function() {

@@ -75,6 +75,8 @@
             timeFormat: 'H(:mm)',
             minTime: '06:00:00',
             maxTime: '24:00:00',
+            slotDuration: '00:15:00',
+
             events: Uninett.events
         })
     });
