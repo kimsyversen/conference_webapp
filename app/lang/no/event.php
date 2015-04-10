@@ -9,7 +9,9 @@ return array(
 	'heading' => 'Hendelser som starter fra',
 
 	'buttons' => array(
-		'all-days' => 'Vis alle dager'
+		'all-days' => 'Vis alle dager',
+		'calendar-view' => 'Kalender-layout',
+		'traditional-view' => 'Tradisjonell-layout',
 	),
 
 

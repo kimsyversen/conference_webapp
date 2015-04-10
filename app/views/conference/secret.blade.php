@@ -31,9 +31,9 @@
             <div id='calendar'></div>
         </div>
     </div>
-</div>2015-04-05UTC08:30:01
+</div>
 
-    <script>
+{{--    <script>
         $(document).ready(function() {
 
 
@@ -60,7 +60,7 @@
                 ]
             })
         });
-    </script>
+    </script>--}}
 
 <script>
     $(document).ready(function() {

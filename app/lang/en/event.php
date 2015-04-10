@@ -9,7 +9,9 @@ return array(
 	'heading' => 'Events starting from',
 
 	'buttons' => array(
-		'all-days' => 'Show all days'
+		'all-days' => 'Show all days',
+		'calendar-view' => 'Calendar view',
+		'traditional-view' => 'Traditional view',
 	),
 
 
