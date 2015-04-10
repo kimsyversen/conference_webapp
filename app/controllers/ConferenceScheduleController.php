@@ -34,8 +34,8 @@ class ConferenceScheduleController extends \BaseController {
 			foreach($sessionGroup['sessions'] as $session)
 			$events[] = [
 					'title' => $session['title'],
-					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->timezone('Europe/Oslo')->format('Y-m-dTH:i:s'),
-					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->timezone('Europe/Oslo')->format('Y-m-dTH:i:s'),
+					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format('Y-m-dTH:i:s'),
+					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format('Y-m-dTH:i:s'),
 					'uri' => $session['links']['session']['uri'],
 					'color' => $this->decideColor($session['category'])
 				];

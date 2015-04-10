@@ -31,7 +31,7 @@
             <div id='calendar'></div>
         </div>
     </div>
-</div>
+</div>2015-04-05UTC08:30:01
 
     <script>
         $(document).ready(function() {
@@ -49,13 +49,13 @@
 
                 events: [{
                     "title": "Registrering",
-                    "start": "2015-04-05UTC08:30:01",
-                    "end": "2015-04-05UTC09:30:00"
+                    "start": "2015-04-05T08:30:01",
+                    "end": "2015-04-05T09:30:00"
 
                 }, {
                     "title": "ASDF",
-                    "start": "2015-04-05UTC08:30:01",
-                    "end": "2015-04-05UTC09:30:00"
+                    "start": "2015-04-05T08:30:01",
+                    "end": "2015-04-05T09:30:00"
                 }
                 ]
             })
