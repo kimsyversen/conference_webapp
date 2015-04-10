@@ -56,15 +56,12 @@
                 events: [{
                     "title": "Registrering",
                     "start": "2015-04-05UTC08:30:01",
-                    "end": "2015-04-05UTC09:30:00",
-                    "uri": "conferences\/1\/sessions\/1",
-                    "color": "rgb(197, 89, 179)"
+                    "end": "2015-04-05UTC09:30:00"
+
                 }, {
-                    "title": "Kurs 6 - Big data og offentlig sektor",
+                    "title": "ASDF",
                     "start": "2015-04-05UTC09:30:01",
-                    "end": "2015-04-05UTC11:15:00",
-                    "uri": "conferences\/1\/sessions\/7",
-                    "color": "rgb(197, 64, 11)"
+                    "end": "2015-04-05UTC11:15:00"
                 }
                 ]
             })
