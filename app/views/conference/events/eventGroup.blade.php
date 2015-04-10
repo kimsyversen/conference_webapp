@@ -78,7 +78,6 @@
             allDayDefault: false,
             allDaySlot: false,
             firstDay: 1,
-            defaultDate: '2015-04-06',
             defaultView: 'agendaDay',
             axisFormat: 'H:mm',
             timeFormat: 'H(:mm)',
