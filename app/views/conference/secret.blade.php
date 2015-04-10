@@ -44,24 +44,18 @@
                     right: 'agendaWeek,agendaDay'
                 },
                 height: 'auto',
-                allDayDefault: false,
-                allDaySlot: false,
-                firstDay: 1,
-                defaultDate: '2015-04-10',
+                defaultDate: '2015-04-05',
                 defaultView: 'agendaDay',
-                axisFormat: 'H:mm',
-                timeFormat: 'H(:mm)',
-                minTime: '06:00:00',
-                maxTime: '24:00:00',
+
                 events: [{
                     "title": "Registrering",
-                    "start": "2015-04-05UTC08:30:01",
-                    "end": "2015-04-05UTC09:30:00"
+                    "start": "2015-04-05T08:30:01",
+                    "end": "2015-04-05T09:30:00"
 
                 }, {
                     "title": "ASDF",
-                    "start": "2015-04-05UTC09:30:01",
-                    "end": "2015-04-05UTC11:15:00"
+                    "start": "2015-04-05T09:30:01",
+                    "end": "2015-04-05T11:15:00"
                 }
                 ]
             })
