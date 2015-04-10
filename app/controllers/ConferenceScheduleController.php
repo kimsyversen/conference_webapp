@@ -30,15 +30,18 @@ class ConferenceScheduleController extends \BaseController {
 		//TODO: Cleanup
 		$events = [];
 
+
 		foreach($response['data'] as $sessionGroup) {
 			foreach($sessionGroup['sessions'] as $session)
 			$events[] = [
 					'title' => $session['title'],
-					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format('Y-m-dTH:i:s'),
-					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format('Y-m-dTH:i:s'),
+					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
+					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format(DateTime::ISO8601),
 					'uri' => $session['links']['session']['uri'],
 					'color' => $this->decideColor($session['category'])
 				];
+
+
 		}
 
 		JavaScript::put([
