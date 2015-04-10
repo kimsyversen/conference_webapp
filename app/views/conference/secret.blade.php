@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div class="row traditional-view toggle">
+    <div class="row traditional-view ">
         <div class="col-xs-12">
             @include('conference.partials.alerts.danger')
             @include('conference.partials.alerts.info')
@@ -26,12 +26,75 @@
         </div>
     </div>
 
-    <div class="row calendar-view toggled">
+    <div class="row calendar-view ">
         <div class="col-xs-12">
             <div id='calendar'></div>
         </div>
     </div>
 </div>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'agendaWeek,agendaDay'
+                },
+                height: 'auto',
+                allDayDefault: false,
+                allDaySlot: false,
+                firstDay: 1,
+                defaultDate: '2015-04-10',
+                defaultView: 'agendaDay',
+                axisFormat: 'H:mm',
+                timeFormat: 'H(:mm)',
+                minTime: '06:00:00',
+                maxTime: '24:00:00',
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2014-06-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2014-06-07',
+                        end: '2014-06-10'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-04-10T16:00:00'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: '2015-04-10T16:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2015-04-10T16:00:00'
+
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2015-04-10T16:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2015-04-10T16:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2015-04-10T16:00:00'
+                    }
+                ]
+            })
+        });
+    </script>
 
 <script>
     $(document).ready(function() {

@@ -7,7 +7,6 @@
     </div>
 </div>
 
-<div id='calendar'></div>
 
 <div class="calendar-view toggle" style="margin-top: 1em;">
     <div class="col-xs-12">
@@ -82,7 +81,6 @@
             defaultView: 'agendaDay',
             axisFormat: 'H:mm',
             timeFormat: 'H(:mm)',
-            slotMinutes: 60,
             minTime: '06:00:00',
             maxTime: '24:00:00',
             events: Uninett.events
