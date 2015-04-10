@@ -19,20 +19,20 @@ class AboutCreatorsController extends \BaseController {
 			'events' => [
 				[
 					'title' => 'Kurs 2 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
-					'start' =>  '2015-04-09T10:00:00',
-					'end' => '2015-04-09T11:00:00',
+					'start' =>  '2015-04-10T10:00:00',
+					'end' => '2015-04-09T10:00:00',
 					'color' => '#123123'
 				],
 				[
 					'title' => 'Kurs 4 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
-					'start' =>  '2015-04-09T10:00:00',
-					'end' => '2015-04-09T11:00:00',
+					'start' =>  '2015-04-10T10:00:00',
+					'end' => '2015-04-09T10:00:00',
 					'color' => '#312321'
 				],
 				[
 					'title' => 'Kurs 6 - Hvordan ta i bruk KS SvarUt i kommuner og fylkeskommuner',
-					'start' =>  '2015-04-09T10:00:00',
-					'end' => '2015-04-09T11:00:00',
+					'start' =>  '2015-04-10T10:00:00',
+					'end' => '2015-04-10T11:00:00',
 					'color' => '#42133'
 				],
 			],

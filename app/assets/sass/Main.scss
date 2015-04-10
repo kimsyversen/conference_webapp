@@ -266,3 +266,10 @@ textarea {
   @include boxShadow();
 }
 
+.fc-content {
+  min-height: 25px !important;
+}
+
+.fc-agenda-slots td div {
+  height: 40px !important;
+}

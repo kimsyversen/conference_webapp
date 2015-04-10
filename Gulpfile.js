@@ -17,7 +17,10 @@ gulp.task('js', function()
             basePath + "fastclick/lib/fastclick.js",
             basePath + "moment/moment.js",
             basePath + "fullcalendar/dist/fullcalendar.js",
+            basePath + "fullcalendar/dist/fullcalendar.js",
             basePath + "fullcalendar/dist/gcal.js",
+            basePath + "fullcalendar/lang/nb.js",
+            basePath + "fullcalendar/lang/en-gb.js",
             "app/assets/javascript/src/conference.js"
 
         ])
