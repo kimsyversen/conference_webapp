@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col-xs-12 text-center" style="margin-top: 0.5em;">
+    <div class="col-xs-12 text-center" style="margin-top: 1em;">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" id="buttonCalendar" class="btn btn-default">Switch to calendar view</button>
-            <button type="button" id="buttonAlerts" class="btn btn-default">Switch to traditional view</button>
+            <button type="button" id="buttonCalendar" class="btn btn-default">Calendar view</button>
+            <button type="button" id="buttonAlerts" class="btn btn-default">Traditional view</button>
         </div>
     </div>
 </div>
 
-<div class="calendar-view toggle">
+<div class="calendar-view toggle" style="margin-top: 1em;">
     <div class="col-xs-12">
         <div id='calendar'></div>
     </div>
@@ -22,7 +22,6 @@
     </div>
 
     @include('conference.partials.options.filter-options')
-
 
     @include('conference.partials.options.filter-options-count')
 
@@ -80,8 +79,6 @@
             axisFormat: 'H:mm',
             timeFormat: 'H(:mm)',
             slotMinutes: 60,
-            /*                eventBackgroundColor: '#378006',
-             eventColor: '#378006',*/
             minTime: '06:00:00',
             maxTime: '24:00:00',
             events: Uninett.events

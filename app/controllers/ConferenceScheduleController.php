@@ -64,8 +64,6 @@ class ConferenceScheduleController extends \BaseController {
 	}
 
 
-
-
 	private function decideColor($category)
 	{
 		switch($category) {
