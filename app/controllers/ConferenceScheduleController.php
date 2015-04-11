@@ -27,14 +27,14 @@ class ConferenceScheduleController extends \BaseController {
 		$response = $this->client->send($request);
 
 
-		if(!Session::has('events'))
+		if(Session::has('events'))
 		{
 			$events = [];
 			//Incoming dates are in UTC timezone, mean they will represented in something like 2015-05-05UTC12:00:00
 			//Somehow, this does not show up on iphones and we need to format the date to this 2015-05-05T12:00:00
 			//We do not know if this affects other phones
 			foreach($response['data'] as $sessionGroup) {
-				foreach($sessionGroup['sessions'] as $session)
+				foreach($sessionGroup['sessions'] as $session) {
 					$events[] = [
 						'title' => $session['title'],
 						'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
@@ -43,6 +43,7 @@ class ConferenceScheduleController extends \BaseController {
 						'url' => '/' . $session['links']['session']['uri'],
 						'color' => $this->decideColor($session['category'])
 					];
+				}
 			}
 
 			Session::put('events', $events);

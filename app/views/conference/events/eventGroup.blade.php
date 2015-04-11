@@ -59,6 +59,10 @@
                 $('.traditional-view').addClass('toggle').removeClass('toggled');
             });
 
+        var current_time = Date.now();
+        var momemtDate = moment(current_time).format("YYYY-MM-DDTHH:mm:ssZZ");
+
+
         $('#calendar').fullCalendar({
             defaultView: 'agendaDay',
             header: {
@@ -75,7 +79,7 @@
             viewRender : function( view, element ) {
                 localStorage['defaultDate'] = $('#calendar').fullCalendar('getDate')
             },
-            defaultDate: localStorage['defaultDate'],
+            defaultDate: localStorage['defaultDate'] ? localStorage['defaultDate'] : momemtDate,
             dayNames : Uninett.dayNames,
             height: 'auto',
             allDayDefault: false,
