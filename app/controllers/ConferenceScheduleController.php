@@ -18,7 +18,7 @@ class ConferenceScheduleController extends \BaseController {
 	{
 		$request = (new Uninett\Api\Request)->setMethod('GET');
 
-		$default_view = "";
+		$default_view = "traditional";
 
 		if($this->userIsAuthenticated())
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated")
@@ -70,10 +70,13 @@ class ConferenceScheduleController extends \BaseController {
 					]
 				]);
 				$default_view = "calendar";
-
-			} else
+			}
+			else
 				$default_view = "traditional";
 		}
+
+
+
 		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view ]);
 	}
 
