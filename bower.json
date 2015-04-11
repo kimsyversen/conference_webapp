@@ -10,6 +10,7 @@
     "world-flags-sprite": "*",
     "font-awesome": "~4.3.0",
     "moment": "~2.10.2",
-    "jquery-cookie": "~1.4.1"
+    "jquery-cookie": "~1.4.1",
+    "jStorage": "~0.4.12"
   }
 }

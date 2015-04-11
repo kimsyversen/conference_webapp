@@ -59,8 +59,6 @@
                 $('.traditional-view').addClass('toggle').removeClass('toggled');
             });
 
-        var current_time = Date.now();
-        var momemtDate = moment(current_time).format("YYYY-MM-DDTHH:mm:ssZZ");
 
 
         $('#calendar').fullCalendar({
@@ -77,9 +75,11 @@
                 day: Uninett.buttonText.day
             },
             viewRender : function( view, element ) {
-                localStorage['defaultDate'] = $('#calendar').fullCalendar('getDate')
+                $.jStorage.set('defaultDate', $('#calendar').fullCalendar('getDate'));
             },
-            defaultDate: localStorage['defaultDate'] ? localStorage['defaultDate'] : momemtDate,
+             defaultDate: $.jStorage.get('defaultDate', "") !== "" ? $.jStorage.get('defaultDate') : moment(),
+
+
             dayNames : Uninett.dayNames,
             height: 'auto',
             allDayDefault: false,
@@ -92,6 +92,8 @@
             slotDuration: '00:15:00',
             events: Uninett.events
         });
+
+
 
 
     });
