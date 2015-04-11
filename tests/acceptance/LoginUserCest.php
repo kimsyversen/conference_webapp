@@ -14,13 +14,13 @@ class LoginUserCest
 	public function tryToLogInPredefinedAdminUser(AcceptanceTester $I)
 	{
 		$I->am('guest');
-		$I->wantTo('Log in adminuser');
+		$I->wantTo('Login adminuser');
 
 		$I->loginUser();
 
 		$I->amOnPage('/conferences');
 
-		$I->see('You are now logged in');
+		$I->see('You have successfully been logged in.');
 	}
 
 	public function tryToLogInNonExistingUser(AcceptanceTester $I)
@@ -37,6 +37,9 @@ class LoginUserCest
 
 		$I->click('Sign in');
 
-		$I->see('Wrong credentials!');
+		$I->see('Wrong credentials.');
 	}
+
+
+	//Logout: You have successfully been logged out.
 }

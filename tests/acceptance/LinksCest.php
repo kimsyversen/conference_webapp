@@ -14,27 +14,20 @@ class LinksCest
 	public function canNavigateToLoginPage(AcceptanceTester $I){
 		$I->am('guest');
 
-		$I->wantTo('Navigate to login page');
-
-		$I->amOnPage('/conferences');
-
-		$I->seeLink('Login', '/login');
-
-		$I->click('Login');
+		$I->wantTo('Can see login page');
 
 		$I->amOnPage('/login');
+		$I->see('Login');
 	}
 
 	public function canNavigateToRegister(AcceptanceTester $I){
 		$I->am('guest');
 
-		$I->wantTo('Navigate to registration page');
-
-		$I->amOnPage('/conferences');
-
-		$I->click('Register');
+		$I->wantTo('can see registration page');
 
 		$I->amOnPage('/register');
+
+		$I->see('Register a new account');
 	}
 
 	public function canNotSeeLogoutLink(AcceptanceTester $I){
@@ -92,57 +85,52 @@ class LinksCest
 	}
 
 
-	private function is_authenticated_and_on_main_page(AcceptanceTester $I)
-	{
-		$I->seeLink('All conferences', '/conferences');
-		/*$I->seeLink('Profile', '/profile');*/
-		$I->seeLink('Log out', '/logout');
-
-		$I->seeLink('About the application', '/about');
-		$I->seeLink('I need help with this application', '/features');
-		$I->seeLink('Application guidelines', '/guidelines');
-
-		$I->dontSeeLink('Log in', '/login');
-	}
-
 	private function is_authenticated_and_on_conference(AcceptanceTester $I)
 	{
 		$this->is_authenticated_and_on_main_page($I);
 
-		$I->seeLink('Home', '/conferences/1');
-		$I->seeLink('Conference schedule', '/conferences/1/schedule');
+		$I->seeLink('Home', '/conferences');
+		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 		$I->seeLink('My schedule', '/conferences/1/schedule');
 		$I->seeLink('Newsfeed', '/conferences/1/newsfeed');
 	}
 
-
 	private function is_not_authenticated_and_on_main_page(AcceptanceTester $I)
 	{
-		$I->seeLink('All conferences', '/conferences');
-	/*	$I->seeLink('Login', '/login');
-		$I->seeLink('Register', '/register');*/
+		$I->seeLink('Home', '/conferences');
 
 		$I->seeLink('I need help with this application', '/features');
 		$I->seeLink('Application guidelines', '/guidelines');
 
-
 		$I->dontSeeLink('Profile', '/profile');
-		$I->dontSeeLink('Log out', '/logout');
+		$I->dontSeeLink('Logout', '/logout');
 	}
 
 	private function is_not_authenticated_and_on_conference(AcceptanceTester $I)
 	{
-		$I->seeLink('All conferences', '/conferences');
-		$I->seeLink('Home', '/conferences/1');
-		$I->seeLink('Conference schedule', '/conferences/1/schedule');
+		$I->seeLink('Home', '/conferences');
+
+		$I->seeLink('Schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 
 		$I->seeLink('I need help with this application', '/features');
 		$I->seeLink('Application guidelines', '/guidelines');
 
-		$I->dontSeeLink('Profile', '/profile');
-		$I->dontSeeLink('Log out', '/logout');
+		$I->dontSeeLink('Logout', '/logout');
 		$I->dontSeeLink('My schedule', '/conferences/1/schedule');
+	}
+
+	private function is_authenticated_and_on_main_page(AcceptanceTester $I)
+	{
+		$I->seeLink('Home', '/conferences');
+
+		$I->seeLink('Logout', '/logout');
+
+		$I->seeLink('About the application', '/about');
+		$I->seeLink('I need help with this application', '/features');
+		$I->seeLink('Application guidelines', '/guidelines');
+
+		$I->dontSeeLink('Login', '/login');
 	}
 }
