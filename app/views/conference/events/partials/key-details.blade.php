@@ -8,7 +8,7 @@
     @endif
 
 
-        @if(!isset($session['target_audience']) &&  $session['target_audience'] == null)
-            <li> <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> {{ Lang::get('event.audience') }}: {{ $session['target_audience'] or 'Var visst null' }}</li>
+        @if(isset($session['target_audience']) &&  $session['target_audience'] == null)
+            <li> <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> {{ Lang::get('event.audience') }}: {{ $session['target_audience'] }}</li>
         @endif
 </ul>
