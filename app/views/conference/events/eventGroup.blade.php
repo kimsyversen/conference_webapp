@@ -78,8 +78,6 @@
                 $.jStorage.set('defaultDate', $('#calendar').fullCalendar('getDate'));
             },
              defaultDate: $.jStorage.get('defaultDate', "") !== "" ? $.jStorage.get('defaultDate') : moment(),
-
-
             dayNames : Uninett.dayNames,
             height: 'auto',
             allDayDefault: false,
@@ -92,10 +90,6 @@
             slotDuration: '00:15:00',
             events: Uninett.events
         });
-
-
-
-
     });
 
 </script>
