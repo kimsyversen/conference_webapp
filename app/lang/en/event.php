@@ -1,6 +1,7 @@
 <?php
 return array(
 	'cancelled' => 'Cancelled',
+	'location' => 'Location',
 	'filter' => array(
 		'title' => 'Search in schedule',
 		'title-free' =>  'Find event by free text',
@@ -22,4 +23,6 @@ return array(
 		'heading' => 'Event information',
 		'rate-heading' => 'Tell us what you think about this event'
 	),
+
+	'audience' => 'Audience'
 );

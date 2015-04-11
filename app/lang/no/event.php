@@ -1,6 +1,7 @@
 <?php
 return array(
 	'cancelled' => 'Kansellert',
+	'location' => 'Lokasjon',
 	'filter' => array(
 		'title' => 'Søk i konferanseprogrammet',
 		'title-free' =>  'Finn en hendelse ved fritekst',
@@ -21,4 +22,6 @@ return array(
 		'heading' => 'Om hendelsen',
 		'rate-heading' => 'Fortell hva du synes om denne hendelsen'
 	),
+
+	'audience' => 'Målgruppe'
 );
