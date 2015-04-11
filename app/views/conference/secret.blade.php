@@ -6,11 +6,11 @@
 
 <div class="container">
 
-{{--    <div class="row calendar-view ">
+    <div class="row calendar-view ">
         <div class="col-xs-12">
             <div id='calendar'></div>
         </div>
-    </div>--}}
+    </div>
 
     <div class="row traditional-view ">
         <div class="col-xs-12">
@@ -48,44 +48,52 @@
                 timeFormat: 'H(:mm)',
                 minTime: '06:00:00',
                 maxTime: '24:00:00',
-                eventAfterRender: function(event, element, view) {
-
+                eventRender: function(event, element, view) {
+                    element.append("Description:" + event.traktor);
 
                 },
                 events: [
                     {
                     "title": "Registrering",
                     "start": "2015-04-05T08:30:01",
-                    "end": "2015-04-05T09:30:00"
+                    "end": "2015-04-05T09:30:00",
+                    "traktor" : "Traktor"
 
                 }, {
                     "title": "ASDF",
                     "start": "2015-04-05T08:30:01",
-                    "end": "2015-04-05T09:30:00"
+                    "end": "2015-04-05T09:30:00",
+                        "traktor" : "Traktor"
+
                 },
                     {
                         "title": "Registrering",
                         "start": "2015-04-05T08:30:01",
-                        "end": "2015-04-05T09:30:00"
+                        "end": "2015-04-05T09:30:00",
+                        "traktor" : "Traktor"
 
                     }, {
                         "title": "ASDF",
                         "start": "2015-04-05T08:30:01",
-                        "end": "2015-04-05T09:30:00"
+                        "end": "2015-04-05T09:30:00",
+                        "traktor" : "Traktor"
                     },
                     {
                         "title": "Registrering",
                         "start": "2015-04-05T08:30:01",
-                        "end": "2015-04-05T09:30:00"
+                        "end": "2015-04-05T09:30:00",
+                        "traktor" : "Traktor"
 
                     }, {
                         "title": "ASDF",
                         "start": "2015-04-05T09:30:00",
-                        "end": "2015-04-05T10:30:00"
+                        "end": "2015-04-05T10:30:00",
+                        "traktor" : "Traktor"
                     },{
                         "title": "ASDFASDF",
                         "start": "2015-04-05T10:30:00",
-                        "end": "2015-04-05T10:45:00"
+                        "end": "2015-04-05T10:45:00",
+                        "traktor" : "Traktor"
                     }
                 ]
             })

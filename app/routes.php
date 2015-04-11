@@ -7,15 +7,12 @@ Route::get('login', ['as' => 'login_path', 'uses' => 'SessionsController@create'
 Route::get('loginmodal', ['as' => 'login_modal_path', 'uses' => 'SessionsController@createModal'])->before('cache.fetch')->after('cache.put');
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
-Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);
 
+/*Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);*/
 
-app_path();
 Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]); //->before('cache.fetch')->after('cache.put');
-
 Route::get('/about', ['as' => 'about_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');
 Route::get('/guidelines', ['as' => 'guideline_path', 'uses' => 'GuidelinesController@index' ]); //->before('cache.fetch')->after('cache.put');
-
 
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page
@@ -41,16 +38,14 @@ Route::get('secret', ['as' => 'secret_path', 'uses' => 'AboutCreatorsController@
 /**
  * AJAX Routes
  */
-
 Route::post('ajax/change_language', ['as' => 'ajax.user.language.change', 'uses' => 'LocalizationController@store']);
 
-//Fjerne get?
+
 Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);
 Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' => 'RatingsController@store' ]);
 Route::post('ajax/change_view', ['as' => 'ajax.user.change.view', 'uses' => 'ConferenceScheduleViewController@store']);
 
 /* loader.io */
-
 Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 	return File::get(storage_path() . "/loaderio-aef6c70fb68412153005721ed69b906e.txt");
 });
@@ -58,7 +53,6 @@ Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 
 /* ADMIN */
 //Route::get('/admin', ['as' => 'home_path', 'uses' => 'Uninett\Admin\AdminController@index' ]);
-
 Route::get('hello', function(){
 	Laracasts\Utilities\JavaScript\Facades\JavaScript::put([
 		'mordi' => 'mordi'

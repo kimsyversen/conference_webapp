@@ -78,6 +78,9 @@ $('#calendar').fullCalendar({
        week : Uninett.buttonText.week,
        day: Uninett.buttonText.day
    },
+    eventRender: function(event, element, view) {
+        element.append("<span class='glyphicon glyphicon glyphicon-map-marker'></span>" + event.location);
+    },
    viewRender : function( view, element ) {
        $.jStorage.set('defaultDate', $('#calendar').fullCalendar('getDate'));
    },
@@ -89,7 +92,7 @@ $('#calendar').fullCalendar({
    firstDay: 1,
    axisFormat: 'H:mm',
    timeFormat: 'H(:mm)',
-   minTime: '06:00:00',
+   minTime: '07:30:00',
    maxTime: '24:00:00',
    slotDuration: '00:15:00',
    events: Uninett.events
