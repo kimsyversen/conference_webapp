@@ -46,11 +46,8 @@ Route::post('ajax/change_language', ['as' => 'ajax.user.language.change', 'uses'
 
 //Fjerne get?
 Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);
-
 Route::post('ajax/user_get_rating', [ 'as' => 'ajax.user.post.rating', 'uses' => 'RatingsController@store' ]);
-
-
-
+Route::post('ajax/change_view', ['as' => 'ajax.user.change.view', 'uses' => 'ConferenceScheduleViewController@store']);
 
 /* loader.io */
 

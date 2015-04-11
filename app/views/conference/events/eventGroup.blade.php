@@ -1,14 +1,21 @@
+
+
 <div class="row">
     <div class="col-xs-12 text-center" style="margin-top: 1em;">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" id="buttonCalendar" class="btn btn-default">{{ Lang::get('event.buttons.calendar-view') }}</button>
-            <button type="button" id="buttonAlerts" class="btn btn-default">{{ Lang::get('event.buttons.traditional-view') }}</button>
+            <button type="button" id="buttonCalendar" class="btn btn-default" onclick="$('#view').val('calendar'); $('#frm-view').submit();" >{{ Lang::get('event.buttons.calendar-view') }}</button>
+            <button type="button" id="buttonAlerts" class="btn btn-default" onclick="$('#view').val('traditional'); $('#frm-view').submit();">{{ Lang::get('event.buttons.traditional-view') }}</button>
         </div>
     </div>
 </div>
 
+{{ Form::open(['route' => 'ajax.user.change.view', 'id' => 'frm-view', 'class' => 'hidden']) }}
+<input id="view" name="view" type="hidden">
+{{ Form::close()}}
 
-<div class="calendar-view toggled" style="margin-top: 1em;">
+
+
+<div class="calendar-view {{ $default_view == "traditional" ? "toggled" : "toggle" }}" style="margin-top: 1em;">
     <div class="col-xs-12">
         <div id='calendar'></div>
     </div>
@@ -16,7 +23,7 @@
 
 
 
-<div class="traditional-view toggle">
+<div class="traditional-view toggle {{ $default_view == "traditional" ? "toggle" : "toggled" }}">
     <div class="row">
         <div class="col-xs-12">
             @include('conference.partials.options.filter')

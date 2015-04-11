@@ -27,29 +27,29 @@ class ConferenceScheduleController extends \BaseController {
 		$response = $this->client->send($request);
 
 
-		//TODO: Cleanup
-		$events = [];
+		if(!Session::has('events'))
+		{
+			$events = [];
+			//Incoming dates are in UTC timezone, mean they will represented in something like 2015-05-05UTC12:00:00
+			//Somehow, this does not show up on iphones and we need to format the date to this 2015-05-05T12:00:00
+			//We do not know if this affects other phones
+			foreach($response['data'] as $sessionGroup) {
+				foreach($sessionGroup['sessions'] as $session)
+					$events[] = [
+						'title' => $session['title'],
+						'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
+						'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format(DateTime::ISO8601),
+						'location' => $session['location'],
+						'url' => '/' . $session['links']['session']['uri'],
+						'color' => $this->decideColor($session['category'])
+					];
+			}
 
-
-		//Incoming dates are in UTC timezone, mean they will represented in something like 2015-05-05UTC12:00:00
-		//Somehow, this does not show up on iphones and we need to format the date to this 2015-05-05T12:00:00
-		//We do not know if this affects other phones
-		foreach($response['data'] as $sessionGroup) {
-			foreach($sessionGroup['sessions'] as $session)
-			$events[] = [
-					'title' => $session['title'],
-					'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
-					'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format(DateTime::ISO8601),
-					'location' => $session['location'],
-					'url' => '/' . $session['links']['session']['uri'],
-					'color' => $this->decideColor($session['category'])
-				];
-
-
+			Session::put('events', $events);
 		}
 
 		JavaScript::put([
-			'events' => $events,
+			'events' => Session::get('events'),
 			'dayNames' => [
 				Lang::get('calendar.dayNames.monday'),
 				Lang::get('calendar.dayNames.tuesday'),
@@ -67,7 +67,12 @@ class ConferenceScheduleController extends \BaseController {
 			]
 		]);
 
-		return View::make('conference.schedule.conference.index')->with(['data' => $response]);
+		$default_view = "traditional";
+
+		if(Cookie::has('default_schedule_view'))
+			$default_view = Cookie::get('default_schedule_view');
+
+		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view ]);
 	}
 
 
