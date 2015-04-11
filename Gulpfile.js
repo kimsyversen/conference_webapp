@@ -12,6 +12,7 @@ gulp.task('js', function()
     gulp.src(
         [
             basePath + "jquery/dist/jquery.js",
+            basePath + "jquery-cookie/jquery-cookie.js",
             basePath + "bootstrap/dist/js/bootstrap.min.js",
             basePath + "add-to-homescreen/src/addtohomescreen.min.js",
             basePath + "fastclick/lib/fastclick.js",

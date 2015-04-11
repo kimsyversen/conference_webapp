@@ -59,8 +59,8 @@
                 $('.traditional-view').addClass('toggle').removeClass('toggled');
             });
 
-
         $('#calendar').fullCalendar({
+            defaultView: 'agendaDay',
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -72,20 +72,24 @@
                 week : Uninett.buttonText.week,
                 day: Uninett.buttonText.day
             },
+            viewRender : function( view, element ) {
+                localStorage['defaultDate'] = $('#calendar').fullCalendar('getDate')
+            },
+            defaultDate: localStorage['defaultDate'] ? localStorage['defaultDate'] : new Date(),
             dayNames : Uninett.dayNames,
             height: 'auto',
             allDayDefault: false,
             allDaySlot: false,
             firstDay: 1,
-            defaultView: 'agendaDay',
             axisFormat: 'H:mm',
             timeFormat: 'H(:mm)',
             minTime: '06:00:00',
             maxTime: '24:00:00',
             slotDuration: '00:15:00',
-
             events: Uninett.events
-        })
+        });
+
+
     });
 
 </script>
