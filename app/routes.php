@@ -13,7 +13,10 @@ Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@prof
 app_path();
 Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]); //->before('cache.fetch')->after('cache.put');
 
-Route::get('/about', ['as' => 'about_creators_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');
+Route::get('/about', ['as' => 'about_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');
+Route::get('/guidelines', ['as' => 'guideline_path', 'uses' => 'GuidelinesController@index' ]); //->before('cache.fetch')->after('cache.put');
+
+
 
 //TODO: Since we have no conference start page, set the conference schedule as the start page
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);

@@ -11,9 +11,9 @@ return array(
 	'logout' => 'Logg ut',
 	'register' => 'Registrer',
 	'refresh' => 'Oppdater side',
-
+	'guidelines' => 'Retningslinjer for applikasjonen',
 	'about_application' => 'Om applikasjonen',
-	'features_application' => 'Funksjonalitet i applikasjonen',
+	'features_application' => 'Hjelp',
 	'conference' => 'Konferanse',
 	'all_conferences' => 'Alle konferanser',
 	'event' => 'Hendelse',

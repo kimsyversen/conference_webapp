@@ -1,20 +1,29 @@
 .footer {
   margin-top: 50px;
-  background-color: #444444;
+  background-color: #444440;
+
   a {
-    color: #fffaf5;
+    text-decoration: none;
+    color: #f4efea;
     &:hover {
       @extend .default-link-hover-color;
+      text-decoration: underline;
     }
   }
+
   h4 {
-    color: #fffaf5;
+    color: #f4efea;
     font-weight:normal;
+  }
+  ul i {
+    color: #f4efea;
   }
 
   ul li {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     font-size: 1.1em;
+
   }
+
 }

@@ -11,9 +11,10 @@ return array(
 	'logout' => 'Logout',
 	'register' => 'Register',
 	'refresh' => 'Refresh',
+	'guidelines' => 'Application guidelines',
 
 	'about_application' => 'About the application',
-	'features_application' => 'Features of the application',
+	'features_application' => 'I need help with this application',
 	'conference' => 'Conference',
 	'all_conferences' => 'All Conferences',
 	'event' => 'Event',

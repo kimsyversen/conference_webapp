@@ -1,4 +1,4 @@
-{{ Form::open(['route' => 'registration_path', 'method' => 'post']) }}
+{{ Form::open(['route' => 'registration_path', 'method' => 'post', 'id' => 'registrationForm']) }}
 
 <div class="form-group">
     {{ Form::label('email', Lang::get('forms.email'), ['class' => 'control-label']) }}
@@ -20,6 +20,6 @@
 </div>
 
 <div class="form-group">
-    {{ Form::submit(Lang::get('forms.sign-up.button_send'), ['class' => 'form-control btn btn-primary']) }}
+    {{ Form::submit(Lang::get('forms.sign-up.button_send'), ['class' => 'form-control btn btn-primary', 'id' => 'submitButton']) }}
 </div>
 {{ Form::close() }}

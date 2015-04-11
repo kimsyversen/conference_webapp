@@ -18,6 +18,8 @@ class LinksCest
 
 		$I->amOnPage('/conferences');
 
+		$I->seeLink('Login', '/login');
+
 		$I->click('Login');
 
 		$I->amOnPage('/login');
@@ -97,7 +99,8 @@ class LinksCest
 		$I->seeLink('Log out', '/logout');
 
 		$I->seeLink('About the application', '/about');
-		$I->seeLink('Features of this application', '/features');
+		$I->seeLink('I need help with this application', '/features');
+		$I->seeLink('Application guidelines', '/guidelines');
 
 		$I->dontSeeLink('Log in', '/login');
 	}
@@ -120,8 +123,8 @@ class LinksCest
 	/*	$I->seeLink('Login', '/login');
 		$I->seeLink('Register', '/register');*/
 
-		$I->seeLink('About the application', '/about');
-		$I->seeLink('Features of this application', '/features');
+		$I->seeLink('I need help with this application', '/features');
+		$I->seeLink('Application guidelines', '/guidelines');
 
 
 		$I->dontSeeLink('Profile', '/profile');
@@ -135,8 +138,8 @@ class LinksCest
 		$I->seeLink('Conference schedule', '/conferences/1/schedule');
 		$I->seeLink('Maps', '/conferences/1/maps');
 
-		$I->seeLink('About the application', '/about');
-		$I->seeLink('Features of this application', '/features');
+		$I->seeLink('I need help with this application', '/features');
+		$I->seeLink('Application guidelines', '/guidelines');
 
 		$I->dontSeeLink('Profile', '/profile');
 		$I->dontSeeLink('Log out', '/logout');

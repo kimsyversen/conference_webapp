@@ -57,12 +57,17 @@
 
 .footer {
   margin-top: 50px;
-  background-color: #444444; }
+  background-color: #444440; }
   .footer a {
-    color: #fffaf5; }
+    text-decoration: none;
+    color: #f4efea; }
+    .footer a:hover {
+      text-decoration: underline; }
   .footer h4 {
-    color: #fffaf5;
+    color: #f4efea;
     font-weight: normal; }
+  .footer ul i {
+    color: #f4efea; }
   .footer ul li {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -347,6 +352,15 @@ html, body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -150px; }
+
+.item-push {
+  margin-top: 1em; }
+
+.guidelines-list {
+  list-style-type: none; }
+  .guidelines-list li {
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
 .default-heading {
   color: #2F2F2F;

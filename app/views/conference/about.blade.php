@@ -1,7 +1,7 @@
 @extends('conference.layouts.default')
 @section('content')
 
-    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('about_creators') ])
+    @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('about') ])
     @include('conference.partials.errors-and-messages')
 
     @include('conference.partials.page-header', ['text' => Lang::get('about.title')])

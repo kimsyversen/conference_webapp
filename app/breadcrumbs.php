@@ -15,9 +15,14 @@ Breadcrumbs::register('login', function($breadcrumbs) {
 });
 
 
-Breadcrumbs::register('about_creators', function($breadcrumbs) {
+Breadcrumbs::register('about', function($breadcrumbs) {
 	$breadcrumbs->parent('conferences');
-	$breadcrumbs->push('About the application', route('about_creators_path'));
+	$breadcrumbs->push(Lang::get('menu.about'), route('about_path'));
+});
+
+Breadcrumbs::register('guidelines', function($breadcrumbs) {
+	$breadcrumbs->parent('conferences');
+	$breadcrumbs->push(Lang::get('menu.guidelines'), route('about_path'));
 });
 
 
@@ -70,11 +75,6 @@ Breadcrumbs::register('personal_schedule', function($breadcrumbs) {
 
 
 
-/*Breadcrumbs::register('profile', function($breadcrumbs) {
-	$breadcrumbs->parent('conferences');
-	$breadcrumbs->push("Your profile", route('profile_path'));
-
-});*/
 
 Breadcrumbs::register('schedule', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
@@ -82,8 +82,6 @@ Breadcrumbs::register('schedule', function($breadcrumbs) {
 		$breadcrumbs->push(Lang::get('menu.schedule'), route('schedule_path', ['conference_id' => Session::get('conference_id')]));
 	else
 		$breadcrumbs->push(Lang::get('menu.schedule'), route('schedule_path'));
-
-	//TODO: elsen over.. er den noe vits?
 });
 
 
@@ -94,12 +92,10 @@ Breadcrumbs::register('session', function($breadcrumbs) {
 	{
 		$conference_id = Session::get('conference_id');
 		$session_id = Session::get('session_id');
-
 		$breadcrumbs->push(Lang::get('menu.event'), route('session_path', ['session_id' => $session_id, 'conference_id' => $conference_id]));
 	}
 	else
 		$breadcrumbs->push(Lang::get('menu.event'), route('conference_path'));
-
 });
 
 

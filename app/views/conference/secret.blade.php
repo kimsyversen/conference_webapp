@@ -6,12 +6,11 @@
 
 <div class="container">
 
-
-    <div class="row calendar-view ">
+{{--    <div class="row calendar-view ">
         <div class="col-xs-12">
             <div id='calendar'></div>
         </div>
-    </div>
+    </div>--}}
 
     <div class="row traditional-view ">
         <div class="col-xs-12">

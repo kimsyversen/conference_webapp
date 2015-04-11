@@ -18,11 +18,14 @@ class RegisterUserCest
 
 		$I->amOnPage('/register');
 
-		$I->fillField('email', 'admin@example.com');
-		$I->fillField('password', 'secret');
-		$I->fillField('password_confirmation', 'secret');
 
-		$I->click('Sign up');
+
+		$I->submitForm('#registrationForm', array(
+			'email' => 'admin@example.com',
+			'password' => 'secret',
+			'password_confirmation' => 'secret'
+		), 'submitButton');
+
 
 		$I->see('The email has already been taken.');
 	}
@@ -33,19 +36,14 @@ class RegisterUserCest
 
 		$I->amOnPage('/register');
 
-		$I->fillField('email', str_random(10). '@example.com');
-		$I->fillField('password', 'secret');
-		$I->fillField('password_confirmation', 'secret');
-
-		$I->click('Sign up');
+		$I->submitForm('#registrationForm', array(
+			'email' => str_random(10). '@example.com',
+			'password' => 'secret',
+			'password_confirmation' => 'secret'
+		), 'submitButton');
 
 		$I->amOnPage('/login');
 
-		$I->see('Sign in');
-
-		//TODO: Someone this won't work
-		//$I->see('Account was successfully created. Check your email to verify your account.');
-
-
+		$I->see('Account was successfully created. You must check your email and activate your account. Allow a few minutes for it to arrive in your inbox.');
 	}
 }
