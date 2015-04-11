@@ -79,7 +79,7 @@
             viewRender : function( view, element ) {
                 localStorage['defaultDate'] = $('#calendar').fullCalendar('getDate')
             },
-            defaultDate: localStorage['defaultDate'] ? localStorage['defaultDate'] : momemtDate,
+      /*      defaultDate: localStorage['defaultDate'] ? localStorage['defaultDate'] : momemtDate,*/
             dayNames : Uninett.dayNames,
             height: 'auto',
             allDayDefault: false,
