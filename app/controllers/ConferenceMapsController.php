@@ -23,6 +23,4 @@ class ConferenceMapsController extends \BaseController {
 
 		return View::make('conference.maps.index');
 	}
-
-
 }
