@@ -72,8 +72,10 @@ class ConferenceScheduleController extends \BaseController {
 				$default_view = "calendar";
 			}
 		}
+/*		Cookie::forever('default_schedule_view', $default_view, 22896000);*/
+		Cookie::queue('default_schedule_view', $default_view, 22896000);
 
-		Cookie::queue('default_schedule_view', $default_view, 2628000);
+
 		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view ]);
 	}
 

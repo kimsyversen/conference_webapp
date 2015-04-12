@@ -25,7 +25,6 @@ App::before(function($request)
 	if(!Cookie::has('first_visit')) {
 		Cookie::queue('first_visit', 'no', 2628000);
 	}
-
 });
 
 
