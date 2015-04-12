@@ -3,18 +3,6 @@
 class LocalizationController extends \BaseController {
 
 	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
-
-
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
@@ -30,7 +18,7 @@ class LocalizationController extends \BaseController {
 
 			if($validator->passes()) {
 				Session::put('language', $language);
-				Cookie::queue('language', $language);
+				Cookie::queue('language', $language, 22896000);
 				App::setLocale($language);
 				return Redirect::back();
 			}
@@ -38,19 +26,4 @@ class LocalizationController extends \BaseController {
 
 		return Redirect::back()->with(['error' => 'Could not change language']);
 	}
-
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-
-
 }

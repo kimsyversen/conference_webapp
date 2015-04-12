@@ -1,5 +1,4 @@
-@if(Session::has('has_visited_before'))
+@if(!Cookie::has('first_visit') || empty(Cookie::get('first_visit')))
     @include('conference.partials.alerts.firstvisit')
-    <?php Session::forget('has_visited_before') ?>
 @endif
 

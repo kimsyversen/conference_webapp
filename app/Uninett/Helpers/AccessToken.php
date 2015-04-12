@@ -1,7 +1,8 @@
-<?php namespace Uninett\Helpers; 
+<?php namespace Uninett\Helpers;
+
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
-use Redirect;
+
 
 
 /**
@@ -49,7 +50,7 @@ class AccessToken {
 
 				$expire_time = $access_token['expires_at'];
 
-				$now = \Carbon\Carbon::now();
+				$now = Carbon::now();
 
 				if($now->gt($expire_time)) {
 					Session::remove('access_token');

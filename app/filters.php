@@ -18,14 +18,14 @@ App::before(function($request)
 {
 	\Uninett\Helpers\AccessToken::validate();
 
-	if(!Cookie::has('has_visited_before')) {
-		Session::put('has_visited_before', true);
-		Cookie::queue('has_visited_before', true);
-	}
-
 	if(Cookie::has('language')) {
 		App::setLocale(Cookie::get('language'), Config::get('app.locale'));
 	}
+
+	if(!Cookie::has('first_visit')) {
+		Cookie::queue('first_visit', 'no', 2628000);
+	}
+
 });
 
 
