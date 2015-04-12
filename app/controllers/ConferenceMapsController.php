@@ -18,7 +18,10 @@ class ConferenceMapsController extends \BaseController {
 
 		$response = $this->client->send($request);
 
-		return View::make('conference.maps.index')->with(['data' => $response]);
+		if(isset($response['data']))
+			return View::make('conference.maps.index')->with(['data' => $response]);
+
+		return View::make('conference.maps.index');
 	}
 
 

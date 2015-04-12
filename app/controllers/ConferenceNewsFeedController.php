@@ -16,9 +16,11 @@ class ConferenceNewsFeedController extends \BaseController {
 
 		$response = $this->client->send($request);
 
-		/*$twitterData = json_decode(Twitter::getUserTimeline(array('screen_name' => $response['data']['user_twitter'], 'count' => 2, 'format' => 'json')), true);*/
+		if(isset($response['data']))
+			return View::make('conference.newsfeed.index')->with(['data' => $response]);
 
-		return View::make('conference.newsfeed.index')->with(['data' => $response]);
-		/*return View::make('conference.newsfeed.index')->with(['data' => $response, 'twitter' => $twitterData]);*/
+
+		return View::make('conference.newsfeed.index');
+
 	}
 }
