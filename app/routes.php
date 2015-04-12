@@ -1,4 +1,7 @@
 <?php
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get('secret', ['as' => 'secret_path', 'uses' => 'AboutCreatorsController@secret' ]);
+
 
 Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ])->before('cache.fetch')->after('cache.put');
 Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ])->before('cache.fetch')->after('cache.put');
@@ -33,7 +36,7 @@ Route::delete('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'se
 
 
 
-Route::get('secret', ['as' => 'secret_path', 'uses' => 'AboutCreatorsController@secret' ]);
+
 
 /**
  * AJAX Routes
@@ -53,11 +56,3 @@ Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 
 /* ADMIN */
 //Route::get('/admin', ['as' => 'home_path', 'uses' => 'Uninett\Admin\AdminController@index' ]);
-Route::get('hello', function(){
-	Laracasts\Utilities\JavaScript\Facades\JavaScript::put([
-		'mordi' => 'mordi'
-	]);
-
-	return View::make('hello');
-
-});

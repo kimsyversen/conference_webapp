@@ -19,6 +19,7 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Barryvdh\Debugbar\ServiceProvider',
+		'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
 	)),
 
 	'aliases' => append_config(array(

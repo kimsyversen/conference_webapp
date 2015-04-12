@@ -14,7 +14,6 @@
         "laracasts/utilities": "~1.0",
         "frenzy/turbolinks": "1.0.1",
         "hieu-le/active": "~1.0"
-
 	},
     "require-dev": {
       "codeception/codeception" : "~2.0",
@@ -23,7 +22,8 @@
       "barryvdh/laravel-debugbar": "~1.8",
       "panique/laravel-sass": "1.0",
       "laracasts/testdummy": "~2",
-      "mockery/mockery" : "0.9.*@dev"
+      "mockery/mockery" : "0.9.*@dev",
+      "rap2hpoutre/laravel-log-viewer": "0.2.*"
     },
 	"autoload": {
 		"classmap": [
