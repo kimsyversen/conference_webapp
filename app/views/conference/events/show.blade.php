@@ -12,6 +12,7 @@
 @section('content')
     @include('conference.partials.page-header', ['text' => Lang::get('event.show.heading')])
 
+
     @if(isset($data['data']) && !empty($data['data']))
 
         @if(($data['data']['confirmed']) == 0)
@@ -20,6 +21,11 @@
             @include('conference.partials.delimiter', ['text' => Lang::get('event.show.delimiter'), 'value' => ''])
 
             @include('conference.events.event', ['session' => $data['data'], 'schedule_type' => 'conference'])
+
+            @if(isset($data['data']['speakers']))
+                @include('conference.partials.delimiter', ['text' => 'Speakers', 'value' => ''])
+                @include('conference.events.partials.speakers', ['speakers' => $data['data']['speakers']])
+            @endif
 
             @include('conference.partials.delimiter', ['text' => Lang::get('event.show.rate-heading'), 'value' => ''])
 

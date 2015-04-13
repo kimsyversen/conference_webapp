@@ -567,9 +567,8 @@ textarea {
 .fc-today {
   background-color: transparent !important; }
 
-/*
-.fc-event {
+.icon-stack {
+  position: relative; }
 
-  min-height: 50px !important;
-
-}*/
+.icon-stack .glyphicon {
+  position: absolute; }

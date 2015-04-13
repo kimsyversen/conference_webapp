@@ -275,9 +275,10 @@ textarea {
   background-color: transparent !important;
 }
 
-/*
-.fc-event {
 
-  min-height: 50px !important;
-
-}*/
+.icon-stack {
+  position: relative;
+}
+.icon-stack .glyphicon {
+  position: absolute;
+}
