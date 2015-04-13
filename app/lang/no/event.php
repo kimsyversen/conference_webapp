@@ -23,5 +23,6 @@ return array(
 		'rate-heading' => 'Fortell hva du synes om denne hendelsen'
 	),
 
-	'audience' => 'Målgruppe'
+	'audience' => 'Målgruppe',
+	'speaker' => 'Foredragsholder',
 );

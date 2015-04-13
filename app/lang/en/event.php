@@ -24,5 +24,6 @@ return array(
 		'rate-heading' => 'Tell us what you think about this event'
 	),
 
-	'audience' => 'Audience'
+	'audience' => 'Audience',
+	'speaker' => 'Speaker',
 );
