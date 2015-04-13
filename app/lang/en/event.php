@@ -21,7 +21,8 @@ return array(
 		'cancelled' => 'Event is cancelled',
 		'delimiter' => 'Details about event',
 		'heading' => 'Event information',
-		'rate-heading' => 'Tell us what you think about this event'
+		'rate-heading' => 'Tell us what you think about this event',
+		'speakers' => 'Speakers'
 	),
 
 	'audience' => 'Audience',

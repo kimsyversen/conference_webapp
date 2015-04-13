@@ -12,7 +12,6 @@
                     </div>
                     <div class="body">
                         <i>{{ $speaker['description'] }} </i>
-
                     </div>
                 </div>
         </div>

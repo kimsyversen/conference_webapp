@@ -20,9 +20,10 @@ return array(
 		'cancelled' => 'Hendelsen er avlyst',
 		'delimiter' => 'Mer informasjon om hendelsen',
 		'heading' => 'Om hendelsen',
-		'rate-heading' => 'Fortell hva du synes om denne hendelsen'
+		'rate-heading' => 'Fortell hva du synes om denne hendelsen',
+		'speakers' => 'Foredragsholdere'
 	),
 
 	'audience' => 'Målgruppe',
-	'speaker' => 'Foredragsholder',
+	'speaker' => 'Foredragsholdere',
 );

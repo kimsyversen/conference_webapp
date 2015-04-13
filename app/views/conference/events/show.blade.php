@@ -23,7 +23,7 @@
             @include('conference.events.event', ['session' => $data['data'], 'schedule_type' => 'conference'])
 
             @if(isset($data['data']['speakers']))
-                @include('conference.partials.delimiter', ['text' => 'Speakers', 'value' => ''])
+                @include('conference.partials.delimiter', ['text' => Lang::get('event.show.speakers'), 'value' => ''])
                 @include('conference.events.partials.speakers', ['speakers' => $data['data']['speakers']])
             @endif
 
