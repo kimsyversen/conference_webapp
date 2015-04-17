@@ -1,4 +1,11 @@
 @extends('conference.layouts.default')
+
+<script>
+    $(document).ready(function() {
+        addToHomescreen();
+    });
+</script>
+
 @section('content')
     @include('conference.partials.breadcrumb', ['breadcrumb' => Breadcrumbs::render('conferences') ])
     @include('conference.partials.errors-and-messages')
@@ -13,3 +20,6 @@
         @endif
     @endif
 @stop
+
+
+
