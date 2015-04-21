@@ -23,6 +23,8 @@ class ConferencePersonalScheduleController extends \BaseController {
 
 			$response = $this->client->send($request);
 
+			$this->sendVariablesToJavascript();
+
 			return View::make('conference.schedule.personal.index')->with(['data' => $response, 'default_view' => 'traditional']);
 		}
 	}

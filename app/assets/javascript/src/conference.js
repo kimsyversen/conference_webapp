@@ -195,7 +195,6 @@ $(document).ready(function() {
         //Find the last span inside the button
         var buttonText = button.find('.button-text');
 
-
         buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close : Uninett.button.more);
     });
 
@@ -207,18 +206,16 @@ $(document).ready(function() {
         parent.find('.description-long').toggleClass('hidden');
         parent.find('.description-short').toggleClass('hidden');
 
-        var button = parent.find('.button-more span');
+        //Find button
+        var button = parent.find('.button-more');
 
         //Swap glyph on button
-        button.first().toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
+        button.find('.glyphicon').toggleClass('glyphicon-zoom-in glyphicon-zoom-out');
 
         //Find the last span inside the button
-        var buttonText = button.last();
+        var buttonText = button.find('.button-text');
 
-        //Change its text
-
-        buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close: Uninett.button.more);
-
+        buttonText.text( buttonText.text() === Uninett.button.more ? Uninett.button.close : Uninett.button.more);
     });
 
     window.setTimeout(function() {

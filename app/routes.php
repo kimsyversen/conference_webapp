@@ -57,10 +57,3 @@ Route::get('loaderio-aef6c70fb68412153005721ed69b906e.txt', function() {
 /* ADMIN */
 //Route::get('/admin', ['as' => 'home_path', 'uses' => 'Uninett\Admin\AdminController@index' ]);
 
-
-Route::get('k', function(){
-	echo "<pre>";
-	print_r(Cookie::get());
-
-
-});
