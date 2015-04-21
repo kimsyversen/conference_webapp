@@ -5,7 +5,7 @@ class RegisterUserCest
 {
     public function _before(AcceptanceTester $I)
     {
-
+	    App::setLocale('en');
     }
 
     public function _after(AcceptanceTester $I)
