@@ -1,7 +1,7 @@
 <?php
 return array(
 	'nav' => array(
-		'description' => 'This is where you navigate around the site. It will look slightly different if you use a smartphone, tablet, or computer, but the choices are still the same. The menu will remember your last visisted conference, therefore you will have more choices once you visit one. The globe let you switch between English and Norwegian language (the conference program may still only be available in one language). If you are on a mobile device, you might have to scroll when expanding the language menu.'
+		'description' => 'This is where you navigate around the site. The house left to home will have a red color if you are not logged in, or green if you are logged in. It will look slightly different if you use a smartphone, tablet, or computer, but the choices are still the same. The menu will remember your last visisted conference, therefore you will have more choices once you visit one. The globe let you switch between English and Norwegian language (the conference program may still only be available in one language). If you are on a mobile device, you might have to scroll when expanding the language menu.'
 	),
 	'newsfeed' => array (
 		'description' => 'Here you will find messages from the conference administration. It will contain both common messages and some targeted messages (to see targeted messages requires an account).',
