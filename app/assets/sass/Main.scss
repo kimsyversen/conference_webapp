@@ -282,3 +282,13 @@ textarea {
 .icon-stack .glyphicon {
   position: absolute;
 }
+
+.alert-custom {
+  z-index: 999999999;
+  position: absolute;
+  top: 10%;
+
+
+  @include animation(15s, 1s, 1);
+
+}

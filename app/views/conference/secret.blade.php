@@ -5,6 +5,14 @@
 
 
 <div class="container">
+        <div class="alert alert-danger alert-dismissible alert-custom animated fadeOut">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="message">
+                <p> {{ $danger or 'This is very long test message to see how it behaves. This is very long test message to see how it behaves. This is very long test message to see how it behaves . This is very long test message to see how it behaves' }} </p>
+            </div>
+
+
+        </div>
 
     <div class="row calendar-view ">
         <div class="col-xs-12">
