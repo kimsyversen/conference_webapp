@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-xs-12 text-center" style="margin-top: 1em;">
         <div class="btn-group" role="group" aria-label="...">
-            <button type="button" id="buttonCalendar" class="btn btn-default" onclick="$('#view').val('calendar'); $('#frm-view').submit();" >{{ Lang::get('event.buttons.calendar-view') }}</button>
-            <button type="button" id="buttonAlerts" class="btn btn-default" onclick="$('#view').val('traditional'); $('#frm-view').submit();">{{ Lang::get('event.buttons.traditional-view') }}</button>
+            <button type="button" id="buttonCalendar" class="btn btn-default <?php if($default_view == "calendar") echo "active";  ?>" onclick="$('#view').val('calendar'); $('#frm-view').submit();" >{{ Lang::get('event.buttons.calendar-view') }}</button>
+            <button type="button" id="buttonAlerts" class="btn btn-default <?php if($default_view == "traditional") echo "active";  ?>" onclick="$('#view').val('traditional'); $('#frm-view').submit();">{{ Lang::get('event.buttons.traditional-view') }}</button>
         </div>
     </div>
 </div>
