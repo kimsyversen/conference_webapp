@@ -26,4 +26,5 @@ return array(
 
 	'audience' => 'Målgruppe',
 	'speaker' => 'Foredragsholdere',
+	'rating' => 'Du kan gi vurdering til denne hendelsen'
 );

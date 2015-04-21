@@ -1,4 +1,4 @@
-<div class="container-fluid rating-item">
+<div class="container-fluid rating-item" id="giverating">
     <div class="row">
         <div class="col-xs-12 ">
             @if($status == -1)

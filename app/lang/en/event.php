@@ -27,4 +27,5 @@ return array(
 
 	'audience' => 'Audience',
 	'speaker' => 'Speaker',
+	'rating' => 'You can rate this event'
 );
