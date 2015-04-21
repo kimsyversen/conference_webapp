@@ -9,17 +9,17 @@
                 <div class="modal-body">
                     <div class="form-group">
                         {{ Form::label('email', Lang::get('forms.email'), ['class' => 'control-label']) }}
-                        {{ Form::text('email', null, ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.email')]) }}
+                        {{ Form::text('email', null, ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.email'), 'required' => 'required' ]) }}
                     </div>
 
                     <div class="form-group">
                         {{ Form::label('password', Lang::get('forms.password'), ['class' => 'control-label']) }}
-                        {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.password')]) }}
+                        {{ Form::password('password', ['required', 'class' => 'form-control', 'placeholder' => Lang::get('forms.password'), 'required' => 'required']) }}
                     </div>
 
                     <div class="form-group">
                         {{ Form::label('password_confirmation', Lang::get('forms.password_confirmation'), ['class' => 'control-label']) }}
-                        {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => Lang::get('forms.password_confirmation')]) }}
+                        {{ Form::password('password_confirmation', ['required', 'class' => 'form-control',  'placeholder' => Lang::get('forms.password_confirmation'), 'required' => 'required']) }}
                     </div>
 
                     <div class="form-group">
