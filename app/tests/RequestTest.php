@@ -21,7 +21,7 @@ class RequestTest extends TestCase {
 	 */
 	public function test_a_working_request()
 	{
-
+		//TODO: Delete if not used
 		$mockClient = Mock::mock('Uninett\Api\Client', [
 			new \Uninett\Api\ResponseFormatter,
 			Mock::mock('Guzzle\Http\Client')

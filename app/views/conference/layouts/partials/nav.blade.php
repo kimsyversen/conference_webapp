@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand {{ Active::action('ConferenceController@index')  }} " href="{{ route('conferences_path') }}"> <i class="glyphicon glyphicon-home"></i> {{ Lang::get('menu.home') }}</a>
+            <a class="navbar-brand {{ Active::action('ConferenceController@index')  }} " href="{{ route('conferences_path') }}"> <i class="glyphicon glyphicon-home" style="<?php if(isset($authenticated) && $authenticated === true) echo "color:green;"; else echo "color:red;"; ?>"></i> {{ Lang::get('menu.home') }}</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -14,7 +14,7 @@ return array(
 
     'sign-up' => array(
         'title' => 'Lag ny konto',
-        'button_send' => 'Send',
+        'button_send' => 'Registrer konto',
         'message' => 'Har du allerede en brukerkonto?',
         'message_link' => 'Logg inn'
     ),

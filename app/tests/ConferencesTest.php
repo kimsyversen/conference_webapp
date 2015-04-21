@@ -9,6 +9,4 @@ class ConferencesTest extends OAuthApiTester {
 		$this->base_url = Config::get('uninett.base_url');
 	}
 
-
-
 }

@@ -12,7 +12,6 @@
     @include('conference.partials.doFirstTimeStuff')
 @stop
 
-
 @section('content')
     @include('conference.partials.page-header', ['text' => Lang::get('menu.schedule')])
 

@@ -1,4 +1,4 @@
 <?php
 return array(
-	'empty-schedule' => 'The schedule are empty.'
+	'empty-schedule' => 'Your schedule is empty.'
 );

@@ -1,4 +1,4 @@
 <?php
 return array(
-	'empty-schedule' => 'Konferanseprogrammet er tomt.'
+	'empty-schedule' => 'Ditt konferanseprogram er tomt.'
 );

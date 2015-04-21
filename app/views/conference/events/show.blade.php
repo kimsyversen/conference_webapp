@@ -36,9 +36,9 @@
 
 @section('javascript')
     @parent
-    <!-- Expand the details about session when entered and remove the button-->
+            <!-- Expand the details about session when entered and remove the button-->
     <script>
-      $(document).ready(function() {
+        $(document).ready(function() {
             $(".button-more").trigger("click");
         });
     </script>

@@ -17,9 +17,9 @@
 
     @if(isset($data['data']))
         @if(!empty($data['data']))
-            @include('conference.events.eventGroup', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
+            @include('conference.events.eventGroupPersonal', ['sessionGroup' => $data['data'], 'schedule_type' => 'personal'])
         @else
-            <p class="lead text-center">Your schedule is empty.</p>
+            <p class="lead text-center">{{ Lang::get('schedule.empty-schedule') }}</p>
         @endif
     @endif
 @stop

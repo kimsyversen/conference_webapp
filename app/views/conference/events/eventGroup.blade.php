@@ -7,6 +7,7 @@
     </div>
 </div>
 
+
 {{ Form::open(['route' => 'ajax.user.change.view', 'id' => 'frm-view', 'class' => 'hidden']) }}
     <input id="view" name="view" type="hidden">
 {{ Form::close()}}
