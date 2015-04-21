@@ -1,6 +1,10 @@
 <ul>
     @if(isset($session['location']) && !empty($session['location']))
-        <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ Lang::get('event.location') }}: {{ $session['location']  }}</li>
+        @if(Session::has('conference_id'))
+            <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ Lang::get('event.location') }}: <a href="{{ route('maps_path', ['conference_id' => Session::get('conference_id')]) }}"> {{ $session['location']  }}</a> </li>
+        @else
+            <li> <span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ Lang::get('event.location') }}: {{ $session['location']  }}</li>
+        @endif
     @endif
 
     @if(isset($session['confirmed']) && $session['confirmed'] == 0)
