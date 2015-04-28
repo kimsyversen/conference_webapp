@@ -27,5 +27,14 @@ return array(
 
 	'audience' => 'Audience',
 	'speaker' => 'Speaker',
-	'rating' => 'Rate this event'
+	'rating' => 'Rate this event',
+
+	'rate' => array(
+		'status' => array(
+			'-1' => 'You must be authenticated to rate this conference.',
+			'0' => 'You can rate this conference.',
+			'1' => 'You can rate this conference after it is finished.',
+			'2' => 'You have rated this conference.'
+		)
+	)
 );
