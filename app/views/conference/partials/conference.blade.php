@@ -6,8 +6,8 @@
                     <div class="conference-item shadow">
                         <div class="row header">
                             <div class="col-xs-12">
-                                <a href="/{{$conference['link']['uri'] }}">
-                                    <img class="img-responsive" src="{{ $conference['banner']}}" alt="{{ $conference['name']}}">
+                                <a href="{{ url($conference['link']['uri'])  }}">
+                                    <img class="img-responsive" src="{{ $conference['banner'] }}" alt="{{ $conference['name']}}">
                                 </a>
                             </div>
                         </div>
