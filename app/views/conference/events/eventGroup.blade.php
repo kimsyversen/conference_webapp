@@ -80,9 +80,17 @@ $('#calendar').fullCalendar({
        day: Uninett.buttonText.day
    },
     eventRender: function(event, element, view) {
-        element.append("<span class='glyphicon glyphicon glyphicon-map-marker'></span>" + event.location);
-        element.append("<br>");
-        element.append("<span class='glyphicon glyphicon glyphicon-user'></span>" + event.speakers);
+        if(event.location) {
+            element.append("<span class='glyphicon glyphicon glyphicon-map-marker'></span>" + event.location);
+            element.append("<br>");
+        }
+
+        if(event.speakers) {
+            element.append("<span class='glyphicon glyphicon glyphicon-user'></span>" + event.speakers);
+        }
+
+
+
     },
    viewRender : function( view, element ) {
        $.jStorage.set('defaultDate', $('#calendar').fullCalendar('getDate'));

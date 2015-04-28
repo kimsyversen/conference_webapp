@@ -42,12 +42,10 @@ class ConferenceScheduleController extends \BaseController {
 
 		$response = $this->client->send($request);
 
-		if( Cookie::has('default_schedule_view'))
-		{
+		if( Cookie::has('default_schedule_view')) {
 			$view = Cookie::get('default_schedule_view');
 
-			if($view != "traditional")
-			{
+			if($view != "traditional") {
 				$events = [];
 				//Incoming dates are in UTC timezone, mean they will represented in something like 2015-05-05UTC12:00:00
 				//Somehow, this does not show up on iphones and we need to format the date to this 2015-05-05T12:00:00
@@ -93,9 +91,7 @@ class ConferenceScheduleController extends \BaseController {
 				$default_view = "calendar";
 			}
 		}
-/*		Cookie::forever('default_schedule_view', $default_view, 22896000);*/
 		Cookie::queue('default_schedule_view', $default_view, 22896000);
-
 
 		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view, 'status' => $status]);
 	}
@@ -117,5 +113,4 @@ class ConferenceScheduleController extends \BaseController {
 				break;
 		}
 	}
-
 }
