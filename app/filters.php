@@ -84,7 +84,7 @@ Route::filter('guest', function()
 Route::filter('authenticated', function()
 {
 	if (!Session::has('access_token'))
-		return Redirect::route('login_path')->with('messages', ['You must be authenticated to do access that page']);
+		return Redirect::route('login_path')->with('messages', [Lang::get('common.you-must-be-authenticated')]);
 });
 
 

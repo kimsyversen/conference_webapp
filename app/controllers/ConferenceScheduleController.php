@@ -18,13 +18,27 @@ class ConferenceScheduleController extends \BaseController {
 	{
 		$request = (new Uninett\Api\Request)->setMethod('GET');
 
+		$requestRating = (new Uninett\Api\Request)->setMethod('GET');
+
 		$default_view = "traditional";
 
-		if($this->userIsAuthenticated())
+		$status = -1;
+
+		if($this->userIsAuthenticated()) {
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule/authenticated")
 				->setAccessTokenInHeader(AccessToken::get());
+
+			$requestRating->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/ratings/create")
+				->setAccessTokenInHeader(AccessToken::get());
+
+			$responseRating = $this->client->send($requestRating);
+
+			$status = $responseRating['data'][0]['code'];
+		}
+
 		else
 			$request->setUrl("{$this->api_endpoint}/conferences/{$conference_id}/schedule");
+
 
 		$response = $this->client->send($request);
 
@@ -83,7 +97,7 @@ class ConferenceScheduleController extends \BaseController {
 		Cookie::queue('default_schedule_view', $default_view, 22896000);
 
 
-		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view ]);
+		return View::make('conference.schedule.conference.index')->with(['data' => $response, 'default_view' => $default_view, 'status' => $status]);
 	}
 
 	private function decideColor($category)

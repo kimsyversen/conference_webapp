@@ -38,6 +38,13 @@ Breadcrumbs::register('conference', function($breadcrumbs) {
 		$breadcrumbs->push(Lang::get('menu.conference'), route('conference_path'));
 });
 
+Breadcrumbs::register('conference_rating', function($breadcrumbs) {
+	$breadcrumbs->parent('conference');
+	$breadcrumbs->push(Lang::get('menu.conference_rating'), route('conference_rating_path'));
+
+});
+
+
 Breadcrumbs::register('maps', function($breadcrumbs) {
 	$breadcrumbs->parent('conference');
 	$breadcrumbs->push(Lang::get('menu.maps'), route('maps_path'));

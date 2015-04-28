@@ -24,6 +24,7 @@ return array(
 
 	'footer_title' => 'Other information',
 
+	'conference_rating' => 'Rate conference',
 
 
 

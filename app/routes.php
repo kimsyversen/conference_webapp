@@ -2,7 +2,6 @@
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 Route::get('secret', ['as' => 'secret_path', 'uses' => 'AboutCreatorsController@secret' ]);
 
-
 Route::get('register', [ 'as' => 'register_path', 'uses' => 'RegistrationController@create' ])->before('cache.fetch')->after('cache.put');
 Route::get('registermodal', [ 'as' => 'registration_modal_path', 'uses' => 'RegistrationController@createModal' ])->before('cache.fetch')->after('cache.put');
 Route::post('register', [ 'as' => 'registration_path', 'uses' => 'RegistrationController@store' ]);
@@ -17,13 +16,15 @@ Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteControl
 Route::get('/about', ['as' => 'about_path', 'uses' => 'AboutCreatorsController@index' ]); //->before('cache.fetch')->after('cache.put');
 Route::get('/guidelines', ['as' => 'guideline_path', 'uses' => 'GuidelinesController@index' ]); //->before('cache.fetch')->after('cache.put');
 
-
 //TODO: Since we have no conference start page, set the conference schedule as the start page
 //Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceController@getConferenceById' ]);
 
 Route::get('/', ['as' => 'home_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences', [ 'as' => 'conferences_path', 'uses' => 'ConferenceController@index' ]);
 Route::get('conferences/{conference_id}', [ 'as' => 'conference_path', 'uses' => 'ConferenceScheduleController@index' ]);
+Route::get('conferences/{conference_id}/rate', [ 'as' => 'conference_rating_path', 'uses' => 'ConferenceRatingController@create' ]);
+Route::post('conferences/{conference_id}/rate', [ 'as' => 'conference_rating_path', 'uses' => 'ConferenceRatingController@store' ]);
+
 Route::get('conferences/{conference_id}/maps', [ 'as' => 'maps_path', 'uses' => 'ConferenceMapsController@index' ]);
 /*Route::get('conferences/{conference_id}/chats', [ 'as' => 'chats_path', 'uses' => 'ConferenceChatsController@index' ]);
 Route::get('conferences/{conference_id}/chats/{chat_id}', [ 'as' => 'chat_path', 'uses' => 'ConferenceChatsController@show' ]);*/
@@ -35,13 +36,11 @@ Route::post('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'sess
 Route::delete('conferences/{conference_id}/sessions/{session_id}', [ 'as' => 'session_delete_path', 'uses' => 'ConferenceSessionsController@destroy' ]); //Ajax destroy in personal agenda
 
 
-
-
-
-/**
- * AJAX Routes
- */
+/* AJAX Routes */
 Route::post('ajax/change_language', ['as' => 'ajax.user.language.change', 'uses' => 'LocalizationController@store']);
+
+//
+
 
 
 Route::get('ajax/user_get_rating', [ 'as' => 'ajax.user.get.rating', 'uses' => 'RatingsController@show' ]);

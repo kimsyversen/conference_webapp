@@ -26,5 +26,14 @@ return array(
 
 	'audience' => 'Målgruppe',
 	'speaker' => 'Foredragsholdere',
-	'rating' => 'Gi vurdering til denne hendelsen'
+	'rating' => 'Gi vurdering til denne hendelsen',
+
+	'rate' => array(
+		'status' => array(
+			'-1' => 'Du må authentisere deg selv før du kan vurdere denne konferansen.',
+			'0' => 'Du kan nå vurdere denne konferansen.',
+			'1' => 'Du kan vurdere konferansen etter at den er ferdig.',
+			'2' => 'Du har vurdert denne konferansen.'
+		)
+	)
 );

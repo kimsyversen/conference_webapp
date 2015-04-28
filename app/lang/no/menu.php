@@ -22,6 +22,7 @@ return array(
 	'settings' => 'Instillinger',
 
 	'footer_title' => 'Annet',
+	'conference_rating' => 'Vurder konferanse',
 
 	'change-language' => array(
 		'change-language' => 'Språk',
