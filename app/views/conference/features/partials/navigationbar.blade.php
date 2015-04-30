@@ -1,4 +1,4 @@
-@include('conference.partials.page-header', ['text' => 'The navigation bar'])
+@include('conference.partials.page-header', ['text' => Lang::get('features.nav.header')])
 
 <p  class="text-muted description">
     {{ Lang::get('features.nav.description') }}
