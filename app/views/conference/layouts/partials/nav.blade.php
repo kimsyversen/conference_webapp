@@ -40,6 +40,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li> <a href="{{ Lang::get('survey.link') }}" target="_blank"> <i class="glyphicon glyphicon-info-sign"></i>  {{ Lang::get('survey.menu_text') }} </a> </li>
                 @if(isset($authenticated) && $authenticated === false)
                     <li> <a href="#" class="register-button" data-toggle="modal" data-target="#registerModal"><i class="glyphicon glyphicon-pencil"></i> {{ Lang::get('menu.register') }} </a></li>
                     <li> <a href="#" class="login-button" data-toggle="modal" data-target="#signIn"><i class="glyphicon glyphicon-log-in"></i> {{ Lang::get('menu.login') }} </a></li>

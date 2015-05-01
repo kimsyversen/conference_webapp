@@ -38,6 +38,8 @@
         @yield('breadcrumb')
         @yield('errors-and-messages')
         @yield('first-time-stuff')
+
+        @include('conference.partials.survey')
         @yield('content')
     </div>
     <div class="push"></div>
