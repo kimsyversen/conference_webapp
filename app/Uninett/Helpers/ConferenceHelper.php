@@ -74,7 +74,7 @@ class ConferenceHelper {
 		$currentLength = 0;
 
 		foreach($speakers as $speaker) {
-			$string = $string . $speaker['first_name'] . $speaker['last_name'] .  ", ";
+			$string = $string . $speaker['first_name'] . " " . $speaker['last_name'] .  ", ";
 			$currentLength += 1;
 		}
 
