@@ -67,7 +67,18 @@ class ConferenceHelper {
 			}
 		}
 		return substr($string, 0, strlen($string) -2);
+	}
 
+	public static function makeSpeakers($speakers) {
+		$string = "";
+		$currentLength = 0;
+
+		foreach($speakers as $speaker) {
+			$string = $string . $speaker['first_name'] . $speaker['last_name'] .  ", ";
+			$currentLength += 1;
+		}
+
+		return substr($string, 0, strlen($string) -2);
 	}
 
 	public static function timestampToCarbon($timestamp)

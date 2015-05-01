@@ -52,18 +52,14 @@ class ConferenceScheduleController extends \BaseController {
 				//We do not know if this affects other phones
 				foreach($response['data'] as $sessionGroup) {
 					foreach($sessionGroup['sessions'] as $session) {
-						$speakers = "";
 
-						//TODO: Commasepareted list of speakers is preferred
-						foreach($session['speakers'] as $speaker)
-							$speakers = $speakers . $speaker['first_name'] . " " . $speaker['last_name'] .", ";
 
 						$events[] = [
 							'title' => $session['title'],
 							'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),
 							'end' =>   (new  \Carbon\Carbon($session['end_date']['date']))->format(DateTime::ISO8601),
 							'location' => $session['location'],
-							'speakers' => $speakers,
+							'speakers' => ConferenceHelper::makeSpeakers($session['speakers']),
 							'url' => '/' . $session['links']['session']['uri'],
 							'color' => $this->decideColor($session['category'])
 						];

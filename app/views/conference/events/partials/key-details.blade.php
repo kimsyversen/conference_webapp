@@ -17,9 +17,11 @@
 
     @if(isset($session['speakers']) &&  $session['speakers'] != null)
         <li> <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> {{ Lang::get('event.speaker') }}:
-            @foreach($session['speakers'] as $speaker)
+
+            {{ ConferenceHelper::makeSpeakers($session['speakers']) }}
+           {{-- @foreach($session['speakers'] as $speaker)
                    {{ $speaker['first_name'] }} {{ $speaker['last_name'] }}
-            @endforeach
+            @endforeach--}}
         </li>
     @endif
     <li> <span class="glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span> <a href="/{{ $session['links']['session']['uri'] }}#giverating">{{ Lang::get('event.rating') }}</a></li>
