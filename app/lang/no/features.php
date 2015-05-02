@@ -3,8 +3,8 @@
 
 return array(
 	'nav' => array(
-		'description' => 'Menyen er antakeligvis den raskeste måten å navigere seg rundt på nettsiden. Huset til venstre for hjem vil ha en rød farge hvis du ikke er logget inn, og grønn hvis du er logget inn. Den vil ha et litt forskjellig utseende avhengig av hva slags enhet (mobil, pc eller nettbrett) du benytter. Valgene er imidlertid de samme.
-		 Menyen vil alltid være relativ til den siste konferansen du har vært inne på. Derfor vil du ha flere valg i menyen etter å at du har klikket deg inn på en. Globusen lar deg velge mellom norsk eller engelsk språk på nettsiden (konferanseprogrammet kan imidlertid være tilgjenglgi i bare ett språk). Hvis du er på en mobil enhet kan det hende at du må scrolle i menyen for å finne ønsket språk.',
+		'description' => 'Menyen er antakeligvis den raskeste måten å navigere seg rundt på nettsiden. Huset til venstre for hjem vil ha en rød farge hvis du ikke er logget inn, og grønn hvis du er logget inn. Den vil ha litt forskjellig utseende avhengig av hva slags enhet (mobil, pc eller nettbrett) du benytter. Valgene er imidlertid de samme.
+		 Menyen vil alltid være relativ til den siste konferansen du har vært inne på. Derfor vil du ha flere valg i menyen etter å at du har klikket deg inn på en konferanse. Globusen lar deg velge mellom norsk eller engelsk språk på nettsiden (konferanseprogrammet kan imidlertid være tilgjenglgi i bare ett språk). Hvis du er på en mobil enhet kan det hende at du må scrolle i menyen for å finne ønsket språk.',
 		'header' => 'Menyen',
 	),
 	'newsfeed' => array (
@@ -18,7 +18,7 @@ return array(
 		'description' => array(
 			'1' => 'Du kan finne opptil fire typer hendelser i konferanseprogrammet.',
 			'2' => 'Alle hendelser har en lokasjon og ofte en beskrivelse som kan ses ved å klikke på ',
-			'3' => 'Hvis du er innlogget får du mulighet til å legge til hendelser i',
+			'3' => 'Hvis du er innlogget får du mulighet til å legge til hendelser i Mitt program.',
 			'4' => 'Hvis hendelsen er kansellert, vil du et rødt kryss og rød tekst. Du kan også dele på Facebook, Twitter og Google+. Om du ønsker å legge igjen en vurdering, klikk deg inn på en hvilken som helst hendelse. Der har du mulighet til å gi en 1-5 score samt legge ved en valgfri kommentar. Du kan også bytte mellom kalender og den tradisjonell visning. Kalendervisning egner seg godt for å få en rask oversikt over hele konferanseprogrammet.',
 			'5' => array(
 				'1' => 'Du kan søke i hendelser med fritekst eller vise programmet basert på dag.',
