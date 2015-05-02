@@ -6,10 +6,10 @@
             @include('conference.features.partials.navigationbar')
         </div>
 
-        <hr>
-        <div>
-            @include('conference.features.partials.newsfeed')
-        </div>
+        {{--         <hr>
+         <div>
+                 @include('conference.features.partials.newsfeed')
+             </div>--}}
 
         <hr>
 
@@ -19,13 +19,13 @@
 
         <hr>
 
-        <div>
+  {{--      <div>
             @include('conference.features.partials.mySchedule')
         </div>
 
         <hr>
 
-  {{--      <div>
+    <div>
             @include('conference.features.partials.account')
         </div>--}}
 
