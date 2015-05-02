@@ -12,6 +12,7 @@
     "moment": "~2.10.2",
     "jquery-cookie": "~1.4.1",
     "jStorage": "~0.4.12",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "fullcalendar": "~2.3.1"
   }
 }
