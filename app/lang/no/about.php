@@ -7,7 +7,7 @@ return array(
 		'1' => 'Se på konferanseprogrammet',
 		'2' => 'Legge til interessante hendelser i ditt eget program (krever innlogging)',
 		'3' => 'Se kart over konferanseområdet',
-		'4' => 'Motta fellesmeldinger og private meldinger fra administrator (krever innlogging)',
+		'4' => 'Motta fellesmeldinger i nyhetsfeed',
 		'5' => 'Gi vurdering på en hvilken som helst hendelse (krever innlogging)',
 	),
 
