@@ -122,12 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'DaveJamesMiller\Breadcrumbs\ServiceProvider',
-		'Laracasts\Flash\FlashServiceProvider',
 		'Laracasts\Utilities\UtilitiesServiceProvider',
-		'Frenzy\Turbolinks\TurbolinksServiceProvider',
 		'HieuLe\Active\ActiveServiceProvider',
-
-
 	),
 
 	/*
