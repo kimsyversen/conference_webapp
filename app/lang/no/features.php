@@ -4,7 +4,7 @@
 return array(
 	'nav' => array(
 		'description' => 'Menyen er antakeligvis den raskeste måten å navigere seg rundt på nettsiden. Huset til venstre for hjem vil ha en rød farge hvis du ikke er logget inn, og grønn hvis du er logget inn. Den vil ha litt forskjellig utseende avhengig av hva slags enhet (mobil, pc eller nettbrett) du benytter. Valgene er imidlertid de samme.
-		 Menyen vil alltid være relativ til den siste konferansen du har vært inne på. Derfor vil du ha flere valg i menyen etter å at du har klikket deg inn på en konferanse. Globusen lar deg velge mellom norsk eller engelsk språk på nettsiden (konferanseprogrammet kan imidlertid være tilgjenglgi i bare ett språk). Hvis du er på en mobil enhet kan det hende at du må scrolle i menyen for å finne ønsket språk.',
+		 Menyen vil alltid være relativ til den siste konferansen du har vært inne på. Derfor vil du ha flere valg i menyen etter å at du har klikket deg inn på en konferanse. Globusen lar deg velge mellom norsk eller engelsk språk på nettsiden (konferanseprogrammet kan imidlertid være tilgjenglig i bare ett språk). Hvis du er på en mobil enhet kan det hende at du må scrolle i menyen for å finne ønsket språk.',
 		'header' => 'Menyen',
 	),
 	'newsfeed' => array (

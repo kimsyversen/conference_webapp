@@ -33,7 +33,8 @@ class ConferenceScheduleController extends \BaseController {
 
 			$responseRating = $this->client->send($requestRating);
 
-			$status = $responseRating['data'][0]['code'];
+			if(isset($responseRating['data']))
+				$status = $responseRating['data'][0]['code'];
 		}
 
 		else
@@ -41,6 +42,9 @@ class ConferenceScheduleController extends \BaseController {
 
 
 		$response = $this->client->send($request);
+
+		if(!isset($response['data']))
+			return View::make('conference.schedule.conference.index')->with(['data' => null, 'default_view' => $default_view, 'status' => $status]);
 
 		if( Cookie::has('default_schedule_view')) {
 			$view = Cookie::get('default_schedule_view');
@@ -52,8 +56,6 @@ class ConferenceScheduleController extends \BaseController {
 				//We do not know if this affects other phones
 				foreach($response['data'] as $sessionGroup) {
 					foreach($sessionGroup['sessions'] as $session) {
-
-
 						$events[] = [
 							'title' => $session['title'],
 							'start' =>  (new  \Carbon\Carbon($session['start_date']['date']))->format(DateTime::ISO8601),

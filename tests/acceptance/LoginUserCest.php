@@ -40,7 +40,4 @@ class LoginUserCest
 
 		$I->see('Wrong credentials.');
 	}
-
-
-	//Logout: You have successfully been logged out.
 }
