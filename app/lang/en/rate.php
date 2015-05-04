@@ -4,6 +4,7 @@ return array(
 		'noauth' => 'You must be authenticated to rate this event'
 	),
 	'0' => array(
+		'about' => 'Ratings will not be publicly published. It is only used for improvements.',
 		'form' => array(
 			'score-label' => 'Give it a score (5 is best):',
 			'comment-title' => 'Anything to comment?',

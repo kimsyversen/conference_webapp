@@ -1,6 +1,7 @@
 
 <div class="row">
     <div class="col-xs-12 forms forms-small">
+
         <div class="rating-form">
             {{ Form::open(['data-remote', 'id' => 'frm-rating', 'class' => 'remember', 'route' => 'ajax.user.post.rating']) }}
             <div class="form-group">
@@ -24,6 +25,7 @@
             </div>
             {{ Form::close() }}
         </div>
+        <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span>  {{ Lang::get('rate.0.about') }}</p>
     </div>
 </div>
 

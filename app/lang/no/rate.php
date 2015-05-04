@@ -4,6 +4,7 @@ return array(
 		'noauth' => 'Du må være autentisert for å gi vurdering.'
 	),
 	'0' => array(
+		'about' => 'Vurderinger blir aldri gjort offentlig. De brukes til forbedringer.',
 		'form' => array(
 			'score-label' => 'Gi en score (5 er best)',
 			'comment-title' => 'Noe å kommentere?',
