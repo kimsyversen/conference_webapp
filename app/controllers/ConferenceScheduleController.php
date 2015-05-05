@@ -71,13 +71,13 @@ class ConferenceScheduleController extends \BaseController {
 				JavaScript::put([
 					'events' => $events,
 					'dayNames' => [
+						Lang::get('calendar.dayNames.sunday'),
 						Lang::get('calendar.dayNames.monday'),
 						Lang::get('calendar.dayNames.tuesday'),
 						Lang::get('calendar.dayNames.wednesday'),
 						Lang::get('calendar.dayNames.thursday'),
 						Lang::get('calendar.dayNames.friday'),
 						Lang::get('calendar.dayNames.saturday'),
-						Lang::get('calendar.dayNames.sunday')
 					],
 					'buttonText' => [
 						'today' => Lang::get('calendar.buttonText.today'),
