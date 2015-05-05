@@ -292,3 +292,11 @@ textarea {
   @include animation(15s, 1s, 1);
 
 }
+
+.survey {
+  background-color: darken($default-background-color, 8%);
+  p {
+    padding: 1em;
+  }
+  margin-bottom: 1em;
+}

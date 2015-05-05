@@ -1,6 +1,6 @@
 <?php
 return array(
 	'link' => 'http://goo.gl/forms/Gc4SzlbAL5',
-	'text' => 'We need your feedback on this application. Please take this survey. If you leave your email, you is in the draw for an iPad',
+	'text' => 'To conclude our thesis, we need at least 50 people responding to the survey (click on this text). It does not take much time, and you will be in the draw for an iPad. We greatly appreciate this.',
 	'menu_text' => 'Participate in survey'
 );

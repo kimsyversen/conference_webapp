@@ -39,6 +39,7 @@
                                 </div>
                                 {{ Form::close() }}
                             </div>
+                            <p class="text-muted"><span class="glyphicon glyphicon-info-sign"></span>  {{ Lang::get('rate.0.about') }}</p>
                         </div>
                     </div>
                 @elseif($status == 1)
