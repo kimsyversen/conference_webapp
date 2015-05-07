@@ -20,6 +20,13 @@ Breadcrumbs::register('about', function($breadcrumbs) {
 	$breadcrumbs->push(Lang::get('menu.about_application'), route('about_path'));
 });
 
+Breadcrumbs::register('survey', function($breadcrumbs) {
+	$breadcrumbs->parent('conferences');
+	$breadcrumbs->push(Lang::get('survey.menu_text'), route('survey_path'));
+});
+
+
+
 Breadcrumbs::register('guidelines', function($breadcrumbs) {
 	$breadcrumbs->parent('conferences');
 	$breadcrumbs->push(Lang::get('menu.guidelines'), route('about_path'));

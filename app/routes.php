@@ -10,6 +10,7 @@ Route::get('loginmodal', ['as' => 'login_modal_path', 'uses' => 'SessionsControl
 Route::post('login', ['as' => 'login_path', 'uses' => 'SessionsController@login']);
 Route::get('logout', ['as' => 'logout_path', 'uses' => 'SessionsController@destroy']);
 
+Route::get('survey', ['as' => 'survey_path', 'uses' => 'SurveyController@index']);
 /*Route::get('profile', ['as' => 'profile_path', 'uses' => 'ProfileController@profile']);*/
 
 Route::get('/features', ['as' => 'featurette_path', 'uses' => 'FeaturetteController@create' ]); //->before('cache.fetch')->after('cache.put');
